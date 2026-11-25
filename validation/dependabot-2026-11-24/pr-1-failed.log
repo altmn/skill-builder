@@ -1,0 +1,24 @@
+standard-library	Check create and audit propagation review	﻿2026-11-25T06:37:22.4157651Z ##[group]Run python3 -I -B -S tools/check_workflow_impact.py --ci
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4157963Z ^[[36;1mpython3 -I -B -S tools/check_workflow_impact.py --ci^[[0m
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4177595Z shell: /usr/bin/bash -e {0}
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4177746Z env:
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4177890Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4178128Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4178354Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4178572Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4178772Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4178975Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4179185Z ##[endgroup]
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4487752Z {
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4488080Z   "schema_version": "1.0.0",
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4488255Z   "outcome": "failed",
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4488435Z   "scope": "Committed range from merge base (or empty tree) to HEAD",
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4488712Z   "changed_files": 1,
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4488839Z   "fresh_records": [],
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4488973Z   "unreviewed_paths": [
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4489101Z     ".github/workflows/ci.yml"
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4489225Z   ],
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4489332Z   "unresolved_verification": [],
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4489690Z   "limits": "Checks freshness, structure and path coverage only; reviewers assess reasoning and evidence truth. Unresolved verification is not release approval."
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4490039Z }
+standard-library	Check create and audit propagation review	2026-11-25T06:37:22.4535881Z ##[error]Process completed with exit code 1.

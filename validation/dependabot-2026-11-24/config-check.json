@@ -1,0 +1,12 @@
+{
+  "outcome": "passed",
+  "checks": [
+    "Unfiltered pull_request and manual dispatch retained",
+    "Push runs limited to master",
+    "Both mandatory jobs unconditional",
+    "Contents permission remains read-only",
+    "Checkout credentials/submodules remain disabled",
+    "Both dependency ecosystems grouped",
+    "Frozen KB hash unchanged"
+  ]
+}

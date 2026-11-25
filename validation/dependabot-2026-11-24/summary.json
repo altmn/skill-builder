@@ -1,0 +1,39 @@
+{
+  "version_scope": "Unreleased maintenance source; v1.0.0 release artifacts unchanged",
+  "date": "2026-11-24",
+  "timezone": "America/Los_Angeles",
+  "original_pull_requests": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "cause": "Required workflow-impact records absent; optional-validator jobs passed on all four original PRs",
+  "combined_versions": {
+    "actions/checkout": "7.0.1",
+    "actions/setup-python": "7.1.0",
+    "PyYAML": "6.0.4",
+    "rpds-py": "2026.9.1"
+  },
+  "full_local_suite": {
+    "outcome": "passed",
+    "tests": 146,
+    "seconds": 29.289,
+    "environment": "Fresh Python 3.15 virtual environment with the reviewed updated wheel set"
+  },
+  "core310_plugin_suite": {
+    "outcome": "passed",
+    "tests": 7,
+    "site_packages": "disabled"
+  },
+  "project_check": "passed with required validators",
+  "configuration_checks": "passed",
+  "pip_check": "passed",
+  "subject_workflows": "Existing creation, read-only audit and runtime-only other-subject tests pass; semantic review remains inconclusive and missing dependencies stay blocked",
+  "knowledge_base_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+  "limits": [
+    "No upstream security certification",
+    "No fresh native-host acceptance or general subject quality claim",
+    "Actual companion PR and master CI outcomes must be checked before completion"
+  ]
+}

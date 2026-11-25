@@ -67,3 +67,11 @@ cannot prove that a no-change reason is correct, that tests really ran, or that
 a language model follows an instruction. Review those claims against evidence.
 No branch protection, account setting or Git hook is installed by this policy;
 required remote status enforcement remains a repository-owner setting.
+
+## Dependency update pull requests
+
+Dependabot proposals need the same reasoned create/audit review as other changes. A missing record is a review-policy failure, even when the dependency test job passes; rerunning unchanged proposals cannot supply the assessment. Review the exact upstream version and execution changes, test the candidate dependency set, and add a fresh record before merging. Do not generate a blanket passing review for every future dependency version or exempt bot-authored changes.
+
+When related proposals affect the same CI or dependency files, a maintainer may apply their exact version bumps together in a reviewed companion PR. Identify the original proposals and retain their failed evidence. After the companion passes required CI and merges, close the superseded proposals as implemented, rather than describing their original runs as successful.
+
+CI runs for every pull request, on master pushes, and on manual dispatch. Feature branch pushes and tag pushes do not start a duplicate run of the same source. Dependabot groups future proposals by ecosystem; grouping does not waive this review or required tests. Published release archives retain their recorded identities until a separately versioned release is prepared.
