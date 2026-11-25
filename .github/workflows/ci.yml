@@ -19,7 +19,7 @@ jobs:
           submodules: false
           fetch-depth: 0
       - name: Set up minimum core Python
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version: "3.10"
       - name: Check create and audit propagation review
@@ -44,7 +44,7 @@ jobs:
           persist-credentials: false
           submodules: false
       - name: Set up minimum full-validation Python
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version: "3.11"
       - name: Create explicit validation environment
@@ -56,7 +56,7 @@ jobs:
           .venv/bin/python -I -B tools/check_project.py --require-validators
           .venv/bin/python -I -B -m unittest discover -s tests -v
       - name: Set up current stable Python
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version: "3.x"
           check-latest: true
