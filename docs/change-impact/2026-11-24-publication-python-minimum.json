@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "Correct CI runtime selection after pinned rpds-py metadata rejects Python 3.10; retain Python 3.10 core coverage and require Python 3.11+ for the full validation set.",
+  "reviewed_paths": [
+    ".github/workflows/ci.yml",
+    "README.md",
+    "plugin.json",
+    "requirements-validation.txt",
+    "skills/skill-builder/SKILL.md",
+    "skills/skill-builder/references/hosts/codex.md",
+    "validation/publication-1.0.0/README.md",
+    "validation/publication-1.0.0/ci-python310-initial-failure.log",
+    "validation/publication-1.0.0/ci-runtime-fix-local-tests.log",
+    "validation/publication-1.0.0/ci-runtime-fix-project-check.json"
+  ],
+  "workflows": {
+    "create": {
+      "decision": "updated",
+      "reason": "Creation and audit share the skill compatibility declaration and Codex capability guidance. Distinguish standard-library helper Python 3.10 support from the pinned full validator environment requiring Python 3.11. No target templates, rule applicability, subject grading or dependency versions need changes.",
+      "owners": [
+        "skills/skill-builder/SKILL.md",
+        "skills/skill-builder/references/hosts/codex.md"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "All 146 local tests and the required-validator project check passed after the compatibility correction, including create/audit from the packaged runtime. Corrected remote CI remains a release gate rather than an inferred pass.",
+        "commands": [
+          "python -I -B -m unittest discover -s tests -v",
+          "python -I -B tools/check_project.py --require-validators"
+        ],
+        "evidence": [
+          "validation/publication-1.0.0/ci-python310-initial-failure.log",
+          "validation/publication-1.0.0/ci-runtime-fix-local-tests.log",
+          "validation/publication-1.0.0/ci-runtime-fix-project-check.json"
+        ]
+      }
+    },
+    "audit": {
+      "decision": "updated",
+      "reason": "Creation and audit share the skill compatibility declaration and Codex capability guidance. Distinguish standard-library helper Python 3.10 support from the pinned full validator environment requiring Python 3.11. No target templates, rule applicability, subject grading or dependency versions need changes.",
+      "owners": [
+        "skills/skill-builder/SKILL.md",
+        "skills/skill-builder/references/hosts/codex.md"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "All 146 local tests and the required-validator project check passed after the compatibility correction, including create/audit from the packaged runtime. Corrected remote CI remains a release gate rather than an inferred pass.",
+        "commands": [
+          "python -I -B -m unittest discover -s tests -v",
+          "python -I -B tools/check_project.py --require-validators"
+        ],
+        "evidence": [
+          "validation/publication-1.0.0/ci-python310-initial-failure.log",
+          "validation/publication-1.0.0/ci-runtime-fix-local-tests.log",
+          "validation/publication-1.0.0/ci-runtime-fix-project-check.json"
+        ]
+      }
+    }
+  }
+}

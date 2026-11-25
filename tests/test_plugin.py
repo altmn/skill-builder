@@ -87,7 +87,7 @@ class PluginPackageTests(unittest.TestCase):
             runtime = root / "unpacked/skill-builder/skills/skill-builder"
             self.assertFalse((runtime / "tools").exists())
             script = runtime / "scripts/skill_builder.py"
-            created, audited = root / "created", root / "audited"
+            created = root / "created"
             result = subprocess.run([sys.executable, "-I", "-B", str(script), "skill-builder-create",
                                      "--name", "publication-note-extractor", "--description",
                                      "Extract decisions from explicitly supplied local notes.",
@@ -98,16 +98,28 @@ class PluginPackageTests(unittest.TestCase):
             marker = root / "should-not-run"
             (subject / "setup.py").write_text("from pathlib import Path\nPath(" + repr(str(marker)) + ").touch()\n")
             before = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in subject.iterdir()}
-            result = subprocess.run([sys.executable, "-I", "-B", str(script), "skill-builder-audit",
-                                     "--target", str(subject), "--profile", "instruction", "--output", str(audited)],
-                                    cwd=root, capture_output=True, timeout=45)
-            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-            summary = json.loads(result.stdout)
-            self.assertFalse(summary["target_code_executed"])
-            self.assertEqual(summary["audit_verdict"], "inconclusive")
-            self.assertFalse(marker.exists())
-            self.assertEqual(before, {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in subject.iterdir()})
-            for output, mode in ((created, "create"), (audited, "audit")):
+            outputs = [(created, "create")]
+            # Always force the missing-parser path, even inside a provisioned venv.
+            modes = [True, False] if importlib.util.find_spec("yaml") else [True]
+            for no_site in modes:
+                audited = root / ("audited-blocked" if no_site else "audited-format-checked")
+                flags = ["-I", "-B"] + (["-S"] if no_site else [])
+                result = subprocess.run([sys.executable, *flags, str(script), "skill-builder-audit",
+                                         "--target", str(subject), "--profile", "instruction", "--output", str(audited)],
+                                        cwd=root, capture_output=True, timeout=45)
+                self.assertEqual(result.returncode, 2 if no_site else 0, result.stdout + result.stderr)
+                summary = json.loads(result.stdout)
+                self.assertEqual(summary["static_checks"], "blocked" if no_site else "passed")
+                if no_site:
+                    checks = json.loads((audited / "static-checks.json").read_text())
+                    self.assertIn("PyYAML is unavailable", checks["reason"])
+                self.assertFalse(summary["target_code_executed"])
+                self.assertFalse(summary["release_ready"])
+                self.assertEqual(summary["audit_verdict"], "inconclusive")
+                self.assertFalse(marker.exists())
+                self.assertEqual(before, {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in subject.iterdir()})
+                outputs.append((audited, "audit"))
+            for output, mode in outputs:
                 review = json.loads((output / "evaluation-review.json").read_text())
                 self.assertEqual(review["mode"], mode)
                 self.assertFalse(review["semantic_review_performed"])

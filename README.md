@@ -81,7 +81,7 @@ All 99 rule IDs have explicit [implementation routing](skills/skill-builder/refe
 
 ## Prerequisites and local quick start
 
-Use **Python 3.10 or newer** for the standard-library helper. The recorded local environment is identified in the validation receipt; this minimum syntax/runtime target is not a claim that every Python/OS combination was executed. Run helpers with `-I` to isolate Python imports from the current directory and `PYTHONPATH`, and `-B` to avoid bytecode writes.
+Use **Python 3.10 or newer** for the standard-library helper. The full pinned YAML/schema validation dependency set requires **Python 3.11 or newer** because its pinned rpds-py distribution requires it. CI checks the 3.10 core without site packages and the full suite on 3.11 and current Python. The recorded environment does not establish every Python/OS combination. Run helpers with `-I` to isolate imports from the current directory and `PYTHONPATH`, and `-B` to avoid bytecode writes.
 
 From the source project root:
 

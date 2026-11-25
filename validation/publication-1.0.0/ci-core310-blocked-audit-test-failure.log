@@ -1,0 +1,456 @@
+﻿2026-11-25T06:28:32.5748246Z Current runner version: '2.338.2'
+2026-11-25T06:28:32.5773616Z ##[group]Runner Image Provisioner
+2026-11-25T06:28:32.5774519Z Hosted Compute Agent
+2026-11-25T06:28:32.5775098Z Version: 20261111.635
+2026-11-25T06:28:32.5775890Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-25T06:28:32.5776651Z Build Date: 2026-11-11T01:49:01Z
+2026-11-25T06:28:32.5777409Z Worker ID: {17ed49e5-0227-45aa-a935-5be6d90a2b33}
+2026-11-25T06:28:32.5778141Z Region: westcentralus
+2026-11-25T06:28:32.5778739Z Cloud: Azure
+2026-11-25T06:28:32.5779336Z ##[endgroup]
+2026-11-25T06:28:32.5780827Z ##[group]Operating System
+2026-11-25T06:28:32.5782020Z Ubuntu
+2026-11-25T06:28:32.5782621Z 24.04.5
+2026-11-25T06:28:32.5783147Z LTS
+2026-11-25T06:28:32.5783732Z ##[endgroup]
+2026-11-25T06:28:32.5784302Z ##[group]Runner Image
+2026-11-25T06:28:32.5784925Z Image: ubuntu-24.04
+2026-11-25T06:28:32.5785646Z Version: 20261116.376.1
+2026-11-25T06:28:32.5786930Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261116.376/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-25T06:28:32.5789978Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261116.376
+2026-11-25T06:28:32.5792519Z ##[endgroup]
+2026-11-25T06:28:32.5794630Z ##[group]GITHUB_TOKEN Permissions
+2026-11-25T06:28:32.5797782Z Contents: read
+2026-11-25T06:28:32.5799048Z Metadata: read
+2026-11-25T06:28:32.5800087Z ##[endgroup]
+2026-11-25T06:28:32.5803019Z Secret source: Actions
+2026-11-25T06:28:32.5803995Z Cache mode: write
+2026-11-25T06:28:32.5805236Z Prepare workflow directory
+2026-11-25T06:28:32.6185882Z Prepare all required actions
+2026-11-25T06:28:32.6234762Z Getting action download info
+2026-11-25T06:28:32.8994601Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-11-25T06:28:33.0624082Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-11-25T06:28:33.2851803Z Complete job name: standard-library
+2026-11-25T06:28:33.3749412Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-11-25T06:28:33.3750505Z with:
+2026-11-25T06:28:33.3750971Z   persist-credentials: false
+2026-11-25T06:28:33.3751707Z   submodules: false
+2026-11-25T06:28:33.3752160Z   fetch-depth: 0
+2026-11-25T06:28:33.3752629Z   repository: altmn/skill-builder
+2026-11-25T06:28:33.3756574Z   token: ***
+2026-11-25T06:28:33.3757026Z   ssh-strict: true
+2026-11-25T06:28:33.3757468Z   ssh-user: git
+2026-11-25T06:28:33.3757890Z   clean: true
+2026-11-25T06:28:33.3758329Z   sparse-checkout-cone-mode: true
+2026-11-25T06:28:33.3758852Z   fetch-tags: false
+2026-11-25T06:28:33.3759310Z   show-progress: true
+2026-11-25T06:28:33.3759754Z   lfs: false
+2026-11-25T06:28:33.3760189Z   set-safe-directory: true
+2026-11-25T06:28:33.3760945Z ##[endgroup]
+2026-11-25T06:28:33.6460000Z Syncing repository: altmn/skill-builder
+2026-11-25T06:28:33.6463434Z ##[group]Getting Git version info
+2026-11-25T06:28:33.6464899Z Working directory is '/home/runner/work/skill-builder/skill-builder'
+2026-11-25T06:28:33.6466739Z [command]/usr/bin/git version
+2026-11-25T06:28:33.6566928Z git version 2.56.1
+2026-11-25T06:28:33.6593642Z ##[endgroup]
+2026-11-25T06:28:33.6610276Z Temporarily overriding HOME='/home/runner/work/_temp/424a7c45-6f2d-4cfd-9f39-c04116afbee7' before making global git config changes
+2026-11-25T06:28:33.6622715Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-25T06:28:33.6624926Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/skill-builder/skill-builder
+2026-11-25T06:28:33.6682640Z Deleting the contents of '/home/runner/work/skill-builder/skill-builder'
+2026-11-25T06:28:33.6695413Z ##[group]Initializing the repository
+2026-11-25T06:28:33.6723056Z [command]/usr/bin/git init /home/runner/work/skill-builder/skill-builder
+2026-11-25T06:28:33.6872170Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-25T06:28:33.6873896Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-25T06:28:33.6875047Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-25T06:28:33.6875947Z hint: call:
+2026-11-25T06:28:33.6876358Z hint:
+2026-11-25T06:28:33.6877053Z hint: 	git config --global init.defaultBranch <name>
+2026-11-25T06:28:33.6877700Z hint:
+2026-11-25T06:28:33.6878502Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-25T06:28:33.6879603Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-25T06:28:33.6880419Z hint:
+2026-11-25T06:28:33.6881153Z hint: 	git branch -m <name>
+2026-11-25T06:28:33.6882090Z hint:
+2026-11-25T06:28:33.6882772Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-25T06:28:33.6889080Z Initialized empty Git repository in /home/runner/work/skill-builder/skill-builder/.git/
+2026-11-25T06:28:33.6904178Z [command]/usr/bin/git remote add origin https://github.com/altmn/skill-builder
+2026-11-25T06:28:33.6965601Z ##[endgroup]
+2026-11-25T06:28:33.6966400Z ##[group]Disabling automatic garbage collection
+2026-11-25T06:28:33.6970547Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-25T06:28:33.7007514Z ##[endgroup]
+2026-11-25T06:28:33.7008462Z ##[group]Setting up auth
+2026-11-25T06:28:33.7017140Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-25T06:28:33.7060524Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-25T06:28:33.7488635Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-25T06:28:33.7539118Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-25T06:28:33.7793577Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-25T06:28:33.7846526Z ##[endgroup]
+2026-11-25T06:28:33.7848001Z ##[group]Fetching the repository
+2026-11-25T06:28:33.7860719Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-11-25T06:28:34.6272677Z From https://github.com/altmn/skill-builder
+2026-11-25T06:28:34.6274577Z  * [new branch]      codex/fix-validation-python-minimum -> origin/codex/fix-validation-python-minimum
+2026-11-25T06:28:34.6277195Z  * [new branch]      dependabot/github_actions/actions/checkout-7.0.1 -> origin/dependabot/github_actions/actions/checkout-7.0.1
+2026-11-25T06:28:34.6279769Z  * [new branch]      dependabot/github_actions/actions/setup-python-7.1.0 -> origin/dependabot/github_actions/actions/setup-python-7.1.0
+2026-11-25T06:28:34.6282860Z  * [new branch]      dependabot/pip/pyyaml-6.0.4 -> origin/dependabot/pip/pyyaml-6.0.4
+2026-11-25T06:28:34.6285067Z  * [new branch]      dependabot/pip/rpds-py-2026.9.1 -> origin/dependabot/pip/rpds-py-2026.9.1
+2026-11-25T06:28:34.6287100Z  * [new branch]      master     -> origin/master
+2026-11-25T06:28:34.6292603Z [command]/usr/bin/git branch --list --remote origin/codex/fix-validation-python-minimum
+2026-11-25T06:28:34.6339448Z   origin/codex/fix-validation-python-minimum
+2026-11-25T06:28:34.6353220Z [command]/usr/bin/git rev-parse refs/remotes/origin/codex/fix-validation-python-minimum
+2026-11-25T06:28:34.6386031Z 45c29064a9fe9c90d9d71053beb04183c84fb1a8
+2026-11-25T06:28:34.6392733Z ##[endgroup]
+2026-11-25T06:28:34.6395200Z ##[group]Determining the checkout info
+2026-11-25T06:28:34.6397067Z ##[endgroup]
+2026-11-25T06:28:34.6398817Z [command]/usr/bin/git sparse-checkout disable
+2026-11-25T06:28:34.6465425Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-25T06:28:34.6509184Z ##[group]Checking out the ref
+2026-11-25T06:28:34.6521117Z [command]/usr/bin/git checkout --progress --force -B codex/fix-validation-python-minimum refs/remotes/origin/codex/fix-validation-python-minimum
+2026-11-25T06:28:34.7438539Z Switched to a new branch 'codex/fix-validation-python-minimum'
+2026-11-25T06:28:34.7443094Z branch 'codex/fix-validation-python-minimum' set up to track 'origin/codex/fix-validation-python-minimum'.
+2026-11-25T06:28:34.7457135Z ##[endgroup]
+2026-11-25T06:28:34.7515969Z [command]/usr/bin/git log -1 --format=%H
+2026-11-25T06:28:34.7553761Z 45c29064a9fe9c90d9d71053beb04183c84fb1a8
+2026-11-25T06:28:34.7566312Z ##[group]Removing auth
+2026-11-25T06:28:34.7570963Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-25T06:28:34.7619100Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-25T06:28:34.7870386Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-25T06:28:34.7909379Z http.https://github.com/.extraheader
+2026-11-25T06:28:34.7918067Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-25T06:28:34.7963318Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-25T06:28:34.8208217Z ##[endgroup]
+2026-11-25T06:28:34.8602013Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-11-25T06:28:34.8603833Z with:
+2026-11-25T06:28:34.8604744Z   python-version: 3.10
+2026-11-25T06:28:34.8605788Z   check-latest: false
+2026-11-25T06:28:34.8615805Z   token: ***
+2026-11-25T06:28:34.8616796Z   update-environment: true
+2026-11-25T06:28:34.8617930Z   allow-prereleases: false
+2026-11-25T06:28:34.8619020Z   freethreaded: false
+2026-11-25T06:28:34.8620026Z ##[endgroup]
+2026-11-25T06:28:34.9981150Z ##[group]Installed versions
+2026-11-25T06:28:35.0052959Z Version 3.10 was not found in the local cache
+2026-11-25T06:28:36.0590155Z Version 3.10 is available for downloading
+2026-11-25T06:28:36.0592153Z Download from "https://github.com/actions/python-versions/releases/download/3.10.22-36876129702/python-3.10.22-linux-24.04-x64.tar.gz"
+2026-11-25T06:28:36.7146438Z Extract downloaded archive
+2026-11-25T06:28:36.7310581Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/536046dc-24b0-4d2f-b2da-a0be97f2c760 -f /home/runner/work/_temp/c40c3680-f2f8-4a14-96aa-6bb1f05a91f7
+2026-11-25T06:28:38.0467344Z Execute installation script
+2026-11-25T06:28:38.0582826Z Check if Python hostedtoolcache folder exist...
+2026-11-25T06:28:38.0583878Z Create Python 3.10.22 folder
+2026-11-25T06:28:38.0597675Z Copy Python binaries to hostedtoolcache folder
+2026-11-25T06:28:38.5040720Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-11-25T06:28:38.5088497Z Upgrading pip...
+2026-11-25T06:28:40.3579680Z Collecting pip
+2026-11-25T06:28:40.4377199Z Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+2026-11-25T06:28:40.5387027Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 19.8 MB/s eta 0:00:00
+2026-11-25T06:28:40.5387700Z 
+2026-11-25T06:28:40.6000857Z Installing collected packages: pip
+2026-11-25T06:28:40.6002012Z Attempting uninstall: pip
+2026-11-25T06:28:40.6012250Z Found existing installation: pip 23.0.1
+2026-11-25T06:28:40.7700954Z Uninstalling pip-23.0.1:
+2026-11-25T06:28:40.7769880Z Successfully uninstalled pip-23.0.1
+2026-11-25T06:28:41.6886816Z Successfully installed pip-26.3
+2026-11-25T06:28:41.7437948Z Create complete file
+2026-11-25T06:28:41.7482265Z Successfully set up CPython (3.10.22)
+2026-11-25T06:28:41.7483620Z ##[endgroup]
+2026-11-25T06:28:41.7654643Z ##[group]Run python3 -I -B -S tools/check_workflow_impact.py --ci
+2026-11-25T06:28:41.7655219Z [36;1mpython3 -I -B -S tools/check_workflow_impact.py --ci[0m
+2026-11-25T06:28:41.7681899Z shell: /usr/bin/bash -e {0}
+2026-11-25T06:28:41.7682174Z env:
+2026-11-25T06:28:41.7682462Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-25T06:28:41.7682912Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-25T06:28:41.7683365Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-25T06:28:41.7683762Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-25T06:28:41.7684181Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-25T06:28:41.7684565Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-25T06:28:41.7684887Z ##[endgroup]
+2026-11-25T06:28:41.8416714Z {
+2026-11-25T06:28:41.8417078Z   "schema_version": "1.0.0",
+2026-11-25T06:28:41.8417355Z   "outcome": "passed",
+2026-11-25T06:28:41.8417761Z   "scope": "Committed range from merge base (or empty tree) to HEAD",
+2026-11-25T06:28:41.8418142Z   "changed_files": 10,
+2026-11-25T06:28:41.8418464Z   "fresh_records": [
+2026-11-25T06:28:41.8418791Z     "docs/change-impact/2026-11-24-publication-python-minimum.json"
+2026-11-25T06:28:41.8419141Z   ],
+2026-11-25T06:28:41.8419337Z   "unreviewed_paths": [],
+2026-11-25T06:28:41.8419582Z   "unresolved_verification": [],
+2026-11-25T06:28:41.8420255Z   "limits": "Checks freshness, structure and path coverage only; reviewers assess reasoning and evidence truth. Unresolved verification is not release approval."
+2026-11-25T06:28:41.8421089Z }
+2026-11-25T06:28:41.8507330Z ##[group]Run python3 -I -B -S tools/check_git_inventory.py
+2026-11-25T06:28:41.8507806Z [36;1mpython3 -I -B -S tools/check_git_inventory.py[0m
+2026-11-25T06:28:41.8508186Z [36;1mpython3 -I -B -S tools/check_project.py[0m
+2026-11-25T06:28:41.8508647Z [36;1mpython3 -I -B -S -m unittest discover -s tests -p test_workflow_impact.py -v[0m
+2026-11-25T06:28:41.8509213Z [36;1mpython3 -I -B -S -m unittest discover -s tests -p test_evaluation.py -v[0m
+2026-11-25T06:28:41.8509733Z [36;1mpython3 -I -B -S -m unittest discover -s tests -p test_uber_workflows.py -v[0m
+2026-11-25T06:28:41.8510262Z [36;1mpython3 -I -B -S -m unittest discover -s tests -p test_release.py -v[0m
+2026-11-25T06:28:41.8510992Z [36;1mpython3 -I -B -S -m unittest discover -s tests -p test_plugin.py -v[0m
+2026-11-25T06:28:41.8532493Z shell: /usr/bin/bash -e {0}
+2026-11-25T06:28:41.8532753Z env:
+2026-11-25T06:28:41.8533039Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-25T06:28:41.8533535Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-25T06:28:41.8533975Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-25T06:28:41.8534363Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-25T06:28:41.8534747Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-25T06:28:41.8535144Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-25T06:28:41.8535470Z ##[endgroup]
+2026-11-25T06:28:42.1592369Z {
+2026-11-25T06:28:42.1592849Z   "schema_version": "1.0.0",
+2026-11-25T06:28:42.1593194Z   "outcome": "passed",
+2026-11-25T06:28:42.1593668Z   "scope": "Git index membership and presence of selected source-release inputs only.",
+2026-11-25T06:28:42.1594207Z   "selected_files": 770,
+2026-11-25T06:28:42.1594496Z   "missing_from_git_index": [],
+2026-11-25T06:28:42.1594828Z   "indexed_files_missing_from_worktree": [],
+2026-11-25T06:28:42.1595181Z   "not_established": [
+2026-11-25T06:28:42.1595473Z     "Index/working-byte equality",
+2026-11-25T06:28:42.1595797Z     "committed or published state",
+2026-11-25T06:28:42.1596105Z     "evidence truth",
+2026-11-25T06:28:42.1596366Z     "native host support"
+2026-11-25T06:28:42.1596629Z   ]
+2026-11-25T06:28:42.1596840Z }
+2026-11-25T06:28:42.9711660Z {
+2026-11-25T06:28:42.9712234Z   "schema_version": "1.0.0",
+2026-11-25T06:28:42.9712780Z   "outcome": "passed",
+2026-11-25T06:28:42.9714268Z   "scope": "Release-input containment, preservation, implemented ownership mapping, entrypoint/links/syntax and available original format checks",
+2026-11-25T06:28:42.9716186Z   "checks": [
+2026-11-25T06:28:42.9716435Z     {
+2026-11-25T06:28:42.9716699Z       "name": "release_input_boundary",
+2026-11-25T06:28:42.9717054Z       "outcome": "passed",
+2026-11-25T06:28:42.9717339Z       "detail": {
+2026-11-25T06:28:42.9717602Z         "selected_files": 770,
+2026-11-25T06:28:42.9718276Z         "policy": "Required selected roots, files and ancestors are nonsymlink and contained; traversal errors fail explicitly.",
+2026-11-25T06:28:42.9719079Z         "limit": "Point-in-time checks; not a sandbox against concurrent filesystem mutation."
+2026-11-25T06:28:42.9719491Z       }
+2026-11-25T06:28:42.9719668Z     },
+2026-11-25T06:28:42.9719853Z     {
+2026-11-25T06:28:42.9720053Z       "name": "current_scoped_license",
+2026-11-25T06:28:42.9720328Z       "outcome": "passed",
+2026-11-25T06:28:42.9720551Z       "detail": {
+2026-11-25T06:28:42.9720754Z         "license": "MIT",
+2026-11-25T06:28:42.9721068Z         "scope": "original_work_only; retained third-party terms apply",
+2026-11-25T06:28:42.9721959Z         "decision": "skills/skill-builder/references/license-decision.json",
+2026-11-25T06:28:42.9722535Z         "limit": "Checks declared terms and component identity; does not adjudicate third-party rights."
+2026-11-25T06:28:42.9722989Z       }
+2026-11-25T06:28:42.9723179Z     },
+2026-11-25T06:28:42.9723358Z     {
+2026-11-25T06:28:42.9723577Z       "name": "original_archive_identity",
+2026-11-25T06:28:42.9724141Z       "outcome": "passed",
+2026-11-25T06:28:42.9724380Z       "detail": null
+2026-11-25T06:28:42.9724582Z     },
+2026-11-25T06:28:42.9724957Z     {
+2026-11-25T06:28:42.9725315Z       "name": "manifest_archive_identity",
+2026-11-25T06:28:42.9725811Z       "outcome": "passed",
+2026-11-25T06:28:42.9726229Z       "detail": null
+2026-11-25T06:28:42.9726596Z     },
+2026-11-25T06:28:42.9726900Z     {
+2026-11-25T06:28:42.9727247Z       "name": "substantive_member_set",
+2026-11-25T06:28:42.9727729Z       "outcome": "passed",
+2026-11-25T06:28:42.9728141Z       "detail": null
+2026-11-25T06:28:42.9728486Z     },
+2026-11-25T06:28:42.9728781Z     {
+2026-11-25T06:28:42.9729111Z       "name": "all_source_file_bytes",
+2026-11-25T06:28:42.9729576Z       "outcome": "passed",
+2026-11-25T06:28:42.9729973Z       "detail": {
+2026-11-25T06:28:42.9730334Z         "mismatches": [],
+2026-11-25T06:28:42.9730713Z         "files": 182
+2026-11-25T06:28:42.9731066Z       }
+2026-11-25T06:28:42.9731651Z     },
+2026-11-25T06:28:42.9731959Z     {
+2026-11-25T06:28:42.9732329Z       "name": "uncompressed_content_total",
+2026-11-25T06:28:42.9732828Z       "outcome": "passed",
+2026-11-25T06:28:42.9733224Z       "detail": null
+2026-11-25T06:28:42.9733564Z     },
+2026-11-25T06:28:42.9733864Z     {
+2026-11-25T06:28:42.9734197Z       "name": "canonical_rules",
+2026-11-25T06:28:42.9734634Z       "outcome": "passed",
+2026-11-25T06:28:42.9735035Z       "detail": null
+2026-11-25T06:28:42.9735389Z     },
+2026-11-25T06:28:42.9735692Z     {
+2026-11-25T06:28:42.9736030Z       "name": "all_rule_owners_present",
+2026-11-25T06:28:42.9736559Z       "outcome": "passed",
+2026-11-25T06:28:42.9736985Z       "detail": null
+2026-11-25T06:28:42.9737342Z     },
+2026-11-25T06:28:42.9737651Z     {
+2026-11-25T06:28:42.9737999Z       "name": "rule_owner_contracts",
+2026-11-25T06:28:42.9738467Z       "outcome": "passed",
+2026-11-25T06:28:42.9738725Z       "detail": []
+2026-11-25T06:28:42.9738975Z     },
+2026-11-25T06:28:42.9739144Z     {
+2026-11-25T06:28:42.9739346Z       "name": "version_agreement",
+2026-11-25T06:28:42.9739599Z       "outcome": "passed",
+2026-11-25T06:28:42.9739823Z       "detail": null
+2026-11-25T06:28:42.9740021Z     },
+2026-11-25T06:28:42.9740188Z     {
+2026-11-25T06:28:42.9740382Z       "name": "plugin_package_contract",
+2026-11-25T06:28:42.9740648Z       "outcome": "passed",
+2026-11-25T06:28:42.9740863Z       "detail": {
+2026-11-25T06:28:42.9741078Z         "outcome": "passed",
+2026-11-25T06:28:42.9741995Z         "scope": "Local project-specific plugin checks; URL reachability, PNG decoding, native activation and portal scans are separate."
+2026-11-25T06:28:42.9742802Z       }
+2026-11-25T06:28:42.9742976Z     },
+2026-11-25T06:28:42.9743417Z     {
+2026-11-25T06:28:42.9743792Z       "name": "entrypoint_not_placeholder",
+2026-11-25T06:28:42.9744316Z       "outcome": "passed",
+2026-11-25T06:28:42.9744719Z       "detail": {
+2026-11-25T06:28:42.9745076Z         "lines": 107,
+2026-11-25T06:28:42.9745393Z         "bytes": 14585
+2026-11-25T06:28:42.9745599Z       }
+2026-11-25T06:28:42.9745787Z     },
+2026-11-25T06:28:42.9745960Z     {
+2026-11-25T06:28:42.9746179Z       "name": "single_discoverable_runtime_entry",
+2026-11-25T06:28:42.9746491Z       "outcome": "passed",
+2026-11-25T06:28:42.9746718Z       "detail": null
+2026-11-25T06:28:42.9746917Z     },
+2026-11-25T06:28:42.9747091Z     {
+2026-11-25T06:28:42.9747279Z       "name": "local_document_links",
+2026-11-25T06:28:42.9747539Z       "outcome": "passed",
+2026-11-25T06:28:42.9747756Z       "detail": []
+2026-11-25T06:28:42.9747950Z     },
+2026-11-25T06:28:42.9748137Z     {
+2026-11-25T06:28:42.9748324Z       "name": "python_syntax",
+2026-11-25T06:28:42.9748559Z       "outcome": "passed",
+2026-11-25T06:28:42.9748773Z       "detail": []
+2026-11-25T06:28:42.9748963Z     },
+2026-11-25T06:28:42.9749137Z     {
+2026-11-25T06:28:42.9749329Z       "name": "portable_entrypoint",
+2026-11-25T06:28:42.9749591Z       "outcome": "blocked",
+2026-11-25T06:28:42.9750263Z       "detail": "Strict preserved YAML/field/name-directory validation; see original_portable_validator."
+2026-11-25T06:28:42.9750750Z     },
+2026-11-25T06:28:42.9750923Z     {
+2026-11-25T06:28:42.9751133Z       "name": "original_portable_validator",
+2026-11-25T06:28:42.9751727Z       "outcome": "blocked",
+2026-11-25T06:28:42.9751962Z       "detail": {
+2026-11-25T06:28:42.9752172Z         "outcome": "blocked",
+2026-11-25T06:28:42.9752551Z         "reason": "PyYAML is unavailable; provision reviewed dependencies explicitly.",
+2026-11-25T06:28:42.9752957Z         "skills": []
+2026-11-25T06:28:42.9753168Z       }
+2026-11-25T06:28:42.9753352Z     }
+2026-11-25T06:28:42.9753526Z   ],
+2026-11-25T06:28:42.9753709Z   "failed_checks": [],
+2026-11-25T06:28:42.9753927Z   "not_established": [
+2026-11-25T06:28:42.9754172Z     "semantic truth of all rule decisions",
+2026-11-25T06:28:42.9754466Z     "native discovery or host enforcement",
+2026-11-25T06:28:42.9754753Z     "clean baseline improvement",
+2026-11-25T06:28:42.9755017Z     "public distribution rights",
+2026-11-25T06:28:42.9755274Z     "GitHub CI execution"
+2026-11-25T06:28:42.9755490Z   ]
+2026-11-25T06:28:42.9755662Z }
+2026-11-25T06:28:43.1084124Z test_changed_files_without_fresh_review_fail (test_workflow_impact.WorkflowImpactTests) ... ok
+2026-11-25T06:28:43.1900160Z test_committed_base_and_ci_event_check_the_complete_range (test_workflow_impact.WorkflowImpactTests) ... ok
+2026-11-25T06:28:43.2170978Z test_duplicate_json_keys_cannot_hide_missing_decision (test_workflow_impact.WorkflowImpactTests) ... ok
+2026-11-25T06:28:43.2712403Z test_missing_audit_decision_or_placeholder_is_blocked (test_workflow_impact.WorkflowImpactTests) ... ok
+2026-11-25T06:28:43.3237485Z test_pass_requires_existing_evidence_and_commands (test_workflow_impact.WorkflowImpactTests) ... ok
+2026-11-25T06:28:43.3543858Z test_reasoned_no_change_decisions_pass_without_forcing_domain_edits (test_workflow_impact.WorkflowImpactTests) ... ok
+2026-11-25T06:28:43.3907103Z test_rewriting_or_deleting_prior_record_is_refused (test_workflow_impact.WorkflowImpactTests) ... ok
+2026-11-25T06:28:43.4220054Z test_staged_bytes_are_checked_instead_of_unstaged_working_record (test_workflow_impact.WorkflowImpactTests) ... ok
+2026-11-25T06:28:43.4493358Z test_stale_existing_record_cannot_cover_new_change (test_workflow_impact.WorkflowImpactTests) ... ok
+2026-11-25T06:28:43.4821910Z test_uncovered_second_path_remains_a_failure (test_workflow_impact.WorkflowImpactTests) ... ok
+2026-11-25T06:28:43.5262912Z test_updated_decision_needs_reviewed_owner_and_blocked_status_needs_consequence (test_workflow_impact.WorkflowImpactTests) ... ok
+2026-11-25T06:28:43.5264279Z 
+2026-11-25T06:28:43.5264554Z ----------------------------------------------------------------------
+2026-11-25T06:28:43.5265082Z Ran 11 tests in 0.439s
+2026-11-25T06:28:43.5265294Z 
+2026-11-25T06:28:43.5265411Z OK
+2026-11-25T06:28:43.6385849Z test_activation_requires_trace_event_and_matching_identity (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6405259Z test_contaminated_control_is_unscored_and_unpaired (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6417394Z test_duplicate_unexpected_and_wrong_plan_records_are_rejected (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6429282Z test_even_trial_tie_and_incomplete_query_are_unscored (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6440066Z test_failed_attempt_usage_is_retained_and_unknown_is_not_zero (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6476615Z test_four_conditions_produce_matched_differences_not_best_attempt (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6487006Z test_frozen_corpus_is_balanced_and_split_before_optimization (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6499122Z test_incomplete_activation_cannot_hide_an_observed_invariant_failure (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6509995Z test_invalid_metrics_and_labels_are_rejected (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6522292Z test_invariant_violation_cannot_be_offset_by_correct_answer (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6525472Z test_known_confusion_matrix_and_undefined_metrics (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6529551Z test_malformed_plan_or_observation_containers_cannot_report_zero_test_completion (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.6535195Z test_missing_runs_and_infrastructure_failure_never_become_true_negatives (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.8552292Z test_prepare_freezes_identities_fixtures_and_budget_without_running_agents (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.8571732Z test_tampered_and_escaping_evidence_and_changed_check_set_are_rejected (test_evaluation.EvaluationTests) ... ok
+2026-11-25T06:28:43.8572537Z 
+2026-11-25T06:28:43.8572786Z ----------------------------------------------------------------------
+2026-11-25T06:28:43.8573296Z Ran 15 tests in 0.219s
+2026-11-25T06:28:43.8573500Z 
+2026-11-25T06:28:43.8582224Z OK
+2026-11-25T06:28:44.0629822Z test_blind_bundle_uses_neutral_files_and_scores_identical_payload_ties (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.0954080Z test_blind_export_caps_count_and_total_bytes_before_creating_output (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1223630Z test_blind_preferences_preserve_unknown_missing_and_unsafe_panel (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1245856Z test_contract_detects_owner_drift_without_rewriting_subject (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1275214Z test_contract_refuses_unknown_checks_duplicate_ids_forbidden_mapping_and_escapes (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1379075Z test_counters_need_integer_measures_and_sources_and_unknown_is_retained (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1395006Z test_field_cases_bind_historical_sources_fixtures_and_independent_oracles (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1649477Z test_incomplete_panel_remains_incomplete_and_artifact_or_key_tampering_is_rejected (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1652846Z test_incomplete_trajectory_stays_unknown_but_forbidden_attempt_cannot_pass (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1670878Z test_linter_returns_advisory_locations_and_does_not_execute_commands (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1821234Z test_named_variant_identity_schedule_and_matched_comparisons (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1824823Z test_optional_successor_has_no_order_requirement_and_malformed_rules_are_refused (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1845985Z test_papercut_resolution_needs_independent_identity_bound_regression (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.1916457Z test_reserved_relative_and_oversized_variant_definitions_are_rejected (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.2914605Z test_runtime_only_ablation_cli_scores_an_external_subject_bundle (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.4370257Z test_runtime_only_cli_checks_another_subject_with_spaces_unicode_and_denied_paths (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.4617260Z test_safe_panel_with_unknown_or_missing_preferences_stays_incomplete (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.4620347Z test_trajectory_checks_success_order_and_equivalent_extra_actions (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.4737492Z test_trajectory_failure_is_separate_from_correct_answer_and_survives_unknown_activation (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.5433132Z test_unsupported_huge_metric_returns_structured_cli_failure_without_traceback (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.5593102Z test_whole_skill_ablation_blinds_clean_no_skill_artifacts (test_uber_workflows.UberWorkflowTests) ... ok
+2026-11-25T06:28:44.5594443Z 
+2026-11-25T06:28:44.5594781Z ----------------------------------------------------------------------
+2026-11-25T06:28:44.5595502Z Ran 21 tests in 0.531s
+2026-11-25T06:28:44.5595805Z 
+2026-11-25T06:28:44.5632352Z OK
+2026-11-25T06:28:44.6878931Z test_descendant_symlinks_and_file_ancestors_are_refused (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:44.6888076Z test_environment_file_in_selected_tree_is_refused (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:44.7215835Z test_exact_bytes_manifest_and_determinism (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:44.7220006Z test_existing_output_preserved (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:45.4382464Z test_inconsistent_license_decision_cannot_claim_selected_mit (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:46.7621526Z test_matching_license_copies_with_wrong_full_attribution_are_refused (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:46.7630583Z test_missing_wrong_type_and_unreadable_selected_trees_fail (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:46.8760825Z test_nested_output_is_rejected_without_creating_any_files (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:46.8766063Z test_output_symlink_ancestor_is_rejected_before_writing (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:46.9236640Z test_payload_identity_changes_with_bytes_or_path (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:47.0858299Z test_project_check_rejects_selected_root_before_using_payload (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:47.2757129Z test_project_path_alias_is_not_hidden_by_resolve (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:47.3085672Z test_runtime_has_only_one_discoverable_skill (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:47.5008688Z test_runtime_root_and_ancestor_symlinks_are_refused (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:47.7622893Z test_selected_directory_roots_refused_before_read_or_output (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:47.8705890Z test_selected_files_and_broken_links_are_refused (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:49.0047571Z test_source_runtime_licenses_and_current_metadata_agree (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:49.0050827Z test_stale_generated_manifest_is_refused (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:51.9121189Z test_supported_repeated_builds_keep_exact_archive_identities (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:51.9126203Z test_symlink_source_refused (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:51.9138409Z test_temporary_fixture_canonicalizes_system_temp_alias (test_release.ReleaseContractTests) ... ok
+2026-11-25T06:28:51.9139185Z 
+2026-11-25T06:28:51.9139383Z ----------------------------------------------------------------------
+2026-11-25T06:28:51.9139828Z Ran 21 tests in 7.228s
+2026-11-25T06:28:51.9140013Z 
+2026-11-25T06:28:51.9140111Z OK
+2026-11-25T06:28:52.0457449Z test_integrations_and_missing_executor_declaration_are_refused (test_plugin.PluginPackageTests) ... ok
+2026-11-25T06:28:52.0486232Z test_listing_limits_and_duplicate_prompts_are_refused (test_plugin.PluginPackageTests) ... ok
+2026-11-25T06:28:52.0516100Z test_missing_bad_and_nonsquare_icons_are_refused (test_plugin.PluginPackageTests) ... ok
+2026-11-25T06:28:52.3588786Z test_packaged_runtime_creates_and_audits_another_skill_without_executing_it (test_plugin.PluginPackageTests) ... FAIL
+2026-11-25T06:28:52.3598205Z test_unrelated_traversal_and_colliding_members_are_refused (test_plugin.PluginPackageTests) ... ok
+2026-11-25T06:28:52.4077579Z test_upload_inventory_is_exact_and_kb_is_preserved (test_plugin.PluginPackageTests) ... ok
+2026-11-25T06:28:52.4094955Z test_wrong_version_and_nonobject_metadata_are_refused (test_plugin.PluginPackageTests) ... ok
+2026-11-25T06:28:52.4095696Z 
+2026-11-25T06:28:52.4095924Z ======================================================================
+2026-11-25T06:28:52.4097249Z FAIL: test_packaged_runtime_creates_and_audits_another_skill_without_executing_it (test_plugin.PluginPackageTests)
+2026-11-25T06:28:52.4098191Z ----------------------------------------------------------------------
+2026-11-25T06:28:52.4098732Z Traceback (most recent call last):
+2026-11-25T06:28:52.4107391Z   File "/home/runner/work/skill-builder/skill-builder/tests/test_plugin.py", line 104, in test_packaged_runtime_creates_and_audits_another_skill_without_executing_it
+2026-11-25T06:28:52.4108698Z     self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+2026-11-25T06:28:52.4111944Z AssertionError: 2 != 0 : b'{\n  "schema_version": "1.0.0",\n  "outcome": "static_preparation_completed",\n  "audit_verdict": "inconclusive",\n  "output": "/tmp/tmpspn0f7j_/audited",\n  "static_checks": "blocked",\n  "inventory_coverage": "complete_within_declared_exclusions",\n  "changed_during_check": [],\n  "full_semantic_review": "not_run",\n  "host_trials": "not_run",\n  "target_code_executed": false,\n  "release_ready": false,\n  "evaluation_plan": "EVALUATION-PLAN.md",\n  "evaluation_review": "evaluation-review.json"\n}\n'
+2026-11-25T06:28:52.4114712Z 
+2026-11-25T06:28:52.4114942Z ----------------------------------------------------------------------
+2026-11-25T06:28:52.4115469Z Ran 7 tests in 0.408s
+2026-11-25T06:28:52.4115671Z 
+2026-11-25T06:28:52.4115802Z FAILED (failures=1)
+2026-11-25T06:28:52.4229458Z ##[error]Process completed with exit code 1.
+2026-11-25T06:28:52.4395500Z Post job cleanup.
+2026-11-25T06:28:52.5285435Z [command]/usr/bin/git version
+2026-11-25T06:28:52.5331231Z git version 2.56.1
+2026-11-25T06:28:52.5404096Z Temporarily overriding HOME='/home/runner/work/_temp/ab214aac-359d-4445-af71-014411822bee' before making global git config changes
+2026-11-25T06:28:52.5405476Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-25T06:28:52.5408994Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/skill-builder/skill-builder
+2026-11-25T06:28:52.5463209Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-25T06:28:52.5499309Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-25T06:28:52.5762038Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-25T06:28:52.5802391Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-25T06:28:52.6272216Z Cleaning up orphan processes
+2026-11-25T06:28:52.6653822Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
