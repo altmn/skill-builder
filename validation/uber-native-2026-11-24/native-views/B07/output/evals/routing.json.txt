@@ -1,0 +1,6 @@
+[
+  {"id":"route-receipt","split":"development","should_trigger":true,"prompt":"Review this evaluation receipt and tell me which of its conclusions the evidence supports."},
+  {"id":"route-author","split":"development","should_trigger":false,"prompt":"Write a new rubric for next month's evaluation. No existing results need review."},
+  {"id":"route-dispute","split":"validation","should_trigger":true,"prompt":"The record says the old revision won. Can you tell from the attached logs what loaded and whether the score is justified?"},
+  {"id":"route-opt-out","split":"validation","should_trigger":false,"prompt":"Copy the attached receipt text verbatim for transcription. Do not use the evaluation receipt reviewer or assess the results."}
+]

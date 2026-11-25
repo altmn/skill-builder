@@ -1,0 +1,282 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "skill-builder-evaluation-review",
+  "mode": "audit",
+  "subject": "incident-queue",
+  "semantic_review_performed": true,
+  "items": [
+    {
+      "id": "task_value",
+      "applicability": "applicable",
+      "outcome": "failed",
+      "reason": "Plausible recurring read-only triage. Decision criteria and mixed, missing and out-of-scope handling are unspecified. Incremental value is unknown.",
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "finding_ids": [
+        "IQ-02",
+        "IQ-04"
+      ]
+    },
+    {
+      "id": "metadata_portability",
+      "applicability": "applicable",
+      "outcome": "inconclusive",
+      "reason": "Local format checks passed independently, including the string version and compatibility. Bundled validator blocked. The offline compatibility text states intended operation. Native loading and host variants are unverified.",
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "finding_ids": [
+        "IQ-03"
+      ]
+    },
+    {
+      "id": "routing",
+      "applicability": "applicable",
+      "outcome": "not_run",
+      "reason": "100% precision and recall on every host is unsupported. No independent labels, fixed development/held-out split, repeated fresh trials or verified activation. All confusion counts and scores are unknown.",
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "finding_ids": [
+        "IQ-03"
+      ]
+    },
+    {
+      "id": "execution_benefit",
+      "applicability": "applicable",
+      "outcome": "not_run",
+      "reason": "No matched tasks or fixtures, verified clean no-skill control, explicit or automatic trial, or available prior revision. Incremental effect remains unknown.",
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "finding_ids": [
+        "IQ-02",
+        "IQ-04"
+      ]
+    },
+    {
+      "id": "independent_grading",
+      "applicability": "applicable",
+      "outcome": "not_run",
+      "reason": "No independent oracle, calibration, outcomes, attempt ledger or invariant checks. A self-reported pass supplies no grade.",
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "finding_ids": [
+        "IQ-01",
+        "IQ-06"
+      ]
+    },
+    {
+      "id": "context_resources",
+      "applicability": "applicable",
+      "outcome": "not_run",
+      "reason": "337 entry-point bytes and zero direct references observed. The separate README solicits setup. The 50% claim lacks a measured denominator, real loaded context, tokenizer, cache conditions and all-attempt usage.",
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "finding_ids": [
+        "IQ-01",
+        "IQ-04"
+      ]
+    },
+    {
+      "id": "trust_recovery",
+      "applicability": "applicable",
+      "outcome": "failed",
+      "reason": "Entry point treats incidents as data and forbids service changes. README asks for unsafe execution and unconditional success. The script contains an unscoped write. Denied actions, missing capability and interruption cases remain unrun.",
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "finding_ids": [
+        "IQ-01",
+        "IQ-02",
+        "IQ-06"
+      ]
+    },
+    {
+      "id": "claims_operations",
+      "applicability": "applicable",
+      "outcome": "failed",
+      "reason": "Supported release blocked by the setup directive, unsupported claims and missing public reuse, support and lifecycle evidence. No rollback or artifact ownership is established.",
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "finding_ids": [
+        "IQ-01",
+        "IQ-03",
+        "IQ-04",
+        "IQ-05",
+        "IQ-06"
+      ]
+    }
+  ],
+  "static_format": {
+    "bundled": "blocked",
+    "independent": "passed",
+    "evidence": "independent-format.json"
+  },
+  "live_evaluation": "not_run",
+  "attempts": [],
+  "prior_revision": "unavailable",
+  "metrics": {
+    "tp": null,
+    "fn": null,
+    "fp": null,
+    "tn": null,
+    "precision": null,
+    "recall": null,
+    "false_activation_rate": null,
+    "f1": null,
+    "task_success": null,
+    "improvement": null,
+    "loaded_context_tokens": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "elapsed_seconds": null,
+    "model_calls": null,
+    "cost": null
+  },
+  "unknown_measurement_reason": "No target trial, activation trace, comparison or usage receipt supplied or executed.",
+  "release_readiness": "BLOCKED"
+}

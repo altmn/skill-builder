@@ -1,0 +1,109 @@
+# Rule selection and verification backlog
+
+Profile: instruction. No capability modifiers. The runtime reads user
+input and replies in the conversation. The offline checker is outside
+the runtime payload. This index preserves every canonical rule ID and
+records profile selection and outstanding verification. Unselected
+rules remain unassessed pending individual applicability review.
+
+| ID | Basis | Strength | Status | Verification procedure from catalog |
+| --- | --- | --- | --- | --- |
+| FMT-001 | specification | required | Adopted by profile, verification unrun | Parse the distributed file, not only its source template. |
+| FMT-002 | specification | required | Adopted by profile, verification unrun | Test empty, overlong and mismatched names. |
+| FMT-003 | specification | required | Adopted by profile, verification unrun | Validate names against the selected specification; document an ASCII-only project policy separately. |
+| FMT-004 | specification | required | Adopted by profile, verification unrun | Test missing, empty, non-string and overlong descriptions. |
+| FMT-005 | specification | required | Adopted by profile, verification unrun | Test compatibility length and string-to-string metadata; do not rely on an outdated helper allowlist. |
+| FMT-006 | project | recommended | Adopted by profile, verification unrun | Supply duplicate keys and unsafe YAML fixtures; parsing must fail visibly. |
+| FMT-007 | project | required | Adopted by profile, verification unrun | Validate the exact target package and explicit adapter extension schema. |
+| FMT-008 | project | required | Adopted by profile, verification unrun | Check missing links, path traversal and symlink escape without executing the payload. |
+| FMT-009 | project | recommended | Adopted by profile, verification unrun | Inspect a release manifest for secrets, caches, unused examples and development debris. |
+| FMT-010 | project | required | Adopted by profile, verification unrun | Verify the report does not imply behavioral or security certification. |
+| INS-001 | project | required | Adopted by profile, verification unrun | A reviewer can state the expected artifact or state and independent acceptance condition. |
+| INS-002 | project | recommended | Adopted by profile, verification unrun | Evaluate positive prompts, paraphrases, near misses and opt-outs. |
+| INS-003 | project | required | Adopted by profile, verification unrun | Trace each external or destructive step through an instruction worksheet. |
+| INS-004 | project | required | Adopted by profile, verification unrun | Test both an authorized continuation and an unauthorized scope expansion. |
+| INS-005 | project | recommended | Adopted by profile, verification unrun | Measure unnecessary questions on a fully specified request. |
+| INS-006 | project | recommended | Adopted by profile, verification unrun | Trace a normal and exceptional task; required instructions must arrive before use. |
+| INS-007 | project | recommended | Adopted by profile, verification unrun | Identify the owning implementation and a meaningful failing case. |
+| INS-008 | project | required | Adopted by profile, verification unrun | Search source, generated text, help, tests and README for contradictory copies. |
+| INS-009 | project | required | Adopted by profile, verification unrun | Inject a missing prerequisite and check final output for honest status. |
+| INS-010 | project | recommended | Adopted by profile, verification unrun | Vary wording while preserving expected artifacts and outcomes. |
+| INS-011 | project | required | Adopted by profile, verification unrun | Review unsupported numerical claims and causal explanations. |
+| INS-012 | project | recommended | Adopted by profile, verification unrun | Trace whether each mandatory step contributes to the requested outcome. |
+| ARC-001 | project | recommended | Adopted by profile, verification unrun | Document why each service, generator or installer exists. |
+| ARC-002 | project | recommended | Adopted by profile, verification unrun | Check whether each entry point has a coherent independent task. |
+| ARC-003 | project | required | Adopted by profile, verification unrun | Identify all native tool names, paths, permissions and hooks in an adapter. |
+| ARC-004 | project | conditional | Applicability unassessed | Regenerate and compare the exact artifact; check unresolved variables and references. |
+| ARC-005 | project | conditional | Applicability unassessed | Resume an interrupted workflow without repeating an uncertain external mutation. |
+| ARC-006 | project | conditional | Applicability unassessed | Exercise concurrent work and confirm no overwritten user or peer changes. |
+| ARC-007 | project | conditional | Applicability unassessed | Force timeout and verify that timeout is not interpreted as termination. |
+| ARC-008 | project | recommended | Adopted by profile, verification unrun | Inspect release contents and verify AGENTS.md does not become accidental task policy. |
+| HOST-001 | project | required | Adopted by profile, verification unrun | Separate Grok Build, Grok Bot and API/custom-host claims. |
+| HOST-002 | project | required | Adopted by profile, verification unrun | Match each support claim to dated documentation and execution evidence. |
+| HOST-003 | project | required | Adopted by profile, verification unrun | Test identical field names with different meanings, especially allowed-tools and user-invocable. |
+| HOST-004 | project | required | Adopted by profile, verification unrun | Disable a required capability and verify the branch reports a blocker. |
+| HOST-005 | project | conditional | Applicability unassessed | Invoke from another directory and a path containing spaces. |
+| HOST-006 | project | conditional | Adopted by profile, verification unrun | Compare acceptance conditions across hosts; preserve missing coverage. |
+| HOST-007 | project | required | Adopted by profile, verification unrun | Review badges and README wording against the actual evidence tier. |
+| CMD-001 | project | conditional | Applicability unassessed | Exercise help, malformed input and normal output at the public boundary. |
+| CMD-002 | project | conditional | Applicability unassessed | Validate malformed, empty, partial and successful outputs independently of prose. |
+| CMD-003 | project | required | Applicability unassessed | Use structured arguments or private files; test quotes, newlines and shell metacharacters. |
+| CMD-004 | project | required | Applicability unassessed | Test traversal, symlink escape, existing user files and overwrite conflicts. |
+| CMD-005 | project | conditional | Applicability unassessed | Trace the actual executable chain in an untrusted checkout. |
+| CMD-006 | project | conditional | Applicability unassessed | Force a slow process and verify termination, cleanup and retained error evidence. |
+| CMD-007 | project | conditional | Applicability unassessed | Simulate a completed mutation with a lost response; prevent duplicate effects. |
+| CMD-008 | project | conditional | Applicability unassessed | Run two instances and inspect permissions, collisions and preserved unrelated files. |
+| CMD-009 | project | conditional | Applicability unassessed | Interrupt before and after commit points; inspect old/new state and recovery. |
+| CMD-010 | project | conditional | Applicability unassessed | Change one relevant input or runtime setting and verify invalidation. |
+| SEC-001 | project | required | Adopted by profile, verification unrun | Embed scope-expansion instructions in fixtures and verify they do not authorize actions. |
+| SEC-002 | project | required | Adopted by profile, verification unrun | Map each safety claim to code/host enforcement or label it advisory. |
+| SEC-003 | project | required | Adopted by profile, verification unrun | Make worktree, sandbox or authentication setup fail and inspect fallback effects. |
+| SEC-004 | project | conditional | Applicability unassessed | Exercise the named boundary and document DNS/rebinding/TOCTOU limits. |
+| SEC-005 | project | conditional | Applicability unassessed | Check account access, permitted actions, storage and session cleanup. |
+| SEC-006 | project | required | Adopted by profile, verification unrun | Use synthetic canaries and inspect all sinks, including error paths. |
+| SEC-007 | project | required | Applicability unassessed | Compare telemetry, model calls, sync, crash reporting and publication separately. |
+| SEC-008 | project | required | Adopted by profile, verification unrun | Set sharing off, rerun setup/update, and verify it remains off. |
+| SEC-009 | project | conditional | Applicability unassessed | Check truncated input, detector failure, unknown formats and confidence handling. |
+| SEC-010 | project | conditional | Applicability unassessed | Test missing cap, unit mismatch, retries and concurrent in-flight spend. |
+| SEC-011 | project | conditional | Applicability unassessed | Attempt to replace tests, expected output and evaluator instructions from the target. |
+| SEC-012 | project | conditional | Applicability unassessed | Review event, checkout, string handling, cache/artifact trust and release credentials. |
+| EVAL-001 | project | required | Adopted by profile, verification unrun | List the evidence each layer can and cannot provide. |
+| EVAL-002 | project | required | Adopted by profile, verification unrun | Verify files or durable effects rather than the completion narrative. |
+| EVAL-003 | project | recommended | Adopted by profile, verification unrun | Run a labeled trigger panel and record false positives/negatives. |
+| EVAL-004 | project | required | Adopted by profile, verification unrun | Check distinct failed, blocked, not-run and inconclusive states. |
+| EVAL-005 | project | recommended | Adopted by profile, verification unrun | Ensure no hidden instructions or hooks contaminate the baseline. |
+| EVAL-006 | project | required | Adopted by profile, verification unrun | Retain every attempt and document methodology changes. |
+| EVAL-007 | project | recommended | Adopted by profile, verification unrun | Report denominators, variation, task selection and uncertainty. |
+| EVAL-008 | project | conditional | Applicability unassessed | Review disagreements; use blind comparisons where practical. |
+| EVAL-009 | project | required | Adopted by profile, verification unrun | Check release verdict includes named blockers independently of aggregate quality. |
+| EVAL-010 | project | required | Adopted by profile, verification unrun | Exercise empty discovery and service failure paths. |
+| EVAL-011 | project | required | Adopted by profile, verification unrun | Change relevant bytes after a pass and verify stale evidence is rejected. |
+| EVAL-012 | project | recommended | Adopted by profile, verification unrun | For each new test explain what realistic failure it detects and why it is needed. |
+| EVAL-013 | project | conditional | Applicability unassessed | Retain red/green receipts; do not invent a historical run. |
+| EVAL-014 | project | required | Adopted by profile, verification unrun | Validate the receipt schema and distinguish estimates from measured usage. |
+| PERF-001 | project | recommended | Adopted by profile, verification unrun | Include references, retries, verification and integration in the comparison. |
+| PERF-002 | project | recommended | Adopted by profile, verification unrun | Match cache/process state between baseline and candidate. |
+| PERF-003 | project | required | Adopted by profile, verification unrun | Label byte-based token estimates and unknown usage clearly. |
+| PERF-004 | project | conditional | Applicability unassessed | Change inputs and verify stale authorization/evidence is not reused. |
+| PERF-005 | project | conditional | Applicability unassessed | Compare one-shot and warm-process workloads and failure recovery. |
+| PERF-006 | project | recommended | Adopted by profile, verification unrun | Run the relevant matched panel; report tradeoffs instead of only faster timing. |
+| LIFE-001 | project | conditional | Applicability unassessed | Check preview and receipt against actual written paths and configuration. |
+| LIFE-002 | project | conditional | Applicability unassessed | Install beside unrelated files and verify preservation on update/uninstall. |
+| LIFE-003 | project | conditional | Applicability unassessed | Force a frozen-lock failure and inspect the repair path. |
+| LIFE-004 | project | conditional | Applicability unassessed | Interrupt build/activation and verify a usable known-good installation. |
+| LIFE-005 | project | conditional | Applicability unassessed | Test failed ref lookup and verify no silent fallback to another channel. |
+| LIFE-006 | project | conditional | Applicability unassessed | Test ordering, repeat execution, failure markers and target-version limits. |
+| LIFE-007 | project | conditional | Applicability unassessed | Actually exercise rollback or mark it unverified. |
+| LIFE-008 | project | conditional | Applicability unassessed | Test changed files, shared directories, active hooks and background processes. |
+| LIFE-009 | project | required | Adopted by profile, verification unrun | Verify manifest, checksums, required resources and post-publication identity. |
+| LIFE-010 | project | conditional | Applicability unassessed | Check expected publisher, build source and artifact identity; do not trust a checksum alone. |
+| LIFE-011 | project | conditional | Applicability unassessed | Exercise supported OS/path/shell cases and label untested combinations. |
+| LIFE-012 | project | required | Applicability unassessed | Prepare concrete release content and verify destination/effect before executing. |
+| OSS-001 | project | required | Adopted by profile, verification unrun | A fresh reviewer can assess suitability without reading implementation. |
+| OSS-002 | project | required | Adopted by profile, verification unrun | Check baseline, versions, panel, attempts, grading and caveats. |
+| OSS-003 | project | recommended | Adopted by profile, verification unrun | Check snippets against actual package scripts and generated-output owners. |
+| OSS-004 | project | recommended | Adopted by profile, verification unrun | Do not demand visual evidence for nonvisual changes without a concrete reason. |
+| OSS-005 | project | required | Adopted by profile, verification unrun | Audit copied/adapted source, revisions, terms and required attribution. |
+| OSS-006 | project | recommended | Adopted by profile, verification unrun | Verify the reporting route and realistic maintenance commitment. |
+| OSS-007 | project | required | Applicability unassessed | Inspect effective workflow dependencies and update provenance. |
+| OSS-008 | project | recommended | Adopted by profile, verification unrun | Track review dates and turn real failures into scoped regression cases. |

@@ -1,0 +1,15 @@
+{
+  "host": "Offline panel specification for future Codex runner; native version and surface unknown.",
+  "model": "Unknown until independent runner binds actual environment.",
+  "settings": {
+    "tools": "Planned: disposable workspace and scoped local note reads only; actual inventory unobserved.",
+    "cache_condition": "Fresh sessions planned; actual cache state unobserved."
+  },
+  "policy": "No additional models, agents, or native trials in creation. Future runner records actual enforcement before scoring.",
+  "catalog_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "budget": {
+    "max_runs": 96,
+    "per_run_seconds": 120,
+    "semantic_retries": 0
+  }
+}

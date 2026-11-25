@@ -1,0 +1,17 @@
+# Worked examples
+
+## Semantic answer review
+
+Task asks for the decision, owner, and date from a project discussion. It requires no literal phrasing. The independent rubric expects a pause in rollout, Imani owning test-data refresh, and a new review on Friday.
+
+Answer: “Deployment stays on hold. Imani will regenerate the sample inputs, and the group will revisit the plan Friday.”
+
+All three criteria are satisfied. “Stays on hold” conveys the decision, “Imani will regenerate the sample inputs” supplies the action and owner, and “revisit the plan Friday” supplies the date. An answer that says “Imani will pitch in” would leave role ownership unestablished.
+
+## Unknown activation
+
+An illustrative excerpt gives an intended SHA-256, a null actual activation hash, a reported answer pass, and no verified full-read event. Report intended identity as stated, actual identity as unknown and the prior-version comparison as unscored. Preserve “reported answer pass” while leaving independent semantic judgment unscored if the answer or rubric is absent. Keep recorded failed attempts and null cost visible. Uncontrolled cache and session overlap further limit attribution.
+
+## Canonical rule identifier
+
+In a field-only excerpt, `{"rule_id":"EVAL-008"}` demonstrates the canonical identifier field. For `{"id":"EVAL-008"}` report both missing `rule_id` and unexpected `id`. If both are present, report unexpected `id` even when they agree. None of these excerpts supplies every field required to validate a full canonical traceability entry.

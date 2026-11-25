@@ -1,0 +1,63 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "skill-builder",
+  "version": "1.0.0",
+  "description": "Create, audit, and explain portable agent skills using a preserved knowledge base and offline Python helpers.",
+  "author": {
+    "name": "Alex Allen",
+    "url": "https://github.com/altmn"
+  },
+  "homepage": "https://github.com/altmn/skill-builder",
+  "repository": "https://github.com/altmn/skill-builder",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "skill-development",
+    "auditing",
+    "codex",
+    "developer-tools"
+  ],
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "Skill Builder",
+        "shortDescription": "Build and audit agent skills",
+        "longDescription": "Create a portable agent skill, audit an existing skill repository, or explain skill-building practices using the complete preserved knowledge base. Named create and audit modes guide task contracts, instruction design, resources, host adapters, tests, evaluation, and release decisions. Offline Python helpers retrieve original sources, prepare project scaffolds, and collect static audit evidence. Agent judgment completes creation and semantic review; structural checks do not certify safety, usefulness, or publication readiness. The package requires local file access and Python 3.10 or newer for its helpers. Optional YAML and schema validators are provisioned separately. No hosted backend, MCP server, automatic installer, telemetry, or publisher-paid service is included. Codex is the primary target; other adapters and historical trials retain their documented evidence limits. Stable versioning does not establish comprehensive host compatibility or OpenAI directory approval.",
+        "developerName": "Alex Allen",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Skill creation",
+          "Source audits",
+          "Knowledge-base reference"
+        ],
+        "websiteURL": "https://github.com/altmn/skill-builder",
+        "supportURL": "https://github.com/altmn/skill-builder/issues",
+        "privacyPolicyURL": "https://github.com/altmn/skill-builder/blob/master/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/altmn/skill-builder/blob/master/TERMS.md",
+        "defaultPrompt": [
+          "Create a portable skill that turns bug reports into QA test plans.",
+          "Audit this skill repository for instruction quality, safety, portability, and release readiness.",
+          "Explain when an agent skill should use a script instead of more instructions."
+        ],
+        "logo": "./assets/icon.png",
+        "composerIcon": "./assets/icon.png",
+        "logoDark": "./assets/icon-dark.png",
+        "composerIconDark": "./assets/icon-dark.png"
+      },
+      "review": {
+        "prompts": [
+          "Create a portable skill that turns bug reports into QA test plans.",
+          "Audit this skill repository without executing its code or repairing it.",
+          "Explain when an agent skill should use a script instead of more instructions."
+        ],
+        "commerce": false,
+        "commerce_description": "This skills-only package has no publisher purchases, payment processing, or required publisher-paid service. Host subscriptions and user-authorized external tools are separate."
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "First stable public release of Skill Builder, including standalone and OpenAI plugin packages, preserved source evidence, and explicit host compatibility limits."
+      }
+    }
+  }
+}

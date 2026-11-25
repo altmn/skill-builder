@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "events": [
+    {
+      "kind": "skill_activation_succeeded",
+      "skill_sha256": "e8de47c086126182bcf84e92909ef8e913dcfd78f70452f337e591e83c1995fe"
+    }
+  ],
+  "raw_turn_completed": true,
+  "raw_trace_sha256": "c2806c9ffaffeebe463b639d77b4af79fb7d91b9acf5dbb9fb531c965291860f",
+  "basis": "Exact full SKILL.md bytes observed in successful command output; staged bytes rechecked."
+}

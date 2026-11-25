@@ -1,0 +1,91 @@
+{
+  "artifacts": "/var/folders/cr/t3l2xddj6x77vp_7482n4jkm0000gn/T/skill-builder-F04-final-w5wy5muc",
+  "results": [
+    {
+      "name": "focused-python315",
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_skill_builder.py",
+        "-k",
+        "owned_failure_cleanup",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "focused-python310",
+      "command": [
+        "/opt/homebrew/bin/python3.10",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_skill_builder.py",
+        "-k",
+        "owned_failure_cleanup",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "runtime-suite",
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_skill_builder.py",
+        "-v"
+      ],
+      "exit_code": 1
+    },
+    {
+      "name": "project-check",
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "tools/check_project.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "before-regression-panel",
+      "source": "git HEAD:skills/skill-builder/scripts/skill_builder.py",
+      "tests_run": 7,
+      "failures": 1,
+      "errors": 4
+    }
+  ],
+  "files": [
+    {
+      "path": "skills/skill-builder/scripts/skill_builder.py",
+      "sha256": "56d3b340ec63fbea4db76d96ad3ef2e78e65ba39eea9793d71f508135e709c0a"
+    },
+    {
+      "path": "tests/test_skill_builder.py",
+      "sha256": "c7755a747893b92b798466089d70442dcadd911348cafda341eea2f51292facb"
+    },
+    {
+      "path": "skills/skill-builder/references/cli.md",
+      "sha256": "de8aed74b23795893f85c29c7d86526e0afc67a654defa8ffb99d571d15ebd4c"
+    }
+  ]
+}

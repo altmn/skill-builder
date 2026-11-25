@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "package-reproduction-observation-companion",
+  "outcome": "passed_for_local_package_reproduction",
+  "command": "python3 -I -B tools/build_release.py --output NEW_DIRECTORY",
+  "identical_input_pair": true,
+  "runtime_and_source_archives_identical_across_pair": true,
+  "written_member_verification": "Builder reread every written member and compared exact bytes; packaged grants explicitly checked for Alex Allen and MIT.",
+  "runtime_archive": {
+    "filename": "skill-builder-1.0.0-rc.2.zip",
+    "size_bytes": 12010297,
+    "sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+    "payload_sha256": "0e64bba5827c66df799bcb0690c6567ed14682e5c0457fa6c05845841549dc84",
+    "payload_files": 24
+  },
+  "source_identity_note": "Source ZIP hashes for this pre-evidence pair remain in detached receipts outside source inputs. Appending this observation changes source-package inputs; final enclosing ZIP identity remains detached.",
+  "checks_not_promoted": [
+    "Full optional schema validation remains dependency-blocked",
+    "Native host panels not_run",
+    "Publication not_run"
+  ]
+}

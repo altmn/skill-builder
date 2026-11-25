@@ -1,0 +1,94 @@
+{
+  "schema_version": "2.0",
+  "record_type": "source-review",
+  "review_id": "IQ-LOCAL",
+  "artifact": {
+    "artifact_id": "incident-queue-local-files",
+    "source_commit": null,
+    "package_sha256": null,
+    "activated_source": null,
+    "activated_sha256": null,
+    "missing_identity_reason": "Supplied filesystem only. No Git, distributed artifact or native activation evidence."
+  },
+  "review_depth": "semantic_full",
+  "sources": [
+    {
+      "source_id": "IQ-SKILL.md",
+      "revision": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+      "path": "incident-queue/SKILL.md",
+      "line_count": 11,
+      "ranges": [
+        {
+          "start": 1,
+          "end": 11
+        }
+      ],
+      "selectors": [],
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ]
+    },
+    {
+      "source_id": "IQ-README.md",
+      "revision": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+      "path": "incident-queue/README.md",
+      "line_count": 5,
+      "ranges": [
+        {
+          "start": 1,
+          "end": 5
+        }
+      ],
+      "selectors": [],
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L1-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ]
+    },
+    {
+      "source_id": "IQ-setup.py",
+      "revision": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+      "path": "incident-queue/setup.py",
+      "line_count": 2,
+      "ranges": [
+        {
+          "start": 1,
+          "end": 2
+        }
+      ],
+      "selectors": [],
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ]
+    }
+  ],
+  "reviewed_at": "2026-11-25T04:08:27.603811+00:00",
+  "findings": [
+    "IQ-01",
+    "IQ-02",
+    "IQ-03",
+    "IQ-04",
+    "IQ-05",
+    "IQ-06"
+  ],
+  "limits": [
+    "Three of three supplied files read in full. Tracked coverage and actual host loading unknown."
+  ]
+}

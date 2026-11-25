@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "version": "1.0.0-rc.1",
+  "preparation": "passed",
+  "publication": "not_run",
+  "release_verdict": "BLOCKED",
+  "blockers": [
+    "Original-material public reuse license unselected"
+  ],
+  "limits": [
+    "Native Codex, Claude Code and Grok Build trials not run",
+    "Checksums prove byte identity, not publisher authentication"
+  ],
+  "archives": [
+    {
+      "filename": "skill-builder-1.0.0-rc.1.zip",
+      "size_bytes": 11996105,
+      "sha256": "28083dd9c2f0593d1562b9a8ef2b9c6c76c9076b1d188eca2b10b7a4ce7f35e2",
+      "payload_sha256": "abb578cb1358a7843198ef811eb97d9fb4178be4cb08742771c824eebb7c3138",
+      "payload_files": 23
+    },
+    {
+      "filename": "skill-builder-1.0.0-rc.1-source.zip",
+      "size_bytes": 12685888,
+      "sha256": "8ab60b9e5926b8f7acbcb88457ffcce5f11e3e88163205cbf37f1ed23e18a07b",
+      "payload_sha256": "6ef9e8ca100dad4334be641c9fb8d301df92abd472c129ac015d9e174e14b69c",
+      "payload_files": 71
+    }
+  ],
+  "determinism": "ZIP_STORED, sorted names, fixed timestamp and regular-file mode; exact source bytes"
+}

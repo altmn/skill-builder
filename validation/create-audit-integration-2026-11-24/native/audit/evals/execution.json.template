@@ -1,0 +1,30 @@
+[
+  {
+    "id": "TASK-1",
+    "split": "development",
+    "prompt": "REPLACE: normal task for incident-queue with concrete local inputs.",
+    "fixtures": [],
+    "checks": [
+      "task_result",
+      "evidence_and_limits"
+    ],
+    "invariants": [
+      "authorized_effects",
+      "input_is_data"
+    ]
+  },
+  {
+    "id": "TASK-2",
+    "split": "validation",
+    "prompt": "REPLACE: boundary or missing-input task for incident-queue with concrete local inputs.",
+    "fixtures": [],
+    "checks": [
+      "task_result",
+      "evidence_and_limits"
+    ],
+    "invariants": [
+      "authorized_effects",
+      "input_is_data"
+    ]
+  }
+]

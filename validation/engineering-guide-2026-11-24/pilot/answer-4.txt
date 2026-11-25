@@ -1,0 +1,14 @@
+**Turn a step into code when you can define the correct result, or a clear pass/fail condition, ahead of time and getting it wrong matters.** Keep instructions for interpreting the user’s intent, choosing the workflow, and deciding what the evidence supports.
+
+| Put in code | Keep in `SKILL.md` |
+|---|---|
+| Parse structured inputs, calculate values, and validate required fields. | Decide which inputs matter and how to handle meaningful ambiguity. |
+| Apply exact file edits, render fixed templates, and check output formats. | Decide what content belongs in the output and what completion means. |
+| Enforce path restrictions, handle partial writes, and manage timeouts or safe retries. | Define the allowed effects, when to invoke the tool, and when to stop. |
+| Run objective checks and return explicit results such as `passed`, `failed`, or `blocked`. | Interpret those results and explain what remains unverified. |
+
+For example, a release-note skill can use code to read commit metadata, render Markdown, and validate required sections. The agent still decides which changes matter to readers and how to explain them. If the skill can publish, the publishing tool or host should enforce the applicable permissions.
+
+Start with one small helper for a step the agent repeatedly gets wrong, or for an invariant every run must satisfy. Give it explicit inputs, outputs, side effects, and failure behavior. A short instruction is usually enough for a low-risk step that needs judgment and already works reliably.
+
+*Source: Skill Builder knowledge base, `handbook/02-instruction-engineering.md` (“Put rules at the right loading level”), `handbook/05-commands-and-resources.md` (“Choose code for deterministic work”), and `handbook/07-security-and-privacy.md` (“Model instructions are one control layer”).*

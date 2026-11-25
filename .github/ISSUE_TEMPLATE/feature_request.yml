@@ -1,0 +1,10 @@
+name: Feature request
+description: Describe a concrete skill-building need.
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Task and desired outcome
+      description: Explain the current limitation, a synthetic example and observable success criteria.
+    validations:
+      required: true

@@ -1,0 +1,7 @@
+{
+  "complete": true,
+  "events": [],
+  "raw_turn_completed": true,
+  "raw_trace_sha256": "6a1a5e6750123e4a945a07e75a4216b2ad12e034f53d06eeee659eef91ba1638",
+  "basis": "No target read/activation attempt observed in complete trace."
+}

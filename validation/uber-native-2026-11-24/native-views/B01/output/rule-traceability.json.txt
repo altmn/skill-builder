@@ -1,0 +1,2035 @@
+{
+  "schema_version": "2.0",
+  "record_type": "rule-traceability",
+  "project": "evaluation-receipt-reviewer",
+  "profile": "instruction",
+  "modifiers": [],
+  "selected_at": "2026-11-24T00:00:00-08:00",
+  "records": [
+    {
+      "rule_id": "FMT-001",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": false,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: A skill has SKILL.md with YAML frontmatter and a Markdown body.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Parse the distributed file, not only its source template.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "FMT-002",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": false,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: name is a nonempty string, at most 64 characters, and matches its directory.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Test empty, overlong and mismatched names.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "FMT-003",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": false,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: name follows the published lowercase alphanumeric/hyphen rules without boundary or consecutive hyphens.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Validate names against the selected specification; document an ASCII-only project policy separately.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "FMT-004",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": false,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: description is a nonempty string of at most 1024 characters.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Test missing, empty, non-string and overlong descriptions.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "FMT-005",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": false,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Optional standard fields obey their documented types and limits, including compatibility and metadata.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Test compatibility length and string-to-string metadata; do not rely on an outdated helper allowlist.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "FMT-006",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Reject duplicate YAML keys, unsafe tags and ambiguous coercion in distributed metadata.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Supply duplicate keys and unsafe YAML fixtures; parsing must fail visibly.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "FMT-007",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Portable metadata contains no undeclared host extension or unresolved template variable.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Validate the exact target package and explicit adapter extension schema.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "FMT-008",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Runtime resource references resolve within the declared package or an explicitly allowed dependency.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check missing links, path traversal and symlink escape without executing the payload.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "FMT-009",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: The package contains only needed runtime resources and applicable notices.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Inspect a release manifest for secrets, caches, unused examples and development debris.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "FMT-010",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Format-validation claims list their checked and unchecked properties.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Verify the report does not imply behavioral or security certification.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-001",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Define a concrete outcome, inputs, scope and output contract.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "A reviewer can state the expected artifact or state and independent acceptance condition.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-002",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Discovery text states triggers and relevant boundaries early.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Evaluate positive prompts, paraphrases, near misses and opt-outs.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-003",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Consequential instructions identify condition, action, evidence, failure behavior and authority.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Trace each external or destructive step through an instruction worksheet.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-004",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Respect existing user authorization and higher-level execution policy.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Test both an authorized continuation and an unauthorized scope expansion.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-005",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Ask only for missing information that materially changes the task or effect.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Measure unnecessary questions on a fully specified request.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-006",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Put branch-specific detail in references with explicit load conditions.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Trace a normal and exceptional task; required instructions must arrive before use.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-007",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Fix deterministic failures in resources before adding repeated prompt warnings.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Identify the owning implementation and a meaningful failing case.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-008",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: One authoritative owner defines each policy or command contract.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Search source, generated text, help, tests and README for contradictory copies.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-009",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Unavailable checks and partial completion remain visible.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Inject a missing prerequisite and check final output for honest status.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-010",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Examples teach decisions without requiring exact prose when meaning is the contract.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Vary wording while preserving expected artifacts and outcomes.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-011",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Keep observed facts, estimates, hypotheses and recommendations distinct.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Review unsupported numerical claims and causal explanations.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "INS-012",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Remove task-irrelevant promotion, profiling and repeated ceremony from the core path.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Trace whether each mandatory step contributes to the requested outcome.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "ARC-001",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Choose instruction-only, resource-assisted or suite/runtime according to actual needs.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Document why each service, generator or installer exists.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "ARC-002",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Split discoverable skills by user intent, capability or materially different effects.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check whether each entry point has a coherent independent task.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "ARC-003",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Keep portable task logic separate from host integration.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Identify all native tool names, paths, permissions and hooks in an adapter.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "ARC-004",
+      "decision": "not_assessed",
+      "reason": "Applicability requires further assessment for this source-only delivery.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Generated artifacts have deterministic sources, provenance and drift checks.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Regenerate and compare the exact artifact; check unresolved variables and references.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "ARC-005",
+      "decision": "not_assessed",
+      "reason": "Applicability requires further assessment for this source-only delivery.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Handoffs contain identity, scope, decisions, outputs, status and pending effects.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Resume an interrupted workflow without repeating an uncertain external mutation.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "ARC-006",
+      "decision": "not_applicable",
+      "reason": "No parallel workers are part of this project.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Parallel workers have disjoint writes or an explicit integration owner.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Exercise concurrent work and confirm no overwritten user or peer changes.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "ARC-007",
+      "decision": "not_applicable",
+      "reason": "The source project has no shared snapshot writer or coordinated readers.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Readers finish or are confirmed stopped before a shared snapshot changes.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Force timeout and verify that timeout is not interpreted as termination.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "ARC-008",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Repository contribution documents are distinct from installed task instructions.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Inspect release contents and verify AGENTS.md does not become accidental task policy.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "HOST-001",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Advertise named hosts and products rather than model brands alone.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Separate Grok Build, Grok Bot and API/custom-host claims.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "HOST-002",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Record host version, platform, capability and tested status.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Match each support claim to dated documentation and execution evidence.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "HOST-003",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Translate permission and invocation semantics explicitly.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Test identical field names with different meanings, especially allowed-tools and user-invocable.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "HOST-004",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Unsupported and unknown capabilities do not silently become supported.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Disable a required capability and verify the branch reports a blocker.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "HOST-005",
+      "decision": "adopted",
+      "reason": "Applies to receipt provenance, independent grading, or the skill's relative reference.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Failure to satisfy the control: Resource paths work independently of the caller working directory.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Invoke from another directory and a path containing spaces.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "HOST-006",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: For each secondary host claimed as functionally exercised, safety exercised or supported, run the applicable shared outcome and denied-action cases. Format-only targets remain explicitly untested for behavior.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Compare acceptance conditions across hosts; preserve missing coverage.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "HOST-007",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Format compatibility is not presented as functional or security support.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Review badges and README wording against the actual evidence tier.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "CMD-001",
+      "decision": "not_applicable",
+      "reason": "The runtime contains prose only and defines no executable command, writes, temporary state or remote mutations.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Public commands document inputs, outputs, effects, errors, limits and cleanup.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Exercise help, malformed input and normal output at the public boundary.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "CMD-002",
+      "decision": "not_applicable",
+      "reason": "The runtime contains prose only and defines no executable command, writes, temporary state or remote mutations.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Machine output uses a versioned schema and explicit result states.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Validate malformed, empty, partial and successful outputs independently of prose.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "CMD-003",
+      "decision": "not_applicable",
+      "reason": "The runtime contains prose only and defines no executable command, writes, temporary state or remote mutations.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Untrusted text is passed as data, not interpolated into shell source.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Use structured arguments or private files; test quotes, newlines and shell metacharacters.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "CMD-004",
+      "decision": "not_applicable",
+      "reason": "The runtime contains prose only and defines no executable command, writes, temporary state or remote mutations.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Writes and deletions validate destination scope and ownership.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Test traversal, symlink escape, existing user files and overwrite conflicts.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "CMD-005",
+      "decision": "not_assessed",
+      "reason": "Applicability requires further assessment for this source-only delivery.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Validators and tests are inspected for hooks, plugins, downloads and side effects before execution.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Trace the actual executable chain in an untrusted checkout.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "CMD-006",
+      "decision": "not_applicable",
+      "reason": "The runtime contains prose only and defines no executable command, writes, temporary state or remote mutations.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Timeout, cancellation and retry behavior are bounded and observable.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Force a slow process and verify termination, cleanup and retained error evidence.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "CMD-007",
+      "decision": "not_applicable",
+      "reason": "The runtime contains prose only and defines no executable command, writes, temporary state or remote mutations.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Uncertain remote outcomes are reconciled before retry.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Simulate a completed mutation with a lost response; prevent duplicate effects.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "CMD-008",
+      "decision": "not_applicable",
+      "reason": "The runtime contains prose only and defines no executable command, writes, temporary state or remote mutations.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Temporary paths are unique and private; cleanup removes only owned state.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Run two instances and inspect permissions, collisions and preserved unrelated files.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "CMD-009",
+      "decision": "not_applicable",
+      "reason": "The runtime contains prose only and defines no executable command, writes, temporary state or remote mutations.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Durable writes survive interruption without false completion.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Interrupt before and after commit points; inspect old/new state and recovery.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "CMD-010",
+      "decision": "adopted",
+      "reason": "Applies to receipt provenance, independent grading, or the skill's relative reference.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Failure to satisfy the control: Reused results bind to exact relevant inputs and configuration.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Change one relevant input or runtime setting and verify invalidation.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "SEC-001",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Treat lower-trust retrieved content, repository task data and tool results as data rather than new authority. Apply host-designated instruction sources only at their actual trust level, without expanding user authorization or overriding higher-level policy.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Embed scope-expansion instructions in fixtures and verify they do not authorize actions.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "SEC-002",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: List protected resources, trust boundaries and enforcement mechanisms.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Map each safety claim to code/host enforcement or label it advisory.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "SEC-003",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: A control failure does not silently broaden access or weaken isolation.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Make worktree, sandbox or authentication setup fail and inspect fallback effects.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "SEC-004",
+      "decision": "not_assessed",
+      "reason": "Applicability requires further assessment for this source-only delivery.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Filesystem and network limits protect actual operations, including redirects and path resolution.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Exercise the named boundary and document DNS/rebinding/TOCTOU limits.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "SEC-005",
+      "decision": "not_applicable",
+      "reason": "The skill has no browser integration or reusable browser session.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Browser profile/session reuse is explicit and scoped.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check account access, permitted actions, storage and session cleanup.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "SEC-006",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Credentials are excluded from logs, arguments, URLs and exported artifacts where avoidable.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Use synthetic canaries and inspect all sinks, including error paths.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "SEC-007",
+      "decision": "not_applicable",
+      "reason": "The review workflow authorizes no external data flow.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Each external data flow has destination, content, default, authority and retention documented.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Compare telemetry, model calls, sync, crash reporting and publication separately.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "SEC-008",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Opt-outs persist across setup, upgrade and endpoint changes.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Set sharing off, rerun setup/update, and verify it remains off.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "SEC-009",
+      "decision": "not_assessed",
+      "reason": "Applicability requires further assessment for this source-only delivery.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Classifier and redaction limits are documented and tested.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check truncated input, detector failure, unknown formats and confidence handling.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "SEC-010",
+      "decision": "not_applicable",
+      "reason": "The review workflow authorizes no paid operations or workers.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Paid operations have enforced bounds across parent and workers.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Test missing cap, unit mismatch, retries and concurrent in-flight spend.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "SEC-011",
+      "decision": "adopted",
+      "reason": "Applies to receipt provenance, independent grading, or the skill's relative reference.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Failure to satisfy the control: Hostile repositories cannot control the grader or authoritative expected result.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Attempt to replace tests, expected output and evaluator instructions from the target.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "SEC-012",
+      "decision": "not_applicable",
+      "reason": "No project CI or distribution automation is included.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: CI and distribution isolate untrusted input from privileged execution.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Review event, checkout, string handling, cache/artifact trust and release credentials.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "EVAL-001",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Separate structure, resource correctness and full agent outcomes.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "List the evidence each layer can and cannot provide.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-002",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Task cases have independent acceptance conditions and real artifact/state checks.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Verify files or durable effects rather than the completion narrative.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-003",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Discovery has positive, negative, ambiguous and opt-out cases.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Run a labeled trigger panel and record false positives/negatives.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-004",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Include missing prerequisite, denied action, malformed output and interruption cases.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check distinct failed, blocked, not-run and inconclusive states.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-005",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Compare candidate, previous version and a clean no-skill control where applicable.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Ensure no hidden instructions or hooks contaminate the baseline.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-006",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Freeze acceptance, retry and exclusion policies before a comparison.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Retain every attempt and document methodology changes.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-007",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Use held-out tasks and repeated trials for stochastic claims.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Report denominators, variation, task selection and uncertainty.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-008",
+      "decision": "adopted",
+      "reason": "Applies to receipt provenance, independent grading, or the skill's relative reference.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Failure to satisfy the control: Subjective graders are calibrated and versioned.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Review disagreements; use blind comparisons where practical.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-009",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Critical safety failures cannot be hidden by an average score.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check release verdict includes named blockers independently of aggregate quality.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-010",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: A zero-test or unavailable-provider result cannot count as a passing check.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Exercise empty discovery and service failure paths.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-011",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Verification binds to the exact package or input revision.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Change relevant bytes after a pass and verify stale evidence is rejected.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-012",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Tests protect observable contracts and credible regressions.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "For each new test explain what realistic failure it detects and why it is needed.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-013",
+      "decision": "adopted",
+      "reason": "Applies to receipt provenance, independent grading, or the skill's relative reference.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Failure to satisfy the control: Regression claims include before-fix failure evidence or an explicit limit.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Retain red/green receipts; do not invent a historical run.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "EVAL-014",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Evaluation receipts include versions, inputs, attempts, outcomes, artifacts and missing data.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Validate the receipt schema and distinguish estimates from measured usage.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "PERF-001",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Measure total activated context and end-to-end work.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Include references, retries, verification and integration in the comparison.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "PERF-002",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Report cold and warm conditions separately.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Match cache/process state between baseline and candidate.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "PERF-003",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Token, latency and cost claims identify their measurement method.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Label byte-based token estimates and unknown usage clearly.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "PERF-004",
+      "decision": "not_applicable",
+      "reason": "The skill owns no cache.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Caches have keys, invalidation, retention and sensitive-data policies.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Change inputs and verify stale authorization/evidence is not reused.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "PERF-005",
+      "decision": "not_applicable",
+      "reason": "The skill starts no persistent process.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Persistent processes justify their lifecycle/security cost with measurements.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Compare one-shot and warm-process workloads and failure recovery.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "PERF-006",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Performance changes preserve task and safety acceptance conditions.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Run the relevant matched panel; report tradeoffs instead of only faster timing.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "LIFE-001",
+      "decision": "not_applicable",
+      "reason": "This source project provides no installer, updater, migration, rollback or removal integration.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Installation targets one declared host/scope and inspectable version.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check preview and receipt against actual written paths and configuration.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "LIFE-002",
+      "decision": "not_applicable",
+      "reason": "This source project provides no installer, updater, migration, rollback or removal integration.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Ownership records distinguish project files from existing user data.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Install beside unrelated files and verify preservation on update/uninstall.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "LIFE-003",
+      "decision": "not_applicable",
+      "reason": "This source project provides no installer, updater, migration, rollback or removal integration.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Locked dependency failure is explicit rather than silently refreshing the lockfile.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Force a frozen-lock failure and inspect the repair path.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "LIFE-004",
+      "decision": "not_applicable",
+      "reason": "This source project provides no installer, updater, migration, rollback or removal integration.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Updates stage and validate before activation when the runtime requires it.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Interrupt build/activation and verify a usable known-good installation.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "LIFE-005",
+      "decision": "not_applicable",
+      "reason": "This source project provides no installer, updater, migration, rollback or removal integration.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Stable/development channels resolve to explicit intended revisions.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Test failed ref lookup and verify no silent fallback to another channel.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "LIFE-006",
+      "decision": "not_applicable",
+      "reason": "This source project provides no installer, updater, migration, rollback or removal integration.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: One deterministic owner runs bounded versioned migrations.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Test ordering, repeat execution, failure markers and target-version limits.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "LIFE-007",
+      "decision": "not_applicable",
+      "reason": "This source project provides no installer, updater, migration, rollback or removal integration.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Rollback claims cover package, dependencies and state compatibility.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Actually exercise rollback or mark it unverified.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "LIFE-008",
+      "decision": "not_applicable",
+      "reason": "This source project provides no installer, updater, migration, rollback or removal integration.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Uninstall removes only owned integrations and preserves chosen user data.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Test changed files, shared directories, active hooks and background processes.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "LIFE-009",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Release checks inspect the exact distributed artifact.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Verify manifest, checksums, required resources and post-publication identity.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "LIFE-010",
+      "decision": "not_assessed",
+      "reason": "Applicability requires further assessment for this source-only delivery.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Provenance/checksum verification uses an explicit trust model.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check expected publisher, build source and artifact identity; do not trust a checksum alone.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "LIFE-011",
+      "decision": "not_applicable",
+      "reason": "This source project provides no installer, updater, migration, rollback or removal integration.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Lifecycle support is tested on claimed platforms.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Exercise supported OS/path/shell cases and label untested combinations.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "LIFE-012",
+      "decision": "not_applicable",
+      "reason": "Delivery is local source only. No external publication is in scope.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: External publication is covered by current authorization.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Prepare concrete release content and verify destination/effect before executing.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "OSS-001",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: README describes task, example, support, install effects, data use, limits and removal.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "A fresh reviewer can assess suitability without reading implementation.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "OSS-002",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Public claims link to reproducible evidence and retain negative results.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check baseline, versions, panel, attempts, grading and caveats.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "OSS-003",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Contribution instructions name canonical files and valid commands.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check snippets against actual package scripts and generated-output owners.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "OSS-004",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: PR requirements are proportional to changed behavior.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Do not demand visual evidence for nonvisual changes without a concrete reason.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "OSS-005",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Licenses and third-party notices accompany redistributed material.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Audit copied/adapted source, revisions, terms and required attribution.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "OSS-006",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Security reporting and supported versions are visible.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Verify the reporting route and realistic maintenance commitment.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    },
+    {
+      "rule_id": "OSS-007",
+      "decision": "not_applicable",
+      "reason": "The source project provides no CI workflows or reusable actions.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Actions and reusable workflow references follow a reviewed immutable dependency policy.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Inspect effective workflow dependencies and update provenance.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [],
+      "release_consequence": "Outside this source project's declared capability scope."
+    },
+    {
+      "rule_id": "OSS-008",
+      "decision": "adopted",
+      "reason": "Selected by the instruction profile for source or behavioral verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Failure to satisfy the control: Maintenance rechecks host semantics, examples, dependencies and data flows.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Track review dates and turn real failures into scoped regression cases.",
+        "outcome": "not_run"
+      },
+      "evidence": [],
+      "release_consequence": "Keep assurance for this control unverified until assessed against the delivered source and applicable run evidence."
+    }
+  ]
+}

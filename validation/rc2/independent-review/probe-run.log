@@ -1,0 +1,9 @@
+full_preservation: passed
+canonical_rule_full_fields_preserved: passed
+all_accepted_unicode_scalars_serializer_roundtrip: passed
+cli_unicode_create_roundtrip_and_portable_format: passed
+mixed_record_batch_continues_and_hides_values: passed
+unresolvable_user_path_retains_batch: FAILED
+current_license_consistency: passed
+reviewed_code_unchanged_during_probe: passed
+{"observations": 8, "failed": ["unresolvable_user_path_retains_batch"]}

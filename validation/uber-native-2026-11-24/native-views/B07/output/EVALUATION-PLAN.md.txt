@@ -1,0 +1,9 @@
+# Evaluation plan
+
+Use the case IDs, splits and inputs in [routing.json](evals/routing.json) and [execution.json](evals/execution.json), with [rubric version 1](evals/RUBRIC.md) as the independent oracle. Validation cases stay separate from tuning. For each case, expose only explicitly named fixture bytes and the prompt. Capture the report and evidence trace for a separate reviewer.
+
+Before trials, record exact candidate, fixture, rubric and catalog digests, host surface/version, model/settings, tools, policy, cache/session isolation and budget. Use a fresh session per attempt. Match inputs and conditions for no-skill, explicit activation and automatic selection. Verify that the no-skill condition has no inherited copy of the skill. A prior-version condition requires an actual supplied previous payload and verified activation evidence. Leave unavailable conditions unscored.
+
+Use one trial per case and condition for an initial descriptive check, without retries to replace a semantic failure. Predeclare any runner timeout and capacity limits. Retain all attempts and reasons for exclusions, including interruptions. Record actual successful activation or verified full read where exposed. Keep unknown activation unscored for routing and comparison. Assess answer meaning independently of routing, identity and the receipt's own labels. Preserve unknown usage as null with reasons.
+
+No native trials were scheduled or started during source creation. Environment, observations, activation identity and usage are unknown until independently recorded.

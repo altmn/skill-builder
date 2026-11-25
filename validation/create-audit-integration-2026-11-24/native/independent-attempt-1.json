@@ -1,0 +1,7 @@
+{
+  "command": "python3 -I -B verify.py",
+  "exit_code": 1,
+  "failure": "AssertionError at line 33: keyword heuristic for domain-specific prompts",
+  "reason": "The reviewer incorrectly required every prompt to contain meeting, fixtures, or release; a valid minutes paraphrase did not. Original script and native outputs retained unchanged.",
+  "follow_up": "verify_v2.py removes the brittle keyword heuristic and records independent semantic review of all eight prompts/rationales. No candidate or frozen native acceptance condition changed."
+}

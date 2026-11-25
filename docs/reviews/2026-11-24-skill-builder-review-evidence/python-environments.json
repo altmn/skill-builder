@@ -1,0 +1,44 @@
+[
+  {
+    "path": "/opt/homebrew/bin/python3",
+    "exit_code": 0,
+    "stdout": "{\"version\": \"3.15.2 (main, Oct 25 2026, 16:57:51) [Clang 21.0.0 (clang-2100.3.34.2)]\", \"executable\": \"/opt/homebrew/opt/python@3.15/bin/python3.15\", \"modules\": {\"yaml\": false, \"jsonschema\": false, \"referencing\": false}}\n",
+    "stderr": ""
+  },
+  {
+    "path": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+    "exit_code": 0,
+    "stdout": "{\"version\": \"3.14.0 (v3.14.0:ebf955df7a8, Oct  7 2025, 08:20:14) [Clang 16.0.0 (clang-1600.0.26.6)]\", \"executable\": \"/Library/Frameworks/Python.framework/Versions/3.14/bin/python3\", \"modules\": {\"yaml\": false, \"jsonschema\": false, \"referencing\": false}}\n",
+    "stderr": ""
+  },
+  {
+    "path": "/usr/local/bin/python3",
+    "exit_code": 0,
+    "stdout": "{\"version\": \"3.14.0 (v3.14.0:ebf955df7a8, Oct  7 2025, 08:20:14) [Clang 16.0.0 (clang-1600.0.26.6)]\", \"executable\": \"/usr/local/bin/python3\", \"modules\": {\"yaml\": false, \"jsonschema\": false, \"referencing\": false}}\n",
+    "stderr": ""
+  },
+  {
+    "path": "/usr/bin/python3",
+    "exit_code": 0,
+    "stdout": "{\"version\": \"3.9.6 (default, Aug 25 2026, 21:26:21) \\n[Clang 21.0.0 (clang-2100.3.34.2)]\", \"executable\": \"/Library/Developer/CommandLineTools/usr/bin/python3\", \"modules\": {\"yaml\": false, \"jsonschema\": false, \"referencing\": false}}\n",
+    "stderr": ""
+  },
+  {
+    "path": "/opt/homebrew/bin/python3.10",
+    "exit_code": 0,
+    "stdout": "{\"version\": \"3.10.22 (main, Oct  1 2026, 00:48:01) [Clang 21.0.0 (clang-2100.3.34.2)]\", \"executable\": \"/opt/homebrew/opt/python@3.10/bin/python3.10\", \"modules\": {\"yaml\": false, \"jsonschema\": false, \"referencing\": false}}\n",
+    "stderr": ""
+  },
+  {
+    "path": "/usr/local/bin/python3.11",
+    "exit_code": 0,
+    "stdout": "{\"version\": \"3.11.1 (v3.11.1:a7a450f84a, Dec  6 2022, 15:24:06) [Clang 13.0.0 (clang-1300.0.29.30)]\", \"executable\": \"/usr/local/bin/python3.11\", \"modules\": {\"yaml\": false, \"jsonschema\": false, \"referencing\": false}}\n",
+    "stderr": ""
+  },
+  {
+    "path": "/opt/homebrew/bin/python3.12",
+    "exit_code": 0,
+    "stdout": "{\"version\": \"3.12.16 (main, Oct 25 2026, 18:24:37) [Clang 21.0.0 (clang-2100.3.34.2)]\", \"executable\": \"/opt/homebrew/opt/python@3.12/bin/python3.12\", \"modules\": {\"yaml\": false, \"jsonschema\": false, \"referencing\": false}}\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,27 @@
+# SUBJECT evaluation assessment
+
+Mode: MODE. Status: NOT ASSESSED. The helper has not performed semantic review.
+
+Complete the companion `evaluation-review.json` with source locations, actual
+results or precise missing evidence. This is supplemental evidence, not a new
+canonical rule catalog or a machine-generated quality verdict.
+
+| Topic | Evidence to assess | Finding or reasoned limit |
+| --- | --- | --- |
+| Task value and scope | Recurring failure/expertise, inputs/output, exclusions, skill versus tool/code | Not assessed |
+| Metadata and portability | Exact YAML, optional types/limits, supported host variants | Not assessed |
+| Routing | Domain positives, near misses, opt-outs, frozen split, real activation, confusion matrix | Not assessed |
+| Execution benefit | Clean control, explicit/automatic/prior separation, matched task/fixture identity | Not assessed |
+| Independent grading | Actual artifacts, calibrated oracle outside target control, failed invariants | Not assessed |
+| Context and resources | Actual loaded references/tokens, latency/cache conditions, every attempt, unknown cost | Not assessed |
+| Trust and recovery | Input instructions as data, permitted/denied effects, missing capability, bounded retry | Not assessed |
+| Claims and operations | Evidence freshness, exact supported host/revision, remaining gates and rollback owner | Not assessed |
+| Trajectory | Observable required/forbidden actions, meaningful order, incomplete traces | Not assessed |
+| Specification traceability | Stable requirement IDs, source drift, actual case/check links | Not assessed |
+| Field feedback | Redacted incidents, human annotations, owner, regression and closure evidence | Not assessed |
+| Ablation | Frozen variants, blinded rubric, identical-payload variation, losing results and retirement decision | Not assessed |
+
+Missing routing metrics do not prove poor routing; absent comparisons do not
+prove lack of benefit. Record the unsupported claim and required verification.
+Do not execute a target, install dependencies or call a model solely to fill this
+worksheet without applicable authorization and a reviewed execution chain.

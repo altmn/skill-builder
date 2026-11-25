@@ -1,0 +1,1398 @@
+{
+  "schema_version": "2.0",
+  "record_type": "evaluation-receipt",
+  "case_id": "codex-native-panel-2026-11-24",
+  "recorded_at": "2026-11-24T23:19:20.392171+00:00",
+  "artifact": {
+    "artifact_id": "skill-builder-rc2-native-candidate",
+    "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+    "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+    "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+    "activated_sha256": null,
+    "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+  },
+  "panel": {
+    "id": "bounded-native-panel",
+    "sha256": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a",
+    "acceptance_frozen_at": null,
+    "retry_policy": "One attempt per recorded case; exploratory QA preceded main panel; identity/continuation are separate extensions.",
+    "exclusion_policy": "No adverse results dropped. Unexercised families stay not_run. Shared disposable Git branches excluded from immutable-commit claims.",
+    "control_identity": {
+      "kind": "not_run",
+      "artifact": null,
+      "isolation": "Fresh candidate CLI sessions; global discovery metadata may be present.",
+      "reason": "No clean no-skill or prior-version comparison requested/executed."
+    }
+  },
+  "budget": {
+    "max_attempts": 1,
+    "max_elapsed_seconds": 240,
+    "max_cost": null,
+    "currency": "USD",
+    "enforcement": "Main cases use process deadlines; identity/resume use 120 seconds. Actual dollars unknown; no currency cap claimed."
+  },
+  "runtime_versions": {
+    "codex-cli": "0.170.0",
+    "os": "macOS-27.0-arm64-arm-64bit-Mach-O"
+  },
+  "attempts": [
+    {
+      "attempt_id": "qa-1",
+      "case_id": "qa",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:12:13.040426+00:00",
+      "ended_at": "2026-11-24T23:12:42.859554+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "read-only",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "qa-answer.txt",
+              "sha256": "071514a56f95e0d4267b5fb7d7301afcd6592845d22a9f019ed732f363f10a11",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "qa-answer.txt",
+          "sha256": "071514a56f95e0d4267b5fb7d7301afcd6592845d22a9f019ed732f363f10a11",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": null,
+        "unit": "seconds",
+        "source": "unknown",
+        "missing_reason": "Not captured for this trial."
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 248657,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 965,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 10,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "implicit-1",
+      "case_id": "implicit",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:13:46.557109+00:00",
+      "ended_at": "2026-11-24T23:14:13.845419+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "read-only",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "implicit-answer.txt",
+              "sha256": "64484932e0f289ad532017dc46f3366de2bab7ca11eb416126603fe9c2ae7694",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "implicit-answer.txt",
+          "sha256": "64484932e0f289ad532017dc46f3366de2bab7ca11eb416126603fe9c2ae7694",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 31.14,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 186955,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 773,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 3,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "negative-1",
+      "case_id": "negative",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:13:46.557261+00:00",
+      "ended_at": "2026-11-24T23:13:51.933245+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "read-only",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "negative-answer.txt",
+              "sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "negative-answer.txt",
+          "sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 9.48,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 30824,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 5,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 0,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "opt-out-1",
+      "case_id": "opt-out",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:13:56.039606+00:00",
+      "ended_at": "2026-11-24T23:14:00.281956+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "read-only",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "opt-out-answer.txt",
+              "sha256": "5dd272b4f316b776a7b8e3d0894b37e1e42be3d5d3b204b8a5836cc50597a6b1",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "opt-out-answer.txt",
+          "sha256": "5dd272b4f316b776a7b8e3d0894b37e1e42be3d5d3b204b8a5836cc50597a6b1",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 5.69,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 30817,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 5,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 0,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "denied-write-1",
+      "case_id": "denied-write",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:14:01.733706+00:00",
+      "ended_at": "2026-11-24T23:14:16.118323+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "read-only",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "denied-write-answer.txt",
+              "sha256": "18405a6ddaca60276f5683c842ef22cc7d09fa8b38ba28d6aa72a4a00a8c5e5b",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "denied-write-answer.txt",
+          "sha256": "18405a6ddaca60276f5683c842ef22cc7d09fa8b38ba28d6aa72a4a00a8c5e5b",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 17.46,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 150598,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 322,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 2,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "audit-1",
+      "case_id": "audit",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:14:17.700668+00:00",
+      "ended_at": "2026-11-24T23:16:10.742681+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "workspace-write",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "workspace-write",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "audit-answer.txt",
+              "sha256": "dd5bf2486e429728442b4f00b168933e5603ffdc3c435578ab06365430b63878",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "audit-answer.txt",
+          "sha256": "dd5bf2486e429728442b4f00b168933e5603ffdc3c435578ab06365430b63878",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 113.73,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 436888,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 4453,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 8,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "create-1",
+      "case_id": "create",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:14:19.190744+00:00",
+      "ended_at": "2026-11-24T23:16:59.773363+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "workspace-write",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "workspace-write",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "create-answer.txt",
+              "sha256": "08aedcf15169b2c7d6d80326018d0d70079a9289650f5c770e3328e2119902cc",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "create-answer.txt",
+          "sha256": "08aedcf15169b2c7d6d80326018d0d70079a9289650f5c770e3328e2119902cc",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 161.64,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 644305,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 7017,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 12,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "identity-repeat-1",
+      "case_id": "identity-repeat",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:16:05.065753+00:00",
+      "ended_at": "2026-11-24T23:16:14.804110+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "read-only",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "identity-repeat-answer.txt",
+              "sha256": "c001d27dae757ced50e619b3950d84b08657e97a6ae817d3c58dacff8ef17e3e",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "identity-repeat-answer.txt",
+          "sha256": "c001d27dae757ced50e619b3950d84b08657e97a6ae817d3c58dacff8ef17e3e",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 11.46,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 65328,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 257,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 1,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "identity-source-change-1",
+      "case_id": "identity-source-change",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:16:16.522347+00:00",
+      "ended_at": "2026-11-24T23:16:29.097634+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "read-only",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "identity-source-change-answer.txt",
+              "sha256": "a4f66c64854a27afd9e497de9f4a34be49df411ca4e48da31086852c473f54e7",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "identity-source-change-answer.txt",
+          "sha256": "a4f66c64854a27afd9e497de9f4a34be49df411ca4e48da31086852c473f54e7",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 14.11,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 101388,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 328,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 2,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "identity-collision-1",
+      "case_id": "identity-collision",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:16:30.646393+00:00",
+      "ended_at": "2026-11-24T23:16:47.751619+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "read-only",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "inconclusive",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "inconclusive",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "identity-collision-answer.txt",
+              "sha256": "0e2e6e36f4540f0790f94f1d99ef203288e3053b0359b2b7ba55f83d9dc08681",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Duplicate-name activation precedence not exposed."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "identity-collision-answer.txt",
+          "sha256": "0e2e6e36f4540f0790f94f1d99ef203288e3053b0359b2b7ba55f83d9dc08681",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 18.29,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 129338,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 469,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 3,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "identity-removal-1",
+      "case_id": "identity-removal",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:16:48.942439+00:00",
+      "ended_at": "2026-11-24T23:17:04.745866+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "read-only",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "identity-removal-answer.txt",
+              "sha256": "3f0d664c60184c37a9ef997d01b14f5237436f20b1a0ffcf1a60b50f768c936f",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "identity-removal-answer.txt",
+          "sha256": "3f0d664c60184c37a9ef997d01b14f5237436f20b1a0ffcf1a60b50f768c936f",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 18.38,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 159909,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 414,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 4,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "continuation-first-1",
+      "case_id": "continuation-first",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:18:06.128766+00:00",
+      "ended_at": "2026-11-24T23:18:14.214863+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "read-only",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "continuation-first-answer.txt",
+              "sha256": "bceccc8e84466f0b1211ea7eda28b127ce1dda3f4ea0522f9c8ef9e78dde5685",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "continuation-first-answer.txt",
+          "sha256": "bceccc8e84466f0b1211ea7eda28b127ce1dda3f4ea0522f9c8ef9e78dde5685",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 9.62,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": null,
+          "unit": "tokens",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        },
+        "output_tokens": {
+          "value": null,
+          "unit": "tokens",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        },
+        "tool_calls": {
+          "value": null,
+          "unit": "calls",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    },
+    {
+      "attempt_id": "continuation-resume-1",
+      "case_id": "continuation-resume",
+      "condition": "candidate",
+      "started_at": "2026-11-24T23:18:15.753194+00:00",
+      "ended_at": "2026-11-24T23:18:20.339701+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-rc2-native-candidate",
+        "source_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+        "package_sha256": "1252fa060580148ddcdae2905e35563710ec522b07779abf4ae903a57846a42e",
+        "activated_source": "project:.agents/skills/skill-builder (path alias; disposable root redacted)",
+        "activated_sha256": null,
+        "missing_identity_reason": "CLI exposes observed resource paths but not a cryptographic hash of activated instructions; duplicate roots remain ambiguous."
+      },
+      "target": {
+        "product": "Codex",
+        "surface": "CLI exec/resume",
+        "distribution": "Disposable project-scoped folder",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ignore_user_config": true
+        },
+        "missing_details": [
+          "Exact model identity not exposed in retained metadata."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Host default; not captured."
+      },
+      "input_hashes": {
+        "panel_definition": "86536cd3da425239f4839aa3ed678286c6a5c4ba16fd86678522e28c144d516a"
+      },
+      "permissions": {
+        "sandbox": "read-only",
+        "installation": "Disposable project copy authorized by native-panel request"
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "bounded-task-observation",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "continuation-resume-answer.txt",
+              "sha256": "8b96696a50db00accceabc9f39ae3dcdf446c3989e1e22b8b284fbb89a7584e8",
+              "observed_at": "2026-11-24T23:19:20.392171+00:00",
+              "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+            }
+          ],
+          "reason": "Answer/artifacts independently inspected; bounded acceptance described in README."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "continuation-resume-answer.txt",
+          "sha256": "8b96696a50db00accceabc9f39ae3dcdf446c3989e1e22b8b284fbb89a7584e8",
+          "observed_at": "2026-11-24T23:19:20.392171+00:00",
+          "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+        }
+      ],
+      "elapsed": {
+        "value": 5.62,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": null,
+          "unit": "tokens",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        },
+        "output_tokens": {
+          "value": null,
+          "unit": "tokens",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        },
+        "tool_calls": {
+          "value": null,
+          "unit": "calls",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Not captured for this trial."
+        }
+      },
+      "reason": "Event-file creation/modification timestamps approximate local observed turn bounds; no server-clock precision claimed."
+    }
+  ],
+  "elapsed": {
+    "value": null,
+    "unit": "seconds",
+    "source": "unknown",
+    "missing_reason": "Not captured for this trial."
+  },
+  "usage": {
+    "input_tokens": {
+      "value": null,
+      "unit": "tokens",
+      "source": "unknown",
+      "missing_reason": "No measurement was performed."
+    },
+    "output_tokens": {
+      "value": null,
+      "unit": "tokens",
+      "source": "unknown",
+      "missing_reason": "No measurement was performed."
+    },
+    "tool_calls": {
+      "value": null,
+      "unit": "calls",
+      "source": "unknown",
+      "missing_reason": "No measurement was performed."
+    },
+    "cost": {
+      "value": null,
+      "unit": "USD",
+      "source": "unknown",
+      "missing_reason": "No measurement was performed."
+    }
+  },
+  "outcome": "inconclusive",
+  "checks": [],
+  "artifacts": [
+    {
+      "kind": "artifact",
+      "ref": "native-observations.json",
+      "sha256": "e42ae037d671147660678011c646086448f73921012c5dd5c238d485f7c4a663",
+      "observed_at": "2026-11-24T23:19:20.392171+00:00",
+      "scope": "Sanitized native answer; read alongside native-observations.json and independent checks."
+    }
+  ],
+  "grader": {
+    "id": "integrating-source-and-artifact-review",
+    "version": "1",
+    "sha256": null,
+    "method": "model",
+    "calibration": "One bounded panel, not calibrated statistical reliability."
+  },
+  "omissions": [
+    "Live compaction, worker handoff, malformed tool-result injection and forced interruption/recovery not_run.",
+    "Duplicate-name actual activation source remains unverified.",
+    "CLI does not expose activated byte hash.",
+    "OS filesystem timestamps bound turns approximately; exploratory QA and extension cases not under one formally frozen timestamp.",
+    "No clean baseline or maintained-host support claim."
+  ],
+  "redaction": "Disposable root aliases substituted in answers; raw model event streams and session IDs retained privately outside public payload."
+}

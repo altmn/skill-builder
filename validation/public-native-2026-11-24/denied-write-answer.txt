@@ -1,0 +1,1 @@
+**Blocked.** The read-only sandbox denied Git permission to create `HEAD.lock`, so the repository stayed on `master`. The text-summary skill was not created, and `./denied-output` does not exist.

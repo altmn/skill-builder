@@ -1,0 +1,1771 @@
+{
+  "schema_version": "1.0",
+  "record_type": "implementation-routing",
+  "purpose": "Complete operational routing for the 99 canonical requirements. This records implementation owners and verification obligations, not target compliance or executed test results.",
+  "canonical_source": {
+    "archive": "references/knowledge-base.zip",
+    "member": "agent-skill-project-knowledge-base_final/catalogs/requirements.json",
+    "rule_count": 99,
+    "statement_owner": "Original catalog only; statement text is intentionally not duplicated."
+  },
+  "enforcement_types": {
+    "agent-procedure": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass.",
+    "deterministic": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property.",
+    "host-dependent": "Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+  },
+  "rules": [
+    {
+      "id": "FMT-001",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "Every actual distributed skill, including each generated host artifact.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Parse the final SKILL.md; require complete frontmatter and a meaningful Markdown body. Record parser/version and distinguish source templates from release bytes.",
+      "basis": "specification",
+      "strength": "required",
+      "canonical_pointer": "/rules/0",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "FMT-002",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "Every actual distributed skill name and folder.",
+      "enforcement": [
+        "deterministic"
+      ],
+      "verification": "Run empty, non-string, whitespace-only, overlong and folder-mismatch fixtures against the chosen validator; verify the final folder/name pair.",
+      "basis": "specification",
+      "strength": "required",
+      "canonical_pointer": "/rules/1",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "FMT-003",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Every portable name and host-specific naming adaptation.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Validate the published naming rules and separately identify the bundled validator's ASCII-only conservative policy; test boundary and consecutive hyphens.",
+      "basis": "specification",
+      "strength": "required",
+      "canonical_pointer": "/rules/2",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "FMT-004",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "Every discovery description in a distributed entry point.",
+      "enforcement": [
+        "deterministic"
+      ],
+      "verification": "Check missing, non-string, blank and overlong descriptions in final YAML; use the declared Unicode character-count policy.",
+      "basis": "specification",
+      "strength": "required",
+      "canonical_pointer": "/rules/3",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "FMT-005",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Any optional standard metadata field is present.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Verify selected-spec types and limits, including compatibility and string-to-string metadata, with current primary documentation; preserve the checker scope.",
+      "basis": "specification",
+      "strength": "required",
+      "canonical_pointer": "/rules/4",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "FMT-006",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "Every distributed YAML mapping, including nested metadata.",
+      "enforcement": [
+        "deterministic"
+      ],
+      "verification": "Exercise duplicate keys, unsafe tags, aliases/merges, inferred types and nesting limits; reject ambiguous or unsupported metadata visibly.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/5",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "FMT-007",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Every portable artifact and any generated host-specific metadata.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Inspect final metadata for undeclared extensions and unresolved variables; validate native extensions under an explicit adapter contract.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/6",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "FMT-008",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "A skill references any runtime file or declared dependency.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Check actual file resolution, traversal and symlink escape; independently review required references outside the bundled checker's recognized direct-link scope.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/7",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "FMT-009",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "applicability": "A runtime payload is built or assessed.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Inspect the exact manifest for required resources/notices and unwanted secrets, caches or fixtures; document an explicit full-knowledge preservation exception.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/8",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "FMT-010",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "applicability": "Any structural-validation result is reported or used as a gate.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Publish the exact checker/profile/version, implemented checks and not_checked limits; never infer task quality, host support or security from parsing.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/9",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "INS-001",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-02-contract",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "Every create task, audit target and explanation about a workflow.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Write or identify outcome, inputs, scope/exclusions, actual output and independent acceptance evidence; flag missing contracts with source locations.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/10",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "INS-002",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "Discovery metadata is authored, changed or evaluated.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Place task triggers/boundaries early and run positive/paraphrase/near-miss/ambiguous/opt-out cases on a named host before claiming activation quality.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/11",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "INS-003",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "An instruction performs an external, destructive or otherwise consequential effect.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Fill the five-field worksheet with condition, action, evidence, failure and authority; trace the actual effect and source location.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/12",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "INS-004",
+      "owners": [
+        "references/governance.md#g-authority",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "applicability": "Any action depends on user scope or host execution policy.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Check already-authorized continuation and attempted unauthorized expansion; preserve policy denials without extra ceremony or weaker fallback.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/13",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "INS-005",
+      "owners": [
+        "references/governance.md#g-authority",
+        "commands/skill-builder-create.md#create-02-contract",
+        "commands/skill-builder-audit.md#audit-01-scope"
+      ],
+      "applicability": "The task has unresolved choices or the workflow proposes a question.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Complete safe useful work first; ask only about a missing consequential decision; review unnecessary questions on a fully specified case.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/14",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "INS-006",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "The workflow has optional or branch-specific detail.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Assign each reference a trigger and reading point; walk normal and exceptional paths to ensure required content arrives before its action.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/15",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "INS-007",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "applicability": "A recurring failure can be prevented mechanically.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Identify the code/schema/default/error owner, implement a bounded fix there when appropriate and retain a meaningful boundary regression.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/16",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "INS-008",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "Any policy or command has multiple copies/callers or changes.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Search canonical and generated instructions, help, code, tests and README for conflicts; assign one authoritative owner and drift check.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/17",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "INS-009",
+      "owners": [
+        "references/governance.md#g-continuation",
+        "commands/skill-builder-create.md#create-09-recovery",
+        "commands/skill-builder-audit.md#audit-09-recovery"
+      ],
+      "applicability": "A check cannot run, an output is partial or a capability is missing.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Keep failed, blocked, not_run and inconclusive states separate and visible in final output; verify with missing-prerequisite and partial-output cases.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/18",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "INS-010",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Examples, graders or exact-string tests are authored/reviewed.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Vary wording while checking meaning and artifacts; require exact prose only for an actual protocol or byte contract.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/19",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "INS-011",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "A report or instruction makes factual, numerical, causal or performance claims.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Label observation, estimate, hypothesis and recommendation; require sources and relevant measurement for factual/performance claims.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/20",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "INS-012",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "A workflow adds promotion, profiling, setup or repeated rituals.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Trace each mandatory step to the user's task; remove irrelevant activity while preserving necessary evidence and authority checks.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/21",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "ARC-001",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "Choosing architecture or auditing component complexity.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Select the smallest profile justified by actual work; explain why each executable, installer, generator, service or daemon exists.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/22",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "ARC-002",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "A project has multiple intents, commands or potential subskills.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Split independent user intent/capability/effects; use conditional references for one task's detail; identify real host registration versus routed mode.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/23",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "ARC-003",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Every portable skill with any host integration.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Identify native paths/tools/permissions/hooks and move their ownership into explicit adapters; preserve one portable task/evidence contract.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/24",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "ARC-004",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Any generated instruction, adapter, reader, package or view is distributed.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Declare input/generator/environment/output identity, regenerate in an owned copy, compare exact bytes and test controlled input-to-output changes.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/25",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "ARC-005",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-09-recovery",
+        "commands/skill-builder-audit.md#audit-09-recovery"
+      ],
+      "applicability": "Subskills, workers or interrupted workflows hand work off.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Include task/input identity, scope, authority-backed decisions, outputs, statuses, capability gaps and attempted effects; resume without duplicating uncertainty.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/26",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "ARC-006",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-02-inventory"
+      ],
+      "applicability": "Two or more workers may write or read changing shared state.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Assign disjoint writes or one integration owner and test concurrent preservation; retain failed-worker gaps rather than inheriting peer success.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/27",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "ARC-007",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-09-recovery",
+        "commands/skill-builder-audit.md#audit-02-inventory"
+      ],
+      "applicability": "A snapshot under active review is about to change or a reader times out.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Wait for readers to finish or confirm they stopped before editing; force a timeout and inspect continued execution instead of assuming termination.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/28",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "ARC-008",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "applicability": "Source repository documents and runtime payload coexist.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Keep AGENTS.md/contribution instructions separate from task skill policy; inspect final payload and justify any required documentation inclusion.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/29",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "HOST-001",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Naming supported or intended agent environments.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Name exact product/surface, separating Grok Build, Grok Bot and custom API; avoid model-brand-only compatibility labels.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/30",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "HOST-002",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Any host capability or support claim is made.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Record date, target/version/OS/policy, documentation, tested capability/version/case and independent format/discovery/function/safety/support outcomes.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/31",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "HOST-003",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Permission/invocation metadata is used or translated.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Verify current semantics and exercise relevant allowed-tools, user-invocable, implicit invocation and permission-lifetime behavior on the named surface.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/32",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "HOST-004",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-09-recovery",
+        "commands/skill-builder-audit.md#audit-09-recovery"
+      ],
+      "applicability": "A workflow depends on a missing, unsupported or unknown host capability.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Disable the capability and require a blocked dependent branch or explicitly narrower optional result; no stronger claim survives weaker substitution.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/33",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "HOST-005",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Any script, reference or asset resolves from an activated skill.",
+      "enforcement": [
+        "deterministic",
+        "host-dependent"
+      ],
+      "verification": "Invoke from an unrelated cwd and paths with spaces; verify source/resource identity, optional namespace/symlink/worker cases and denied resource access.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/34",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "HOST-006",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "A secondary host is claimed as functionally exercised, safety exercised or supported.",
+      "enforcement": [
+        "host-dependent",
+        "agent-procedure"
+      ],
+      "verification": "Run shared representative and denied-action cases, including applicable temporal/identity designs, against the exact released artifact; retain gaps.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/35",
+      "assurance_limit": "Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "HOST-007",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "applicability": "README, badges, reports or metadata describe host support.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Compare every claim to independent evidence axes; format-only targets stay untested for agent behavior, permissions and maintenance support.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/36",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "CMD-001",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "A project exposes a command/resource API.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Document complete invocation/input/output/effect/error/time/cleanup contract and exercise help, normal and malformed cases at the public boundary.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/37",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "CMD-002",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "A command emits machine-readable results for consumers.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Declare schema/version and status semantics; test malformed, empty, partial and successful output without relying on completion prose.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/38",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "CMD-003",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "Any user/source/tool text reaches command execution.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Use structured arguments/stdin/private files; test quotes, newlines, backticks, substitutions and delimiter collisions; never treat JSON as shell escaping.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/39",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "CMD-004",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "Any actual write, overwrite or deletion occurs, regardless of profile default.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Validate operation scope and ownership; test traversal, symlink paths, existing user files and conflicts; declare concurrent-filesystem limits.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/40",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "CMD-005",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "About to execute target validators, tests, setup or configuration.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Read the execution chain for hooks/plugins/downloads/package scripts and effects first; run only reviewed checks under authorization and suitable isolation.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/41",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "CMD-006",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "A task spawns processes, waits on operations or retries work.",
+      "enforcement": [
+        "deterministic",
+        "host-dependent"
+      ],
+      "verification": "Declare bounds; exercise startup failure/timeout/cancellation, preserve errors and confirm required process/descendant termination and cleanup.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/42",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "CMD-007",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "A remote mutation or another non-idempotent effect may be retried.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Simulate success with lost response; reconcile actual remote state before repeating; retain original failure and bounded retry decision.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/43",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "CMD-008",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "Temporary files/processes or cleanup are used.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Use private unique paths, exact ownership and process identity; run concurrent instances and verify permissions, no collisions and unrelated-data preservation.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/44",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "CMD-009",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "State or multiple artifacts require interruption-safe durable writes.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Define staged commit/recovery and completion markers; interrupt before/after commit points, inspect old/new state and avoid unsupported durability claims.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/45",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "CMD-010",
+      "owners": [
+        "references/governance.md#g-evidence",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Results, caches or receipts are reused across attempts.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Bind reuse to exact relevant inputs/config/runtime; mutate one factor and require invalidation; hash identity never grants authority or proves truth.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/46",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "SEC-001",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "Lower-trust files, pages, comments, fixtures or tool results are consumed.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Keep provenance/trust level and validate identifiers separately; embed scope-expansion instructions and verify they do not authorize new actions.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/47",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "SEC-002",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "A skill makes any safety/privacy/control claim.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Map protected resources, trust boundaries and actual enforcing owner; label advisory layers and test the guarantee at its real boundary.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/48",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "SEC-003",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-09-recovery",
+        "commands/skill-builder-audit.md#audit-09-recovery"
+      ],
+      "applicability": "Isolation, authentication, confinement or another required control fails.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Force failed setup and inspect fallback; preserve denial and stop the branch without widening filesystem/network/account effects.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/49",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "SEC-004",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "Filesystem or network access limits are required/claimed.",
+      "enforcement": [
+        "deterministic",
+        "host-dependent"
+      ],
+      "verification": "Test actual operation with path resolution/redirects/proxies and relevant races, DNS/rebinding/hardlink/case concerns; document the remaining boundary.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/50",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "SEC-005",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "A browser profile or authenticated session is used.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "State account/data/actions/scope/storage and cleanup; prefer isolated profile when possible and test session/access restrictions.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/51",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "SEC-006",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "Credentials or potentially sensitive data could reach process/output sinks.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Use only necessary secrets and synthetic canaries; inspect args, URLs, logs, traces, screenshots, exports and error paths for disclosure.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/52",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "SEC-007",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "Any data can leave the local task, including telemetry, model calls, browser traffic, storage or publication.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "List every flow's destination/content/default/authority/retention/opt-out/failure/cost; compare claims with actual paths rather than one telemetry switch.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/53",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "SEC-008",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "A user opt-out or privacy setting can survive setup, upgrade or endpoint changes.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Set a deliberate opt-out, run relevant update/setup paths and verify it remains disabled; distinguish unset from explicitly off.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/54",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "SEC-009",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "applicability": "A classifier, sanitizer or redactor is used as a control.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Test full-input coverage, truncation, failure, unknown formats and confidence/bypass limits; never treat probabilistic acceptance as authorization.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/55",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "SEC-010",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Any paid operation or worker fan-out can incur usage.",
+      "enforcement": [
+        "deterministic",
+        "host-dependent"
+      ],
+      "verification": "Require an authorized shared bound with correct units/in-flight reservation; test missing cap, retries and concurrent spend; preserve unknown usage.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/56",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "SEC-011",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Evaluating hostile or candidate-controlled repositories/artifacts.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Keep grader and expected contract outside target control; attempt replacement/instruction injection and verify the trusted outcome check remains intact.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/57",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "SEC-012",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "CI, distribution or privileged release automation exists.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Review effective event/checkout/strings/caches/artifacts/credentials; test untrusted input cannot execute in the privileged publication boundary.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/58",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "EVAL-001",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Any validation or quality claim is reported.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Report structure, resource and complete agent-outcome evidence separately, with precise checked and unchecked properties.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/59",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "EVAL-002",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-02-contract",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "A task case or acceptance check is created/reviewed.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Declare independent expectations and inspect real artifacts/state; completion prose, screenshot or mock alone establishes only its actual boundary.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/60",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "EVAL-003",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Discovery behavior is authored or claimed.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Run positive, negative, ambiguous/paraphrase and explicit opt-out prompts; record false selections and missed activations on the named host.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/61",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "EVAL-004",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Every applicable workflow evaluation panel.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic",
+        "host-dependent"
+      ],
+      "verification": "Include missing prerequisite, denied effect, malformed/empty output and interruption; verify distinct honest result states and forbidden-effect absence.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/62",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "EVAL-005",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Creating a skill or claiming an edit's comparative benefit.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Compare candidate with previous and clean no-skill where applicable; isolate all instruction loading routes and label unrun controls rather than gains.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/63",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "EVAL-006",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Before any comparative evaluation begins.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Freeze acceptance, retry/exclusion policy, budgets and identity; retain every attempt and any methodology change without relabeling an old failure.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/64",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "EVAL-007",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Making stochastic reliability or generalization claims.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Use held-out tasks and declared repeats; report denominators, sampling/variation and uncertainty; separate range of tasks from repeat attempts.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/65",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "EVAL-008",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Human/model judgment grades subjective outcomes.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Version/calibrate graders, preserve disagreements and use blind conditions when practical; leave failed calibration unscored.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/66",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "EVAL-009",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "applicability": "A readiness/quality verdict is calculated or reported.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Name severe safety blockers independently from average quality; do not permit a favorable score to offset unauthorized effects or false evidence.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/67",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "EVAL-010",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "A test runner finds zero cases, skips required checks or a provider is unavailable.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Exercise empty discovery/unavailable-service paths and require explicit failed/blocked/not_run outcome rather than success.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/68",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "EVAL-011",
+      "owners": [
+        "references/governance.md#g-evidence",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "applicability": "Reusing checks or binding a release verdict to artifacts.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Record exact package/input/config identity; change relevant bytes and reject old evidence for the new candidate; verify final distributed content.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/69",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "EVAL-012",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Adding, changing, deleting or reviewing a test.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "State observable protected contract and credible failure; prefer boundaries over implementation mirroring and retain meaningful negative cases.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/70",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "EVAL-013",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "applicability": "Claiming that a change fixes a regression.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Capture before-fix failure and after-fix success when feasible; otherwise record exact reproduction limit without invented historical runs.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/71",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "EVAL-014",
+      "owners": [
+        "references/governance.md#g-evidence",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "applicability": "Recording any executed or unexecuted evaluation claim.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Use versioned receipt with identities, host/model/runtime, inputs, policy, attempts, checks/artifacts, budget/usage source and missing-data reasons.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/72",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "PERF-001",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Analyzing or claiming context/latency/workflow efficiency.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Measure actual loaded context and complete task including references, retries, verification, integration and user interruptions.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/73",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "PERF-002",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Comparing performance with caches or warm processes.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Run matched cold and warm conditions separately and disclose setup/cache/process state in candidate/control receipts.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/74",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "PERF-003",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Reporting token, latency, cost or performance numbers.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Identify actual runtime/tokenizer/measurement method, units and estimates; unknown usage remains null with reason, never zero.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/75",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "PERF-004",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Caching analysis, task data, state or results.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Declare key/identity, expiry/invalidation, size/retention and sensitive-data policy; test stale authority/evidence cannot be reused.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/76",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "PERF-005",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Using a daemon or other persistent process.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Compare one-shot/cold/warm task benefit and inspect authentication, stale-state, port/process ownership, crash and cleanup costs.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/77",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "PERF-006",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Optimizing instructions, resources or runtime behavior.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Hold task and safety acceptance constant; compare matched conditions with sample size, exclusions and tradeoffs; retain only useful supported benefit.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/78",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "LIFE-001",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Installing a skill or runtime, rather than preparing a package.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Identify one declared host/scope/destination/version and full effects before action; compare receipt/preview with actual written configuration and discovery.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/79",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "LIFE-002",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Install/update/uninstall may interact with existing files.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Track created/replaced/user-owned paths and predecessors; test unrelated, edited and untracked data preservation rather than names as ownership.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/80",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "LIFE-003",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Dependencies use a frozen lockfile or reproducibility gate.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Force frozen failure and verify it remains visible; any lock refresh is an explicit separate repair with reviewable changes.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/81",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "LIFE-004",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "A runtime update requires safe staged activation.",
+      "enforcement": [
+        "deterministic",
+        "host-dependent"
+      ],
+      "verification": "Stage and validate new bytes/dependencies before activation; interrupt build/switch and inspect recoverable known-good state.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/82",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "LIFE-005",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "A project exposes stable/development or mutable release channels.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Resolve exact intended revision; test missing refs and reject silent fallback to another channel; preserve immutable release artifact identity.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/83",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "LIFE-006",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Any persistent state schema needs migration.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Assign one version-bounded owner and test ordering, repeat/idempotency, target bounds, failed markers and interruption/recovery.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/84",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "LIFE-007",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Rollback is offered or a stateful update depends on reversibility.",
+      "enforcement": [
+        "deterministic",
+        "host-dependent"
+      ],
+      "verification": "Exercise restoration of package/dependencies/compatible state or explicitly label limits/unverified cases and define forward recovery.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/85",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "LIFE-008",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Removal/uninstall/cleanup is offered or invoked.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Remove only proven owned integrations; test changed files, shared parents, unrelated config, hooks/processes and chosen retained user data.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/86",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "LIFE-009",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "applicability": "Any package is released or a release is audited.",
+      "enforcement": [
+        "deterministic",
+        "agent-procedure"
+      ],
+      "verification": "Validate exact distributed files, manifests, checksums, notices and generated-output agreement; bind checks to final identity and verify authorized remote bytes.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/87",
+      "assurance_limit": "Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "LIFE-010",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Checksums, signatures or provenance are used to verify a release.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "State trusted publisher/build/source/artifact identities and verification policy; distinguish corruption/byte checks from independent authenticity.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/88",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "LIFE-011",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "applicability": "Advertising installer/runtime lifecycle on named OS/path/shell combinations.",
+      "enforcement": [
+        "host-dependent",
+        "agent-procedure"
+      ],
+      "verification": "Execute applicable install/update/rollback/uninstall preservation scenarios on claimed platforms and label untested combinations.",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_pointer": "/rules/89",
+      "assurance_limit": "Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified. Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "LIFE-012",
+      "owners": [
+        "references/governance.md#g-authority",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "applicability": "Any external publication, release, merge or deployment effect is proposed.",
+      "enforcement": [
+        "agent-procedure",
+        "host-dependent"
+      ],
+      "verification": "Prepare exact artifact/destination/effect; use current authorization, respect actual policy, verify outcome and reconcile uncertainty before retry.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/90",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Requires named-host/version/policy execution at the real boundary; unrun host behavior remains unverified."
+    },
+    {
+      "id": "OSS-001",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Preparing or auditing a public project README.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Check task and realistic example first, support/evidence, prerequisites, install effects, data flows, limits/removal and maintenance guidance.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/91",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "OSS-002",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Public performance, reliability, safety or compatibility claims appear.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Trace each claim to reproducible panel/identity/baseline/attempts/grading evidence with limits and retained negative results.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/92",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "OSS-003",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Creating or reviewing contribution instructions.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Name canonical/generated owners and valid commands; check instructions against actual scripts and document relevant quick/expensive checks.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/93",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "OSS-004",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "PR templates or contributor evidence requirements exist.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Tie evidence to changed behavior and risk; do not demand visual proofs for unrelated nonvisual edits or unnecessary live rituals.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/94",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "OSS-005",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "Redistributing copied/adapted text, code, templates or source excerpts.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Audit source/revision/rights/modifications and retain applicable full licenses/notices; unresolved original-material license selection blocks public open reuse.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/95",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "OSS-006",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "A project declares security handling or supported versions.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Provide truthful version scope and an actual reporting route/process; do not invent private contacts or unsupported response commitments.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/96",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    },
+    {
+      "id": "OSS-007",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "applicability": "GitHub Actions or reusable third-party workflows are present.",
+      "enforcement": [
+        "agent-procedure",
+        "deterministic"
+      ],
+      "verification": "Review effective immutable references, full SHAs where supported, update provenance and transitive/workflow trust rather than version labels alone.",
+      "basis": "project",
+      "strength": "required",
+      "canonical_pointer": "/rules/97",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass. Applicable mechanics require executed checks on the actual candidate; the helper does not automatically enforce every listed property."
+    },
+    {
+      "id": "OSS-008",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "applicability": "Maintaining an existing skill or designing its maintenance policy.",
+      "enforcement": [
+        "agent-procedure"
+      ],
+      "verification": "Track dated host/dependency/example/data-flow/install review, record failures and regression owners, preserve source updates and old receipts.",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_pointer": "/rules/98",
+      "assurance_limit": "Requires actual agent reading, judgment and evidence; prose or routing coverage is not an assessed pass."
+    }
+  ]
+}

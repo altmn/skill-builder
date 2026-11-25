@@ -1,0 +1,4 @@
+{
+  "outcome": "failed",
+  "error": "Source/runtime license declarations disagree"
+}

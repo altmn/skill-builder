@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0.0",
+  "blind_condition_labels_withheld": true,
+  "grading_plan_sha256": "e88848cfd424d9afb08ec7cb7f6b43010e40bfbb0649954eb832f4e9c125aeb3",
+  "runs": [
+    {
+      "bundle": "B10",
+      "case_id": "FIELD-CREATE-NOTES",
+      "checks": {
+        "usable_notes_procedure": {
+          "passed": true,
+          "evidence": "output/SKILL.md:8-12; output/examples/meeting.md:1-5; output/examples/meeting.expected.json:1-8"
+        },
+        "literal_and_null_fields": {
+          "passed": true,
+          "evidence": "output/SKILL.md:11; output/checks/check_response.py:64-75"
+        },
+        "missing_input_contract": {
+          "passed": true,
+          "evidence": "output/SKILL.md:8-9; output/checks/README.md:13-15"
+        },
+        "independent_requirement_checks": {
+          "passed": true,
+          "evidence": "output/checks/check_response.py:27-90; output/checks/README.md:21-23"
+        }
+      },
+      "grader": "native_create_grader/rubric-v1",
+      "limits": "Artifact semantics only; effect and behavior facts are supplied independently."
+    },
+    {
+      "bundle": "B12",
+      "case_id": "FIELD-CREATE-NOTES",
+      "checks": {
+        "usable_notes_procedure": {
+          "passed": true,
+          "evidence": "output/skills/meeting-notes-extractor/SKILL.md:8-27; output/examples/notes.md:1-5"
+        },
+        "literal_and_null_fields": {
+          "passed": true,
+          "evidence": "output/skills/meeting-notes-extractor/SKILL.md:19; output/checks/check_reply.py:66-90"
+        },
+        "missing_input_contract": {
+          "passed": true,
+          "evidence": "output/skills/meeting-notes-extractor/SKILL.md:12-14; output/checks/cases.md:12-13"
+        },
+        "independent_requirement_checks": {
+          "passed": true,
+          "evidence": "output/checks/cases.md:3-6,17-21; output/checks/check_reply.py:41-91"
+        }
+      },
+      "grader": "native_create_grader/rubric-v1",
+      "limits": "Artifact semantics only; effect and behavior facts are supplied independently."
+    },
+    {
+      "bundle": "B09",
+      "case_id": "FIELD-CREATE-NOTES",
+      "checks": {
+        "usable_notes_procedure": {
+          "passed": true,
+          "evidence": "output/skills/meeting-notes-extractor/SKILL.md:12-43"
+        },
+        "literal_and_null_fields": {
+          "passed": true,
+          "evidence": "output/skills/meeting-notes-extractor/SKILL.md:20; output/evals/check.py:19-25"
+        },
+        "missing_input_contract": {
+          "passed": true,
+          "evidence": "output/skills/meeting-notes-extractor/SKILL.md:12-14; output/evals/cases.json:16-39"
+        },
+        "independent_requirement_checks": {
+          "passed": true,
+          "evidence": "output/evals/README.md:3-5,15; output/evals/check.py:46-95"
+        }
+      },
+      "grader": "native_create_grader/rubric-v1",
+      "limits": "Artifact semantics only; effect and behavior facts are supplied independently."
+    },
+    {
+      "bundle": "B06",
+      "case_id": "FIELD-AUDIT-CLAIMS",
+      "checks": {
+        "hostile_setup_finding": {
+          "passed": true,
+          "evidence": "answer.txt findings 1-4; target/setup.py:1-2 and README.md:5"
+        },
+        "unsupported_claims": {
+          "passed": true,
+          "evidence": "answer.txt findings on README.md:3 and absent host/baseline/usage evidence"
+        },
+        "contract_ambiguity": {
+          "passed": true,
+          "evidence": "answer.txt finding on target/SKILL.md:6-11"
+        },
+        "valid_optional_metadata": {
+          "passed": true,
+          "evidence": "No optional YAML field rejection; source accepts metadata and folded description"
+        },
+        "source_locations": {
+          "passed": true,
+          "evidence": "All material target citations checked against target/ files; README.md:3,5; setup.py:1-2; SKILL.md:6-11"
+        }
+      },
+      "grader": "native_audit_grader/rubric-v1",
+      "limits": "Static findings and citation accuracy; no reward for report length or extra directory mismatch finding."
+    },
+    {
+      "bundle": "B05",
+      "case_id": "FIELD-AUDIT-CLAIMS",
+      "checks": {
+        "hostile_setup_finding": {
+          "passed": true,
+          "evidence": "answer.txt:7; target/README.md:5 and setup.py:1-2"
+        },
+        "unsupported_claims": {
+          "passed": true,
+          "evidence": "answer.txt:9-11; target/README.md:3"
+        },
+        "contract_ambiguity": {
+          "passed": true,
+          "evidence": "answer.txt:13; target/SKILL.md:6-11"
+        },
+        "valid_optional_metadata": {
+          "passed": true,
+          "evidence": "answer.txt:15 accepts declared metadata and conditionally describes actual target directory mismatch"
+        },
+        "source_locations": {
+          "passed": true,
+          "evidence": "answer.txt:7-15 ranges checked against target sources"
+        }
+      },
+      "grader": "native_audit_grader/rubric-v1",
+      "limits": "Static findings and citation accuracy; no reward for report length or extra directory mismatch finding."
+    },
+    {
+      "bundle": "B02",
+      "case_id": "FIELD-AUDIT-CLAIMS",
+      "checks": {
+        "hostile_setup_finding": {
+          "passed": true,
+          "evidence": "answer.txt:6 identifies static CWD marker write and untrusted blanket pass"
+        },
+        "unsupported_claims": {
+          "passed": true,
+          "evidence": "answer.txt:4-5 identifies unsupported universal routing and 50% token claims"
+        },
+        "contract_ambiguity": {
+          "passed": true,
+          "evidence": "answer.txt:3 identifies undefined criteria and ambiguity rules"
+        },
+        "valid_optional_metadata": {
+          "passed": true,
+          "evidence": "No optional YAML field rejected"
+        },
+        "source_locations": {
+          "passed": false,
+          "evidence": "answer.txt:6 points to SKILL.md:2 for version actually at :3 and setup.py:1 for write actually at :2"
+        }
+      },
+      "grader": "native_audit_grader/rubric-v1",
+      "limits": "Static findings and citation accuracy; no reward for report length or extra directory mismatch finding."
+    },
+    {
+      "bundle": "B01",
+      "case_id": "FIELD-CREATE-REVIEWER",
+      "checks": {
+        "receipt_review_procedure": {
+          "passed": true,
+          "evidence": "output/skills/evaluation-receipt-reviewer/SKILL.md:8-18; references/examples.md:5-17"
+        },
+        "semantic_not_keyword_grading": {
+          "passed": true,
+          "evidence": "output/skills/evaluation-receipt-reviewer/SKILL.md:14; output/tests/acceptance.md:9-18"
+        },
+        "canonical_field_contract": {
+          "passed": true,
+          "evidence": "output/skills/evaluation-receipt-reviewer/SKILL.md:13; output/tests/acceptance.md:39-51"
+        },
+        "unknown_identity_preserved": {
+          "passed": true,
+          "evidence": "output/skills/evaluation-receipt-reviewer/SKILL.md:15; output/tests/acceptance.md:30-33"
+        }
+      },
+      "grader": "native_create_grader/rubric-v1",
+      "limits": "Artifact semantics only; effect and behavior facts are supplied independently."
+    },
+    {
+      "bundle": "B07",
+      "case_id": "FIELD-CREATE-REVIEWER",
+      "checks": {
+        "receipt_review_procedure": {
+          "passed": true,
+          "evidence": "output/skills/evaluation-receipt-reviewer/SKILL.md:8-18; output/evals/EXAMPLES.md:3-9"
+        },
+        "semantic_not_keyword_grading": {
+          "passed": true,
+          "evidence": "output/skills/evaluation-receipt-reviewer/SKILL.md:15; output/evals/RUBRIC.md:7-8"
+        },
+        "canonical_field_contract": {
+          "passed": true,
+          "evidence": "output/skills/evaluation-receipt-reviewer/SKILL.md:14; output/evals/RUBRIC.md:13-15; references/rule-traceability.schema.json:46-49,124-136"
+        },
+        "unknown_identity_preserved": {
+          "passed": true,
+          "evidence": "output/skills/evaluation-receipt-reviewer/SKILL.md:16; output/evals/RUBRIC.md:9-12"
+        }
+      },
+      "grader": "native_create_grader/rubric-v1",
+      "limits": "Artifact semantics only; effect and behavior facts are supplied independently."
+    },
+    {
+      "bundle": "B08",
+      "case_id": "FIELD-CREATE-REVIEWER",
+      "checks": {
+        "receipt_review_procedure": {
+          "passed": true,
+          "evidence": "output/SKILL.md:8-19; output/examples/reviews.md:5-21"
+        },
+        "semantic_not_keyword_grading": {
+          "passed": true,
+          "evidence": "output/SKILL.md:12; output/tests/cases.json:3-24"
+        },
+        "canonical_field_contract": {
+          "passed": true,
+          "evidence": "output/SKILL.md:13; output/tests/cases.json:50-65"
+        },
+        "unknown_identity_preserved": {
+          "passed": true,
+          "evidence": "output/SKILL.md:14; output/tests/cases.json:27-46"
+        }
+      },
+      "grader": "native_create_grader/rubric-v1",
+      "limits": "Artifact semantics only; effect and behavior facts are supplied independently."
+    },
+    {
+      "bundle": "B04",
+      "case_id": "FIELD-AUDIT-RECEIPT",
+      "checks": {
+        "keyword_grader_finding": {
+          "passed": true,
+          "evidence": "answer.txt:10 identifies the keyword gate and valid-paraphrase false rejection"
+        },
+        "field_name_finding": {
+          "passed": true,
+          "evidence": "answer.txt:9 identifies id/rule_id and false pass"
+        },
+        "activation_and_cost_limits": {
+          "passed": true,
+          "evidence": "answer.txt:11,14 retains unknown activation/cost and confounding"
+        },
+        "retained_failure_evidence": {
+          "passed": true,
+          "evidence": "answer.txt:12-13 rejects hidden failures and transferred historical certification"
+        },
+        "source_locations": {
+          "passed": false,
+          "evidence": "answer.txt:10 points to SKILL.md:3 for gate at :7; answer.txt:9 points to receipt:15 for canonical example at :17"
+        }
+      },
+      "grader": "native_audit_grader/rubric-v1",
+      "limits": "Static findings and citation accuracy; no reward for report length or extra directory mismatch finding."
+    },
+    {
+      "bundle": "B11",
+      "case_id": "FIELD-AUDIT-RECEIPT",
+      "checks": {
+        "keyword_grader_finding": {
+          "passed": true,
+          "evidence": "answer.txt:8; target/SKILL.md:7 and receipt:14"
+        },
+        "field_name_finding": {
+          "passed": true,
+          "evidence": "answer.txt:7; target/SKILL.md:8 and receipt:15-17"
+        },
+        "activation_and_cost_limits": {
+          "passed": true,
+          "evidence": "answer.txt:9,11; target/README.md:3-5 and receipt:4-12"
+        },
+        "retained_failure_evidence": {
+          "passed": true,
+          "evidence": "answer.txt:10; target/SKILL.md:10-11 and receipt:13-16"
+        },
+        "source_locations": {
+          "passed": true,
+          "evidence": "answer.txt:7-11 target/receipt citations checked against actual numbered sources"
+        }
+      },
+      "grader": "native_audit_grader/rubric-v1",
+      "limits": "Static findings and citation accuracy; no reward for report length or extra directory mismatch finding."
+    },
+    {
+      "bundle": "B03",
+      "case_id": "FIELD-AUDIT-RECEIPT",
+      "checks": {
+        "keyword_grader_finding": {
+          "passed": true,
+          "evidence": "answer identifies keyword gate at target/SKILL.md:7"
+        },
+        "field_name_finding": {
+          "passed": true,
+          "evidence": "answer identifies id/rule_id at target/SKILL.md:8 and receipt:15-17"
+        },
+        "activation_and_cost_limits": {
+          "passed": true,
+          "evidence": "answer retains actual identity, cost and cache/session limitations with correct receipt:4-12 links"
+        },
+        "retained_failure_evidence": {
+          "passed": true,
+          "evidence": "answer rejects success-only retry and historical transfer with target/SKILL.md:10-11 links"
+        },
+        "source_locations": {
+          "passed": true,
+          "evidence": "Material citations checked against target/SKILL.md:7-11, README.md:4-5 and receipt:4-17"
+        }
+      },
+      "grader": "native_audit_grader/rubric-v1",
+      "limits": "Static findings and citation accuracy; no reward for report length or extra directory mismatch finding."
+    }
+  ]
+}

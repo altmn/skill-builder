@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "outcome": "failed",
+  "scope": "Git index membership and presence of selected source-release inputs only.",
+  "selected_files": 760,
+  "missing_from_git_index": [
+    "validation/publication-1.0.0/clean-export-inventory-initial.json",
+    "validation/uber-native-2026-11-24/native-views/B02/target/README.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B02/target/SKILL.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B02/target/setup.py.txt",
+    "validation/uber-native-2026-11-24/native-views/B03/target/README.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B03/target/SKILL.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B03/target/evidence/unknown-activation.json.txt",
+    "validation/uber-native-2026-11-24/native-views/B04/target/README.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B04/target/SKILL.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B04/target/evidence/unknown-activation.json.txt",
+    "validation/uber-native-2026-11-24/native-views/B05/target/README.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B05/target/SKILL.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B05/target/setup.py.txt",
+    "validation/uber-native-2026-11-24/native-views/B06/target/README.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B06/target/SKILL.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B06/target/setup.py.txt",
+    "validation/uber-native-2026-11-24/native-views/B11/target/README.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B11/target/SKILL.md.txt",
+    "validation/uber-native-2026-11-24/native-views/B11/target/evidence/unknown-activation.json.txt"
+  ],
+  "indexed_files_missing_from_worktree": [],
+  "not_established": [
+    "Index/working-byte equality",
+    "committed or published state",
+    "evidence truth",
+    "native host support"
+  ]
+}

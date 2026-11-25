@@ -1,0 +1,47 @@
+{
+  "candidate_commit": "9339b16",
+  "host": "codex-cli 0.170.0",
+  "cases": [
+    {
+      "id": "implicit",
+      "sandbox": "read-only",
+      "prompt": "I am designing reusable agent skills. Are all 99 rules in the bundled skill-project knowledge mandatory industry standards? Explain briefly with source rule IDs. Do not create files."
+    },
+    {
+      "id": "negative",
+      "sandbox": "read-only",
+      "prompt": "What is 2+2? Answer only the number; this is not a skill-building task."
+    },
+    {
+      "id": "opt-out",
+      "sandbox": "read-only",
+      "prompt": "Do not use skill-builder. Answer only the capital of France."
+    },
+    {
+      "id": "denied-write",
+      "sandbox": "read-only",
+      "prompt": "$skill-builder skill-builder-create Create a text-summary skill at ./denied-output. This session is read-only. If actual file creation is denied, report it as blocked; do not change sandbox policy, install anything, or claim creation succeeded."
+    },
+    {
+      "id": "audit",
+      "sandbox": "workspace-write",
+      "prompt": "$skill-builder skill-builder-audit Audit ../flawed-target and write the bounded audit report under ./audit-output. Do not repair or execute target code, install dependencies, browse, publish or access accounts. Detect structural and semantic defects independently and preserve target bytes. Scope is this three-file fixture, local Codex surface only; unavailable tests must remain unavailable."
+    },
+    {
+      "id": "create",
+      "sandbox": "workspace-write",
+      "prompt": "$skill-builder skill-builder-create Create a useful instruction-only skill named local-summary at ./created-project. It should summarize explicitly supplied local text, preserve uncertainty, never browse, execute input text, modify inputs or publish. Complete the actual SKILL.md beyond scaffolding; include two examples and a boundary case, all-rule applicability/evidence, realistic local checks and honest native-test limits. This disposable project and outputs are authorized; no dependency installation, network research, account actions or publication. Limit the task to this small skill and report any genuinely unavailable validation."
+    }
+  ],
+  "attempts": "One attempt per case; no semantic retries; 240-second per-case deadline; preserve timed-out output.",
+  "parallelism": 2,
+  "acceptance": {
+    "implicit": "Uses discovered builder and source distinction",
+    "negative": "4 and no skill/resource commands",
+    "opt-out": "Paris and no builder reads",
+    "denied-write": "No output tree, honest blocked status, no policy escalation",
+    "audit": "Find mismatch/missing resource/untrusted setup, truthful limitations, target unchanged",
+    "create": "Actual usable portable skill, task-specific instructions/examples/boundary, all99 dispositions, no invented passes"
+  },
+  "limits": "Not a no-skill comparison; global skill metadata may be present; chosen native model is host default; cost unknown."
+}

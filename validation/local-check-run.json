@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "local-check-run",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-I",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "/workspace/scratch/1e5ab00a904f/skill-builder-project",
+  "started_at": "2026-11-23T06:57:25.521287+00:00",
+  "ended_at": "2026-11-23T06:57:31.366920+00:00",
+  "elapsed_seconds": 5.8455562830004055,
+  "exit_code": 0,
+  "limit_reached": null,
+  "capture_policy": "Combined stdout/stderr to local log; caller polls one-MiB capture threshold and 60-second deadline at 50-ms intervals; polling may overshoot byte threshold; this finite controlled suite is not an untrusted subprocess service.",
+  "log": "validation/local-tests.log",
+  "log_sha256": "64308e21af620c0d4c59f2a0c23fad7e4423857a9f99d4002c8d4da9b53abe87",
+  "log_bytes": 6773,
+  "inputs": {
+    "tests/test_release.py": "694c39572b89fc9999f2d92831c1de765d9446e3e9079587da2a88bbd0e34cf6",
+    "tests/test_skill_builder.py": "303439ede87a2828119ca44100e853b63311686f2da756f5f50e66bdeb6521ee",
+    "skills/skill-builder/scripts/skill_builder.py": "71f7dc8ae9a67b3d0b19f5fdaaafe99441468653efab12147f54a4c24fcba31c",
+    "tools/build_release.py": "15e31398903b00c14db442b034dac9f300f1dc2c59e7dc28e4bc28c75ec33eec"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "scope": "Local helper and archive contracts; no native-host or comparative-agent claim."
+}

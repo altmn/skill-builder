@@ -1,0 +1,11 @@
+{
+  "record_type": "repair-preservation-companion",
+  "schema_version": "1.0.0",
+  "protected_inputs": 130,
+  "changed_protected_inputs": [],
+  "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+  "kb_manifest_sha256": "c7efadcddfb5dbf427ae16851b490728b5a2a932140923b99e705688cbc9f101",
+  "original_log_count": 23,
+  "logs_in_git_index": 23,
+  "scope": "Frozen archive, manifest, all-rule mapping, and prior validation evidence except the deliberately prepended index README."
+}

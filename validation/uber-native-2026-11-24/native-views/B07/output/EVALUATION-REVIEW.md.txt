@@ -1,0 +1,3 @@
+# Evaluation review
+
+The supplied synthetic counterexample motivates independent semantic grading, exact traceability fields and separate activation evidence. The instruction payload uses portable frontmatter and read-only references. The test rubric is outside the payload. The four execution cases and four routing requests are source designs. Native discovery, answer quality, release support, comparative benefit, timing, and cost remain unverified.

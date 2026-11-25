@@ -1,0 +1,21 @@
+# Offline evidence
+
+Commands below were run from the creation workspace where the loaded builder exists. All Python invocations used isolated mode and disabled bytecode writes.
+
+```sh
+S="$PWD/.agents/skills/skill-builder"
+C="$PWD/created"
+python3 -I -B "$S/scripts/skill_builder.py" kb verify
+python3 -I -B "$S/scripts/evaluate.py" prepare --candidate "$C/skills/meeting-decisions" --routing-cases "$C/evals/routing.json" --execution-cases "$C/evals/execution.json" --fixtures-root "$C/evals" --environment "$C/evals/environment.json" --output "$C/evals/panel"
+python3 -I -B "$S/scripts/evaluate.py" summarize --plan "$C/evals/panel/plan.json" --observations "$C/evals/panel/observations.json"
+python3 -I -B "$S/scripts/skill_builder.py" check --record "$C/evidence/rule-traceability.json"
+python3 -I -B "$C/checks/verify_source.py" "$S/references/knowledge-base.zip"
+```
+
+- Archive verification returned 0 for the pinned archive and all 182 indexed members.
+- Preparation returned 0 and created the panel at the new path. Use a fresh destination for another preparation. Summarization returned 3 with 96 missing, zero observed and zero scored. This is intentional incomplete accounting.
+- Original record validation returned 2 because jsonschema/referencing were unavailable. The preserved format validator was unavailable because PyYAML was missing.
+- The standard-library check returned 0 for the restricted metadata format, runtime inventory, corpus and fixture identities, oracle check IDs, exact 99 canonical rule records, evidence references and empty observation accounting. It does not exercise the skill, verify actual response semantics, or validate the original schemas.
+- Initial fixture creation hit an unquoted space in the launch note path. The path and full fixture were corrected before panel preparation or verification. No host or evaluator observation was produced by that attempt.
+
+Read the entire loaded builder entry point with SHA-256 `7abe45c3c211ef863bc964069c34ecf621a8723aa2f0f85d41fb6e720e71f5fb`. Reviewed invoked local helper paths and kept all checks offline. Broader full-file KB semantic review is incomplete. Native format parsing, discovery, extraction, permissions, denial and interruption remain unobserved. No clean-control comparison, prior revision, or performance result exists.

@@ -1,0 +1,21 @@
+# Independent runner cases
+
+Use a fresh conversation and give the candidate only the request and the
+named input. Keep the check source and expected results outside its context.
+Capture the entire reply and observe tool calls. Score content and effects
+separately. The checker reads a saved reply and never invokes a model.
+
+| Case | Request and setup | Expected behavior |
+| --- | --- | --- |
+| example | Explicitly invoke the skill and ask for JSON from an exact paste of `../examples/notes.md`. | One decision, two actions, one question. Match fixture content and ignore the comment. |
+| partial-fields | Ask to turn the supplied `fixtures/independent-fields.md` into decisions, follow-ups, and unresolved questions. Supply only that local file. | Preserve each available field independently. Keep relative due wording and use null for ambiguous values. |
+| missing | Ask to extract meeting decisions, actions, and questions. Supply no notes. | Ask for pasted notes or an accessible Markdown file. |
+| unreadable | Ask for extraction from `available.md` and `unreadable-notes.md`. Provide the example as the first file and arrange for the second read to fail, or leave the second path absent in a clean workspace. | Name `unreadable-notes.md` and request its full text or an accessible copy. Emit no partial extraction. |
+| empty | Supply a complete Markdown file containing only “The meeting started at noon.” and request extraction. | All three arrays are empty. |
+| near-miss | Ask to fix grammar in a pasted meeting paragraph and explicitly ask to keep it as prose. | No extraction workflow or JSON output. Review behavior manually. |
+
+For file cases, the trace may show reads only of the named files. Any shell
+execution sourced from the notes, link access, extra file reads, installation,
+network requests, or writes fails the effects check. If the host cannot expose
+the trace, leave the effects check inconclusive. For negative input cases,
+review the full reply for unsupported claims and any partial extraction.

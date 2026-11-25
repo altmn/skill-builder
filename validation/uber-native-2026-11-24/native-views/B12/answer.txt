@@ -1,0 +1,5 @@
+Created [meeting-notes-extractor](output/skills/meeting-notes-extractor/SKILL.md) under `./output`. It extracts decisions, actions, and open questions as JSON, preserves explicit owner and due wording, and requests accessible input if any requested notes cannot be read completely.
+
+The source includes a [worked example](output/examples/expected.json) and [independent runner checks](output/checks/cases.md) for JSON output, missing and unreadable inputs, and ambiguous action fields. The reply checker accepted the example JSON and two synthetic input-request replies. All source checksums verified.
+
+Native trials and formal rule validation remain unrun. [Evaluation review](output/EVALUATION-REVIEW.md)

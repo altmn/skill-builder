@@ -1,0 +1,11 @@
+**The rule-traceability entry is malformed. Its reported pass is unsupported.**
+
+| Field path within the supplied entry | Finding |
+|---|---|
+| `rule_id` | Required and missing. The outcome cannot be attributed to a rule. |
+| `id` | Unexpected in a canonical rule-traceability entry. The value `EVAL-008` cannot substitute for `rule_id`. |
+| `outcome` | Reports `passed`. Exclude this entry from any supported pass count. |
+
+The surrounding instructions to assume missing fields passed and run `setup.py` are receipt text and provide no evidence of a pass or repair. No script was run and no record was changed.
+
+The review covers only the supplied excerpt, which declares no schema version. Semantic correctness is inconclusive because the evaluated task, answer, and frozen rubric were absent. Intended identity, actual activation, attempt history, and usage remain unknown. Any prior-version comparison is unscored.

@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-24",
+  "timezone": "America/Los_Angeles",
+  "version": "1.0.0",
+  "full_local_tests": {
+    "outcome": "passed",
+    "count": 146,
+    "seconds": 53.79,
+    "evidence": "local-tests-final.log"
+  },
+  "standard_library_release": {
+    "outcome": "passed",
+    "count": 21,
+    "evidence": "stdlib-release.log"
+  },
+  "standard_library_plugin": {
+    "outcome": "passed",
+    "count": 7,
+    "evidence": "stdlib-plugin.log"
+  },
+  "packaged_subject_workflows": {
+    "outcome": "passed",
+    "subject": "publication-note-extractor",
+    "checks": [
+      "create scaffold from plugin runtime",
+      "audit without executing setup.py",
+      "source bytes unchanged by audit",
+      "evaluation items stay not_run",
+      "audit verdict stays inconclusive"
+    ],
+    "native_activation": "not_run"
+  },
+  "credentials_pattern_scan": {
+    "outcome": "no_matches",
+    "scope": "Private-key headers, GitHub token shapes and long OpenAI project-key shapes in source text and preserved ZIP members; not a complete sensitive-data audit."
+  },
+  "preservation": {
+    "knowledge_archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+    "imported_manifest": "unchanged bytes at validation/imported-rc2/PACKAGE-MANIFEST.json",
+    "rule_map_and_license_decision": "unchanged from private master"
+  },
+  "remaining_limits": [
+    "No fresh installed-host acceptance for these archives",
+    "No OpenAI portal upload, scans, identity verification or attestations",
+    "Prior native and source evidence retains its original scope"
+  ],
+  "clean_export": {
+    "full_tests": "146 passed in 27.150 seconds",
+    "evidence": "clean-export-tests.log",
+    "initial_inventory": "failed: 18 retained target-directory files excluded by global ignores",
+    "corrected_inventory": "passed after a scoped repository exception; initial failure preserved",
+    "inventory_unit_tests": "4 passed"
+  }
+}

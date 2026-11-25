@@ -1,0 +1,7 @@
+{
+  "complete": false,
+  "events": [],
+  "raw_turn_completed": true,
+  "raw_trace_sha256": "df21cb606f036c2df2f2e00ad50be0145b4653ca88908b7b86a96e8c6c3ace5a",
+  "basis": "Native explicit invocation may inject instructions, but activated hash/full read was not observable."
+}

@@ -1,0 +1,1 @@
+Decision: use weekly releases. Action: Alex updates the checklist by Friday. Open question: who owns rollback?

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "outcome": "passed",
+  "scope": "Exact archive and every indexed substantive file identity; no host or semantic assurance.",
+  "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+  "archive_bytes": 11572664,
+  "content_files": 182,
+  "content_bytes": 76965199,
+  "all_original_archive_members_retained": true,
+  "source_content_rewritten": false
+}

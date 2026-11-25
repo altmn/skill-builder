@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "Prepare the first public stable release and an OpenAI skills-only plugin without publishing private development Git history.",
+  "reviewed_paths": [
+    ".agents/plugins/marketplace.json",
+    ".github/CODEOWNERS",
+    ".github/ISSUE_TEMPLATE/bug_report.yml",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/feature_request.yml",
+    ".github/dependabot.yml",
+    ".github/workflows/ci.yml",
+    ".gitignore",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+    "NOTICE.md",
+    "PACKAGE-MANIFEST.json",
+    "PRIVACY.md",
+    "README.md",
+    "SECURITY.md",
+    "SUPPORT.md",
+    "TERMS.md",
+    "VERSION",
+    "assets/icon-dark.png",
+    "assets/icon.png",
+    "docs/architecture.md",
+    "docs/branding.md",
+    "docs/chatgpt-submission.md",
+    "docs/compatibility.md",
+    "docs/releasing.md",
+    "plugin.json",
+    "skills/skill-builder/LICENSE.md",
+    "skills/skill-builder/NOTICE.md",
+    "skills/skill-builder/VERSION",
+    "skills/skill-builder/agents/openai.yaml",
+    "skills/skill-builder/references/hosts/codex.md",
+    "skills/skill-builder/references/release-status.md",
+    "skills/skill-builder/scripts/skill_builder.py",
+    "tests/test_plugin.py",
+    "tests/test_release.py",
+    "tools/build_release.py",
+    "tools/check_project.py",
+    "validation/README.md",
+    "validation/imported-rc2/PACKAGE-MANIFEST.json",
+    "validation/imported-rc2/README.md",
+    "validation/publication-1.0.0/README.md",
+    "validation/publication-1.0.0/assets-verification.json",
+    "validation/publication-1.0.0/local-tests-before-icon-revision.log",
+    "validation/publication-1.0.0/local-tests-before-packaged-workflow.log",
+    "validation/publication-1.0.0/local-tests-final.log",
+    "validation/publication-1.0.0/project-check.json",
+    "validation/publication-1.0.0/stdlib-plugin.log",
+    "validation/publication-1.0.0/stdlib-release.log",
+    "validation/publication-1.0.0/summary.json"
+  ],
+  "workflows": {
+    "create": {
+      "decision": "updated",
+      "reason": "The create workflow shares the packaged host adapter, release limits and runtime identity. Update those owners for the new standalone/plugin distribution. Subject templates, domain evaluation and the frozen knowledge rules remain applicable without requiring every subject to use plugin packaging.",
+      "owners": [
+        "skills/skill-builder/references/hosts/codex.md",
+        "skills/skill-builder/references/release-status.md"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "Mechanical propagation verified on another synthetic subject from the actual plugin runtime. The full 146-test suite and standard-library package panels passed. This does not establish domain quality or native activation.",
+        "commands": [
+          "python -I -B -m unittest discover -s tests -v",
+          "python -I -B -S -m unittest discover -s tests -p test_plugin.py -v"
+        ],
+        "evidence": [
+          "validation/publication-1.0.0/local-tests-final.log",
+          "validation/publication-1.0.0/stdlib-plugin.log",
+          "validation/publication-1.0.0/summary.json"
+        ]
+      }
+    },
+    "audit": {
+      "decision": "updated",
+      "reason": "The audit workflow shares the packaged host adapter, release limits and runtime identity. Update those owners for the new standalone/plugin distribution. Subject templates, domain evaluation and the frozen knowledge rules remain applicable without requiring every subject to use plugin packaging.",
+      "owners": [
+        "skills/skill-builder/references/hosts/codex.md",
+        "skills/skill-builder/references/release-status.md"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "Mechanical propagation verified on another synthetic subject from the actual plugin runtime. The full 146-test suite and standard-library package panels passed. This does not establish domain quality or native activation.",
+        "commands": [
+          "python -I -B -m unittest discover -s tests -v",
+          "python -I -B -S -m unittest discover -s tests -p test_plugin.py -v"
+        ],
+        "evidence": [
+          "validation/publication-1.0.0/local-tests-final.log",
+          "validation/publication-1.0.0/stdlib-plugin.log",
+          "validation/publication-1.0.0/summary.json"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "skill-builder-evaluation-review",
+  "mode": "create",
+  "subject": "evaluation-receipt-reviewer",
+  "semantic_review_performed": false,
+  "items": [
+    {
+      "id": "task_value",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "The supplied counterexample motivates the review workflow.",
+      "evidence": [
+        "TASK-BRIEF.md"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "metadata_portability",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "The source uses a portable entry point. Host discovery is untested.",
+      "evidence": [
+        "skills/evaluation-receipt-reviewer/SKILL.md"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "routing",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "Four labeled routing prompts are available. No routing trials ran.",
+      "evidence": [
+        "evals/routing.json"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "execution_benefit",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "Four case designs are available. Comparative benefit is unmeasured.",
+      "evidence": [
+        "evals/execution.json"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "independent_grading",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "The runner rubric is outside the instruction payload. No answer was graded.",
+      "evidence": [
+        "evals/RUBRIC.md"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "context_resources",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "Loaded context and usage remain unknown.",
+      "evidence": [
+        "EVALUATION-PLAN.md"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "trust_recovery",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "Read-only boundaries and interrupted review behavior are specified. Enforcement is untested.",
+      "evidence": [
+        "TASK-BRIEF.md"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "claims_operations",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "Source delivery only. Native support and release readiness are unverified.",
+      "evidence": [
+        "README.md"
+      ],
+      "finding_ids": []
+    }
+  ]
+}

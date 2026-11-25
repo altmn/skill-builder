@@ -1,0 +1,7 @@
+No. The bundled catalog classifies **5 of the 99 rules as Agent Skills specification requirements** and **94 as project policy**.
+
+- **Specification (`FMT-001`–`FMT-005`)** covers `SKILL.md` with YAML frontmatter and a Markdown body, the required `name` and `description` fields, naming and length limits, and constraints on optional standard fields when supplied. (`catalogs/requirements.json`, `audits/standards-and-skill-creator.md` §2, `sources/primary-sources.md` S01)
+- **Project policy** includes 38 required controls, 34 conditional controls, and 22 recommendations. “Required” can mean mandatory within a project. Skill Builder’s create and audit workflows account for all 99 rules, with applicability based on the project’s actual capabilities and effects. For example, an instruction-only skill can mark daemon controls inapplicable. (`handbook/01-design-principles.md`, `catalogs/application-profiles.md`)
+
+**Skill root used**  
+`<DISPOSABLE_TEST_ROOT>/candidate/.agents/skills/skill-builder`

@@ -1,0 +1,307 @@
+{
+  "runtime": {
+    "payload_sha256": "9769827138fb32f440a27e118d675a92c2adfa447e8d1fa0a6760d397c9f00b8",
+    "skill_sha256": "e8de47c086126182bcf84e92909ef8e913dcfd78f70452f337e591e83c1995fe",
+    "files": [
+      {
+        "path": "LICENSE.md",
+        "size_bytes": 4178,
+        "sha256": "0512694420814006555d7038f09e066cf6954260ca65a012fe56ee95aa6a1521"
+      },
+      {
+        "path": "NOTICE.md",
+        "size_bytes": 1737,
+        "sha256": "d9974124015ad16e7c10d6ea1c49e19c33a9f65fb24846f09d835b72ab790d49"
+      },
+      {
+        "path": "SKILL.md",
+        "size_bytes": 14134,
+        "sha256": "e8de47c086126182bcf84e92909ef8e913dcfd78f70452f337e591e83c1995fe"
+      },
+      {
+        "path": "VERSION",
+        "size_bytes": 11,
+        "sha256": "0c654c00f94741d78169de333d4d9e866be0667b41f9c54cafe3c6b700b15a43"
+      },
+      {
+        "path": "agents/openai.yaml",
+        "size_bytes": 223,
+        "sha256": "20abc78c7cfeac6b123afcb32f09a4785a2f7ea21cbd6b398072c7bc2d521482"
+      },
+      {
+        "path": "assets/handoff.md",
+        "size_bytes": 1252,
+        "sha256": "64ce97fabb3b00726d4052a1e7fe28290cd39f548145c77575b3c33e9ded1b7c"
+      },
+      {
+        "path": "assets/request-examples.md",
+        "size_bytes": 2930,
+        "sha256": "e1c58347773843a2218c4cd99962391e3e6a620d1e0c515d56457df6cd99e9a0"
+      },
+      {
+        "path": "commands/skill-builder-audit.md",
+        "size_bytes": 23422,
+        "sha256": "354ebdc273c7ccc78080dac50cd354ffeb4baab0c9f68d1f2f596909ea0f5e2d"
+      },
+      {
+        "path": "commands/skill-builder-create.md",
+        "size_bytes": 23444,
+        "sha256": "bfb8e6373ed4869844aa1a4b1111940b6b277a3b95328839a4ce0340823df8b3"
+      },
+      {
+        "path": "commands/skill-builder-explain.md",
+        "size_bytes": 11951,
+        "sha256": "75cf4c48bd10e1202ff45f7e01e2445843be2805dd57b022dc1d1f7b6c03d376"
+      },
+      {
+        "path": "references/cli-result.schema.json",
+        "size_bytes": 5901,
+        "sha256": "7490770d768f921668661273e27b1812945081fdf1cd1ced5f325638dd9f0a7b"
+      },
+      {
+        "path": "references/cli.md",
+        "size_bytes": 22636,
+        "sha256": "3be2806b5fb084fa4116333353da042e4287f22819b8457ab6dda4c6fbccbc75"
+      },
+      {
+        "path": "references/evaluation-method.md",
+        "size_bytes": 3883,
+        "sha256": "2d8359477fc0ba4950bc45aa705ff24fb2791120f63c6f2f7de27e671eee6418"
+      },
+      {
+        "path": "references/governance.md",
+        "size_bytes": 35717,
+        "sha256": "b3dcf582d676cfc5286bf9d7c7184b6e703b030505aaeee3c3595e4bf7710924"
+      },
+      {
+        "path": "references/hosts/claude-code.md",
+        "size_bytes": 6223,
+        "sha256": "1753d58a266b62d0b5735714ca64277243c2e5bf8a767a9ffd1bac0dd0428cbf"
+      },
+      {
+        "path": "references/hosts/codex.md",
+        "size_bytes": 7165,
+        "sha256": "59ed3dd77f7196093631b50ee4349a54e964307f918b2ec26f16cb2dfafc76b5"
+      },
+      {
+        "path": "references/hosts/custom-host.md",
+        "size_bytes": 7017,
+        "sha256": "d8da9c9be6a7fffcb41c98a17353c0ef49d1d3831a1412a4bde7f8bec6b5d700"
+      },
+      {
+        "path": "references/hosts/grok.md",
+        "size_bytes": 6104,
+        "sha256": "20b5e0763810f4704a90572c6039b67c3f76693dd12cd41ff1d95c8cf6c6dfc3"
+      },
+      {
+        "path": "references/implementation-map.json",
+        "size_bytes": 88562,
+        "sha256": "b750c09ef869b57bb9baf89ea9df071973b5fb82db48ba31431d4bd4ea387472"
+      },
+      {
+        "path": "references/knowledge-base-manifest.json",
+        "size_bytes": 103953,
+        "sha256": "c7efadcddfb5dbf427ae16851b490728b5a2a932140923b99e705688cbc9f101"
+      },
+      {
+        "path": "references/knowledge-base.zip",
+        "size_bytes": 11572664,
+        "sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204"
+      },
+      {
+        "path": "references/license-decision.json",
+        "size_bytes": 1242,
+        "sha256": "5b738a9cedc3706e5cf9803bb4ec8e49af247b3cc80b11796cdcd6f96fe6341d"
+      },
+      {
+        "path": "references/release-status.md",
+        "size_bytes": 2675,
+        "sha256": "fbc21b8467d114ac5eea9916b8c866def29ce94618c68f750906f879d16a262e"
+      },
+      {
+        "path": "references/requirement-coverage.md",
+        "size_bytes": 12836,
+        "sha256": "8be34aa5f699d837c4014e8ecf7fec085bd756650c6d83612b9f4358add4d4e4"
+      },
+      {
+        "path": "scripts/skill_builder.py",
+        "size_bytes": 51680,
+        "sha256": "b19ca1546da6746587ef91fb1145d99a12b48eadb2e1ffc84ba8e5065111491f"
+      }
+    ]
+  },
+  "implementation_files": [
+    {
+      "path": "skills/skill-builder/LICENSE.md",
+      "sha256": "0512694420814006555d7038f09e066cf6954260ca65a012fe56ee95aa6a1521"
+    },
+    {
+      "path": "skills/skill-builder/NOTICE.md",
+      "sha256": "d9974124015ad16e7c10d6ea1c49e19c33a9f65fb24846f09d835b72ab790d49"
+    },
+    {
+      "path": "skills/skill-builder/SKILL.md",
+      "sha256": "e8de47c086126182bcf84e92909ef8e913dcfd78f70452f337e591e83c1995fe"
+    },
+    {
+      "path": "skills/skill-builder/VERSION",
+      "sha256": "0c654c00f94741d78169de333d4d9e866be0667b41f9c54cafe3c6b700b15a43"
+    },
+    {
+      "path": "skills/skill-builder/agents/openai.yaml",
+      "sha256": "20abc78c7cfeac6b123afcb32f09a4785a2f7ea21cbd6b398072c7bc2d521482"
+    },
+    {
+      "path": "skills/skill-builder/assets/handoff.md",
+      "sha256": "64ce97fabb3b00726d4052a1e7fe28290cd39f548145c77575b3c33e9ded1b7c"
+    },
+    {
+      "path": "skills/skill-builder/assets/request-examples.md",
+      "sha256": "e1c58347773843a2218c4cd99962391e3e6a620d1e0c515d56457df6cd99e9a0"
+    },
+    {
+      "path": "skills/skill-builder/commands/skill-builder-audit.md",
+      "sha256": "354ebdc273c7ccc78080dac50cd354ffeb4baab0c9f68d1f2f596909ea0f5e2d"
+    },
+    {
+      "path": "skills/skill-builder/commands/skill-builder-create.md",
+      "sha256": "bfb8e6373ed4869844aa1a4b1111940b6b277a3b95328839a4ce0340823df8b3"
+    },
+    {
+      "path": "skills/skill-builder/commands/skill-builder-explain.md",
+      "sha256": "75cf4c48bd10e1202ff45f7e01e2445843be2805dd57b022dc1d1f7b6c03d376"
+    },
+    {
+      "path": "skills/skill-builder/references/cli-result.schema.json",
+      "sha256": "7490770d768f921668661273e27b1812945081fdf1cd1ced5f325638dd9f0a7b"
+    },
+    {
+      "path": "skills/skill-builder/references/cli.md",
+      "sha256": "3be2806b5fb084fa4116333353da042e4287f22819b8457ab6dda4c6fbccbc75"
+    },
+    {
+      "path": "skills/skill-builder/references/evaluation-method.md",
+      "sha256": "2d8359477fc0ba4950bc45aa705ff24fb2791120f63c6f2f7de27e671eee6418"
+    },
+    {
+      "path": "skills/skill-builder/references/governance.md",
+      "sha256": "b3dcf582d676cfc5286bf9d7c7184b6e703b030505aaeee3c3595e4bf7710924"
+    },
+    {
+      "path": "skills/skill-builder/references/hosts/claude-code.md",
+      "sha256": "1753d58a266b62d0b5735714ca64277243c2e5bf8a767a9ffd1bac0dd0428cbf"
+    },
+    {
+      "path": "skills/skill-builder/references/hosts/codex.md",
+      "sha256": "59ed3dd77f7196093631b50ee4349a54e964307f918b2ec26f16cb2dfafc76b5"
+    },
+    {
+      "path": "skills/skill-builder/references/hosts/custom-host.md",
+      "sha256": "d8da9c9be6a7fffcb41c98a17353c0ef49d1d3831a1412a4bde7f8bec6b5d700"
+    },
+    {
+      "path": "skills/skill-builder/references/hosts/grok.md",
+      "sha256": "20b5e0763810f4704a90572c6039b67c3f76693dd12cd41ff1d95c8cf6c6dfc3"
+    },
+    {
+      "path": "skills/skill-builder/references/implementation-map.json",
+      "sha256": "b750c09ef869b57bb9baf89ea9df071973b5fb82db48ba31431d4bd4ea387472"
+    },
+    {
+      "path": "skills/skill-builder/references/knowledge-base-manifest.json",
+      "sha256": "c7efadcddfb5dbf427ae16851b490728b5a2a932140923b99e705688cbc9f101"
+    },
+    {
+      "path": "skills/skill-builder/references/knowledge-base.zip",
+      "sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204"
+    },
+    {
+      "path": "skills/skill-builder/references/license-decision.json",
+      "sha256": "5b738a9cedc3706e5cf9803bb4ec8e49af247b3cc80b11796cdcd6f96fe6341d"
+    },
+    {
+      "path": "skills/skill-builder/references/release-status.md",
+      "sha256": "fbc21b8467d114ac5eea9916b8c866def29ce94618c68f750906f879d16a262e"
+    },
+    {
+      "path": "skills/skill-builder/references/requirement-coverage.md",
+      "sha256": "8be34aa5f699d837c4014e8ecf7fec085bd756650c6d83612b9f4358add4d4e4"
+    },
+    {
+      "path": "skills/skill-builder/scripts/skill_builder.py",
+      "sha256": "b19ca1546da6746587ef91fb1145d99a12b48eadb2e1ffc84ba8e5065111491f"
+    },
+    {
+      "path": "tools/build_release.py",
+      "sha256": "6e786008828888755ff0fe1d47273078a3f734e0d4b4226e175e837caec85bcf"
+    },
+    {
+      "path": "tools/check_git_inventory.py",
+      "sha256": "58ab3693f4b9c7e5748d301cd3a97ecd549ace87bf4c3b6c751f20c98372cb2e"
+    },
+    {
+      "path": "tools/check_project.py",
+      "sha256": "9d08bad9e8b12d16987070e9136ee51be3b075f9bfb4828a5aa9e79bbd0bf4c9"
+    },
+    {
+      "path": "tools/evaluate.py",
+      "sha256": "bf52611a0657db50af95afedcbfc91b436d748922bccaeb02f11c89f19d83781"
+    },
+    {
+      "path": "tests/test_evaluation.py",
+      "sha256": "f3b8d4fda9674c54f53def3d7a6ee275ccbb27f727028e017d6721cedfb0948c"
+    },
+    {
+      "path": "tests/test_git_inventory.py",
+      "sha256": "777ce156d8f3177afe588ebd1157e5052ce0fc22b3d1d2310424c1339913fe4b"
+    },
+    {
+      "path": "tests/test_project_metadata.py",
+      "sha256": "896b6971e9402b0998304d770d668cdecaa67a4c2c03337b4e2ae7cbefa70ffd"
+    },
+    {
+      "path": "tests/test_release.py",
+      "sha256": "329f9115734fac5ab1818c5fd9b259d3742b2aa3e0b9c93d9c205680cd251b22"
+    },
+    {
+      "path": "tests/test_skill_builder.py",
+      "sha256": "94ff756cac8d61c6565514380d1c7ce682cb344f7058ce7c875fc6cdb416b901"
+    },
+    {
+      "path": "evals/README.md",
+      "sha256": "f79a0c2fab491b50927eceb554b7037ddefb5d8f84b84b5ab5352c5f4b54f100"
+    },
+    {
+      "path": "evals/cases.json",
+      "sha256": "dee6e209986558ab8e77d677ff851ef179d914352c80147621791f7bbfe2afd0"
+    },
+    {
+      "path": "evals/environment.example.json",
+      "sha256": "c4ce450e0629626f34dca675d0cee65a4d1bfff6ad2e8493c6ffb7d89ac18707"
+    },
+    {
+      "path": "evals/execution.json",
+      "sha256": "364274f7d9f3da36b0549a99ce8e78426bcb37d8d5d3a73a30b850f63487f6bc"
+    },
+    {
+      "path": "evals/fixtures/review-skill/README.md",
+      "sha256": "bf6d1acf882c2839d762f241aa72d074e11aaec08dcbbf543b9fac4e887d2819"
+    },
+    {
+      "path": "evals/fixtures/review-skill/SKILL.md.fixture",
+      "sha256": "7de4a37fdd8acddf403cd41ca1856d55b4e648d098afed024d22abc096913b65"
+    },
+    {
+      "path": "evals/protocol.md",
+      "sha256": "4862b57b3e1f427d96e2a22c2a27a57d3f6cd451e6ab9f7bb46d950cdd612a5e"
+    },
+    {
+      "path": "evals/routing.json",
+      "sha256": "c6a9cfb97467c68b02bac0dc01b1b22ed2e9afc185cfca48faa85bc10c98fa81"
+    }
+  ],
+  "frozen_archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+  "frozen_manifest_sha256": "c7efadcddfb5dbf427ae16851b490728b5a2a932140923b99e705688cbc9f101",
+  "archive_and_manifest_equal_to_prior_commit": true,
+  "scope": "Current implementation inputs only; excludes receipts and enclosing release-archive identity."
+}

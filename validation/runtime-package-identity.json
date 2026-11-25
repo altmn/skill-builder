@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "recorded_at": "2026-11-23T06:58:09.613438+00:00",
+  "archive": {
+    "filename": "skill-builder-1.0.0-rc.1.zip",
+    "size_bytes": 11989802,
+    "sha256": "64699bffb1c1f14f815e26023900799eb223b9bb7d76d0345f64b8a22c2b61ce",
+    "payload_sha256": "b190dd1231f186b3cc498471678dc99edd1c47c16885ce6e5ac5e1d6f209ea10",
+    "payload_files": 22
+  },
+  "source_commit": null,
+  "scope": "The exact runtime archive bytes that the final build must reproduce. Source archive identity is detached after all validation records are included."
+}

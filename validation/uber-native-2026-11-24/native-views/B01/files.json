@@ -1,0 +1,37 @@
+[
+  {
+    "path": "output/README.md.txt",
+    "original_sha256": "fa1a32c8f5562813078bcca57098ed324ba9805444a6300331e09d3b4deed9a2",
+    "derived_sha256": "fa1a32c8f5562813078bcca57098ed324ba9805444a6300331e09d3b4deed9a2"
+  },
+  {
+    "path": "output/rule-traceability.json.txt",
+    "original_sha256": "acb064209ef4f8d83fb1d3a4ee5464b9d2f3b00c701e3bf37dbac5ae9a287d88",
+    "derived_sha256": "acb064209ef4f8d83fb1d3a4ee5464b9d2f3b00c701e3bf37dbac5ae9a287d88"
+  },
+  {
+    "path": "output/skills/evaluation-receipt-reviewer/SKILL.md.txt",
+    "original_sha256": "28524b56c7be7913e00db93b229baf2b64759859f1d309171528a69da3183064",
+    "derived_sha256": "28524b56c7be7913e00db93b229baf2b64759859f1d309171528a69da3183064"
+  },
+  {
+    "path": "output/skills/evaluation-receipt-reviewer/references/examples.md.txt",
+    "original_sha256": "a585f2574923b2a24122599fdf6dc7db2c6f8dcf94198986c9729c49cfa3e48c",
+    "derived_sha256": "a585f2574923b2a24122599fdf6dc7db2c6f8dcf94198986c9729c49cfa3e48c"
+  },
+  {
+    "path": "output/tests/acceptance.md.txt",
+    "original_sha256": "3779fc23266f74f2409e71e6ab768cfaae166056978ad80091bb160f0a1e37da",
+    "derived_sha256": "3779fc23266f74f2409e71e6ab768cfaae166056978ad80091bb160f0a1e37da"
+  },
+  {
+    "path": "output/tests/fixtures/unknown-activation.json.txt",
+    "original_sha256": "4a772857fb474903b4b33d64a06dceec883e2e326703f603e19b435a2f08863f",
+    "derived_sha256": "4a772857fb474903b4b33d64a06dceec883e2e326703f603e19b435a2f08863f"
+  },
+  {
+    "path": "answer.txt",
+    "original_sha256": "61644680b2a2cb4b357bce9b1b88d44a7b673b61fd51731ab97a7b77d19aa42c",
+    "derived_sha256": "ba1e98999fdf6c068f9457d3b6330c520cc3f49d7010b66b5ce167ccfeecf5a2"
+  }
+]

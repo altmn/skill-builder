@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "outcome": "passed",
+  "scope": "Release-input containment, preservation, implemented ownership mapping, entrypoint/links/syntax and available original format checks",
+  "checks": [
+    {
+      "name": "release_input_boundary",
+      "outcome": "passed",
+      "detail": {
+        "selected_files": 210,
+        "policy": "Required selected roots, files and ancestors are nonsymlink and contained; traversal errors fail explicitly.",
+        "limit": "Point-in-time checks; not a sandbox against concurrent filesystem mutation."
+      }
+    },
+    {
+      "name": "current_scoped_license",
+      "outcome": "passed",
+      "detail": {
+        "license": "MIT",
+        "scope": "original_work_only; retained third-party terms apply",
+        "decision": "skills/skill-builder/references/license-decision.json",
+        "limit": "Checks declared terms and component identity; does not adjudicate third-party rights."
+      }
+    },
+    {
+      "name": "original_archive_identity",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "manifest_archive_identity",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "substantive_member_set",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "all_source_file_bytes",
+      "outcome": "passed",
+      "detail": {
+        "mismatches": [],
+        "files": 182
+      }
+    },
+    {
+      "name": "uncompressed_content_total",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "canonical_rules",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "all_rule_owners_present",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "rule_owner_contracts",
+      "outcome": "passed",
+      "detail": []
+    },
+    {
+      "name": "version_agreement",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "portable_entrypoint",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "entrypoint_not_placeholder",
+      "outcome": "passed",
+      "detail": {
+        "lines": 101,
+        "bytes": 13375
+      }
+    },
+    {
+      "name": "single_discoverable_runtime_entry",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "local_document_links",
+      "outcome": "passed",
+      "detail": []
+    },
+    {
+      "name": "python_syntax",
+      "outcome": "passed",
+      "detail": []
+    },
+    {
+      "name": "original_portable_validator",
+      "outcome": "blocked",
+      "detail": {
+        "outcome": "blocked",
+        "reason": "PyYAML is unavailable; provision reviewed dependencies explicitly.",
+        "skills": []
+      }
+    }
+  ],
+  "failed_checks": [],
+  "not_established": [
+    "semantic truth of all rule decisions",
+    "native discovery or host enforcement",
+    "clean baseline improvement",
+    "public distribution rights",
+    "GitHub CI execution"
+  ]
+}

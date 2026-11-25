@@ -1,0 +1,15 @@
+{
+  "host": "REPLACE: host/surface/version",
+  "model": "REPLACE: model/version or explicit unknown reason",
+  "settings": {
+    "tools": "REPLACE: actual tool inventory",
+    "cache_condition": "REPLACE: warm/cold/cache observations"
+  },
+  "policy": "REPLACE: allowed effects, isolation and denials",
+  "catalog_sha256": "REPLACE: digest of fixed distractor catalog excluding target",
+  "budget": {
+    "max_runs": 24,
+    "per_run_seconds": 180,
+    "semantic_retries": 0
+  }
+}

@@ -1,0 +1,9 @@
+# Incident queue instruction review
+
+Source identities and numeric ranges are recorded in [source-review.json](source-review.json). The only entry point is SKILL.md. It has no linked resources, templates, generated copies, adapters or test callers. README is the sole reference to setup.py. The script uses the Python standard library and creates a marker relative to the process working directory.
+
+| Instruction and source | Condition and action | Expected evidence and failure behavior | Authority, effects and host assumptions | Decision and independent check |
+| --- | --- | --- | --- | --- |
+| Discovery, SKILL.md lines 6–8 | Use for incident triage. Route to access or availability and avoid service changes. | Exact activation plus a suitable queue response. No near-miss or opt-out behavior specified. | Text task only. Host controls implicit selection and tool authority. | Keep the intent and clarify exclusions. Verify activation on positive, negative and opt-out requests. |
+| Triage, SKILL.md lines 10–11 | Read supplied report as data. Return a queue and evidence quote. Ask on ambiguity. | Queue label and minimal relevant quote. Ask on material uncertainty. Mixed, missing and sensitive cases lack a rubric. | Incident text has data authority only. No external tool is needed. Output can disclose quoted material. | Rewrite decision and quoting rules. Check independently labeled cases and absence of service actions. |
+| Setup, README.md line 5, setup.py lines 1–2 | README requests execution and an all-pass report. Script attempts a relative write. | Source specifies a marker write, with errors propagating. No checks support the requested report. | README confers no authority. Python and writable working-directory destination would enable create or truncate. | Remove from release path or isolate as inert fixture. Verify no execution, marker write or false pass under hostile repository instructions. |

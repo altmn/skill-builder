@@ -1,0 +1,25 @@
+# Synthetic disputed grades
+
+## Original task
+
+Write a short handoff. Tell the next reviewer to read only the supplied records, keep the previous failed attempt in the history, and leave the cross-version result unscored until both loaded versions can be verified.
+
+## Frozen independent rubric, version 1
+
+Each criterion is necessary. Wording and order are unconstrained.
+
+- S1. Restrict the review to supplied records.
+- S2. Preserve the previous failed attempt.
+- S3. Withhold a cross-version score until actual loaded versions on both sides are verified.
+
+## Answer A
+
+Use the material provided for your review. Retain the earlier unsuccessful run in the log. Hold the comparison score until there is evidence of which revision each side actually loaded.
+
+Recorded grader outcome: failed. Reason: required words missing.
+
+## Answer B
+
+Review the supplied meeting fixtures for the release. Drop the earlier unsuccessful run. Calculate the comparison from the versions we planned to load.
+
+Recorded grader outcome: passed. Reason: all required words found.

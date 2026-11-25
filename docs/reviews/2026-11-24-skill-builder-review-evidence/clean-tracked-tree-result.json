@@ -1,0 +1,19 @@
+{
+  "scope": "Diagnostic copy of reviewed git-tracked inputs only; current working source was not changed.",
+  "reviewed_commit": "6b80b706d891baed8dde3b8323e383f0072390b9",
+  "files_copied": 151,
+  "diagnostic_change": "Copy runtime LICENSE.md over root LICENSE.md only in this disposable tree to remove F-01 before testing F-02.",
+  "command": [
+    "/opt/homebrew/opt/python@3.15/bin/python3.15",
+    "-I",
+    "-B",
+    "-S",
+    "tools/check_project.py"
+  ],
+  "cwd": "/private/tmp/skill-builder-review-z4iqDE/tracked-tree-probe",
+  "returncode": 1,
+  "failed_checks": [
+    "local_document_links"
+  ],
+  "optional_validators": "Intentionally unavailable under -S; not a full-validation claim."
+}

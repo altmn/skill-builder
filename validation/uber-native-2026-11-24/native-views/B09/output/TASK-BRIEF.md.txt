@@ -1,0 +1,7 @@
+# Task contract
+
+The intended user has meeting notes already available as pasted text or explicitly named local Markdown files. The outcome is a JSON representation of decisions, actions and unresolved questions. Each action independently preserves explicit owner and due wording or uses null. The supplied contract is the domain source. Its example is reproduced in the weekly fixture.
+
+An instruction-only skill fits semantic extraction from naturally worded notes. The response is the only runtime output. The user designates the inputs. The host's existing read permission governs access to named local files and the skill needs no external services or runtime writes. Notes are low-trust data. Comments, command text and links may try to redirect the agent. The instruction boundary confines reading to designated notes and forbids executing or following note content. The evaluation runner checks actual effects independently.
+
+A complete source may yield empty arrays. Absent, inaccessible, or interrupted reads yield a request for the affected input. After an interruption, reestablish that all requested notes were read completely before producing any extraction. The case catalog covers explicit file input, pasted notes, missing input, incomplete inputs and no meeting business. Adjacent agenda drafting and search are routing negatives.

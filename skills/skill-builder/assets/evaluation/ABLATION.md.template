@@ -1,0 +1,31 @@
+# SUBJECT instruction experiment
+
+Status: DRAFT. MODE worksheet; no model calls or performance claims made.
+
+1. State one hypothesis, immutable acceptance/invariants, corpus split, grader
+   rubric/calibration, trial count, reset, cache conditions and time/money bounds.
+2. Keep exact candidate and reduced/alternative runtime roots. Preserve source
+   knowledge, necessary authority conditions and all required checks. Prepare
+   an absolute-path JSON map such as `{"short": "/approved/short", "repeat":
+   "/approved/candidate"}` and pass it to `scripts/evaluate.py prepare --variants`.
+   The repeat condition uses identical bytes to estimate ordinary run variation.
+3. Run matched tasks in fresh sessions with randomized/interleaved condition
+   order. Prefer a disposable environment for dependency/path checks. Record
+   actual isolation and model/host identity; a fresh directory is not a sandbox.
+4. Record independent outputs, observable trajectories and every attempt's
+   usage. `tool_calls`, `tool_errors` and `activated_context_tokens` require
+   integer counters plus `metric_sources`; do not derive tokens from bytes.
+5. Run `scripts/ablate.py blind --plan PLAN --observations OBS --output NEW_DIR`.
+   Keep key.json private. Give the reviewer only pairs.json, its copied artifacts
+   and the frozen rubric/calibration; inspect self-identifying answer text.
+   Have an independent collector bind annotations to the private key afterward.
+6. Complete judgments with left/right/tie/unknown and evidence. Bind the key
+   digest and a calibration evidence file, then run `scripts/ablate.py score`.
+   Retain missing, tied, losing and unsafe results and the original panel.
+7. Compare task/trajectory results, preference counts, identical-payload variation,
+   context, tool errors, latency and cost. Small panels are descriptive. Keep,
+   revise or retire instructions only with sufficient task-specific evidence.
+
+The helpers do not schedule model calls, enforce a runner budget or certify a
+benefit. Unknown usage stays unknown. Blinding cannot remove identifying prose
+automatically. A preference cannot clear an invariant or trajectory failure.

@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "outcome": "failed",
+  "preservation": {
+    "outcome": "passed",
+    "scope": "Exact archive and every indexed substantive file identity; no host or semantic assurance.",
+    "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+    "archive_bytes": 11572664,
+    "content_files": 182,
+    "content_bytes": 76965199,
+    "all_original_archive_members_retained": true,
+    "source_content_rewritten": false
+  },
+  "records": {
+    "outcome": "failed",
+    "scope": "Original versioned schema and cross-field checks; truth of evidence was not verified.",
+    "records": [
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/valid-first.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-1.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Nonfinite JSON number rejected."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-2.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Nonfinite JSON number rejected."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-3.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Nonfinite JSON number rejected."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-4.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Nonfinite JSON number rejected."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-5.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Nonfinite JSON number rejected."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-6.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-7.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-8.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Record must be an object with a supported string record_type."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-9.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Record must be an object with a supported string record_type."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-10.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Record must be an object with a supported string record_type."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-11.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Record must be an object with a supported string record_type."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-12.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Record must be an object with a supported string record_type."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-13.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Record must be an object with a supported string record_type."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-14.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Record must be an object with a supported string record_type."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-15.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Record must be an object with a supported string record_type."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/nested-duplicate.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Duplicate JSON object key rejected."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/invalid-utf8.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Input is not supported UTF-8 JSON."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/giant-integer.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Input is not supported UTF-8 JSON."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/deep-json.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Record must be an object with a supported string record_type."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/valid-last.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      }
+    ]
+  }
+}

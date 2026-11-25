@@ -1,0 +1,155 @@
+test_archive_symlink_is_rejected (test_skill_builder.BuilderContracts.test_archive_symlink_is_rejected) ... ok
+test_archive_tamper_rejected_before_retrieval (test_skill_builder.BuilderContracts.test_archive_tamper_rejected_before_retrieval) ... ok
+test_archive_traversal_is_rejected (test_skill_builder.BuilderContracts.test_archive_traversal_is_rejected) ... ok
+test_audit_is_read_only_and_never_executes_candidate_code_or_hooks (test_skill_builder.BuilderContracts.test_audit_is_read_only_and_never_executes_candidate_code_or_hooks) ... FAIL
+test_audit_missing_resource_propagates_failure (test_skill_builder.BuilderContracts.test_audit_missing_resource_propagates_failure) ... FAIL
+test_audit_output_cannot_modify_target (test_skill_builder.BuilderContracts.test_audit_output_cannot_modify_target) ... ok
+test_cli_misuse_has_nonzero_json_error (test_skill_builder.BuilderContracts.test_cli_misuse_has_nonzero_json_error) ... ok
+test_content_path_cannot_escape_index (test_skill_builder.BuilderContracts.test_content_path_cannot_escape_index) ... ok
+test_create_quotes_description_and_does_not_execute_shell_text (test_skill_builder.BuilderContracts.test_create_quotes_description_and_does_not_execute_shell_text) ... ERROR
+test_created_descriptions_round_trip_unicode_scalars_through_yaml (test_skill_builder.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) ... ERROR
+test_deep_directory_tree_has_explicit_coverage_limit (test_skill_builder.BuilderContracts.test_deep_directory_tree_has_explicit_coverage_limit) ... ok
+test_duplicate_archive_entries_rejected (test_skill_builder.BuilderContracts.test_duplicate_archive_entries_rejected) ... ok
+test_duplicate_json_record_keys_and_nonfinite_numbers_are_rejected (test_skill_builder.BuilderContracts.test_duplicate_json_record_keys_and_nonfinite_numbers_are_rejected) ... ok
+test_empty_directory_tree_is_bounded_by_entry_budget (test_skill_builder.BuilderContracts.test_empty_directory_tree_is_bounded_by_entry_budget) ... ok
+test_every_documented_public_cli_mode_has_help (test_skill_builder.BuilderContracts.test_every_documented_public_cli_mode_has_help) ... ok
+test_evidence_validation_rejects_incomplete_and_false_pass_without_echoing_values (test_skill_builder.BuilderContracts.test_evidence_validation_rejects_incomplete_and_false_pass_without_echoing_values) ... FAIL
+test_existing_outputs_are_not_overwritten (test_skill_builder.BuilderContracts.test_existing_outputs_are_not_overwritten) ... ok
+test_extra_substantive_archive_member_cannot_hide_from_manifest (test_skill_builder.BuilderContracts.test_extra_substantive_archive_member_cannot_hide_from_manifest) ... ok
+test_extract_refuses_installed_skill_locations (test_skill_builder.BuilderContracts.test_extract_refuses_installed_skill_locations) ... ok
+test_extract_reproduces_every_indexed_file_without_executing (test_skill_builder.BuilderContracts.test_extract_reproduces_every_indexed_file_without_executing) ... ok
+test_file_count_budget_reports_unenumerated_remainder (test_skill_builder.BuilderContracts.test_file_count_budget_reports_unenumerated_remainder) ... ok
+test_full_manifest_listing_and_prefix_are_explicit (test_skill_builder.BuilderContracts.test_full_manifest_listing_and_prefix_are_explicit) ... ok
+test_invalid_names_and_blank_description_fail_without_output (test_skill_builder.BuilderContracts.test_invalid_names_and_blank_description_fail_without_output) ... ok
+test_inventory_budget_does_not_report_complete_coverage (test_skill_builder.BuilderContracts.test_inventory_budget_does_not_report_complete_coverage) ... FAIL
+test_isolated_audit_ignores_hostile_cwd_and_pythonpath_modules (test_skill_builder.BuilderContracts.test_isolated_audit_ignores_hostile_cwd_and_pythonpath_modules) ... FAIL
+test_manifest_cannot_reassign_pinned_archive (test_skill_builder.BuilderContracts.test_manifest_cannot_reassign_pinned_archive) ... ok
+test_no_actual_skill_is_blocked_not_passed (test_skill_builder.BuilderContracts.test_no_actual_skill_is_blocked_not_passed) ... ok
+test_nonfinite_numbers_are_rejected_at_every_json_depth (test_skill_builder.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) ... ok
+test_nonisolated_dependency_operation_is_refused (test_skill_builder.BuilderContracts.test_nonisolated_dependency_operation_is_refused) ... ok
+test_output_symlink_parent_is_refused (test_skill_builder.BuilderContracts.test_output_symlink_parent_is_refused) ... ok
+test_overflow_record_failures_keep_finite_controls_and_batch_order (test_skill_builder.BuilderContracts.test_overflow_record_failures_keep_finite_controls_and_batch_order) ... FAIL
+test_overrides_require_known_rule_and_reviewable_reason (test_skill_builder.BuilderContracts.test_overrides_require_known_rule_and_reviewable_reason) ... ok
+test_owned_failure_cleanup_keeps_contents_beneath_replaced_root (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_contents_beneath_replaced_root) ... ok
+test_owned_failure_cleanup_keeps_directory_metadata_changes (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_directory_metadata_changes) ... ok
+test_owned_failure_cleanup_keeps_files_with_changed_metadata (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_files_with_changed_metadata) ... ok
+test_owned_failure_cleanup_keeps_in_place_modified_file (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_in_place_modified_file) ... ok
+test_owned_failure_cleanup_keeps_replaced_file (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_replaced_file) ... ok
+test_owned_failure_cleanup_keeps_unconfirmed_partial_write (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_unconfirmed_partial_write) ... ok
+test_owned_failure_cleanup_keeps_unrelated_new_file (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_unrelated_new_file) ... ok
+test_owned_failure_cleanup_removes_known_partial_write (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_removes_known_partial_write) ... ok
+test_owned_failure_cleanup_removes_unchanged_nested_output (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_removes_unchanged_nested_output) ... ok
+test_prefetched_siblings_are_charged_to_global_enumeration_budget (test_skill_builder.BuilderContracts.test_prefetched_siblings_are_charged_to_global_enumeration_budget) ... ok
+test_profiles_match_original_selector_and_preserve_full_rule_text (test_skill_builder.BuilderContracts.test_profiles_match_original_selector_and_preserve_full_rule_text) ... ok
+test_public_json_results_have_version_and_explicit_outcome (test_skill_builder.BuilderContracts.test_public_json_results_have_version_and_explicit_outcome) ... ERROR
+test_publication_authority_is_selected (test_skill_builder.BuilderContracts.test_publication_authority_is_selected) ... ok
+test_read_outputs_complete_exact_bytes_without_extra_newline (test_skill_builder.BuilderContracts.test_read_outputs_complete_exact_bytes_without_extra_newline) ... ok
+test_received_archive_and_all_182_files_are_verified (test_skill_builder.BuilderContracts.test_received_archive_and_all_182_files_are_verified) ... ok
+test_search_is_literal_paginated_and_discloses_preview_limits (test_skill_builder.BuilderContracts.test_search_is_literal_paginated_and_discloses_preview_limits) ... ok
+test_search_no_hits_is_not_fabricated_content (test_skill_builder.BuilderContracts.test_search_no_hits_is_not_fabricated_content) ... ok
+test_surrogate_descriptions_fail_before_output_creation (test_skill_builder.BuilderContracts.test_surrogate_descriptions_fail_before_output_creation) ... ok
+test_symlink_contents_and_special_files_are_not_read (test_skill_builder.BuilderContracts.test_symlink_contents_and_special_files_are_not_read) ... ok
+test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics (test_skill_builder.BuilderContracts.test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics) ... FAIL
+test_wrong_individual_hash_fails_verification (test_skill_builder.BuilderContracts.test_wrong_individual_hash_fails_verification) ... ok
+test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values (test_skill_builder.BuilderContracts.test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values) ... FAIL
+
+======================================================================
+ERROR: test_create_quotes_description_and_does_not_execute_shell_text (test_skill_builder.BuilderContracts.test_create_quotes_description_and_does_not_execute_shell_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/tests/test_skill_builder.py", line 226, in test_create_quotes_description_and_does_not_execute_shell_text
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+
+======================================================================
+ERROR: test_created_descriptions_round_trip_unicode_scalars_through_yaml (test_skill_builder.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/tests/test_skill_builder.py", line 245, in test_created_descriptions_round_trip_unicode_scalars_through_yaml
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+
+======================================================================
+ERROR: test_public_json_results_have_version_and_explicit_outcome (test_skill_builder.BuilderContracts.test_public_json_results_have_version_and_explicit_outcome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/tests/test_skill_builder.py", line 88, in test_public_json_results_have_version_and_explicit_outcome
+    import jsonschema
+ModuleNotFoundError: No module named 'jsonschema'
+
+======================================================================
+FAIL: test_audit_is_read_only_and_never_executes_candidate_code_or_hooks (test_skill_builder.BuilderContracts.test_audit_is_read_only_and_never_executes_candidate_code_or_hooks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/tests/test_skill_builder.py", line 313, in test_audit_is_read_only_and_never_executes_candidate_code_or_hooks
+    self.assertEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : b'{\n  "schema_version": "1.0.0",\n  "outcome": "static_preparation_completed",\n  "audit_verdict": "inconclusive",\n  "output": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/.test-builder-jjjay8f9/audit",\n  "static_checks": "blocked",\n  "inventory_coverage": "complete_within_declared_exclusions",\n  "changed_during_check": [],\n  "full_semantic_review": "not_run",\n  "host_trials": "not_run",\n  "target_code_executed": false,\n  "release_ready": false\n}\n'
+
+======================================================================
+FAIL: test_audit_missing_resource_propagates_failure (test_skill_builder.BuilderContracts.test_audit_missing_resource_propagates_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/tests/test_skill_builder.py", line 327, in test_audit_missing_resource_propagates_failure
+    self.assertEqual(result.returncode, 1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1
+
+======================================================================
+FAIL: test_evidence_validation_rejects_incomplete_and_false_pass_without_echoing_values (test_skill_builder.BuilderContracts.test_evidence_validation_rejects_incomplete_and_false_pass_without_echoing_values)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/tests/test_skill_builder.py", line 449, in test_evidence_validation_rejects_incomplete_and_false_pass_without_echoing_values
+    self.assertEqual(result.returncode, 1, result.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1 : b'{\n  "schema_version": "1.0.0",\n  "outcome": "blocked",\n  "preservation": {\n    "outcome": "passed",\n    "scope": "Exact archive and every indexed substantive file identity; no host or semantic assurance.",\n    "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",\n    "archive_bytes": 11572664,\n    "content_files": 182,\n    "content_bytes": 76965199,\n    "all_original_archive_members_retained": true,\n    "source_content_rewritten": false\n  },\n  "records": {\n    "outcome": "blocked",\n    "reason": "Evidence checking requires the pinned jsonschema/referencing dependencies; nothing was installed.",\n    "records": []\n  }\n}\n'
+
+======================================================================
+FAIL: test_inventory_budget_does_not_report_complete_coverage (test_skill_builder.BuilderContracts.test_inventory_budget_does_not_report_complete_coverage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/tests/test_skill_builder.py", line 384, in test_inventory_budget_does_not_report_complete_coverage
+    self.assertEqual(result.returncode, 1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1
+
+======================================================================
+FAIL: test_isolated_audit_ignores_hostile_cwd_and_pythonpath_modules (test_skill_builder.BuilderContracts.test_isolated_audit_ignores_hostile_cwd_and_pythonpath_modules)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/tests/test_skill_builder.py", line 337, in test_isolated_audit_ignores_hostile_cwd_and_pythonpath_modules
+    self.assertEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : b'{\n  "schema_version": "1.0.0",\n  "outcome": "static_preparation_completed",\n  "audit_verdict": "inconclusive",\n  "output": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/.test-builder-wr8qz1r1/audit",\n  "static_checks": "blocked",\n  "inventory_coverage": "complete_within_declared_exclusions",\n  "changed_during_check": [],\n  "full_semantic_review": "not_run",\n  "host_trials": "not_run",\n  "target_code_executed": false,\n  "release_ready": false\n}\n'
+
+======================================================================
+FAIL: test_overflow_record_failures_keep_finite_controls_and_batch_order (test_skill_builder.BuilderContracts.test_overflow_record_failures_keep_finite_controls_and_batch_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/tests/test_skill_builder.py", line 484, in test_overflow_record_failures_keep_finite_controls_and_batch_order
+    self.assertEqual(result.returncode, 1, result.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1 : b'{\n  "schema_version": "1.0.0",\n  "outcome": "blocked",\n  "preservation": {\n    "outcome": "passed",\n    "scope": "Exact archive and every indexed substantive file identity; no host or semantic assurance.",\n    "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",\n    "archive_bytes": 11572664,\n    "content_files": 182,\n    "content_bytes": 76965199,\n    "all_original_archive_members_retained": true,\n    "source_content_rewritten": false\n  },\n  "records": {\n    "outcome": "blocked",\n    "reason": "Evidence checking requires the pinned jsonschema/referencing dependencies; nothing was installed.",\n    "records": []\n  }\n}\n'
+
+======================================================================
+FAIL: test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics (test_skill_builder.BuilderContracts.test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/tests/test_skill_builder.py", line 520, in test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics
+    self.assertEqual(result.returncode, 1, result.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1 : b'{\n  "schema_version": "1.0.0",\n  "outcome": "blocked",\n  "preservation": {\n    "outcome": "passed",\n    "scope": "Exact archive and every indexed substantive file identity; no host or semantic assurance.",\n    "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",\n    "archive_bytes": 11572664,\n    "content_files": 182,\n    "content_bytes": 76965199,\n    "all_original_archive_members_retained": true,\n    "source_content_rewritten": false\n  },\n  "records": {\n    "outcome": "blocked",\n    "reason": "Evidence checking requires the pinned jsonschema/referencing dependencies; nothing was installed.",\n    "records": []\n  }\n}\n'
+
+======================================================================
+FAIL: test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values (test_skill_builder.BuilderContracts.test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder/tests/test_skill_builder.py", line 504, in test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values
+    self.assertEqual(result.returncode, 1, result.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1 : b'{\n  "schema_version": "1.0.0",\n  "outcome": "blocked",\n  "preservation": {\n    "outcome": "passed",\n    "scope": "Exact archive and every indexed substantive file identity; no host or semantic assurance.",\n    "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",\n    "archive_bytes": 11572664,\n    "content_files": 182,\n    "content_bytes": 76965199,\n    "all_original_archive_members_retained": true,\n    "source_content_rewritten": false\n  },\n  "records": {\n    "outcome": "blocked",\n    "reason": "Evidence checking requires the pinned jsonschema/referencing dependencies; nothing was installed.",\n    "records": []\n  }\n}\n'
+
+----------------------------------------------------------------------
+Ran 54 tests in 4.312s
+
+FAILED (failures=8, errors=3)

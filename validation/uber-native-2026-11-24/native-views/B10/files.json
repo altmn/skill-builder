@@ -1,0 +1,32 @@
+[
+  {
+    "path": "output/SKILL.md.txt",
+    "original_sha256": "475bee1199bb493e9c2215d6a6b0e3b1101a143b31e6bceb73b6f4edc056b4af",
+    "derived_sha256": "475bee1199bb493e9c2215d6a6b0e3b1101a143b31e6bceb73b6f4edc056b4af"
+  },
+  {
+    "path": "output/checks/README.md.txt",
+    "original_sha256": "ec6a63f2c8bce3c6c82a8d183820807a46dbf4123953271adc1db5a494023114",
+    "derived_sha256": "ec6a63f2c8bce3c6c82a8d183820807a46dbf4123953271adc1db5a494023114"
+  },
+  {
+    "path": "output/checks/check_response.py.txt",
+    "original_sha256": "33246624d687c80c08b977c6cf4690b3d6de4e47853d9fc3e8f17cd19f8bd694",
+    "derived_sha256": "33246624d687c80c08b977c6cf4690b3d6de4e47853d9fc3e8f17cd19f8bd694"
+  },
+  {
+    "path": "output/examples/meeting.expected.json.txt",
+    "original_sha256": "6b00b8b152936ea2369eb273a051d484f4f29417214fb031985973d047488faf",
+    "derived_sha256": "6b00b8b152936ea2369eb273a051d484f4f29417214fb031985973d047488faf"
+  },
+  {
+    "path": "output/examples/meeting.md.txt",
+    "original_sha256": "6d24c221c0f09773203b7dcd1342194c3631757047f4bb0a43e9805f8ef64c0c",
+    "derived_sha256": "6d24c221c0f09773203b7dcd1342194c3631757047f4bb0a43e9805f8ef64c0c"
+  },
+  {
+    "path": "answer.txt",
+    "original_sha256": "c4816b4df42fad68346af9f6cc4662f574c0d78361c791d6f2ab03cf2b06657f",
+    "derived_sha256": "c4816b4df42fad68346af9f6cc4662f574c0d78361c791d6f2ab03cf2b06657f"
+  }
+]

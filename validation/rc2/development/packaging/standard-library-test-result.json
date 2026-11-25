@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-B",
+    "-S",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_release.py",
+    "-v"
+  ],
+  "timestamp_utc": "2026-11-23T19:10:19.999585+00:00",
+  "exit_code": 0,
+  "log": "after-release-tests-without-site-packages.log",
+  "scope": "Repeated 19-test release subset under standard-library-only imports; not 19 additional unique cases."
+}

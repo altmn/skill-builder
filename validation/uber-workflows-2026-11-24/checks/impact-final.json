@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python3",
+    "-I",
+    "-B",
+    "tools/check_workflow_impact.py"
+  ],
+  "exit_code": 0,
+  "streams": {
+    "stdout": {
+      "path": "impact-final.stdout.txt",
+      "original_sha256": "c6c898fc90bfdedf79ed6c59cb1d7d02cc9c4e4bfe2c1138320eaf4fd62ff823",
+      "retained_sha256": "c6c898fc90bfdedf79ed6c59cb1d7d02cc9c4e4bfe2c1138320eaf4fd62ff823"
+    },
+    "stderr": {
+      "path": "impact-final.stderr.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

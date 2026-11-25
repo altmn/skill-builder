@@ -1,0 +1,18 @@
+{
+  "outcome": "passed",
+  "checks": [
+    "Restricted two-scalar frontmatter and single-file payload",
+    "Payload and frozen corpus identities",
+    "Case uniqueness, split coverage, oracle check references, fixture hashes, empty and missing inputs",
+    "All canonical rule fields and traceability references",
+    "Panel and supplemental review consistency"
+  ],
+  "skill_sha256": "da7e2a44e34306f8d12d5675611bcf4ec902ab4d0c3434c236025ea1294425a7",
+  "plan_sha256": "34d4693ee91f46e40ef2939c297be43ede7262684fec9a6f2c2c13a1171f0437",
+  "routing_cases": 8,
+  "execution_cases": 8,
+  "frozen_fixtures": 6,
+  "canonical_rules_retained": 99,
+  "native_observations": 0,
+  "limits": "Source checks only. No general YAML parsing, original schema validation, or native execution."
+}

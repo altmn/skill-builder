@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "native_calls": 24,
+  "main_completed": 12,
+  "probes_completed": 11,
+  "probes_infrastructure_blocked": 1,
+  "semantic_retries": 0,
+  "conditions": {
+    "no_skill": {
+      "create": {
+        "passed": 2,
+        "attempted": 2
+      },
+      "audit": {
+        "passed": 1,
+        "attempted": 2
+      },
+      "all_task_checks": {
+        "passed": 17,
+        "total": 18
+      },
+      "generated_subject_probes": {
+        "passed": 4,
+        "attempted": 4,
+        "unknown": 0
+      },
+      "main_usage": {
+        "input_tokens": 445831,
+        "cached_input_tokens": 334592,
+        "output_tokens": 6166,
+        "command_calls": 14,
+        "elapsed_seconds_sum": 163.82416008308064,
+        "cost_usd": null
+      }
+    },
+    "previous": {
+      "create": {
+        "passed": 2,
+        "attempted": 2
+      },
+      "audit": {
+        "passed": 1,
+        "attempted": 2
+      },
+      "all_task_checks": {
+        "passed": 17,
+        "total": 18
+      },
+      "generated_subject_probes": {
+        "passed": 4,
+        "attempted": 4,
+        "unknown": 0
+      },
+      "main_usage": {
+        "input_tokens": 1730659,
+        "cached_input_tokens": 1471488,
+        "output_tokens": 17009,
+        "command_calls": 36,
+        "elapsed_seconds_sum": 409.8142842920497,
+        "cost_usd": null
+      }
+    },
+    "candidate": {
+      "create": {
+        "passed": 2,
+        "attempted": 2
+      },
+      "audit": {
+        "passed": 2,
+        "attempted": 2
+      },
+      "all_task_checks": {
+        "passed": 18,
+        "total": 18
+      },
+      "generated_subject_probes": {
+        "passed": 3,
+        "attempted": 4,
+        "unknown": 1
+      },
+      "main_usage": {
+        "input_tokens": 1596050,
+        "cached_input_tokens": 1344128,
+        "output_tokens": 15472,
+        "command_calls": 33,
+        "elapsed_seconds_sum": 367.6598859168589,
+        "cost_usd": null
+      }
+    }
+  },
+  "conclusion": "Small observed audit citation-accuracy advantage; no creation artifact or completed-probe quality gain. Broader causal/efficiency benefit is unproven.",
+  "interpretation": [
+    "Every condition found the substantive audit defects; only source-location grading separated them.",
+    "All eight builder-assisted main runs and eleven completed generated-subject probes expose verified full entrypoint reads.",
+    "One candidate-generated receipt probe hit model capacity before loading and is unknown, not an attributed skill failure.",
+    "Candidate main input usage is lower than prior in this panel, but much higher than no skill. Cache/model/concurrency limits prevent a dollar/speed claim.",
+    "New companion helpers and direct Uber-supplement reads were not observed, so this does not establish native uptake or benefit of every new mechanism.",
+    "Audit packages were materialized under ./target, identically across conditions, introducing an additional possible directory/name mismatch. No extra primary credit was awarded."
+  ],
+  "limits": [
+    "Four public historical-adaptation tasks, one trial each; descriptive results only.",
+    "Provider caching and default resolved model version may be uncontrolled.",
+    "Fresh projects and native sandboxing do not constitute an independent remote clean room.",
+    "Latency with two concurrent calls is observational; dollar cost may be unavailable."
+  ]
+}

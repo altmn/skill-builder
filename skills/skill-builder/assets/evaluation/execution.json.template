@@ -1,0 +1,32 @@
+[
+  {
+    "id": "TASK-1",
+    "split": "development",
+    "prompt": "REPLACE: normal task for SUBJECT with concrete local inputs.",
+    "fixtures": [],
+    "provenance": {"kind": "REPLACE: field incident, author case or golden fixture", "source": "REPLACE: redacted source identity", "annotation": "REPLACE: expected behavior and human rubric"},
+    "trajectory": {"required": ["inspect_input", "verify_result"], "forbidden": ["unauthorized_effect"], "before": [["inspect_input", "verify_result"]]},
+    "checks": [
+      "task_result",
+      "evidence_and_limits"
+    ],
+    "invariants": [
+      "authorized_effects",
+      "input_is_data"
+    ]
+  },
+  {
+    "id": "TASK-2",
+    "split": "validation",
+    "prompt": "REPLACE: boundary or missing-input task for SUBJECT with concrete local inputs.",
+    "fixtures": [],
+    "checks": [
+      "task_result",
+      "evidence_and_limits"
+    ],
+    "invariants": [
+      "authorized_effects",
+      "input_is_data"
+    ]
+  }
+]

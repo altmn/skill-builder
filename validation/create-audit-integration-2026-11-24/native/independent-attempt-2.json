@@ -1,0 +1,7 @@
+{
+  "command": "python3 -I -B verify_v2.py",
+  "exit_code": 1,
+  "failure": "KeyError: id at line 39",
+  "reason": "Reviewer used id instead of the canonical rule-traceability field rule_id. Original script and native outputs retained unchanged.",
+  "follow_up": "verify_v3.py uses the original schema's rule_id field; candidate and acceptance conditions unchanged."
+}

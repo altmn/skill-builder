@@ -1,0 +1,18 @@
+# Instruction review worksheet
+
+| Field | Entry |
+|---|---|
+| Instruction ID and source revision | [value] |
+| File / lines / surrounding heading | [value] |
+| Condition | [when it applies] |
+| Action | [observable operation or decision] |
+| Expected evidence | [what establishes success] |
+| Failure / uncertainty behavior | [stop, partial result, retry, recovery] |
+| Authority and effect | [source of authorization; resources changed or disclosed] |
+| Host assumptions | [tools, paths, metadata, lifecycle] |
+| Conflicts / duplicate owners | [locations or none found] |
+| Decision | keep / rewrite / move / implement in code / remove / needs verification |
+| Reason and proposed wording | [specific change] |
+| Evaluation case | [independent outcome/negative case] |
+
+An automatic topic tag or grep match is a review lead, not a verdict.

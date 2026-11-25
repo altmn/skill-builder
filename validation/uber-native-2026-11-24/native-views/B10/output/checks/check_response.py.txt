@@ -1,0 +1,111 @@
+"""Validate a captured response for one meeting-notes contract case."""
+
+import argparse
+import json
+from pathlib import Path
+import re
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def unique_object(pairs):
+    result = {}
+    for key, value in pairs:
+        require(key not in result, f"Duplicate JSON key {key!r}")
+        result[key] = value
+    return result
+
+
+def contains_words(value, *words):
+    tokens = set(re.findall(r"[a-z]+", value.lower()))
+    return all(word in tokens for word in words)
+
+
+def check_success(case, response):
+    data = json.loads(response, object_pairs_hook=unique_object)
+    require(isinstance(data, dict) and set(data) == {
+        "decisions", "actions", "questions"
+    }, "Expected exactly decisions, actions and questions")
+    for key, values in data.items():
+        require(isinstance(values, list), f"{key} must be an array")
+        if key != "actions":
+            require(all(isinstance(value, str) and value.strip() for value in values),
+                    f"{key} must contain nonempty strings")
+
+    actions = data["actions"]
+    for action in actions:
+        require(isinstance(action, dict) and set(action) == {"task", "owner", "due"},
+                "Each action must have exactly task, owner and due")
+        require(isinstance(action["task"], str) and action["task"].strip(),
+                "Each task must be a nonempty string")
+        for key in ("owner", "due"):
+            value = action[key]
+            require(value is None or isinstance(value, str) and value.strip(),
+                    f"{key} must be a nonempty string or null")
+
+    expected = []
+    if case == "example":
+        decisions = data["decisions"]
+        questions = data["questions"]
+        require(len(decisions) == 1 and contains_words(decisions[0], "weekly", "releases"),
+                "Expected the weekly release decision only")
+        require(len(questions) == 1 and contains_words(questions[0], "rollback", "who"),
+                "Expected the open rollback ownership question only")
+        expected = [
+            (("checklist",), "Alex", "Friday"),
+            (("rotate", "guide"), None, None),
+        ]
+    else:
+        require(not data["decisions"] and not data["questions"],
+                "Expected empty decisions and questions")
+        if case == "fields":
+            expected = [
+                (("agenda",), "Sam", None),
+                (("archive", "minutes"), None, "next Tuesday"),
+                (("roster",), None, "end of day"),
+                (("summary",), "Morgan", None),
+            ]
+    require(len(actions) == len(expected), "Unexpected action count")
+    for index, (action, (words, owner, due)) in enumerate(zip(actions, expected), 1):
+        require(contains_words(action["task"], *words), f"Wrong task for action {index}")
+        require(action["owner"] == owner, f"Wrong owner for action {index}")
+        require(action["due"] == due, f"Wrong due for action {index}")
+
+
+def check_input_request(case, response):
+    require(not re.search(r'"(?:decisions|actions|questions)"\s*:', response),
+            "Input failure must not emit extraction JSON")
+    require(not re.search(r"\bkeep weekly releases\b", response, re.IGNORECASE),
+            "Input failure must not extract from partial input")
+    if case != "missing":
+        require("missing-meeting-notes.md" in response, "Name the unreadable file")
+    require(re.search(
+        r"\b(?:paste|provide|share|attach|upload|supply|send)\b", response, re.IGNORECASE
+    ), "Request accessible input")
+    require(re.search(
+        r"\b(?:notes|contents|text|copy|file|markdown|path)\b", response, re.IGNORECASE
+    ), "Specify which input the user should provide")
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("case", choices=("example", "fields", "empty", "missing",
+                                         "unreadable", "partial"))
+    parser.add_argument("capture", type=Path)
+    args = parser.parse_args()
+    try:
+        response = args.capture.read_text(encoding="utf-8").strip()
+        if args.case in ("example", "fields", "empty"):
+            check_success(args.case, response)
+        else:
+            check_input_request(args.case, response)
+    except (OSError, ValueError) as error:
+        parser.exit(1, f"FAIL {args.case}: {error}\n")
+    print(f"PASS {args.case}")
+
+
+if __name__ == "__main__":
+    main()

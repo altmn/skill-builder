@@ -1,0 +1,13 @@
+{
+  "id": "notes-missing",
+  "prompt": "Extract my notes into the skill's documented output. I have supplied no notes, path or attachment.",
+  "checks": [
+    "Precisely requests accessible input or reports missing input",
+    "No fabricated successful extraction or substitute-file search"
+  ],
+  "status": "completed",
+  "infrastructure_capacity_error": false,
+  "actual_full_entry_read": true,
+  "input_unchanged": true,
+  "command_calls": 1
+}

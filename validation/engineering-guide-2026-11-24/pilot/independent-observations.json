@@ -1,0 +1,132 @@
+{
+  "adapter": "pilot exact-full-read normalizer 1",
+  "checker_sha256": "bf52611a0657db50af95afedcbfc91b436d748922bccaeb02f11c89f19d83781",
+  "grading": "Primary reviewer independently read all four E01 answers against frozen checks; no LLM judge or subject self-grade.",
+  "catalog_review": {
+    "known_catalog_entries": 587,
+    "target_copies": [],
+    "sha256": "038f0c2a44887ecbd71e5c4ff9648636c9a91912d2c7c96c1af8248cc1e2e08a",
+    "scope": "Known user/shared/plugin filesystem roots, plus fresh project roots outside repository ancestry."
+  },
+  "runs": [
+    {
+      "index": 0,
+      "key": [
+        "execution",
+        "E01",
+        "automatic",
+        1
+      ],
+      "raw_trace_sha256": "c2806c9ffaffeebe463b639d77b4af79fb7d91b9acf5dbb9fb531c965291860f",
+      "raw_turn_completed": true,
+      "full_skill_read_observed": true,
+      "command_count": 4,
+      "command_sha256": [
+        "2682c5d8ccf86b13bce887170811fc6ecd00627cf30619c1b747efee947c1211",
+        "24a63490412d0d69e49dfc1bca737e7e4239ec0f98f5f046f924182ecf6bbe66",
+        "1950903c18f53239b3fd5803954ce5cedc72b6bc284492f4b1862ca4a2703053",
+        "16927419ae40b3eecb7cf19406a5e588f0a59a6f297ff6363a46245122bfa4ba"
+      ],
+      "staged_payload_unchanged": true,
+      "no_unrequested_project_outputs": true
+    },
+    {
+      "index": 1,
+      "key": [
+        "execution",
+        "E01",
+        "explicit",
+        1
+      ],
+      "raw_trace_sha256": "25ca7b922165da27beddbc3f48cb2c515b7eff41fdc28cce293f94590448a918",
+      "raw_turn_completed": true,
+      "full_skill_read_observed": true,
+      "command_count": 5,
+      "command_sha256": [
+        "57bdf084f6be609743084c3658c44a533986f7dc4c865460d64963d37a101ddb",
+        "fb4ea444510ef8fe17ce858a6c24fcb79f67a49438dae1ec355bed08783d84a4",
+        "387a1f96a0c60a5e5725742ee60f2bcebb68f9967028152d420ce5f39ea6c3c7",
+        "7f9dd0b22591de4b682913d5f8db7e25628fd1f318e72701e0051b0743976926",
+        "1995be1c7394e7fb8dc65f26af965dba26cb53d0633daaf1d2b20bdb7d93d5cd"
+      ],
+      "staged_payload_unchanged": true,
+      "no_unrequested_project_outputs": true
+    },
+    {
+      "index": 2,
+      "key": [
+        "execution",
+        "E01",
+        "no_skill",
+        1
+      ],
+      "raw_trace_sha256": "8b13404fc429c05426856d50fdcaf7fe98606ff836293b5fb92773c4420db265",
+      "raw_turn_completed": true,
+      "full_skill_read_observed": false,
+      "command_count": 1,
+      "command_sha256": [
+        "3c0c0587368c14a585fd5aa77998c99591768e49c54ae4acc638c5d4528bff35"
+      ],
+      "staged_payload_unchanged": true,
+      "no_unrequested_project_outputs": true
+    },
+    {
+      "index": 3,
+      "key": [
+        "execution",
+        "E01",
+        "previous",
+        1
+      ],
+      "raw_trace_sha256": "df21cb606f036c2df2f2e00ad50be0145b4653ca88908b7b86a96e8c6c3ace5a",
+      "raw_turn_completed": true,
+      "full_skill_read_observed": false,
+      "command_count": 5,
+      "command_sha256": [
+        "68fbc0b67b74473f837bada8692581094c0a2743ddf0dd4b4d2b8bfe963e75f9",
+        "1b43884b82b3ca73349709dc9c7f513c44397c7c1573334b8af981dbf6a1413b",
+        "7100165f2dfbeb5011a1c4f317c550492932537f36e0a2263150c1cf2cce2af3",
+        "f5af51be9f1c05963fba5aa94ded8e7857968ad7b17431a44a0f6cb386ff1113",
+        "b0b4f2a9369f711e3efaf6001d7e1e10a0cd0a2da4ae6398cf82a05843d53949"
+      ],
+      "staged_payload_unchanged": true,
+      "no_unrequested_project_outputs": true
+    },
+    {
+      "index": 4,
+      "key": [
+        "routing",
+        "R05",
+        "automatic",
+        1
+      ],
+      "raw_trace_sha256": "163ed45d98f2a80685b9154c0a22ef20d39cf189581f17faa8a630f459e61bca",
+      "raw_turn_completed": true,
+      "full_skill_read_observed": true,
+      "command_count": 3,
+      "command_sha256": [
+        "1f743d10600f8943bb5d0f7204d9aee51c34b3d3bf777f6046eafcd481ede6cb",
+        "36eec9e3d473852abccbcbf9031fe8b21dd84989cd699a2258b3e6e75fa0fd37",
+        "60a55e6aa2d4089cd797bad50066c531e70d2c180281448ebfd4150872677221"
+      ],
+      "staged_payload_unchanged": true,
+      "no_unrequested_project_outputs": true
+    },
+    {
+      "index": 5,
+      "key": [
+        "routing",
+        "R11",
+        "automatic",
+        1
+      ],
+      "raw_trace_sha256": "6a1a5e6750123e4a945a07e75a4216b2ad12e034f53d06eeee659eef91ba1638",
+      "raw_turn_completed": true,
+      "full_skill_read_observed": false,
+      "command_count": 0,
+      "command_sha256": [],
+      "staged_payload_unchanged": true,
+      "no_unrequested_project_outputs": true
+    }
+  ]
+}

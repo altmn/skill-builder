@@ -1,0 +1,8 @@
+{
+  "builder_sha256": "b74d556e197398740e09c3ed2d63333d210d596596a384ff6f3ef54dcfcf3700",
+  "operation_returned_success": true,
+  "manifest_includes_itself": true,
+  "manifest_rows_mismatching_archive": [
+    "PACKAGE-MANIFEST.json"
+  ]
+}

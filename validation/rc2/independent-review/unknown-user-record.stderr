@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 719, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 677, in main
+    result["records"] = check_records(kb, args.record)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 593, in check_records
+    record = parse_json(bounded_read(Path(value).expanduser(), MAX_RECORD_BYTES))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1406, in expanduser
+    raise RuntimeError("Could not determine home directory.")
+RuntimeError: Could not determine home directory.

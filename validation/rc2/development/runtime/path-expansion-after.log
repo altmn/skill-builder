@@ -1,0 +1,6 @@
+test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics (runtime_path_expansion_tests.BuilderContracts.test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.104s
+
+OK

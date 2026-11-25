@@ -1,0 +1,5 @@
+Created [Local Meeting Notes Extractor](output/SKILL.md) under `./output`. It extracts decisions, actions, and open questions as JSON, preserves explicit owner and due wording, and asks for accessible input when requested notes are missing or incomplete.
+
+Included a [worked example](output/examples/meeting.md) with [expected JSON](output/examples/meeting.expected.json) and [independent checks](output/checks/README.md) for output structure, ambiguous fields, and missing or partially available input.
+
+The checks remain unrun for the independent runner.

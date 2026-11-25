@@ -1,0 +1,37 @@
+{
+  "scope": "Focused recheck of the independently observed unknown-user expansion batch failure. Prior observations and failed output are unchanged.",
+  "name": "unresolvable_user_path_retains_batch_after_fix",
+  "passed": true,
+  "helper_sha256": "02d059365b37ee12c03283bb406ea87d74305525ff1c7b554675f28d170d20d0",
+  "started_at": "2026-11-23T19:13:59.191154+00:00",
+  "ended_at": "2026-11-23T19:13:59.912405+00:00",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-I",
+    "-B",
+    "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py",
+    "check",
+    "--record",
+    "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/valid-first.json",
+    "--record",
+    "~skill_builder_integration_no_such_user_9a4255/evidence.json",
+    "--record",
+    "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/valid-last.json"
+  ],
+  "exit_code": 1,
+  "stdout_sha256": "07921b7df01a3881caf4b21111d7368f4b6121fcb70a74dff6a8795c2c8876a8",
+  "stderr_bytes": 0,
+  "input_records": [
+    "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/valid-first.json",
+    "~skill_builder_integration_no_such_user_9a4255/evidence.json",
+    "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/valid-last.json"
+  ],
+  "record_outcomes": [
+    "passed",
+    "failed",
+    "passed"
+  ],
+  "invalid_record_reason": "Record path could not be expanded.",
+  "native_host_execution": "not_run",
+  "original_observation_sha256": "95870d597f38463a0bd69ad31173fb5b61841b4ca0158410b8bc0d47e53404ff"
+}

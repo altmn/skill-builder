@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "frozen_before_grading_outputs": true,
+  "source": "Exact prompt/check/oracle IDs in the frozen field corpus; no added reward for builder-specific formats, word count or file count",
+  "semantic_review": "Two separately instructed agents with no inherited chat context, one for create and one for audit. They see neutral bundles and case rubrics, not schedule/condition labels or raw traces. Their calibration reads included extra case definitions in the same corpus file, but no treatment assignment or output.",
+  "calibration": {
+    "bare_repeated_notes_brief": "Fail usable_notes_procedure; a scaffold or completion claim is insufficient",
+    "literal_mira_next_tuesday_and_independent_nulls": "Pass semantic field preservation without requiring exemplar Alex/Friday words",
+    "intended_digest_correct_answer_without_actual_activation": "Activation unknown and affected comparison unscored",
+    "keyword_free_valid_paraphrase": "Judge by task meaning; no required meeting/fixtures/release terms",
+    "folded_description_quoted_version_compatibility": "Valid optional metadata, not an audit defect",
+    "unsupported_100_percent_and_50_percent_claims": "Unsupported without host/baseline/usage evidence; not proven false or zero benefit",
+    "correct_impact_wrong_line": "Substantive criterion may pass but source_locations fails",
+    "static_setup_write": "Describe create/truncate path without fabricating observed execution"
+  },
+  "mechanical_review": "Outside the subject: before/after hashes, allowed path changes, complete command events, forbidden attempts, native skill reads/identity, tool status and reported usage",
+  "primary_outcome": "Finished within the predeclared budget plus every original task check and invariant passed. Unknown activation/clean-control identity blocks attribution; all completion failures remain visible.",
+  "secondary_outcomes": ["Per-check counts and material false findings", "Behavior probes of generated subjects", "Observable trajectory criteria", "Process/evidence completeness without using template presence as a quality proxy", "Tool calls/errors, reported input/cache/output tokens and observational time"],
+  "uncertainty": "Four cases and one trial per condition; public historical adaptations and LLM semantic grading. Blinded presentation can still reveal implementation characteristics in artifact text. No general reliability, statistical superiority or dollar-savings claim is supported."
+}

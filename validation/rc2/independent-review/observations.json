@@ -1,0 +1,353 @@
+{
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "isolated": true,
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0"
+  },
+  "reviewed_identity": {
+    "skills/skill-builder/scripts/skill_builder.py": "babea39afbd891f25c993d472aab0c9391468e94cc10a4d3be27003661b769c3",
+    "tools/build_release.py": "079847a2f686b8466ca1c7e82d4b7c3e4c67efb63871cba49b3f0db3db9f5a4f",
+    "tools/check_project.py": "2e6497050385277b9b26a8e91d3ac7c5c48689b0be4e907eb55e5f2df9d6b9f2"
+  },
+  "observations": [
+    {
+      "name": "full_preservation",
+      "passed": true,
+      "result": {
+        "outcome": "passed",
+        "scope": "Exact archive and every indexed substantive file identity; no host or semantic assurance.",
+        "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+        "archive_bytes": 11572664,
+        "content_files": 182,
+        "content_bytes": 76965199,
+        "all_original_archive_members_retained": true,
+        "source_content_rewritten": false
+      },
+      "original_source_sha256": "624d313a45a15749c75a5251b53c40408808ba1ee3c7149e2d4697635bd06588",
+      "kb_entries": 454
+    },
+    {
+      "name": "canonical_rule_full_fields_preserved",
+      "passed": true
+    },
+    {
+      "name": "all_accepted_unicode_scalars_serializer_roundtrip",
+      "passed": true,
+      "scalar_values_examined": 1112063,
+      "description_batches": 1088,
+      "failures": [],
+      "seconds": 0.733,
+      "oracle": "yaml.safe_load equality for descriptions of at most 1024 scalars; U+0000 and surrogate codepoints excluded by the public contract"
+    },
+    {
+      "name": "cli_unicode_create_roundtrip_and_portable_format",
+      "passed": true,
+      "exit_code": 0,
+      "format_result": {
+        "outcome": "passed",
+        "scope": "Implemented portable format and direct-resource checks only.",
+        "validator": {
+          "version": "1.1.0",
+          "profile": "portable-conservative-v1",
+          "PyYAML": "6.0.3",
+          "tested_PyYAML": "6.0.3"
+        },
+        "skills": [
+          {
+            "input": "/workspace/scratch/ce88fda257c5/evidence/integration/unicode-created/skills/unicode-example",
+            "checks": [
+              {
+                "id": "directory",
+                "status": "passed",
+                "message": "Selected directory resolves; this resolved path is the resource boundary."
+              },
+              {
+                "id": "skill_file",
+                "status": "passed",
+                "message": "SKILL.md is bounded UTF-8 text within the selected root.",
+                "bytes": 1593
+              },
+              {
+                "id": "frontmatter.delimiters",
+                "status": "passed",
+                "message": "Opening and closing frontmatter delimiters are present."
+              },
+              {
+                "id": "body.nonempty",
+                "status": "passed",
+                "message": "Markdown body must contain non-whitespace text."
+              },
+              {
+                "id": "frontmatter.yaml",
+                "status": "passed",
+                "message": "Safe YAML parsed with unique string keys and bounded depth; aliases/merges are disallowed."
+              },
+              {
+                "id": "frontmatter.mapping",
+                "status": "passed",
+                "message": "Frontmatter is a mapping."
+              },
+              {
+                "id": "frontmatter.fields",
+                "status": "passed",
+                "message": "Only current standard fields are accepted; host extensions require a separate adapter check."
+              },
+              {
+                "id": "name.format",
+                "status": "passed",
+                "message": "name must be 1\u201364 ASCII lowercase letters/digits with single interior hyphens."
+              },
+              {
+                "id": "name.directory",
+                "status": "passed",
+                "message": "name must equal the explicitly selected directory's final component."
+              },
+              {
+                "id": "description",
+                "status": "passed",
+                "message": "description must be a nonblank string of at most 1,024 characters."
+              },
+              {
+                "id": "links.supported_syntax",
+                "status": "passed",
+                "message": "Block/inline coverage and direct Markdown destination/title syntax fit the supported subset; unsupported ambiguous masking fails this gate."
+              },
+              {
+                "id": "links.relative_resources",
+                "status": "passed",
+                "message": "Recognized direct relative links must resolve to files within this skill root; external URIs are not fetched.",
+                "recognized": 0,
+                "failed": 0,
+                "passed": 0,
+                "not_checked": 0
+              }
+            ],
+            "resources": [],
+            "warnings": [],
+            "root": "/workspace/scratch/ce88fda257c5/evidence/integration/unicode-created/skills/unicode-example",
+            "status": "passed"
+          }
+        ],
+        "not_checked": [
+          "Instruction quality, task success, model behavior, triggering, or evaluation quality.",
+          "Host discovery, installation, permission enforcement, tool availability, or adapter metadata.",
+          "Script execution, executable safety, dependency provenance, or malicious instructions/content.",
+          "Resource contents, recursively linked documents, or files mentioned only in prose/code.",
+          "Reference-style Markdown links, raw HTML links, autolinks, dynamic paths, or complete CommonMark conformance.",
+          "External URL availability/content, query semantics, or fragment/heading targets.",
+          "Filesystem race resistance: this is a point-in-time check, not a sandbox for later execution."
+        ]
+      }
+    },
+    {
+      "name": "mixed_record_batch_continues_and_hides_values",
+      "passed": true,
+      "exit_code": 1,
+      "records": 21,
+      "expected": [
+        "passed",
+        "failed",
+        "failed",
+        "failed",
+        "failed",
+        "failed",
+        "passed",
+        "passed",
+        "failed",
+        "failed",
+        "failed",
+        "failed",
+        "failed",
+        "failed",
+        "failed",
+        "failed",
+        "failed",
+        "failed",
+        "failed",
+        "failed",
+        "passed"
+      ],
+      "actual": {
+        "outcome": "failed",
+        "scope": "Original versioned schema and cross-field checks; truth of evidence was not verified.",
+        "records": [
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/valid-first.json",
+            "outcome": "passed",
+            "error_count": 0,
+            "reason": null
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-1.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Nonfinite JSON number rejected."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-2.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Nonfinite JSON number rejected."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-3.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Nonfinite JSON number rejected."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-4.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Nonfinite JSON number rejected."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-5.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Nonfinite JSON number rejected."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-6.json",
+            "outcome": "passed",
+            "error_count": 0,
+            "reason": null
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/number-7.json",
+            "outcome": "passed",
+            "error_count": 0,
+            "reason": null
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-8.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Record must be an object with a supported string record_type."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-9.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Record must be an object with a supported string record_type."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-10.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Record must be an object with a supported string record_type."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-11.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Record must be an object with a supported string record_type."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-12.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Record must be an object with a supported string record_type."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-13.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Record must be an object with a supported string record_type."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-14.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Record must be an object with a supported string record_type."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/dispatch-15.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Record must be an object with a supported string record_type."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/nested-duplicate.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Duplicate JSON object key rejected."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/invalid-utf8.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Input is not supported UTF-8 JSON."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/giant-integer.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Input is not supported UTF-8 JSON."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/deep-json.json",
+            "outcome": "failed",
+            "error_count": 1,
+            "reason": "Record must be an object with a supported string record_type."
+          },
+          {
+            "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/valid-last.json",
+            "outcome": "passed",
+            "error_count": 0,
+            "reason": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "unresolvable_user_path_retains_batch",
+      "passed": false,
+      "exit_code": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 1002,
+      "traceback": true,
+      "public_contract": "Each unreadable/malformed input record produces its own failure; remaining requested records continue in order."
+    },
+    {
+      "name": "current_license_consistency",
+      "passed": true,
+      "decision": {
+        "schema_version": "1.0.0",
+        "record_type": "license-decision",
+        "license": "MIT",
+        "status": "selected",
+        "copyright": "Copyright (c) 2026 Alex",
+        "declaration": "LICENSE.md",
+        "knowledge_base_archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+        "scope": "original_work_only; retained third-party terms apply",
+        "recorded_on": "2026-11-23",
+        "timezone": "America/Los_Angeles",
+        "effective_version": "1.0.0-rc.2",
+        "authority": "Alex explicitly selected MIT and requested applying review finding F-01; no renewed selection is required.",
+        "coverage": [
+          "Original Skill Builder instructions, code, tests, templates, mappings, and documentation",
+          "Original knowledge-base prose, analysis, rules, catalogs, code, schemas, examples, tools, and scaffolding in the identified snapshot"
+        ],
+        "exceptions": [
+          "Retained third-party source and excerpts keep their own terms",
+          "OpenAI public helper material retains applicable Apache 2.0 terms",
+          "Primary-documentation sources are not relicensed"
+        ],
+        "historical_status": "The frozen archive and rc.1 evidence retain their earlier pending status; this later declaration resolves the original-material selection for rc.2."
+      }
+    },
+    {
+      "name": "reviewed_code_unchanged_during_probe",
+      "passed": true
+    }
+  ],
+  "scope_limits": [
+    "Local Linux mechanics only; no native agent host or remote service was exercised.",
+    "Original embedded utilities were inspected before the trusted utility path was executed.",
+    "No adversarial filesystem race resistance or third-party rights adjudication is claimed."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "helper_sha256": "77a1c16948f1ec41c72c7f11ba3065e36cab310c340643a2bc8a528e60f9018e",
+  "deep_directory": {
+    "returned": false,
+    "exception_type": "RecursionError",
+    "depth": 1030,
+    "max_files": 1
+  },
+  "archive_identity": {
+    "original_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+    "packaged_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+    "same_bytes": true
+  }
+}

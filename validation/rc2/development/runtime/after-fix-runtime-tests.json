@@ -1,0 +1,32 @@
+{
+  "phase": "after-fix",
+  "started_at": "2026-11-23T19:07:41.964010+00:00",
+  "ended_at": "2026-11-23T19:07:45.106790+00:00",
+  "elapsed_seconds": 3.1427816860004896,
+  "command": "python -I -B; runpy.run_path tests/test_skill_builder.py; unittest selected regression methods",
+  "test_methods": [
+    "test_nonfinite_numbers_are_rejected_at_every_json_depth",
+    "test_overflow_record_failures_keep_finite_controls_and_batch_order",
+    "test_created_descriptions_round_trip_unicode_scalars_through_yaml",
+    "test_surrogate_descriptions_fail_before_output_creation",
+    "test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values"
+  ],
+  "tests_run": 5,
+  "failure_subtests": 0,
+  "error_subtests": 0,
+  "skipped": 0,
+  "successful": true,
+  "runtime": {
+    "python": "3.12.14",
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0"
+  },
+  "inputs_sha256": {
+    "tests/test_skill_builder.py": "4defded4a4b5ecc4533d6763e543d78f465ce97d76f234d5442f2a560d1de0b6",
+    "skills/skill-builder/scripts/skill_builder.py": "babea39afbd891f25c993d472aab0c9391468e94cc10a4d3be27003661b769c3",
+    "skills/skill-builder/references/knowledge-base.zip": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204"
+  },
+  "log_sha256": "62f4cb5d4d10d414bd4e49273bbd7211957d060a4d347d1206e3994a8e493683",
+  "limits": "Local deterministic synthetic fixtures only; no host or comparative evaluation."
+}

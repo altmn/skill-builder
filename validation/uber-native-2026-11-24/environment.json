@@ -1,0 +1,20 @@
+{
+  "host": "codex-cli 0.170.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "os_release": "27.0.0",
+  "client_date": "2026-11-24",
+  "timezone": "America/Los_Angeles",
+  "resolved_model_version": null,
+  "cost_usd": null,
+  "requested_sandbox": {
+    "create": "workspace-write",
+    "audit": "read-only",
+    "probes": "read-only"
+  },
+  "isolation": "Fresh unrelated ephemeral projects, no builder in controls, config/plugins/hooks/memory disabled consistently, no inherited repository instructions, full-read and input identity checks.",
+  "enforcement_limit": "No separate denied-operation trial; results rely on complete observed commands and filesystem identities, not a general OS isolation guarantee.",
+  "native_calls": "24 CLI invocations; provider transport retry behavior remains host-owned, not a semantic rerun.",
+  "resource_scope": "Native CLI usage only; orchestration and independent grading usage not measured.",
+  "raw_retention": "Original traces and original artifacts remain private; derived inert views and hashes retained in this repository."
+}

@@ -1,0 +1,6 @@
+No. The bundled `catalogs/requirements.json` classifies **5 rules as specification requirements and 94 as project policy**.
+
+- **Specification requirements (`FMT-001`–`FMT-005`, sources `S01`, `S08`, `S09`)** cover `SKILL.md`, YAML frontmatter, naming, description limits, and constraints on optional metadata when present.
+- **Project policy** includes **38 required, 34 conditional, and 22 recommended** rules. For example, `SEC-001` is a required local control for handling untrusted content. `LIFE-012` applies when publishing, and `PERF-001` recommends measuring context use and end-to-end work.
+
+For a reusable skill, follow the format requirements and use `catalogs/application-profiles.md` to select project controls based on what the skill actually does.

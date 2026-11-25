@@ -1,0 +1,369 @@
+{
+  "schema_version": "2.0",
+  "record_type": "evaluation-receipt",
+  "case_id": "skill-builder-rc2-local-contracts",
+  "recorded_at": "2026-11-23T19:15:53.680547+00:00",
+  "artifact": {
+    "artifact_id": "skill-builder-1.0.0-rc.2",
+    "source_commit": null,
+    "package_sha256": "ed3b5aa6afac2db8d4a17ab49783478b115743dd7c7c0e8dda577e0b929f277f",
+    "activated_source": null,
+    "activated_sha256": null,
+    "missing_identity_reason": "No native agent host activated this package. The exact runtime ZIP and saved input hashes identify the candidate; no published source commit is assigned."
+  },
+  "panel": {
+    "id": "skill-builder-rc2-local-contracts",
+    "sha256": "85f57699438304f4c7cb949a0f081672c106c3e4b113a441afdc3b02a31cf3ca",
+    "acceptance_frozen_at": "2026-11-23T19:13:48.111735+00:00",
+    "retry_policy": "One run per listed command for these frozen inputs. Prior development attempts are retained separately; a code change requires a new frozen panel and run.",
+    "exclusion_policy": "No local contract excluded; unavailable native hosts and comparisons are outside this panel.",
+    "control_identity": {
+      "kind": "not_run",
+      "artifact": null,
+      "isolation": "An agent comparison would need fresh contexts without inherited skill, policy, memory or candidate content.",
+      "reason": "This panel checks local deterministic contracts only; no comparative agent advantage is claimed."
+    }
+  },
+  "budget": {
+    "max_attempts": 1,
+    "max_elapsed_seconds": 60,
+    "max_cost": null,
+    "currency": null,
+    "enforcement": "Combined stdout/stderr; 60-second deadline and 2 MiB log threshold polled every 50 ms; process-group SIGTERM and SIGKILL after 2 seconds on breach. Polling can overshoot."
+  },
+  "runtime_versions": {
+    "python": "3.12.14",
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0",
+    "attrs": "26.1.0",
+    "jsonschema-specifications": "2025.9.1",
+    "rpds-py": "2026.6.3",
+    "typing_extensions": "4.16.0"
+  },
+  "attempts": [
+    {
+      "attempt_id": "rc2-integrated-final-65",
+      "case_id": "skill-builder-rc2-local-contracts",
+      "condition": "local_resource",
+      "started_at": "2026-11-23T19:13:48.137028+00:00",
+      "ended_at": "2026-11-23T19:14:03.124925+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-1.0.0-rc.2",
+        "source_commit": null,
+        "package_sha256": "ed3b5aa6afac2db8d4a17ab49783478b115743dd7c7c0e8dda577e0b929f277f",
+        "activated_source": "skills/skill-builder/scripts/skill_builder.py",
+        "activated_sha256": "02d059365b37ee12c03283bb406ea87d74305525ff1c7b554675f28d170d20d0",
+        "missing_identity_reason": "Explicit local resource execution/import by the deterministic suite; this is not native skill activation."
+      },
+      "target": {
+        "product": "Python local helper and release contract tests",
+        "surface": "command_line",
+        "distribution": "Source project runtime bytes corresponding to the identified runtime ZIP",
+        "version": "3.12.14",
+        "os": "Linux",
+        "policy": {
+          "network_use": "No network calls in the inspected test chain; not an independent OS network-isolation claim.",
+          "target_code_execution": false,
+          "filesystem_contract": "Owned disposable synthetic fixtures; stable input tree; no hostile concurrent replacement guarantee."
+        },
+        "missing_details": [
+          "Native discovery, host permissions and full host tasks were not exercised."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "No model participated within the deterministic test subprocess."
+      },
+      "input_hashes": {
+        "tests/test_release.py": "47265f7c176aa546627414105959620d81c3e6dd284480a59cce78c53933cb25",
+        "tests/test_skill_builder.py": "e4ac4c974b9cb122ec23de99a1b257be4d507d23a387e5ca18e91747732dcff5",
+        "tools/build_release.py": "079847a2f686b8466ca1c7e82d4b7c3e4c67efb63871cba49b3f0db3db9f5a4f",
+        "tools/check_project.py": "2e6497050385277b9b26a8e91d3ac7c5c48689b0be4e907eb55e5f2df9d6b9f2",
+        "skills/skill-builder/LICENSE.md": "3d088fe8079c8c8b6487e232429fb374abc47ccc4ea7e38de8ed8b89493aa959",
+        "skills/skill-builder/NOTICE.md": "d9974124015ad16e7c10d6ea1c49e19c33a9f65fb24846f09d835b72ab790d49",
+        "skills/skill-builder/SKILL.md": "9fa84561bb0e328c29a3bd719412aa52bbc7529e3f4f74ef693afeecb813c373",
+        "skills/skill-builder/VERSION": "0c654c00f94741d78169de333d4d9e866be0667b41f9c54cafe3c6b700b15a43",
+        "skills/skill-builder/agents/openai.yaml": "20abc78c7cfeac6b123afcb32f09a4785a2f7ea21cbd6b398072c7bc2d521482",
+        "skills/skill-builder/assets/handoff.md": "64ce97fabb3b00726d4052a1e7fe28290cd39f548145c77575b3c33e9ded1b7c",
+        "skills/skill-builder/assets/request-examples.md": "e1c58347773843a2218c4cd99962391e3e6a620d1e0c515d56457df6cd99e9a0",
+        "skills/skill-builder/commands/skill-builder-audit.md": "cf617dbb1426f224ca2565d367a6e5ba7acb02b94de0a9317941907f58528bb1",
+        "skills/skill-builder/commands/skill-builder-create.md": "bfb8e6373ed4869844aa1a4b1111940b6b277a3b95328839a4ce0340823df8b3",
+        "skills/skill-builder/commands/skill-builder-explain.md": "8e9dbfeaa2d5985188908a01847fa3a1ad3e700ac7613a2d11a1de8124b013e9",
+        "skills/skill-builder/references/cli-result.schema.json": "2fbe253ecd71c3bd955e665e8b3fbb69a7b0e0ec39c8d3375d8d828197496607",
+        "skills/skill-builder/references/cli.md": "ca5c9bc9c2f9acc3fa27185603c6ecf3ab1a21e104988b822033b15b18fc19e4",
+        "skills/skill-builder/references/governance.md": "b3dcf582d676cfc5286bf9d7c7184b6e703b030505aaeee3c3595e4bf7710924",
+        "skills/skill-builder/references/hosts/claude-code.md": "1753d58a266b62d0b5735714ca64277243c2e5bf8a767a9ffd1bac0dd0428cbf",
+        "skills/skill-builder/references/hosts/codex.md": "59ed3dd77f7196093631b50ee4349a54e964307f918b2ec26f16cb2dfafc76b5",
+        "skills/skill-builder/references/hosts/custom-host.md": "d8da9c9be6a7fffcb41c98a17353c0ef49d1d3831a1412a4bde7f8bec6b5d700",
+        "skills/skill-builder/references/hosts/grok.md": "20b5e0763810f4704a90572c6039b67c3f76693dd12cd41ff1d95c8cf6c6dfc3",
+        "skills/skill-builder/references/implementation-map.json": "b750c09ef869b57bb9baf89ea9df071973b5fb82db48ba31431d4bd4ea387472",
+        "skills/skill-builder/references/knowledge-base-manifest.json": "c7efadcddfb5dbf427ae16851b490728b5a2a932140923b99e705688cbc9f101",
+        "skills/skill-builder/references/knowledge-base.zip": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+        "skills/skill-builder/references/license-decision.json": "32b739a8323ddd5864bf2c0d6afb22530f4546e359f923b00bc2563ba3719203",
+        "skills/skill-builder/references/release-status.md": "fbc21b8467d114ac5eea9916b8c866def29ce94618c68f750906f879d16a262e",
+        "skills/skill-builder/references/requirement-coverage.md": "8be34aa5f699d837c4014e8ecf7fec085bd756650c6d83612b9f4358add4d4e4",
+        "skills/skill-builder/scripts/skill_builder.py": "02d059365b37ee12c03283bb406ea87d74305525ff1c7b554675f28d170d20d0",
+        "VERSION": "0c654c00f94741d78169de333d4d9e866be0667b41f9c54cafe3c6b700b15a43",
+        "LICENSE.md": "3d088fe8079c8c8b6487e232429fb374abc47ccc4ea7e38de8ed8b89493aa959",
+        "NOTICE.md": "07829a5ba8bfceac29684ac6f84d93e3e707cc9fbb7fe4a5bf3f4f497aa02af2"
+      },
+      "permissions": {
+        "test_effects": "Create and remove owned disposable synthetic fixtures; inspect explicit local sources; no installation or publication."
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "final-local-helper-and-release-contracts",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "validation/rc2/local-tests.log",
+              "sha256": "d7cbbcd6753e4ecd423663947198c159a02d86604034aa035707acebccf17ec7",
+              "observed_at": "2026-11-23T19:15:53.680547+00:00",
+              "scope": "All 65 final helper/release unittest methods passed with zero failures, errors or skips."
+            },
+            {
+              "kind": "artifact",
+              "ref": "validation/rc2/local-tests.json",
+              "sha256": "5c3bf45bd4c95eb60523e51cd2e5293ca1f40aa1f11136625e7c42ce8f22e5fe",
+              "observed_at": "2026-11-23T19:15:53.680547+00:00",
+              "scope": "Actual command, environment, timing, capture limits and pre-run input hashes."
+            },
+            {
+              "kind": "artifact",
+              "ref": "validation/rc2/panel-definition.json",
+              "sha256": "85f57699438304f4c7cb949a0f081672c106c3e4b113a441afdc3b02a31cf3ca",
+              "observed_at": "2026-11-23T19:15:53.680547+00:00",
+              "scope": "Acceptance and exact inputs frozen before the final integrated run."
+            },
+            {
+              "kind": "artifact",
+              "ref": "validation/rc2/post-run-inputs.json",
+              "sha256": "8289663a6070917d2ac4ac282a62a7f5e05e4efa4fee77accbf6c61801260216",
+              "observed_at": "2026-11-23T19:15:53.680547+00:00",
+              "scope": "All frozen executing inputs remained unchanged through the panel."
+            },
+            {
+              "kind": "artifact",
+              "ref": "validation/rc2/runtime-package-identity.json",
+              "sha256": "8ecd38b5fd5dd545904fe1c3d97d8bc52c8a5d55123b45cb8b83e770ca37a719",
+              "observed_at": "2026-11-23T19:15:53.680547+00:00",
+              "scope": "Exact runtime ZIP/payload identity and actual-member verification; no native activation."
+            }
+          ],
+          "reason": null
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "validation/rc2/local-tests.log",
+          "sha256": "d7cbbcd6753e4ecd423663947198c159a02d86604034aa035707acebccf17ec7",
+          "observed_at": "2026-11-23T19:15:53.680547+00:00",
+          "scope": "All 65 final helper/release unittest methods passed with zero failures, errors or skips."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/rc2/local-tests.json",
+          "sha256": "5c3bf45bd4c95eb60523e51cd2e5293ca1f40aa1f11136625e7c42ce8f22e5fe",
+          "observed_at": "2026-11-23T19:15:53.680547+00:00",
+          "scope": "Actual command, environment, timing, capture limits and pre-run input hashes."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/rc2/panel-definition.json",
+          "sha256": "85f57699438304f4c7cb949a0f081672c106c3e4b113a441afdc3b02a31cf3ca",
+          "observed_at": "2026-11-23T19:15:53.680547+00:00",
+          "scope": "Acceptance and exact inputs frozen before the final integrated run."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/rc2/post-run-inputs.json",
+          "sha256": "8289663a6070917d2ac4ac282a62a7f5e05e4efa4fee77accbf6c61801260216",
+          "observed_at": "2026-11-23T19:15:53.680547+00:00",
+          "scope": "All frozen executing inputs remained unchanged through the panel."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/rc2/runtime-package-identity.json",
+          "sha256": "8ecd38b5fd5dd545904fe1c3d97d8bc52c8a5d55123b45cb8b83e770ca37a719",
+          "observed_at": "2026-11-23T19:15:53.680547+00:00",
+          "scope": "Exact runtime ZIP/payload identity and actual-member verification; no native activation."
+        }
+      ],
+      "elapsed": {
+        "value": 14.987847820000752,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": null,
+          "unit": "tokens",
+          "source": "unknown",
+          "missing_reason": "No model/provider meter participates in the deterministic test subprocess; local compute cost was not measured."
+        },
+        "output_tokens": {
+          "value": null,
+          "unit": "tokens",
+          "source": "unknown",
+          "missing_reason": "No model/provider meter participates in the deterministic test subprocess; local compute cost was not measured."
+        },
+        "tool_calls": {
+          "value": null,
+          "unit": "calls",
+          "source": "unknown",
+          "missing_reason": "No model/provider meter participates in the deterministic test subprocess; local compute cost was not measured."
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "No model/provider meter participates in the deterministic test subprocess; local compute cost was not measured."
+        }
+      },
+      "reason": null
+    }
+  ],
+  "elapsed": {
+    "value": 14.987847820000752,
+    "unit": "seconds",
+    "source": "measured",
+    "missing_reason": null
+  },
+  "usage": {
+    "input_tokens": {
+      "value": null,
+      "unit": "tokens",
+      "source": "unknown",
+      "missing_reason": "No model/provider meter participates in the deterministic test subprocess; local compute cost was not measured."
+    },
+    "output_tokens": {
+      "value": null,
+      "unit": "tokens",
+      "source": "unknown",
+      "missing_reason": "No model/provider meter participates in the deterministic test subprocess; local compute cost was not measured."
+    },
+    "tool_calls": {
+      "value": null,
+      "unit": "calls",
+      "source": "unknown",
+      "missing_reason": "No model/provider meter participates in the deterministic test subprocess; local compute cost was not measured."
+    },
+    "cost": {
+      "value": null,
+      "unit": "USD",
+      "source": "unknown",
+      "missing_reason": "No model/provider meter participates in the deterministic test subprocess; local compute cost was not measured."
+    }
+  },
+  "outcome": "passed",
+  "checks": [
+    {
+      "id": "final-local-helper-and-release-contracts",
+      "outcome": "passed",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "validation/rc2/local-tests.log",
+          "sha256": "d7cbbcd6753e4ecd423663947198c159a02d86604034aa035707acebccf17ec7",
+          "observed_at": "2026-11-23T19:15:53.680547+00:00",
+          "scope": "All 65 final helper/release unittest methods passed with zero failures, errors or skips."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/rc2/local-tests.json",
+          "sha256": "5c3bf45bd4c95eb60523e51cd2e5293ca1f40aa1f11136625e7c42ce8f22e5fe",
+          "observed_at": "2026-11-23T19:15:53.680547+00:00",
+          "scope": "Actual command, environment, timing, capture limits and pre-run input hashes."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/rc2/panel-definition.json",
+          "sha256": "85f57699438304f4c7cb949a0f081672c106c3e4b113a441afdc3b02a31cf3ca",
+          "observed_at": "2026-11-23T19:15:53.680547+00:00",
+          "scope": "Acceptance and exact inputs frozen before the final integrated run."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/rc2/post-run-inputs.json",
+          "sha256": "8289663a6070917d2ac4ac282a62a7f5e05e4efa4fee77accbf6c61801260216",
+          "observed_at": "2026-11-23T19:15:53.680547+00:00",
+          "scope": "All frozen executing inputs remained unchanged through the panel."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/rc2/runtime-package-identity.json",
+          "sha256": "8ecd38b5fd5dd545904fe1c3d97d8bc52c8a5d55123b45cb8b83e770ca37a719",
+          "observed_at": "2026-11-23T19:15:53.680547+00:00",
+          "scope": "Exact runtime ZIP/payload identity and actual-member verification; no native activation."
+        }
+      ],
+      "reason": null
+    }
+  ],
+  "artifacts": [
+    {
+      "kind": "artifact",
+      "ref": "validation/rc2/local-tests.log",
+      "sha256": "d7cbbcd6753e4ecd423663947198c159a02d86604034aa035707acebccf17ec7",
+      "observed_at": "2026-11-23T19:15:53.680547+00:00",
+      "scope": "All 65 final helper/release unittest methods passed with zero failures, errors or skips."
+    },
+    {
+      "kind": "artifact",
+      "ref": "validation/rc2/local-tests.json",
+      "sha256": "5c3bf45bd4c95eb60523e51cd2e5293ca1f40aa1f11136625e7c42ce8f22e5fe",
+      "observed_at": "2026-11-23T19:15:53.680547+00:00",
+      "scope": "Actual command, environment, timing, capture limits and pre-run input hashes."
+    },
+    {
+      "kind": "artifact",
+      "ref": "validation/rc2/panel-definition.json",
+      "sha256": "85f57699438304f4c7cb949a0f081672c106c3e4b113a441afdc3b02a31cf3ca",
+      "observed_at": "2026-11-23T19:15:53.680547+00:00",
+      "scope": "Acceptance and exact inputs frozen before the final integrated run."
+    },
+    {
+      "kind": "artifact",
+      "ref": "validation/rc2/post-run-inputs.json",
+      "sha256": "8289663a6070917d2ac4ac282a62a7f5e05e4efa4fee77accbf6c61801260216",
+      "observed_at": "2026-11-23T19:15:53.680547+00:00",
+      "scope": "All frozen executing inputs remained unchanged through the panel."
+    },
+    {
+      "kind": "artifact",
+      "ref": "validation/rc2/runtime-package-identity.json",
+      "sha256": "8ecd38b5fd5dd545904fe1c3d97d8bc52c8a5d55123b45cb8b83e770ca37a719",
+      "observed_at": "2026-11-23T19:15:53.680547+00:00",
+      "scope": "Exact runtime ZIP/payload identity and actual-member verification; no native activation."
+    },
+    {
+      "kind": "artifact",
+      "ref": "validation/rc2/project-check-result.json",
+      "sha256": "95cc952ec709686be9d7e0c3504f940198e8f63ecb41ef75dfaa142c330fea8e",
+      "observed_at": "2026-11-23T19:15:53.680547+00:00",
+      "scope": "Separate required-validator project check passed for release boundaries, license declaration, exact KB, all 99 rule routing, metadata, links and syntax; no full semantic or native-host assurance."
+    }
+  ],
+  "grader": {
+    "id": "skill-builder-contract-unittests",
+    "version": "1.0.0-rc.2",
+    "sha256": "b7ce36b5b2a49c8d5d29170efa55415ab12e5454b56fbc1f78a50e874b82bafd",
+    "method": "deterministic",
+    "calibration": "SHA-256 of canonical sorted test-path-to-hash JSON plus LF. Independent assertions cover observable bytes, metadata, path effects, invalid inputs and ordered results; no subjective model scoring."
+  },
+  "omissions": [
+    "No native Codex CLI/IDE, Claude Code or Grok Build discovery, enforcement or full-host task trial.",
+    "No clean no-skill/prior-version comparative agent panel, reliability rate or benefit measurement.",
+    "No hostile concurrent-filesystem sandbox guarantee.",
+    "No installation, external account change, remote CI or public publication.",
+    "Prior rc.1 evidence and rc.2 development attempts, including the earlier 64-test pass and the subsequently discovered path-expansion defect, are retained separately; they are not relabeled as this final run.",
+    "The 19-method standard-library release run is a repeated subset, not 19 additional unique tests. The separately preserved-validator suite has 73 methods and its own observation."
+  ],
+  "redaction": "Only synthetic fixtures and explicit project files were used; no real credentials or private audit-target contents. Absolute paths identify this execution workspace."
+}

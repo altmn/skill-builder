@@ -1,0 +1,17 @@
+{
+  "helper_sha256": "71f7dc8ae9a67b3d0b19f5fdaaafe99441468653efab12147f54a4c24fcba31c",
+  "build_sha256": "5cc98f10bbc7f9777a88b18374df6ca1d072f4a613f0bf2b791c2c5d2be9b9be",
+  "version": "1.0.0-rc.1",
+  "project_version": "1.0.0-rc.1",
+  "runtime_version": "1.0.0-rc.1",
+  "enumeration_budget": {
+    "max_entries": 6,
+    "reported_entries_seen": 6,
+    "actual_scandir_entries_read": 6,
+    "coverage": "incomplete"
+  },
+  "reserved_manifest": {
+    "rejected": true,
+    "output_exists": false
+  }
+}

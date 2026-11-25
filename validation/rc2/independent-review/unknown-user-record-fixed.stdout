@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "outcome": "failed",
+  "preservation": {
+    "outcome": "passed",
+    "scope": "Exact archive and every indexed substantive file identity; no host or semantic assurance.",
+    "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+    "archive_bytes": 11572664,
+    "content_files": 182,
+    "content_bytes": 76965199,
+    "all_original_archive_members_retained": true,
+    "source_content_rewritten": false
+  },
+  "records": {
+    "outcome": "failed",
+    "scope": "Original versioned schema and cross-field checks; truth of evidence was not verified.",
+    "records": [
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/valid-first.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "~skill_builder_integration_no_such_user_9a4255/evidence.json",
+        "outcome": "failed",
+        "error_count": 1,
+        "reason": "Record path could not be expanded."
+      },
+      {
+        "path": "/workspace/scratch/ce88fda257c5/evidence/integration/record-fixtures/valid-last.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      }
+    ]
+  }
+}

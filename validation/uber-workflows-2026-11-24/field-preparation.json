@@ -1,0 +1,10 @@
+{
+  "exit_code": 0,
+  "result": {
+    "outcome": "prepared",
+    "scheduled": 16,
+    "plan_sha256": "175fb7825d5440059d7e19ecd08f125c395003bee123be236fa6ecafc43f4591"
+  },
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "Runtime-only standard-library preparation, no model or target execution"
+}

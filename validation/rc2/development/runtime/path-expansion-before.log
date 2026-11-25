@@ -1,0 +1,30 @@
+test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics (runtime_path_expansion_tests.BuilderContracts.test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics) ... FAIL
+
+======================================================================
+FAIL: test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics (runtime_path_expansion_tests.BuilderContracts.test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 521, in test_unexpandable_record_path_preserves_valid_records_and_safe_diagnostics
+    report = self.decoded(result)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 46, in decoded
+    self.assertFalse(result.stderr, result.stderr.decode(errors="replace"))
+AssertionError: b'Traceback (most recent call last):\n  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 719, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 677, in main\n    result["records"] = check_records(kb, args.record)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 593, in check_records\n    record = parse_json(bounded_read(Path(value).expanduser(), MAX_RECORD_BYTES))\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1406, in expanduser\n    raise RuntimeError("Could not determine home directory.")\nRuntimeError: Could not determine home directory.\n' is not false : Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 719, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 677, in main
+    result["records"] = check_records(kb, args.record)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 593, in check_records
+    record = parse_json(bounded_read(Path(value).expanduser(), MAX_RECORD_BYTES))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1406, in expanduser
+    raise RuntimeError("Could not determine home directory.")
+RuntimeError: Could not determine home directory.
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.750s
+
+FAILED (failures=1)

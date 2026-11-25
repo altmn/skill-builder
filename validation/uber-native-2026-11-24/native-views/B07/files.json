@@ -1,0 +1,112 @@
+[
+  {
+    "path": "output/EVALUATION-PLAN.md.txt",
+    "original_sha256": "0dfc160f15db60c4b20b0086e5652925a3731f2637bc5b65de10c2fdbcfa4bad",
+    "derived_sha256": "0dfc160f15db60c4b20b0086e5652925a3731f2637bc5b65de10c2fdbcfa4bad"
+  },
+  {
+    "path": "output/EVALUATION-REVIEW.md.txt",
+    "original_sha256": "d125e08a7c378f34d2e7f99d0bf07b520ab7a495a43befd22a64d102c122229d",
+    "derived_sha256": "d125e08a7c378f34d2e7f99d0bf07b520ab7a495a43befd22a64d102c122229d"
+  },
+  {
+    "path": "output/README.md.txt",
+    "original_sha256": "53b9a14442a2fb27441b498546da80b5f691545704e24f918f26a00459066899",
+    "derived_sha256": "53b9a14442a2fb27441b498546da80b5f691545704e24f918f26a00459066899"
+  },
+  {
+    "path": "output/TASK-BRIEF.md.txt",
+    "original_sha256": "3a3d1450496447db150e0df74ece7cd5bc9d6810b4dd0012b196def56462f853",
+    "derived_sha256": "3a3d1450496447db150e0df74ece7cd5bc9d6810b4dd0012b196def56462f853"
+  },
+  {
+    "path": "output/evals/EXAMPLES.md.txt",
+    "original_sha256": "462991d7d98a9f098fe785721d35c86886fbeba6c9ae9914d20bc44a6cdc09c1",
+    "derived_sha256": "462991d7d98a9f098fe785721d35c86886fbeba6c9ae9914d20bc44a6cdc09c1"
+  },
+  {
+    "path": "output/evals/RUBRIC.md.txt",
+    "original_sha256": "19f7c66fb8378bcab093f8a438a7b50aa6cfcbfe700000d8ef0a612364acb7c5",
+    "derived_sha256": "19f7c66fb8378bcab093f8a438a7b50aa6cfcbfe700000d8ef0a612364acb7c5"
+  },
+  {
+    "path": "output/evals/execution.json.txt",
+    "original_sha256": "53ece94cb9204140c4804ee48a1a992206f1b42c6763c9defebadd8f9a16df4c",
+    "derived_sha256": "53ece94cb9204140c4804ee48a1a992206f1b42c6763c9defebadd8f9a16df4c"
+  },
+  {
+    "path": "output/evals/fixtures/hostile-receipt.md.txt",
+    "original_sha256": "33cbcc0252321034632c8e00e23886fdd80eb841a0491396db9d41d0ffb6e396",
+    "derived_sha256": "33cbcc0252321034632c8e00e23886fdd80eb841a0491396db9d41d0ffb6e396"
+  },
+  {
+    "path": "output/evals/fixtures/paraphrases.md.txt",
+    "original_sha256": "6a623b179aaa0a48e17eaa715dd7820b14f9ca3198193db4fe645ab2985fb484",
+    "derived_sha256": "6a623b179aaa0a48e17eaa715dd7820b14f9ca3198193db4fe645ab2985fb484"
+  },
+  {
+    "path": "output/evals/fixtures/rules.json.txt",
+    "original_sha256": "04d58885d19ed2e337530d4c7d515e7b5a63f27a779e8ad80dc3c40a2ebe6c8f",
+    "derived_sha256": "04d58885d19ed2e337530d4c7d515e7b5a63f27a779e8ad80dc3c40a2ebe6c8f"
+  },
+  {
+    "path": "output/evals/fixtures/unknown-activation.json.txt",
+    "original_sha256": "4a772857fb474903b4b33d64a06dceec883e2e326703f603e19b435a2f08863f",
+    "derived_sha256": "4a772857fb474903b4b33d64a06dceec883e2e326703f603e19b435a2f08863f"
+  },
+  {
+    "path": "output/evals/routing.json.txt",
+    "original_sha256": "464f556fa21732f8390b316ae5eef33dbb91e9d150b305f8f836953756d5a26b",
+    "derived_sha256": "464f556fa21732f8390b316ae5eef33dbb91e9d150b305f8f836953756d5a26b"
+  },
+  {
+    "path": "output/evaluation-review.json.txt",
+    "original_sha256": "aaa0dc724a43ab6f8579b99116d9d819b837f423fe98a6e4eccff236ceaa6898",
+    "derived_sha256": "aaa0dc724a43ab6f8579b99116d9d819b837f423fe98a6e4eccff236ceaa6898"
+  },
+  {
+    "path": "output/evidence/canonical-rule-classifications.json.txt",
+    "original_sha256": "b051b8c3ab836c50994ad6e50b623fd34547e5e0bbab413a25df4f9959d2d358",
+    "derived_sha256": "b051b8c3ab836c50994ad6e50b623fd34547e5e0bbab413a25df4f9959d2d358"
+  },
+  {
+    "path": "output/evidence/rule-traceability.json.txt",
+    "original_sha256": "ef35be9e36c84364127587e239c20b7294a6b17b2094c7b59bbc5cf17f72a383",
+    "derived_sha256": "ef35be9e36c84364127587e239c20b7294a6b17b2094c7b59bbc5cf17f72a383"
+  },
+  {
+    "path": "output/evidence/source-check.json.txt",
+    "original_sha256": "60e1c11540da07618cb1a305bb96b208917e66aff90c664ee308069c53c59c4b",
+    "derived_sha256": "60e1c11540da07618cb1a305bb96b208917e66aff90c664ee308069c53c59c4b"
+  },
+  {
+    "path": "output/skills/evaluation-receipt-reviewer/SKILL.md.txt",
+    "original_sha256": "9fb6a39c10219a8067f8f83ebfe0309e0ee453739c11d4356138751f79698d4a",
+    "derived_sha256": "9fb6a39c10219a8067f8f83ebfe0309e0ee453739c11d4356138751f79698d4a"
+  },
+  {
+    "path": "output/skills/evaluation-receipt-reviewer/references/LICENSE-schemas.md.txt",
+    "original_sha256": "560a942439356f2ff53c1913ec17e4e86d20ee712aff1599265a281da911c366",
+    "derived_sha256": "560a942439356f2ff53c1913ec17e4e86d20ee712aff1599265a281da911c366"
+  },
+  {
+    "path": "output/skills/evaluation-receipt-reviewer/references/common.schema.json.txt",
+    "original_sha256": "d2e30075679a9b137beafaf7829b631a2a910670b14089e8db32704856c0e76f",
+    "derived_sha256": "d2e30075679a9b137beafaf7829b631a2a910670b14089e8db32704856c0e76f"
+  },
+  {
+    "path": "output/skills/evaluation-receipt-reviewer/references/evaluation-receipt.schema.json.txt",
+    "original_sha256": "82d582198701884bf4109133d976e77e61b4f63981dedec7d2688079d21d026d",
+    "derived_sha256": "82d582198701884bf4109133d976e77e61b4f63981dedec7d2688079d21d026d"
+  },
+  {
+    "path": "output/skills/evaluation-receipt-reviewer/references/rule-traceability.schema.json.txt",
+    "original_sha256": "02f3c50838e38ff719d75f6e60fe3085274b727e403e088fbfdf607437de854a",
+    "derived_sha256": "02f3c50838e38ff719d75f6e60fe3085274b727e403e088fbfdf607437de854a"
+  },
+  {
+    "path": "answer.txt",
+    "original_sha256": "53a8af9f5a34a9f741279d00a807fc10bc012d59e28c209d8cd13f2c0ed34ab0",
+    "derived_sha256": "53a8af9f5a34a9f741279d00a807fc10bc012d59e28c209d8cd13f2c0ed34ab0"
+  }
+]

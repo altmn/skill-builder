@@ -1,0 +1,10 @@
+The illustrative excerpt supports one correct answer on attempt 3. It leaves successful activation and cost improvement unverified and provides insufficient evidence of reliable ordinary success.
+
+| Finding | Assessment |
+|---|---|
+| Activation | **Unknown.** `intended_payload_sha256` records the illustrative intended digest of 64 `a` characters. `actual_activation_sha256` is `null`, and the excerpt supplies neither activation evidence nor a verified full read of the exact revision. |
+| Cost improvement | **Unscored.** `cost_usd` is `null`, `cache_condition` is uncontrolled, and two sessions overlapped. The excerpt supplies no measured cost or matched, isolated comparison. |
+| Reliable ordinary success | **Unestablished.** Attempts 1 and 2 failed independent checks. Attempt 3 correctly summarized the open decisions as stipulated. That supports one observed success. An independent semantic grade is inconclusive because the answer text and frozen rubric were not supplied. |
+| Rule traceability | The illustrative entry identifies `rule_id: EVAL-008` and records `outcome: not_run`. It earns no pass credit. |
+
+The assessment is limited to the visible fields and attempt history in the supplied excerpt. Full receipt schema conformance is outside that scope.

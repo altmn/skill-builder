@@ -1,0 +1,3 @@
+- **Selected skill root:** `<DISPOSABLE_TEST_ROOT>/identity-project/.agents/skills/skill-builder`
+- **`display_name` in `agents/openai.yaml`:** `Skill Builder`
+- **Supported parent modes declared in `SKILL.md`:** `skill-builder-create`, `skill-builder-audit`, and `skill-builder-explain`

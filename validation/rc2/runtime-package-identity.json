@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "runtime-package-identity",
+  "recorded_at": "2026-11-23T19:15:53.680547+00:00",
+  "version": "1.0.0-rc.2",
+  "filename": "skill-builder-1.0.0-rc.2.zip",
+  "size_bytes": 12004722,
+  "sha256": "ed3b5aa6afac2db8d4a17ab49783478b115743dd7c7c0e8dda577e0b929f277f",
+  "manifest": {
+    "file_count": 24,
+    "files": [
+      {
+        "path": "LICENSE.md",
+        "sha256": "3d088fe8079c8c8b6487e232429fb374abc47ccc4ea7e38de8ed8b89493aa959",
+        "size_bytes": 4166
+      },
+      {
+        "path": "NOTICE.md",
+        "sha256": "d9974124015ad16e7c10d6ea1c49e19c33a9f65fb24846f09d835b72ab790d49",
+        "size_bytes": 1737
+      },
+      {
+        "path": "SKILL.md",
+        "sha256": "9fa84561bb0e328c29a3bd719412aa52bbc7529e3f4f74ef693afeecb813c373",
+        "size_bytes": 13375
+      },
+      {
+        "path": "VERSION",
+        "sha256": "0c654c00f94741d78169de333d4d9e866be0667b41f9c54cafe3c6b700b15a43",
+        "size_bytes": 11
+      },
+      {
+        "path": "agents/openai.yaml",
+        "sha256": "20abc78c7cfeac6b123afcb32f09a4785a2f7ea21cbd6b398072c7bc2d521482",
+        "size_bytes": 223
+      },
+      {
+        "path": "assets/handoff.md",
+        "sha256": "64ce97fabb3b00726d4052a1e7fe28290cd39f548145c77575b3c33e9ded1b7c",
+        "size_bytes": 1252
+      },
+      {
+        "path": "assets/request-examples.md",
+        "sha256": "e1c58347773843a2218c4cd99962391e3e6a620d1e0c515d56457df6cd99e9a0",
+        "size_bytes": 2930
+      },
+      {
+        "path": "commands/skill-builder-audit.md",
+        "sha256": "cf617dbb1426f224ca2565d367a6e5ba7acb02b94de0a9317941907f58528bb1",
+        "size_bytes": 22907
+      },
+      {
+        "path": "commands/skill-builder-create.md",
+        "sha256": "bfb8e6373ed4869844aa1a4b1111940b6b277a3b95328839a4ce0340823df8b3",
+        "size_bytes": 23444
+      },
+      {
+        "path": "commands/skill-builder-explain.md",
+        "sha256": "8e9dbfeaa2d5985188908a01847fa3a1ad3e700ac7613a2d11a1de8124b013e9",
+        "size_bytes": 11360
+      },
+      {
+        "path": "references/cli-result.schema.json",
+        "sha256": "2fbe253ecd71c3bd955e665e8b3fbb69a7b0e0ec39c8d3375d8d828197496607",
+        "size_bytes": 5307
+      },
+      {
+        "path": "references/cli.md",
+        "sha256": "ca5c9bc9c2f9acc3fa27185603c6ecf3ab1a21e104988b822033b15b18fc19e4",
+        "size_bytes": 20704
+      },
+      {
+        "path": "references/governance.md",
+        "sha256": "b3dcf582d676cfc5286bf9d7c7184b6e703b030505aaeee3c3595e4bf7710924",
+        "size_bytes": 35717
+      },
+      {
+        "path": "references/hosts/claude-code.md",
+        "sha256": "1753d58a266b62d0b5735714ca64277243c2e5bf8a767a9ffd1bac0dd0428cbf",
+        "size_bytes": 6223
+      },
+      {
+        "path": "references/hosts/codex.md",
+        "sha256": "59ed3dd77f7196093631b50ee4349a54e964307f918b2ec26f16cb2dfafc76b5",
+        "size_bytes": 7165
+      },
+      {
+        "path": "references/hosts/custom-host.md",
+        "sha256": "d8da9c9be6a7fffcb41c98a17353c0ef49d1d3831a1412a4bde7f8bec6b5d700",
+        "size_bytes": 7017
+      },
+      {
+        "path": "references/hosts/grok.md",
+        "sha256": "20b5e0763810f4704a90572c6039b67c3f76693dd12cd41ff1d95c8cf6c6dfc3",
+        "size_bytes": 6104
+      },
+      {
+        "path": "references/implementation-map.json",
+        "sha256": "b750c09ef869b57bb9baf89ea9df071973b5fb82db48ba31431d4bd4ea387472",
+        "size_bytes": 88562
+      },
+      {
+        "path": "references/knowledge-base-manifest.json",
+        "sha256": "c7efadcddfb5dbf427ae16851b490728b5a2a932140923b99e705688cbc9f101",
+        "size_bytes": 103953
+      },
+      {
+        "path": "references/knowledge-base.zip",
+        "sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+        "size_bytes": 11572664
+      },
+      {
+        "path": "references/license-decision.json",
+        "sha256": "32b739a8323ddd5864bf2c0d6afb22530f4546e359f923b00bc2563ba3719203",
+        "size_bytes": 1236
+      },
+      {
+        "path": "references/release-status.md",
+        "sha256": "fbc21b8467d114ac5eea9916b8c866def29ce94618c68f750906f879d16a262e",
+        "size_bytes": 2675
+      },
+      {
+        "path": "references/requirement-coverage.md",
+        "sha256": "8be34aa5f699d837c4014e8ecf7fec085bd756650c6d83612b9f4358add4d4e4",
+        "size_bytes": 12836
+      },
+      {
+        "path": "scripts/skill_builder.py",
+        "sha256": "02d059365b37ee12c03283bb406ea87d74305525ff1c7b554675f28d170d20d0",
+        "size_bytes": 45595
+      }
+    ],
+    "identity_algorithm": "sha256 of UTF-8 canonical JSON files array plus LF; manifest excludes itself",
+    "kind": "installable-skill",
+    "license": "MIT",
+    "license_declaration": "LICENSE.md",
+    "license_scope": "original_work_only; retained third-party terms apply",
+    "native_host_execution": "not_run",
+    "open_reuse_gate": "license_selected_with_retained_third_party_terms",
+    "payload_sha256": "f10c2be7ef52bb180c93367656c84ae798d002d915312133d261966b006b5109",
+    "release_state": "prepared_unpublished",
+    "schema_version": "1.0.0",
+    "version": "1.0.0-rc.2"
+  },
+  "verification": "Independently read every actual ZIP member and verified exact member set, size and SHA-256 against the manifest. Final release must retain this exact runtime hash.",
+  "source_archive_identity": "Kept detached from the enclosing source archive to avoid a self-hash cycle.",
+  "native_activation": "not_run"
+}

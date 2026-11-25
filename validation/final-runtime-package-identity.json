@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "recorded_at": "2026-11-23T07:09:13.736147+00:00",
+  "archive": {
+    "filename": "skill-builder-final-runtime.zip",
+    "size_bytes": 11996105,
+    "sha256": "28083dd9c2f0593d1562b9a8ef2b9c6c76c9076b1d188eca2b10b7a4ce7f35e2",
+    "payload_sha256": "abb578cb1358a7843198ef811eb97d9fb4178be4cb08742771c824eebb7c3138",
+    "payload_files": 23
+  },
+  "scope": "Exact final runtime bytes; distribution filename can differ without changing ZIP content. Final distribution must reproduce this SHA-256."
+}

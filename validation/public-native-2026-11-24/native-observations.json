@@ -1,0 +1,464 @@
+{
+  "date": "2026-11-24",
+  "host": "Codex CLI 0.170.0",
+  "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "cases": [
+    {
+      "id": "qa",
+      "exit_code": 0,
+      "seconds": null,
+      "usage": {
+        "input_tokens": 248657,
+        "cached_input_tokens": 185600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 965,
+        "reasoning_output_tokens": 0
+      },
+      "command_observations": [
+        {
+          "command_sha256": "498535ab371e65bfabe5b41cf45017536816a37a3b0323f07bd47558f50a00c1",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "de8cc59b4249e97ffe1aa7824da36c655b15af22807f405b2806036042b2a928",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "9ac7d5d28448dc15dff266174eb78ab739ff80f9cc0c73879b6113eda777621b",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "3f0fd6e4baa128b811ea33fe32b93c33f3d68d243f315e5eda7880fd24ec1252",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "985a530af8a442bfff7e13a8f686e60c2f9ca9afd32ed452e7b3e215f37da1c9",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "e455e64aa1b8ba17bb93dab2f9563582b2a1b1bdc006921ab8aa030cc937844e",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "0dc601b20ae579ff8c47a80598e6df949e4fa3ed9943d418b20d7e64b547c6ee",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "c887e8719eaebe8084de4deab1be941800cd551948185a6c0862ab0289ac6ea3",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "9212108c9497dc8416a0919a0a6e4ad21bdfd61ee1f9ab460129516a0630eecb",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "104df3ab027f96e86bec17db1e6076f6b285fa5d6696ce5f1b8cf66cceb9e4a7",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        }
+      ],
+      "raw_event_sha256": "994f71ba9183e2360d752a9bd595b0fc476fa9ec5d2fb189da687a7569c2e73e",
+      "answer_path": "qa-answer.txt",
+      "answer_redacted": true,
+      "outcome": "passed_for_declared_bounded_case"
+    },
+    {
+      "id": "implicit",
+      "sandbox": "read-only",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 31.14,
+      "usage": {
+        "input_tokens": 186955,
+        "cached_input_tokens": 143360,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 773,
+        "reasoning_output_tokens": 0
+      },
+      "command_observations": [
+        {
+          "command_sha256": "6a890b22b76dc5e3ffeebe015553034538611a4642ea9af628c588791f8972ed",
+          "exit_code": 1,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "362d856b7f9f909ed351452113a32596959068c24159dbd942ba679317a5e825",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "45ea1655545243645f7b06e3a00a0d0418c03d8cd173e1819bf26e629ed65bc6",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        }
+      ],
+      "raw_event_sha256": "01ea0ab382a0c62033e98f2e83aeeb11fba0c61ce7ddab8d6fdcff42fcb132ca",
+      "answer_path": "implicit-answer.txt",
+      "answer_redacted": true,
+      "outcome": "passed_for_declared_bounded_case"
+    },
+    {
+      "id": "negative",
+      "sandbox": "read-only",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 9.48,
+      "usage": {
+        "input_tokens": 30824,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5,
+        "reasoning_output_tokens": 0
+      },
+      "command_observations": [],
+      "raw_event_sha256": "383ee7f71ec289697382fded72309b4428d782e300242e3afc738ad0766bdb6d",
+      "answer_path": "negative-answer.txt",
+      "answer_redacted": true,
+      "outcome": "passed_for_declared_bounded_case"
+    },
+    {
+      "id": "opt-out",
+      "sandbox": "read-only",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 5.69,
+      "usage": {
+        "input_tokens": 30817,
+        "cached_input_tokens": 7296,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5,
+        "reasoning_output_tokens": 0
+      },
+      "command_observations": [],
+      "raw_event_sha256": "e94eb712645d67ffb1d1251156bcab04704e2c479352ec737780b822cc755e83",
+      "answer_path": "opt-out-answer.txt",
+      "answer_redacted": true,
+      "outcome": "passed_for_declared_bounded_case"
+    },
+    {
+      "id": "denied-write",
+      "sandbox": "read-only",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 17.46,
+      "usage": {
+        "input_tokens": 150598,
+        "cached_input_tokens": 111232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 322,
+        "reasoning_output_tokens": 60
+      },
+      "command_observations": [
+        {
+          "command_sha256": "43d6f5c34c08c0fa5718545f98a2a8e8bda687ec2915655d662b4995afddd3be",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "d0c6cedfbf3d62cb6f8dde555aff3d4c2f11d5ad7ec9b3062f83d11a9736d1c8",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        }
+      ],
+      "raw_event_sha256": "1b6b30a47b1d8b37b1e72acf261390cbeb736ad2f59feac1d8c45c1d8bc40cb7",
+      "answer_path": "denied-write-answer.txt",
+      "answer_redacted": true,
+      "outcome": "passed_for_declared_bounded_case"
+    },
+    {
+      "id": "audit",
+      "sandbox": "workspace-write",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 113.73,
+      "usage": {
+        "input_tokens": 436888,
+        "cached_input_tokens": 379136,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4453,
+        "reasoning_output_tokens": 26
+      },
+      "command_observations": [
+        {
+          "command_sha256": "3fb3a1ead2fa583b13eb0146f537bc4a8b48d339362a3cb9c180cd8bbc56b30f",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "2db915706fe573f922c2b9015d167b72b5d1a710d4ae9908f3fface84042bccd",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "561b077e524769c46a0431e1be316367fe87b52a0313d3ca0130a06a4f5ef47f",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "aa52d7673e295a84ce4be0b88c79554a9bcc18ddda12de04f480fcac3f44aa20",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "f8e1e01482b2d1402f5b4abcfb2bf5a65c044ad3cf9b1df5d8784791c83f0973",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "220d422f58544c4f3c9010e4b7bfba88dc442862dec1ccaa5a97539875fe0097",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "abe49bf80b77c0ebd33bbc8fe41249ba80d03cc87d638b46254fed97e1b46b7f",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "684349e6325d093e3ac8529fdbbac4830544923386981a57ff1440744b793407",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        }
+      ],
+      "raw_event_sha256": "ca5c4c0a25d8a0fc9016242c1d55de143aa7d16a53eae59ddc2c1f68a8f04b8c",
+      "answer_path": "audit-answer.txt",
+      "answer_redacted": true,
+      "outcome": "passed_for_declared_bounded_case"
+    },
+    {
+      "id": "create",
+      "sandbox": "workspace-write",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 161.64,
+      "usage": {
+        "input_tokens": 644305,
+        "cached_input_tokens": 597632,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 7017,
+        "reasoning_output_tokens": 102
+      },
+      "command_observations": [
+        {
+          "command_sha256": "3b779f87196a4ec5554c33e337124d4a903b0d01e2f589f4c34b5ba751872ef6",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "bcaf943435714388120a73ccc68fbad4f04b526baed9d1fd7dcf4c6de1f76a64",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "eb1ae3f89331ef5b83366630c8b236ca72f6aaf966040803234b61fcee889859",
+          "exit_code": 1,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "3ef23bb4485ba296abbb90da49821a63c01fd8d602d5cd5e2dbe9dc4a34ebf1f",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "251aaf8688da4842aa68e825ebd44073c9def703cf266c6b65f3f15e4be55d0d",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "84c65d7e842f9a7a1abf24c9521ecdebe9b6c2fdbe9438e680f4328fa964f246",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "325e4f529369effe6f749f92b3831209af592b22b92e07bed877e7112f435311",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "002736a5b7fee05fcbd4e84f58f720553e57e30c40cf8e7514ecb0cf195abb88",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "49ec1547735adc966df975898a92a833e45f2fae7e7682fd0be8d9f0c43a0367",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "22b01b23d8643b41dc7a71f163bed92844ce57622908d8b9f27443c0a69ce3dc",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "f08415949d7766c183335c167763f8ba3e4e73e5bff3f36c8dec369f547750a9",
+          "exit_code": 2,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "421d02d82460171e1b4ac4e34c10383b380cfb8d9dcf5fb0410693e46bd60f40",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        }
+      ],
+      "raw_event_sha256": "238525329ffa378099f6ddb6ec87af9620d3439599949e537918a387045d18ba",
+      "answer_path": "create-answer.txt",
+      "answer_redacted": true,
+      "outcome": "passed_for_declared_bounded_case"
+    },
+    {
+      "id": "identity-repeat",
+      "exit_code": 0,
+      "seconds": 11.46,
+      "usage": {
+        "input_tokens": 65328,
+        "cached_input_tokens": 39680,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 257,
+        "reasoning_output_tokens": 0
+      },
+      "command_observations": [
+        {
+          "command_sha256": "811d5c9b4ed26442c24ec06c07fd57edd7ad1f9e3f617df210a1c010e1dca23b",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        }
+      ],
+      "raw_event_sha256": "cb2859a1bbc3435ba66d5ef206f23df580292b2baafb14b2afc5f4dcd1faa104",
+      "answer_path": "identity-repeat-answer.txt",
+      "answer_redacted": true,
+      "outcome": "passed_for_declared_bounded_case"
+    },
+    {
+      "id": "identity-source-change",
+      "exit_code": 0,
+      "seconds": 14.11,
+      "usage": {
+        "input_tokens": 101388,
+        "cached_input_tokens": 81792,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 328,
+        "reasoning_output_tokens": 0
+      },
+      "command_observations": [
+        {
+          "command_sha256": "5e60626d6870906c4c39f5cadd673c33bee840b2e8d9aeb5b012e2351a112d14",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "a38ce0a04e36f19330fe65981f8d5db7ee55cbe03a60c76eb6ce3bfecac87fb7",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        }
+      ],
+      "raw_event_sha256": "0f16f6b6bc22f89f0180f50786f1fb15ed23af2114a3c2b46cf4fae2fc460820",
+      "answer_path": "identity-source-change-answer.txt",
+      "answer_redacted": true,
+      "outcome": "passed_for_declared_bounded_case"
+    },
+    {
+      "id": "identity-collision",
+      "exit_code": 0,
+      "seconds": 18.29,
+      "usage": {
+        "input_tokens": 129338,
+        "cached_input_tokens": 93568,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 469,
+        "reasoning_output_tokens": 0
+      },
+      "command_observations": [
+        {
+          "command_sha256": "8623768256b1e95d33e482b0a0a9d325188544ec70f54a4148900de8b93816e0",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "dfa6d3f61a4aedbd45f149e25bafd81b720588e604ec962e5b467d585205b15e",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        },
+        {
+          "command_sha256": "f4d00597d77d4214063bf5ef14c9d8c3ece5075547a27a9f8715e4d351e959ee",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        }
+      ],
+      "raw_event_sha256": "0f5edb90d75f8eb671c8b10bb6e6b1657c8699a2a1d82a85a02fa35bbd0ef470",
+      "answer_path": "identity-collision-answer.txt",
+      "answer_redacted": true,
+      "outcome": "inconclusive"
+    },
+    {
+      "id": "identity-removal",
+      "exit_code": 0,
+      "seconds": 18.38,
+      "usage": {
+        "input_tokens": 159909,
+        "cached_input_tokens": 124928,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 414,
+        "reasoning_output_tokens": 0
+      },
+      "command_observations": [
+        {
+          "command_sha256": "030b71ca38c08a52eabf908203a7ca608e1e4200401941ecaadd0fb9d5a6e4fe",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "90e71fc14ab82f49c69ca841a0821501cbfaccd77f3c20fe0f1ddccf64de0064",
+          "exit_code": 0,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "4b3e54e6872e5d088acb4a0ff31fa2fa11d75b3ea2cd3d6850ab3ccd7eb84943",
+          "exit_code": 1,
+          "candidate_root_referenced": false
+        },
+        {
+          "command_sha256": "ac5a9fa96059fff21442b5838f103666a9f7dc595758659843f510f86efe85d6",
+          "exit_code": 0,
+          "candidate_root_referenced": true
+        }
+      ],
+      "raw_event_sha256": "044dbd8da2fdcabeb0e339c65d73fc43d0087515433e8b7ff40c2d954d5c194a",
+      "answer_path": "identity-removal-answer.txt",
+      "answer_redacted": true,
+      "outcome": "passed_for_declared_bounded_case"
+    },
+    {
+      "id": "continuation-first",
+      "exit_code": 0,
+      "seconds": 9.62,
+      "answer_path": "continuation-first-answer.txt",
+      "outcome": "passed_for_declared_bounded_case",
+      "scope": "Actual persisted CLI conversation and resume; no compaction claim"
+    },
+    {
+      "id": "continuation-resume",
+      "exit_code": 0,
+      "seconds": 5.62,
+      "answer_path": "continuation-resume-answer.txt",
+      "outcome": "passed_for_declared_bounded_case",
+      "scope": "Actual persisted CLI conversation and resume; no compaction claim"
+    }
+  ],
+  "candidate_runtime_hash_mismatches": [],
+  "limits": [
+    "Raw native event streams remain private outside public source; no reasoning traces or session identifiers copied.",
+    "Loaded instruction hash is not exposed by CLI; candidate copies and observed resource paths are hashed, separately from activated identity.",
+    "Create/audit overlapped in one disposable Git checkout and changed its branch; Git identity claims are excluded, fixture and runtime byte identities independently verified.",
+    "Model default identity and dollar cost were not captured; returned token usage is retained.",
+    "No model/provider/OS support beyond this sampled CLI trial is claimed."
+  ]
+}

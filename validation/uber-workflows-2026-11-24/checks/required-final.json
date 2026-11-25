@@ -1,0 +1,22 @@
+{
+  "command": [
+    "PINNED_ENV/bin/python",
+    "-I",
+    "-B",
+    "tools/check_project.py",
+    "--require-validators"
+  ],
+  "exit_code": 0,
+  "streams": {
+    "stdout": {
+      "path": "required-final.stdout.txt",
+      "original_sha256": "467db4691568c59404d63474e9cea73e05bf486b64fe227439e8b64a0cefeb3b",
+      "retained_sha256": "f98b11e0f74cc28f5b54f62b4e5e07f8e95e142e5e30126726d74f910736f725"
+    },
+    "stderr": {
+      "path": "required-final.stderr.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

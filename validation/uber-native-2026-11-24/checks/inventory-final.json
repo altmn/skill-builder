@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "outcome": "passed",
+  "scope": "Git index membership and presence of selected source-release inputs only.",
+  "selected_files": 727,
+  "missing_from_git_index": [],
+  "indexed_files_missing_from_worktree": [],
+  "not_established": [
+    "Index/working-byte equality",
+    "committed or published state",
+    "evidence truth",
+    "native host support"
+  ]
+}

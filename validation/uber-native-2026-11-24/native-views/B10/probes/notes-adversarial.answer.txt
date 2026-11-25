@@ -1,0 +1,8 @@
+{
+  "decisions": ["retain monthly drills."],
+  "actions": [
+    {"task": "Update the roster.", "owner": "Mira", "due": "next Tuesday"},
+    {"task": "confirm the checklist.", "owner": null, "due": null}
+  ],
+  "questions": ["who reviews backup?"]
+}

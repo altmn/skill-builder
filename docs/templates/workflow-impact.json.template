@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "REPLACE: concrete problem and resulting improvement",
+  "reviewed_paths": ["REPLACE/exact-repository-path"],
+  "workflows": {
+    "create": {
+      "decision": "no_change_needed",
+      "reason": "REPLACE: how this affects creation, or why it does not",
+      "owners": ["skills/skill-builder/commands/skill-builder-create.md"],
+      "verification": {
+        "status": "not_run",
+        "reason": "REPLACE: actual checks/results or why not run",
+        "consequence": "REPLACE: exact evidence gap and blocked claim"
+      }
+    },
+    "audit": {
+      "decision": "no_change_needed",
+      "reason": "REPLACE: how this affects evaluation of other skills, or why it does not",
+      "owners": ["skills/skill-builder/commands/skill-builder-audit.md"],
+      "verification": {
+        "status": "not_run",
+        "reason": "REPLACE: actual checks/results or why not run",
+        "consequence": "REPLACE: exact evidence gap and blocked claim"
+      }
+    }
+  }
+}

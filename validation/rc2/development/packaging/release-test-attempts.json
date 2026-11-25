@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_release.py",
+    "-v"
+  ],
+  "timestamp_utc": "2026-11-23T19:09:31.007125+00:00",
+  "exit_code": 0,
+  "log": "after-release-tests-attempt-2.log",
+  "prior_attempt": {
+    "log": "after-release-tests-attempt-1.log",
+    "tests_run": 19,
+    "errors": 8,
+    "cause": "Test fixture copied its own temporary directory when the restricted runtime used project cwd for tempfile; fixture now copies explicit project roots."
+  }
+}

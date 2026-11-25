@@ -1,0 +1,7 @@
+No. A portable Agent Skills format check establishes that a skill package meets the format rules the checker implements. Safety, discoverability, and usefulness each require separate evidence.
+
+| Claim | Evidence needed |
+|---|---|
+| **Safe to use** | Review the skill’s instructions, bundled scripts, and dependencies. Test what it can access, execute, or send under the intended host’s permissions, including with untrusted inputs. Scope the conclusion to the version and environment reviewed. |
+| **Discoverable on every host** | Verify on each claimed host and version that the skill is found in a supported location, appears in the host’s skill inventory or model context, and can be selected for a representative request. A passing check on one host supports only that tested configuration. |
+| **Useful compared with no skill** | Run representative tasks with and without the skill, holding the model, host, tools, and evaluation criteria constant. Repeat enough to account for run-to-run variation. Compare task success, output quality, and any relevant tradeoffs in time or cost. |

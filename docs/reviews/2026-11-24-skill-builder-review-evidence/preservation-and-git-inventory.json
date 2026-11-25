@@ -1,0 +1,49 @@
+{
+  "external_kb_files": 182,
+  "external_vs_archive_content_mismatches": [],
+  "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+  "archive_bytes": 11572664,
+  "archive_entries": 454,
+  "substantive_bytes": 76965199,
+  "canonical_rules": 99,
+  "rule_basis_counts": {
+    "specification": 5,
+    "project": 94
+  },
+  "rule_strength_counts": {
+    "required": 43,
+    "recommended": 22,
+    "conditional": 34
+  },
+  "mapped_rule_ids": 99,
+  "basis_strength_mismatches": [],
+  "old_source_manifest_mismatches": [
+    "LICENSE.md"
+  ],
+  "old_source_manifest_untracked_members": [
+    "validation/final-local-tests.log",
+    "validation/local-tests.log",
+    "validation/rc2/creator-check.log",
+    "validation/rc2/development/integrated-64/creator-check.log",
+    "validation/rc2/development/integrated-64/local-tests.log",
+    "validation/rc2/development/integrated-64/project-check.log",
+    "validation/rc2/development/integrated-64/stdlib-project-check.log",
+    "validation/rc2/development/integrated-64/stdlib-release-tests.log",
+    "validation/rc2/development/packaging/after-release-tests-attempt-1.log",
+    "validation/rc2/development/packaging/after-release-tests-attempt-2.log",
+    "validation/rc2/development/packaging/after-release-tests-without-site-packages.log",
+    "validation/rc2/development/runtime/after-fix-runtime-tests.log",
+    "validation/rc2/development/runtime/all-runtime-tests.log",
+    "validation/rc2/development/runtime/before-fix-runtime-tests.log",
+    "validation/rc2/development/runtime/path-expansion-after.log",
+    "validation/rc2/development/runtime/path-expansion-before.log",
+    "validation/rc2/independent-review/probe-run.log",
+    "validation/rc2/kb-verify.log",
+    "validation/rc2/local-tests.log",
+    "validation/rc2/preservation-inputs/preserved-validator-tests-current.log",
+    "validation/rc2/project-check.log",
+    "validation/rc2/stdlib-project-check.log",
+    "validation/rc2/stdlib-release-tests.log"
+  ],
+  "release_input_identity_note": "Existing PACKAGE-MANIFEST is historical/stale for current commit and will also predate review deliverables."
+}

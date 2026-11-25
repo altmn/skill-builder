@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "preservation-audit-delivery-index",
+  "recorded_at": "2026-11-23T19:12:16.346402+00:00",
+  "scope": "Only top-level additive audit artifacts; extracted KB and temporary fixture directory excluded from final packaging.",
+  "files": [
+    {
+      "path": "baseline-preservation-self-check.json",
+      "size_bytes": 2278,
+      "sha256": "2f7c5b1ffcb3abdf114bf2be278a3e610c25452c4e530a07654ffa80fe89682e"
+    },
+    {
+      "path": "compare_preservation.py",
+      "size_bytes": 12395,
+      "sha256": "928accf5ac2666b721e828fc614a358a7540b258a6b93ad8b6dc2f5571b431dd"
+    },
+    {
+      "path": "current-receipt-recipe.md",
+      "size_bytes": 13360,
+      "sha256": "4015e59257a3ca1dc1c66732c7dafc9ad48af2475d1a7fbdc5f2904aad6b7083"
+    },
+    {
+      "path": "historical-evidence-audit.json",
+      "size_bytes": 10406,
+      "sha256": "c92ab73577b15d9b5dbd020a45fc4c26583235ec0cdf59b892c1ba24fa1c1a4d"
+    },
+    {
+      "path": "original-kb-inventory.json",
+      "size_bytes": 142159,
+      "sha256": "a5704b455c3f19622ae390e89784c6e52435fe0eaeb25c6a1e67a5f87f6192c3"
+    },
+    {
+      "path": "original-source-inventory.json",
+      "size_bytes": 19002,
+      "sha256": "6680bbec00697a239b29e53507b79a0f638cec62a6c8e26ff7c969dd6d88444f"
+    },
+    {
+      "path": "preserved-validator-tests-current.json",
+      "size_bytes": 2652,
+      "sha256": "c6b93528eabb17d43da9ee985f00d2d678b13887d641fdd60de9ff8fec11eaee"
+    },
+    {
+      "path": "preserved-validator-tests-current.log",
+      "size_bytes": 10840,
+      "sha256": "4e8cc102efbe0d77e8a4efc1b93abbb169194837109810797a117b2d67cb9c19"
+    }
+  ],
+  "checker_syntax": "parsed successfully with Python ast.parse; final candidate comparison remains for integration",
+  "not_run": [
+    "Final edited release local suite",
+    "Final source and runtime package verification",
+    "Native hosts",
+    "Remote CI",
+    "Publication",
+    "Installation"
+  ]
+}

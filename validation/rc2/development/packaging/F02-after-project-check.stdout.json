@@ -1,0 +1,4 @@
+{
+  "outcome": "failed",
+  "error": "Symlink inputs/ancestors are not distributable: /workspace/scratch/ce88fda257c5/evidence/packaging/after-2kt36o2j/project/docs"
+}

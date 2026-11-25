@@ -1,0 +1,12 @@
+The illustrative excerpt reports a correct answer on attempt 3. It does not establish successful activation, cost improvement, or reliable ordinary success.
+
+| Review item | Assessment |
+|---|---|
+| Subject and input | Illustrative evaluation excerpt for “Summarize the open decisions from the attached notes.” The excerpt is explicitly incomplete and not a schema-valid receipt. |
+| Semantic prompt verdict | **Unscored.** The requested action and scope are clear, but the candidate prompt and frozen independent rubric were not supplied. |
+| Intended payload identity | `intended_payload_sha256` is reported as 64 repeated `a` characters. |
+| Actual activation identity | **Unknown.** `actual_activation_sha256` is `null`, and the excerpt exposes neither a verified activation identity nor a verified full-read event linking the intended bytes to the run. |
+| Answer correctness | **Reported pass on attempt 3.** The excerpt says the answer correctly captured the open decisions. |
+| Rule traceability | `EVAL-008` has the expected fields, `rule_id` and `outcome`, with no missing or unexpected fields in the entry. Its recorded outcome is **not run**. |
+| Attempts and reliability | Attempts 1 and 2 **failed** independent checks. The reasons were not supplied. The reported success on attempt 3 is insufficient to establish reliable ordinary success. |
+| Cost and comparison | Cost is **unknown** because `cost_usd` is `null`. No amount was reported. Cost improvement and any prior-version comparison are **unscored**. The cache was uncontrolled and two sessions overlapped. The excerpt does not establish what effect either condition had. |

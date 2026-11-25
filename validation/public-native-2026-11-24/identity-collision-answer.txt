@@ -1,0 +1,8 @@
+**Selected skill root: unverified.** The skill catalog lists both roots under `skill-builder`, and the invocation provides no resolved path. I read `agents/openai.yaml` directly from each candidate root.
+
+| Candidate root relative to `identity-project` | Markers observed in `SKILL.md` |
+|---|---|
+| `.agents/skills/skill-builder` | `SOURCE-REVISION-TWO` |
+| `different directory/.agents/skills/skill-builder` | `SOURCE-REVISION-TWO`, `NEAREST-ROOT-THREE` |
+
+Both YAML files set `display_name` to `Skill Builder`. Both `SKILL.md` files declare the same parent modes: `skill-builder-create`, `skill-builder-audit`, and `skill-builder-explain`.

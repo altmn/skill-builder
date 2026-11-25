@@ -1,0 +1,30 @@
+{
+  "complete": true,
+  "raw_sha256": "af9104f9dc959b54e8d0fe48e1a3f1f48195e7fea27f297f90630a8962952005",
+  "adapter": "bounded-native-review-v1",
+  "events": [
+    {
+      "kind": "skill_activation_succeeded",
+      "skill_sha256": "7abe45c3c211ef863bc964069c34ecf621a8723aa2f0f85d41fb6e720e71f5fb",
+      "evidence": [
+        {
+          "item": "item_1",
+          "command": "/opt/homebrew/bin/zsh -lc 'for f in AGENTS.md CLAUDE.md .agents/skills/skill-builder/SKILL.md; do if test -f \"$f\"; then cat \"$f\"; fi; done\nls -a\nls fixtures'"
+        }
+      ]
+    },
+    {
+      "kind": "action",
+      "name": "read_supplied_contract",
+      "outcome": "succeeded",
+      "evidence": "Successful source-reading command in the preserved complete native event stream."
+    },
+    {
+      "kind": "action",
+      "name": "inspect_delivered_artifacts",
+      "outcome": "succeeded",
+      "evidence": "Post-write file inventory, source reads or hash/check outputs. Inventory alone does not prove semantic verification."
+    }
+  ],
+  "limits": "Actions normalized from observed commands/output and final source bindings, not hidden reasoning. Partial KB reading is not comprehensive 99-rule review."
+}

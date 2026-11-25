@@ -1,0 +1,8 @@
+{
+  "host": "REPLACE: product, surface and exact version",
+  "model": "REPLACE: model ID/version or explicit unavailable reason",
+  "settings": {"sampling": "REPLACE", "tools": "REPLACE: tool inventory/version", "cache_condition": "REPLACE"},
+  "policy": "REPLACE: execution, network and approval profile",
+  "catalog_sha256": "REPLACE: digest of frozen distractor catalog excluding the target skill",
+  "budget": {"max_runs": 96, "per_run_seconds": 180, "semantic_retries": 0}
+}

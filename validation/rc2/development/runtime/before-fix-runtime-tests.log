@@ -1,0 +1,363 @@
+test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) ... 
+  test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'1e999') ... FAIL
+  test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'[1e999]') ... FAIL
+  test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'{"elapsed":{"value":1e999}}') ... FAIL
+  test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'{"attempts":[{"usage":{"cost":{"value":1e999}}}]}') ... FAIL
+  test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'-1e999') ... FAIL
+  test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'[-1e999]') ... FAIL
+  test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'{"elapsed":{"value":-1e999}}') ... FAIL
+  test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'{"attempts":[{"usage":{"cost":{"value":-1e999}}}]}') ... FAIL
+test_overflow_record_failures_keep_finite_controls_and_batch_order (runtime_regression_tests.BuilderContracts.test_overflow_record_failures_keep_finite_controls_and_batch_order) ... FAIL
+test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) ... 
+  test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x7fAfter'") ... ERROR
+  test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x80After'") ... ERROR
+  test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x84After'") ... ERROR
+  test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x85After'") ... FAIL
+  test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x86After'") ... ERROR
+  test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x9fAfter'") ... ERROR
+  test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\ufffeAfter'") ... ERROR
+  test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\uffffAfter'") ... ERROR
+test_surrogate_descriptions_fail_before_output_creation (runtime_regression_tests.BuilderContracts.test_surrogate_descriptions_fail_before_output_creation) ... 
+  test_surrogate_descriptions_fail_before_output_creation (runtime_regression_tests.BuilderContracts.test_surrogate_descriptions_fail_before_output_creation) (codepoints="'\\ud800'") ... FAIL
+  test_surrogate_descriptions_fail_before_output_creation (runtime_regression_tests.BuilderContracts.test_surrogate_descriptions_fail_before_output_creation) (codepoints="'\\udfff'") ... FAIL
+  test_surrogate_descriptions_fail_before_output_creation (runtime_regression_tests.BuilderContracts.test_surrogate_descriptions_fail_before_output_creation) (codepoints="'\\ud83d\\ude00'") ... FAIL
+test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values (runtime_regression_tests.BuilderContracts.test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values) ... FAIL
+
+======================================================================
+ERROR: test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x7fAfter'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 260, in test_created_descriptions_round_trip_unicode_scalars_through_yaml
+    actual = yaml.safe_load(text.split("---", 2)[1])["description"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 79, in load
+    loader = Loader(stream)
+             ^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/loader.py", line 34, in __init__
+    Reader.__init__(self, stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 74, in __init__
+    self.check_printable(stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 143, in check_printable
+    raise ReaderError(self.name, position, ord(character),
+yaml.reader.ReaderError: unacceptable character #x007f: special characters are not allowed
+  in "<unicode string>", position 43
+
+======================================================================
+ERROR: test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x80After'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 260, in test_created_descriptions_round_trip_unicode_scalars_through_yaml
+    actual = yaml.safe_load(text.split("---", 2)[1])["description"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 79, in load
+    loader = Loader(stream)
+             ^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/loader.py", line 34, in __init__
+    Reader.__init__(self, stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 74, in __init__
+    self.check_printable(stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 143, in check_printable
+    raise ReaderError(self.name, position, ord(character),
+yaml.reader.ReaderError: unacceptable character #x0080: special characters are not allowed
+  in "<unicode string>", position 43
+
+======================================================================
+ERROR: test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x84After'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 260, in test_created_descriptions_round_trip_unicode_scalars_through_yaml
+    actual = yaml.safe_load(text.split("---", 2)[1])["description"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 79, in load
+    loader = Loader(stream)
+             ^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/loader.py", line 34, in __init__
+    Reader.__init__(self, stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 74, in __init__
+    self.check_printable(stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 143, in check_printable
+    raise ReaderError(self.name, position, ord(character),
+yaml.reader.ReaderError: unacceptable character #x0084: special characters are not allowed
+  in "<unicode string>", position 43
+
+======================================================================
+ERROR: test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x86After'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 260, in test_created_descriptions_round_trip_unicode_scalars_through_yaml
+    actual = yaml.safe_load(text.split("---", 2)[1])["description"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 79, in load
+    loader = Loader(stream)
+             ^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/loader.py", line 34, in __init__
+    Reader.__init__(self, stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 74, in __init__
+    self.check_printable(stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 143, in check_printable
+    raise ReaderError(self.name, position, ord(character),
+yaml.reader.ReaderError: unacceptable character #x0086: special characters are not allowed
+  in "<unicode string>", position 43
+
+======================================================================
+ERROR: test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x9fAfter'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 260, in test_created_descriptions_round_trip_unicode_scalars_through_yaml
+    actual = yaml.safe_load(text.split("---", 2)[1])["description"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 79, in load
+    loader = Loader(stream)
+             ^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/loader.py", line 34, in __init__
+    Reader.__init__(self, stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 74, in __init__
+    self.check_printable(stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 143, in check_printable
+    raise ReaderError(self.name, position, ord(character),
+yaml.reader.ReaderError: unacceptable character #x009f: special characters are not allowed
+  in "<unicode string>", position 43
+
+======================================================================
+ERROR: test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\ufffeAfter'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 260, in test_created_descriptions_round_trip_unicode_scalars_through_yaml
+    actual = yaml.safe_load(text.split("---", 2)[1])["description"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 79, in load
+    loader = Loader(stream)
+             ^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/loader.py", line 34, in __init__
+    Reader.__init__(self, stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 74, in __init__
+    self.check_printable(stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 143, in check_printable
+    raise ReaderError(self.name, position, ord(character),
+yaml.reader.ReaderError: unacceptable character #xfffe: special characters are not allowed
+  in "<unicode string>", position 43
+
+======================================================================
+ERROR: test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\uffffAfter'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 260, in test_created_descriptions_round_trip_unicode_scalars_through_yaml
+    actual = yaml.safe_load(text.split("---", 2)[1])["description"]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 79, in load
+    loader = Loader(stream)
+             ^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/loader.py", line 34, in __init__
+    Reader.__init__(self, stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 74, in __init__
+    self.check_printable(stream)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/reader.py", line 143, in check_printable
+    raise ReaderError(self.name, position, ord(character),
+yaml.reader.ReaderError: unacceptable character #xffff: special characters are not allowed
+  in "<unicode string>", position 43
+
+======================================================================
+FAIL: test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'1e999')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 462, in test_nonfinite_numbers_are_rejected_at_every_json_depth
+    with self.subTest(data=data), self.assertRaises(builder.BuilderError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BuilderError not raised
+
+======================================================================
+FAIL: test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'[1e999]')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 462, in test_nonfinite_numbers_are_rejected_at_every_json_depth
+    with self.subTest(data=data), self.assertRaises(builder.BuilderError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BuilderError not raised
+
+======================================================================
+FAIL: test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'{"elapsed":{"value":1e999}}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 462, in test_nonfinite_numbers_are_rejected_at_every_json_depth
+    with self.subTest(data=data), self.assertRaises(builder.BuilderError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BuilderError not raised
+
+======================================================================
+FAIL: test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'{"attempts":[{"usage":{"cost":{"value":1e999}}}]}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 462, in test_nonfinite_numbers_are_rejected_at_every_json_depth
+    with self.subTest(data=data), self.assertRaises(builder.BuilderError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BuilderError not raised
+
+======================================================================
+FAIL: test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'-1e999')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 462, in test_nonfinite_numbers_are_rejected_at_every_json_depth
+    with self.subTest(data=data), self.assertRaises(builder.BuilderError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BuilderError not raised
+
+======================================================================
+FAIL: test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'[-1e999]')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 462, in test_nonfinite_numbers_are_rejected_at_every_json_depth
+    with self.subTest(data=data), self.assertRaises(builder.BuilderError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BuilderError not raised
+
+======================================================================
+FAIL: test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'{"elapsed":{"value":-1e999}}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 462, in test_nonfinite_numbers_are_rejected_at_every_json_depth
+    with self.subTest(data=data), self.assertRaises(builder.BuilderError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BuilderError not raised
+
+======================================================================
+FAIL: test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) (data=b'{"attempts":[{"usage":{"cost":{"value":-1e999}}}]}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 462, in test_nonfinite_numbers_are_rejected_at_every_json_depth
+    with self.subTest(data=data), self.assertRaises(builder.BuilderError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BuilderError not raised
+
+======================================================================
+FAIL: test_overflow_record_failures_keep_finite_controls_and_batch_order (runtime_regression_tests.BuilderContracts.test_overflow_record_failures_keep_finite_controls_and_batch_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 488, in test_overflow_record_failures_keep_finite_controls_and_batch_order
+    self.assertEqual([row["outcome"] for row in report["records"]["records"]], expected)
+AssertionError: Lists differ: ['passed', 'passed', 'failed', 'failed', 'failed', 'f[32 chars]sed'] != ['passed', 'failed', 'failed', 'failed', 'failed', 'f[32 chars]sed']
+
+First differing element 1:
+'passed'
+'failed'
+
+  ['passed',
+-  'passed',
+   'failed',
+   'failed',
+   'failed',
+   'failed',
+-  'passed',
++  'failed',
++  'failed',
+   'failed',
+   'passed']
+
+======================================================================
+FAIL: test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) (description="'Before\\x85After'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 261, in test_created_descriptions_round_trip_unicode_scalars_through_yaml
+    self.assertEqual([ord(char) for char in actual], [ord(char) for char in description])
+AssertionError: Lists differ: [66, 101, 102, 111, 114, 101, 32, 65, 102, 116, 101, 114] != [66, 101, 102, 111, 114, 101, 133, 65, 102, 116, 101, 114]
+
+First differing element 6:
+32
+133
+
+- [66, 101, 102, 111, 114, 101, 32, 65, 102, 116, 101, 114]
+?                                ^
+
++ [66, 101, 102, 111, 114, 101, 133, 65, 102, 116, 101, 114]
+?                               + ^
+
+
+======================================================================
+FAIL: test_surrogate_descriptions_fail_before_output_creation (runtime_regression_tests.BuilderContracts.test_surrogate_descriptions_fail_before_output_creation) (codepoints="'\\ud800'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 273, in test_surrogate_descriptions_fail_before_output_creation
+    builder.create_project(args, self.kb)
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 330, in create_project
+    with NewTree(destination) as output:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+AssertionError: Output creation attempted
+
+======================================================================
+FAIL: test_surrogate_descriptions_fail_before_output_creation (runtime_regression_tests.BuilderContracts.test_surrogate_descriptions_fail_before_output_creation) (codepoints="'\\udfff'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 273, in test_surrogate_descriptions_fail_before_output_creation
+    builder.create_project(args, self.kb)
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 330, in create_project
+    with NewTree(destination) as output:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+AssertionError: Output creation attempted
+
+======================================================================
+FAIL: test_surrogate_descriptions_fail_before_output_creation (runtime_regression_tests.BuilderContracts.test_surrogate_descriptions_fail_before_output_creation) (codepoints="'\\ud83d\\ude00'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 273, in test_surrogate_descriptions_fail_before_output_creation
+    builder.create_project(args, self.kb)
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder/scripts/skill_builder.py", line 330, in create_project
+    with NewTree(destination) as output:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+AssertionError: Output creation attempted
+
+======================================================================
+FAIL: test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values (runtime_regression_tests.BuilderContracts.test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/tests/test_skill_builder.py", line 504, in test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values
+    self.assertEqual(result.returncode, 1, result.stdout)
+AssertionError: 2 != 1 : b'{\n  "schema_version": "1.0.0",\n  "outcome": "blocked",\n  "error": "Operation could not complete; inspect paths, permissions, archive integrity, and supported inputs.",\n  "exception_type": "TypeError",\n  "assurance": "No completed semantic or host assurance is implied."\n}\n'
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.768s
+
+FAILED (failures=14, errors=7)

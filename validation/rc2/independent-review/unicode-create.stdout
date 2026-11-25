@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "outcome": "scaffold_created",
+  "output": "/workspace/scratch/ce88fda257c5/evidence/integration/unicode-created",
+  "skill": "skills/unicode-example/SKILL.md",
+  "rule_decisions": 99,
+  "semantic_implementation": "not_run",
+  "host_trials": "not_run",
+  "release_ready": false
+}

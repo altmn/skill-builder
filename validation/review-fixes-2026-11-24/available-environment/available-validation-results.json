@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-24",
+  "timezone": "America/Los_Angeles",
+  "observed_utc": "2026-11-24T18:46:32.942835+00:00",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "python": "3.15.2 (main, Oct 25 2026, 16:57:51) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "cwd": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder",
+  "dependency_setup": "No package installation performed for these observations. Optional setup approval is pending.",
+  "results": [
+    {
+      "name": "integrated-default-tests",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 1,
+      "duration_seconds": 7.034,
+      "outputs": {
+        "stdout": {
+          "path": "integrated-default-tests.stdout.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "integrated-default-tests.stderr.txt",
+          "bytes": 23160,
+          "sha256": "66fb9787a6573ff5d551aa9502318e3d7633f7eaa53bcaca8853cfe8f4f16c34"
+        }
+      }
+    },
+    {
+      "name": "stdlib-release-tests",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "-S",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_release.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "duration_seconds": 2.3519,
+      "outputs": {
+        "stdout": {
+          "path": "stdlib-release-tests.stdout.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "stdlib-release-tests.stderr.txt",
+          "bytes": 3180,
+          "sha256": "e82437e13102db9d6d23ea36c954b889192438d390f6b66307cbc4575ea8de96"
+        }
+      }
+    },
+    {
+      "name": "core-project-check",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "tools/check_project.py"
+      ],
+      "returncode": 0,
+      "duration_seconds": 0.2861,
+      "outputs": {
+        "stdout": {
+          "path": "core-project-check.stdout.txt",
+          "bytes": 2960,
+          "sha256": "f1bbafb083aeaf6fe5b6e4d8e76573720ed064c69a3e694404f3b545d591bf63"
+        },
+        "stderr": {
+          "path": "core-project-check.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "name": "required-project-check",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "tools/check_project.py",
+        "--require-validators"
+      ],
+      "returncode": 1,
+      "duration_seconds": 0.2882,
+      "outputs": {
+        "stdout": {
+          "path": "required-project-check.stdout.txt",
+          "bytes": 3204,
+          "sha256": "2af58d708aebb470f42fd3a106b2332d94900bbc835cf3277ced078e8a49152a"
+        },
+        "stderr": {
+          "path": "required-project-check.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "name": "available-yaml-project-check",
+      "argv": [
+        "/Users/routerhealthchecker/.codex/skills/seo/.venv/bin/python",
+        "-I",
+        "-B",
+        "tools/check_project.py"
+      ],
+      "returncode": 0,
+      "duration_seconds": 2.0201,
+      "outputs": {
+        "stdout": {
+          "path": "available-yaml-project-check.stdout.txt",
+          "bytes": 12641,
+          "sha256": "ab4f8f2ed8d1e8c4326e128c96de465de471d0a0f01fc6904e03e17884ab2d53"
+        },
+        "stderr": {
+          "path": "available-yaml-project-check.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "name": "knowledge-preservation",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "kb",
+        "verify"
+      ],
+      "returncode": 0,
+      "duration_seconds": 0.1618,
+      "outputs": {
+        "stdout": {
+          "path": "knowledge-preservation.stdout.txt",
+          "bytes": 415,
+          "sha256": "e1519694d406f3355b34bab2d6ef19e32f2afe10df4d342fb33ca1ce518af3bf"
+        },
+        "stderr": {
+          "path": "knowledge-preservation.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  ]
+}

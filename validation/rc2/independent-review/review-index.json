@@ -1,0 +1,94 @@
+{
+  "review_outcome": "No remaining independently identified defect after focused correction; see scoped report.",
+  "initial_failed_observations_retained": true,
+  "focused_fix_verified": true,
+  "project_check": {
+    "exit_code": 0,
+    "outcome": "passed",
+    "checks": 18,
+    "ran_before_focused_fix": true
+  },
+  "native_host_execution": "not_run",
+  "deliverables": [
+    {
+      "path": "check-project.json",
+      "size_bytes": 12714,
+      "sha256": "1947e3cab175190078b8bd45f20d2202826ebc3deb47053b09e13fbce1812363"
+    },
+    {
+      "path": "check-project.stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "focused-recheck.json",
+      "size_bytes": 1646,
+      "sha256": "bbbc768d3d28c4459f52a09c1c7e71a13f26fa028ace0d7466b8dee9a430b432"
+    },
+    {
+      "path": "independent-review.md",
+      "size_bytes": 10034,
+      "sha256": "32ed28c83384c9b24ac4fabafdb547ee633c4f7ba3d8cbcbe9ace693a07b003f"
+    },
+    {
+      "path": "observations.json",
+      "size_bytes": 14502,
+      "sha256": "95870d597f38463a0bd69ad31173fb5b61841b4ca0158410b8bc0d47e53404ff"
+    },
+    {
+      "path": "probe-run.log",
+      "size_bytes": 438,
+      "sha256": "73bd1d9e8f10a27a3f6129a2fd2dd2b07441b9f062294ccf0514f95d35d4b2eb"
+    },
+    {
+      "path": "probe_review.py",
+      "size_bytes": 9421,
+      "sha256": "2aa57f01bd1214ada09d7c29f8e2932585a1e7fae0f0b4705f9a90b60c98d07b"
+    },
+    {
+      "path": "record-batch.stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "record-batch.stdout",
+      "size_bytes": 5602,
+      "sha256": "713381b2f244a7e2077989c72a86c328b475cfa9010413db96a0518a68f9df03"
+    },
+    {
+      "path": "unicode-create.stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unicode-create.stdout",
+      "size_bytes": 313,
+      "sha256": "70561cb1c1a95da46b04cebeb5c5798c900c493c64c9accf05a3cdd84ea64e29"
+    },
+    {
+      "path": "unknown-user-record-fixed.stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unknown-user-record-fixed.stdout",
+      "size_bytes": 1253,
+      "sha256": "07921b7df01a3881caf4b21111d7368f4b6121fcb70a74dff6a8795c2c8876a8"
+    },
+    {
+      "path": "unknown-user-record.stderr",
+      "size_bytes": 1002,
+      "sha256": "333f849bfcca0cc1fa222d23b5777397cba8fda52631d6da505fcc385b04c748"
+    },
+    {
+      "path": "unknown-user-record.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "excluded_working_directories": [
+    "tmp",
+    "record-fixtures",
+    "unicode-created"
+  ]
+}

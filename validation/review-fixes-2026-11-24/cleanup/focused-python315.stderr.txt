@@ -1,0 +1,14 @@
+test_owned_failure_cleanup_keeps_contents_beneath_replaced_root (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_contents_beneath_replaced_root) ... ok
+test_owned_failure_cleanup_keeps_directory_metadata_changes (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_directory_metadata_changes) ... ok
+test_owned_failure_cleanup_keeps_files_with_changed_metadata (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_files_with_changed_metadata) ... ok
+test_owned_failure_cleanup_keeps_in_place_modified_file (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_in_place_modified_file) ... ok
+test_owned_failure_cleanup_keeps_replaced_file (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_replaced_file) ... ok
+test_owned_failure_cleanup_keeps_unconfirmed_partial_write (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_unconfirmed_partial_write) ... ok
+test_owned_failure_cleanup_keeps_unrelated_new_file (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_keeps_unrelated_new_file) ... ok
+test_owned_failure_cleanup_removes_known_partial_write (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_removes_known_partial_write) ... ok
+test_owned_failure_cleanup_removes_unchanged_nested_output (test_skill_builder.BuilderContracts.test_owned_failure_cleanup_removes_unchanged_nested_output) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.022s
+
+OK

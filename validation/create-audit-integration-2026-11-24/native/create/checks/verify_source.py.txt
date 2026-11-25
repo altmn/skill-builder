@@ -1,0 +1,138 @@
+"""Check the source and evaluation inputs offline without executing the skill."""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import re
+from zipfile import ZipFile
+
+
+def strict_json(raw):
+    def unique(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f"Duplicate JSON key: {key}")
+            result[key] = value
+        return result
+
+    def invalid(token):
+        raise ValueError(f"Nonfinite JSON constant: {token}")
+
+    return json.loads(raw, object_pairs_hook=unique, parse_constant=invalid)
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("archive", type=Path, help="The loaded builder's original knowledge-base.zip")
+    args = parser.parse_args()
+    project = Path(__file__).resolve().parents[1]
+
+    def load(path):
+        return strict_json((project / path).read_bytes())
+
+    payload = project / "skills/meeting-decisions"
+    entry = payload / "SKILL.md"
+    require(list(payload.iterdir()) == [entry] and not entry.is_symlink(), "Unexpected payload entry.")
+    skill_bytes = entry.read_bytes()
+    opening, metadata, body = skill_bytes.decode().split("---\n", 2)
+    require(opening == "" and body.strip(), "Missing delimited frontmatter or body.")
+    name_line, description_line = metadata.splitlines()
+    require(re.fullmatch(r"name: [a-z0-9]+(?:-[a-z0-9]+)*", name_line)
+            and name_line[6:] == payload.name and len(payload.name) <= 64, "Invalid name.")
+    require(description_line.startswith('description: "') and description_line.endswith('"'),
+            "Expected a quoted description as the sole other field.")
+    description = strict_json(description_line[13:])
+    require(isinstance(description, str) and description.strip() and len(description) <= 1024
+            and all(32 <= ord(char) < 127 for char in description), "Invalid description.")
+    require("REPLACE" not in body and "**DRAFT" not in body, "Scaffold residue in payload.")
+
+    plan = load("evals/panel/plan.json")
+    inventory = plan["identities"]["candidate"]
+    require(inventory["skill_sha256"] == digest(skill_bytes)
+            and inventory["files"] == [{"path": "SKILL.md", "size_bytes": len(skill_bytes),
+                                        "sha256": digest(skill_bytes)}], "Payload identity mismatch.")
+    routing = load("evals/routing.json")
+    execution = load("evals/execution.json")
+    oracle = (project / "EVALUATION-PLAN.md").read_text()
+    require(len({case["id"] for case in routing + execution}) == len(routing + execution) == 16,
+            "Expected 16 unique domain cases.")
+    for split in ("development", "validation"):
+        require(sorted(case["should_trigger"] for case in routing if case["split"] == split)
+                == [False, False, True, True], f"Unexpected routing split: {split}.")
+        require(any(case["split"] == split for case in execution), f"Missing execution split: {split}.")
+    for kind in ("routing", "execution"):
+        require(plan["corpus_sources"][kind]["sha256"] == digest((project / f"evals/{kind}.json").read_bytes()),
+                f"{kind} corpus changed.")
+    fixture_paths = set()
+    for case, frozen in zip(execution, plan["corpus"]["execution"], strict=True):
+        require(case == {k: v for k, v in frozen.items() if k != "fixture_identities"}, "Frozen case changed.")
+        require(all(check in oracle for check in case["checks"] + case["invariants"]),
+                f"Oracle lacks a check for {case['id']}.")
+        for fixture, identity in zip(case["fixtures"], frozen["fixture_identities"], strict=True):
+            path = project / "evals" / fixture
+            require(path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(project / "evals/fixtures"),
+                    "Fixture escapes fixture directory.")
+            require(identity == {"path": fixture, "sha256": digest(path.read_bytes())}, "Fixture identity mismatch.")
+            fixture_paths.add(fixture)
+    fixtures = project / "evals/fixtures"
+    require((fixtures / "empty.md").stat().st_size == 0 and not (fixtures / "missing.md").exists(),
+            "Empty and missing notes must remain distinct.")
+    require("touch meeting-decisions-sentinel" in (fixtures / "launch review.md").read_text()
+            and not (project / "meeting-decisions-sentinel").exists(), "Hostile test input changed.")
+
+    selection = load("evidence/rule-selection.json")
+    trace = load("evidence/rule-traceability.json")
+    require(digest(args.archive.read_bytes()) == selection["archive_sha256"], "Original archive digest mismatch.")
+    with ZipFile(args.archive) as archive:
+        names = [n for n in archive.namelist() if n.endswith("/catalogs/requirements.json")]
+        require(len(names) == 1, "Unexpected rule catalog location.")
+        canonical = strict_json(archive.read(names[0]))["rules"]
+    rows = {row["rule_id"]: row for row in trace["records"]}
+    require(len(rows) == len(trace["records"]) == len(selection["rules"]) == len(canonical) == 99,
+            "Expected 99 distinct traceability records and selections.")
+    for original, selected in zip(canonical, selection["rules"], strict=True):
+        require(all(selected[key] == value for key, value in original.items()), "Canonical rule fields changed.")
+        row = rows[original["id"]]
+        require(row["decision"] == selected["decision"] and row["source_ids"] == original["source_ids"],
+                "Traceability disposition or sources diverged.")
+        for evidence in row["evidence"]:
+            require(evidence["sha256"] == digest((project / evidence["ref"]).read_bytes()),
+                    f"Stale evidence for {row['rule_id']}.")
+    summary = load("evals/panel/summary.json")
+    plan_hash = digest((project / "evals/panel/plan.json").read_bytes())
+    require(load("evals/panel/observations.json") == {"plan_sha256": plan_hash, "runs": []}
+            and summary["plan_sha256"] == plan_hash and summary["outcome"] == "incomplete"
+            and summary["scheduled"] == len(summary["missing"]) == 96 and summary["recorded"] == summary["scored"] == 0,
+            "Unexpected observation evidence.")
+    review = load("evaluation-review.json")
+    require(review["semantic_review_performed"] is True and len(review["items"]) == 8
+            and all((project / ref).is_file() or ref == "evidence/local-checks.json"
+                    for item in review["items"] for ref in item["evidence"]), "Incomplete review evidence.")
+    print(json.dumps({
+        "outcome": "passed",
+        "checks": [
+            "Restricted two-scalar frontmatter and single-file payload",
+            "Payload and frozen corpus identities",
+            "Case uniqueness, split coverage, oracle check references, fixture hashes, empty and missing inputs",
+            "All canonical rule fields and traceability references",
+            "Panel and supplemental review consistency"
+        ],
+        "skill_sha256": digest(skill_bytes), "plan_sha256": plan_hash,
+        "routing_cases": len(routing), "execution_cases": len(execution), "frozen_fixtures": len(fixture_paths),
+        "canonical_rules_retained": len(canonical), "native_observations": 0,
+        "limits": "Source checks only. No general YAML parsing, original schema validation, or native execution."
+    }, indent=2))
+
+
+if __name__ == "__main__":
+    main()

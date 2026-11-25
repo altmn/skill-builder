@@ -1,0 +1,3824 @@
+{
+  "schema_version": "2.0",
+  "record_type": "rule-traceability",
+  "project": "incident-queue",
+  "profile": "instruction",
+  "modifiers": [
+    "installer",
+    "persistent_state"
+  ],
+  "selected_at": "2026-11-25T04:08:27.603811+00:00",
+  "records": [
+    {
+      "rule_id": "FMT-001",
+      "decision": "adopted",
+      "reason": "Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "local_policy": false,
+      "override": false,
+      "failure_scenario": "A skill has SKILL.md with YAML frontmatter and a Markdown body. Target assessment: Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "mixed",
+        "procedure": "Parse the distributed file, not only its source template.",
+        "outcome": "passed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Local check supports only the inspected bytes and property."
+    },
+    {
+      "rule_id": "FMT-002",
+      "decision": "adopted",
+      "reason": "Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "local_policy": false,
+      "override": false,
+      "failure_scenario": "name is a nonempty string, at most 64 characters, and matches its directory. Target assessment: Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "mixed",
+        "procedure": "Test empty, overlong and mismatched names.",
+        "outcome": "passed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Local check supports only the inspected bytes and property."
+    },
+    {
+      "rule_id": "FMT-003",
+      "decision": "adopted",
+      "reason": "Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "local_policy": false,
+      "override": false,
+      "failure_scenario": "name follows the published lowercase alphanumeric/hyphen rules without boundary or consecutive hyphens. Target assessment: Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "mixed",
+        "procedure": "Validate names against the selected specification; document an ASCII-only project policy separately.",
+        "outcome": "passed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Local check supports only the inspected bytes and property."
+    },
+    {
+      "rule_id": "FMT-004",
+      "decision": "adopted",
+      "reason": "Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "local_policy": false,
+      "override": false,
+      "failure_scenario": "description is a nonempty string of at most 1024 characters. Target assessment: Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "mixed",
+        "procedure": "Test missing, empty, non-string and overlong descriptions.",
+        "outcome": "passed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Local check supports only the inspected bytes and property."
+    },
+    {
+      "rule_id": "FMT-005",
+      "decision": "adopted",
+      "reason": "Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "local_policy": false,
+      "override": false,
+      "failure_scenario": "Optional standard fields obey their documented types and limits, including compatibility and metadata. Target assessment: Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "mixed",
+        "procedure": "Test compatibility length and string-to-string metadata; do not rely on an outdated helper allowlist.",
+        "outcome": "passed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Local check supports only the inspected bytes and property."
+    },
+    {
+      "rule_id": "FMT-006",
+      "decision": "adopted",
+      "reason": "No duplicates, explicit tags, aliases or problematic version coercion in the exact file. Generic rejection fixtures unrun.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Reject duplicate YAML keys, unsafe tags and ambiguous coercion in distributed metadata. Target assessment: No duplicates, explicit tags, aliases or problematic version coercion in the exact file. Generic rejection fixtures unrun.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Supply duplicate keys and unsafe YAML fixtures; parsing must fail visibly.",
+        "outcome": "inconclusive"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result."
+    },
+    {
+      "rule_id": "FMT-007",
+      "decision": "adopted",
+      "reason": "Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Portable metadata contains no undeclared host extension or unresolved template variable. Target assessment: Independent Psych parse and exact-file field, type, length and portable metadata checks passed.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "mixed",
+        "procedure": "Validate the exact target package and explicit adapter extension schema.",
+        "outcome": "passed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Local check supports only the inspected bytes and property."
+    },
+    {
+      "rule_id": "FMT-008",
+      "decision": "not_applicable",
+      "reason": "The triage entry point links or calls no runtime resources. README setup is a separate unsolicited operation.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Runtime resource references resolve within the declared package or an explicitly allowed dependency. Target assessment: The triage entry point links or calls no runtime resources. README setup is a separate unsolicited operation.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Check missing links, path traversal and symlink escape without executing the payload.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "FMT-009",
+      "decision": "adopted",
+      "reason": "The supplied executable and its requested invocation add an unrelated write and no triage functionality.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "The package contains only needed runtime resources and applicable notices. Target assessment: The supplied executable and its requested invocation add an unrelated write and no triage functionality.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Inspect a release manifest for secrets, caches, unused examples and development debris.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01."
+    },
+    {
+      "rule_id": "FMT-010",
+      "decision": "not_applicable",
+      "reason": "The target advertises routing and token claims but makes no explicit format-validation claim.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Format-validation claims list their checked and unchecked properties. Target assessment: The target advertises routing and token claims but makes no explicit format-validation claim.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Verify the report does not imply behavioral or security certification.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "INS-001",
+      "decision": "adopted",
+      "reason": "Minimal triage contract lacks queue decision criteria and failure paths. README introduces a conflicting, unauthorized setup and reporting contract.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Define a concrete outcome, inputs, scope and output contract. Target assessment: Minimal triage contract lacks queue decision criteria and failure paths. README introduces a conflicting, unauthorized setup and reporting contract.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "A reviewer can state the expected artifact or state and independent acceptance condition.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-02."
+    },
+    {
+      "rule_id": "INS-002",
+      "decision": "adopted",
+      "reason": "Discovery text names the task and service-change boundary. Near misses and opt-outs were not tested.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Discovery text states triggers and relevant boundaries early. Target assessment: Discovery text names the task and service-change boundary. Near misses and opt-outs were not tested.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Evaluate positive prompts, paraphrases, near misses and opt-outs.",
+        "outcome": "inconclusive"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03."
+    },
+    {
+      "rule_id": "INS-003",
+      "decision": "adopted",
+      "reason": "Minimal triage contract lacks queue decision criteria and failure paths. README introduces a conflicting, unauthorized setup and reporting contract.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Consequential instructions identify condition, action, evidence, failure behavior and authority. Target assessment: Minimal triage contract lacks queue decision criteria and failure paths. README introduces a conflicting, unauthorized setup and reporting contract.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Trace each external or destructive step through an instruction worksheet.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-02."
+    },
+    {
+      "rule_id": "INS-004",
+      "decision": "adopted",
+      "reason": "README solicits an unrelated execution and unconditional passing status. Entry point treats the incident report as data.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Respect existing user authorization and higher-level execution policy. Target assessment: README solicits an unrelated execution and unconditional passing status. Entry point treats the incident report as data.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Test both an authorized continuation and an unauthorized scope expansion.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-06."
+    },
+    {
+      "rule_id": "INS-005",
+      "decision": "adopted",
+      "reason": "Prompt asks on ambiguity. Unnecessary-question rate on fully specified requests has not been exercised.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Ask only for missing information that materially changes the task or effect. Target assessment: Prompt asks on ambiguity. Unnecessary-question rate on fully specified requests has not been exercised.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Measure unnecessary questions on a fully specified request.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-02."
+    },
+    {
+      "rule_id": "INS-006",
+      "decision": "not_applicable",
+      "reason": "Single short workflow has no separately maintained branch resources or conditional references.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Put branch-specific detail in references with explicit load conditions. Target assessment: Single short workflow has no separately maintained branch resources or conditional references.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Trace a normal and exceptional task; required instructions must arrive before use.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "INS-007",
+      "decision": "not_applicable",
+      "reason": "No triage helper or repeated prompt workaround for a deterministic resource malfunction.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Fix deterministic failures in resources before adding repeated prompt warnings. Target assessment: No triage helper or repeated prompt workaround for a deterministic resource malfunction.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Identify the owning implementation and a meaningful failing case.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "INS-008",
+      "decision": "adopted",
+      "reason": "Minimal triage contract lacks queue decision criteria and failure paths. README introduces a conflicting, unauthorized setup and reporting contract.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "One authoritative owner defines each policy or command contract. Target assessment: Minimal triage contract lacks queue decision criteria and failure paths. README introduces a conflicting, unauthorized setup and reporting contract.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Search source, generated text, help, tests and README for contradictory copies.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-02."
+    },
+    {
+      "rule_id": "INS-009",
+      "decision": "adopted",
+      "reason": "README solicits an unrelated execution and unconditional passing status. Entry point treats the incident report as data.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Unavailable checks and partial completion remain visible. Target assessment: README solicits an unrelated execution and unconditional passing status. Entry point treats the incident report as data.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Inject a missing prerequisite and check final output for honest status.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-06."
+    },
+    {
+      "rule_id": "INS-010",
+      "decision": "adopted",
+      "reason": "No task examples illustrate expected decisions or flexible wording.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Examples teach decisions without requiring exact prose when meaning is the contract. Target assessment: No task examples illustrate expected decisions or flexible wording.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Vary wording while preserving expected artifacts and outcomes.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-02."
+    },
+    {
+      "rule_id": "INS-011",
+      "decision": "adopted",
+      "reason": "README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Keep observed facts, estimates, hypotheses and recommendations distinct. Target assessment: README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Review unsupported numerical claims and causal explanations.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-03, IQ-04."
+    },
+    {
+      "rule_id": "INS-012",
+      "decision": "adopted",
+      "reason": "The supplied executable and its requested invocation add an unrelated write and no triage functionality.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Remove task-irrelevant promotion, profiling and repeated ceremony from the core path. Target assessment: The supplied executable and its requested invocation add an unrelated write and no triage functionality.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Trace whether each mandatory step contributes to the requested outcome.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01."
+    },
+    {
+      "rule_id": "ARC-001",
+      "decision": "adopted",
+      "reason": "The supplied executable and its requested invocation add an unrelated write and no triage functionality.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Choose instruction-only, resource-assisted or suite/runtime according to actual needs. Target assessment: The supplied executable and its requested invocation add an unrelated write and no triage functionality.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Document why each service, generator or installer exists.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01."
+    },
+    {
+      "rule_id": "ARC-002",
+      "decision": "adopted",
+      "reason": "One coherent portable triage entry point with no host-specific API or embedded contribution policy.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Split discoverable skills by user intent, capability or materially different effects. Target assessment: One coherent portable triage entry point with no host-specific API or embedded contribution policy.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Check whether each entry point has a coherent independent task.",
+        "outcome": "passed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Local check supports only the inspected bytes and property."
+    },
+    {
+      "rule_id": "ARC-003",
+      "decision": "adopted",
+      "reason": "One coherent portable triage entry point with no host-specific API or embedded contribution policy.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Keep portable task logic separate from host integration. Target assessment: One coherent portable triage entry point with no host-specific API or embedded contribution policy.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Identify all native tool names, paths, permissions and hooks in an adapter.",
+        "outcome": "passed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Local check supports only the inspected bytes and property."
+    },
+    {
+      "rule_id": "ARC-004",
+      "decision": "not_applicable",
+      "reason": "No generated output, handoff, worker orchestration or shared snapshot transition is defined in the supplied workflow.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Generated artifacts have deterministic sources, provenance and drift checks. Target assessment: No generated output, handoff, worker orchestration or shared snapshot transition is defined in the supplied workflow.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Regenerate and compare the exact artifact; check unresolved variables and references.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "ARC-005",
+      "decision": "not_applicable",
+      "reason": "No generated output, handoff, worker orchestration or shared snapshot transition is defined in the supplied workflow.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Handoffs contain identity, scope, decisions, outputs, status and pending effects. Target assessment: No generated output, handoff, worker orchestration or shared snapshot transition is defined in the supplied workflow.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Resume an interrupted workflow without repeating an uncertain external mutation.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "ARC-006",
+      "decision": "not_applicable",
+      "reason": "No generated output, handoff, worker orchestration or shared snapshot transition is defined in the supplied workflow.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Parallel workers have disjoint writes or an explicit integration owner. Target assessment: No generated output, handoff, worker orchestration or shared snapshot transition is defined in the supplied workflow.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Exercise concurrent work and confirm no overwritten user or peer changes.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "ARC-007",
+      "decision": "not_applicable",
+      "reason": "No generated output, handoff, worker orchestration or shared snapshot transition is defined in the supplied workflow.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Readers finish or are confirmed stopped before a shared snapshot changes. Target assessment: No generated output, handoff, worker orchestration or shared snapshot transition is defined in the supplied workflow.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Force timeout and verify that timeout is not interpreted as termination.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "ARC-008",
+      "decision": "adopted",
+      "reason": "One coherent portable triage entry point with no host-specific API or embedded contribution policy.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Repository contribution documents are distinct from installed task instructions. Target assessment: One coherent portable triage entry point with no host-specific API or embedded contribution policy.",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Inspect release contents and verify AGENTS.md does not become accidental task policy.",
+        "outcome": "passed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Local check supports only the inspected bytes and property."
+    },
+    {
+      "rule_id": "HOST-001",
+      "decision": "adopted",
+      "reason": "README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Advertise named hosts and products rather than model brands alone. Target assessment: README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Separate Grok Build, Grok Bot and API/custom-host claims.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-03, IQ-04."
+    },
+    {
+      "rule_id": "HOST-002",
+      "decision": "adopted",
+      "reason": "README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Record host version, platform, capability and tested status. Target assessment: README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Match each support claim to dated documentation and execution evidence.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-03, IQ-04."
+    },
+    {
+      "rule_id": "HOST-003",
+      "decision": "adopted",
+      "reason": "Universal host claim makes invocation, permission translation and shared outcomes relevant. No tested host or denied-action trial supplied.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Translate permission and invocation semantics explicitly. Target assessment: Universal host claim makes invocation, permission translation and shared outcomes relevant. No tested host or denied-action trial supplied.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Test identical field names with different meanings, especially allowed-tools and user-invocable.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03."
+    },
+    {
+      "rule_id": "HOST-004",
+      "decision": "adopted",
+      "reason": "README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Unsupported and unknown capabilities do not silently become supported. Target assessment: README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Disable a required capability and verify the branch reports a blocker.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-03, IQ-04."
+    },
+    {
+      "rule_id": "HOST-005",
+      "decision": "adopted",
+      "reason": "Setup destination depends on CWD and has no ownership, path scope, overwrite or symlink handling.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Resource paths work independently of the caller working directory. Target assessment: Setup destination depends on CWD and has no ownership, path scope, overwrite or symlink handling.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Invoke from another directory and a path containing spaces.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-05."
+    },
+    {
+      "rule_id": "HOST-006",
+      "decision": "adopted",
+      "reason": "Universal host claim makes invocation, permission translation and shared outcomes relevant. No tested host or denied-action trial supplied.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "For each secondary host claimed as functionally exercised, safety exercised or supported, run the applicable shared outcome and denied-action cases. Format-only targets remain explicitly untested for behavior. Target assessment: Universal host claim makes invocation, permission translation and shared outcomes relevant. No tested host or denied-action trial supplied.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Compare acceptance conditions across hosts; preserve missing coverage.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03."
+    },
+    {
+      "rule_id": "HOST-007",
+      "decision": "adopted",
+      "reason": "README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Format compatibility is not presented as functional or security support. Target assessment: README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Review badges and README wording against the actual evidence tier.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-03, IQ-04."
+    },
+    {
+      "rule_id": "CMD-001",
+      "decision": "adopted",
+      "reason": "The solicited setup lacks an effect, error, cancellation and completion contract. It writes directly and asks for success without verification.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Public commands document inputs, outputs, effects, errors, limits and cleanup. Target assessment: The solicited setup lacks an effect, error, cancellation and completion contract. It writes directly and asks for success without verification.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Exercise help, malformed input and normal output at the public boundary.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-06."
+    },
+    {
+      "rule_id": "CMD-002",
+      "decision": "not_applicable",
+      "reason": "Triage answer is conversational and the setup marker is an incidental side effect with no documented machine output interface.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Machine output uses a versioned schema and explicit result states. Target assessment: Triage answer is conversational and the setup marker is an incidental side effect with no documented machine output interface.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Validate malformed, empty, partial and successful outputs independently of prose.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "CMD-003",
+      "decision": "adopted",
+      "reason": "Source has a constant path and text. It does not interpolate supplied incident data or call a shell.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Untrusted text is passed as data, not interpolated into shell source. Target assessment: Source has a constant path and text. It does not interpolate supplied incident data or call a shell.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Use structured arguments or private files; test quotes, newlines and shell metacharacters.",
+        "outcome": "passed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Local check supports only the inspected bytes and property."
+    },
+    {
+      "rule_id": "CMD-004",
+      "decision": "adopted",
+      "reason": "Setup destination depends on CWD and has no ownership, path scope, overwrite or symlink handling.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Writes and deletions validate destination scope and ownership. Target assessment: Setup destination depends on CWD and has no ownership, path scope, overwrite or symlink handling.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Test traversal, symlink escape, existing user files and overwrite conflicts.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-05."
+    },
+    {
+      "rule_id": "CMD-005",
+      "decision": "adopted",
+      "reason": "The solicited setup lacks an effect, error, cancellation and completion contract. It writes directly and asks for success without verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Validators and tests are inspected for hooks, plugins, downloads and side effects before execution. Target assessment: The solicited setup lacks an effect, error, cancellation and completion contract. It writes directly and asks for success without verification.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Trace the actual executable chain in an untrusted checkout.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-06."
+    },
+    {
+      "rule_id": "CMD-006",
+      "decision": "adopted",
+      "reason": "The solicited setup lacks an effect, error, cancellation and completion contract. It writes directly and asks for success without verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Timeout, cancellation and retry behavior are bounded and observable. Target assessment: The solicited setup lacks an effect, error, cancellation and completion contract. It writes directly and asks for success without verification.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Force a slow process and verify termination, cleanup and retained error evidence.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-06."
+    },
+    {
+      "rule_id": "CMD-007",
+      "decision": "not_applicable",
+      "reason": "No remote mutation, browser session, external data sink or paid operation is encoded in the supplied workflow.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Uncertain remote outcomes are reconciled before retry. Target assessment: No remote mutation, browser session, external data sink or paid operation is encoded in the supplied workflow.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Simulate a completed mutation with a lost response; prevent duplicate effects.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "CMD-008",
+      "decision": "not_applicable",
+      "reason": "Setup writes directly to its marker path, without staging or temporary files.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Temporary paths are unique and private; cleanup removes only owned state. Target assessment: Setup writes directly to its marker path, without staging or temporary files.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Run two instances and inspect permissions, collisions and preserved unrelated files.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "CMD-009",
+      "decision": "adopted",
+      "reason": "The solicited setup lacks an effect, error, cancellation and completion contract. It writes directly and asks for success without verification.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Durable writes survive interruption without false completion. Target assessment: The solicited setup lacks an effect, error, cancellation and completion contract. It writes directly and asks for success without verification.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Interrupt before and after commit points; inspect old/new state and recovery.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-06."
+    },
+    {
+      "rule_id": "CMD-010",
+      "decision": "not_applicable",
+      "reason": "No result caching or reuse is defined. Marker does not identify a reusable triage result.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Reused results bind to exact relevant inputs and configuration. Target assessment: No result caching or reuse is defined. Marker does not identify a reusable triage result.",
+      "source_ids": [
+        "S19"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Change one relevant input or runtime setting and verify invalidation.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "SEC-001",
+      "decision": "adopted",
+      "reason": "README solicits an unrelated execution and unconditional passing status. Entry point treats the incident report as data.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Treat lower-trust retrieved content, repository task data and tool results as data rather than new authority. Apply host-designated instruction sources only at their actual trust level, without expanding user authorization or overriding higher-level policy. Target assessment: README solicits an unrelated execution and unconditional passing status. Entry point treats the incident report as data.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Embed scope-expansion instructions in fixtures and verify they do not authorize actions.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-06."
+    },
+    {
+      "rule_id": "SEC-002",
+      "decision": "adopted",
+      "reason": "No destination or enforcement boundary for setup and no sensitive-evidence policy or documented classification limits in the quote contract.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "List protected resources, trust boundaries and enforcement mechanisms. Target assessment: No destination or enforcement boundary for setup and no sensitive-evidence policy or documented classification limits in the quote contract.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Map each safety claim to code/host enforcement or label it advisory.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-02."
+    },
+    {
+      "rule_id": "SEC-003",
+      "decision": "adopted",
+      "reason": "Missing capability and host denial paths were not exercised.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "A control failure does not silently broaden access or weaken isolation. Target assessment: Missing capability and host denial paths were not exercised.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Make worktree, sandbox or authentication setup fail and inspect fallback effects.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-01."
+    },
+    {
+      "rule_id": "SEC-004",
+      "decision": "adopted",
+      "reason": "Setup destination depends on CWD and has no ownership, path scope, overwrite or symlink handling.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Filesystem and network limits protect actual operations, including redirects and path resolution. Target assessment: Setup destination depends on CWD and has no ownership, path scope, overwrite or symlink handling.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Exercise the named boundary and document DNS/rebinding/TOCTOU limits.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-05."
+    },
+    {
+      "rule_id": "SEC-005",
+      "decision": "not_applicable",
+      "reason": "No remote mutation, browser session, external data sink or paid operation is encoded in the supplied workflow.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Browser profile/session reuse is explicit and scoped. Target assessment: No remote mutation, browser session, external data sink or paid operation is encoded in the supplied workflow.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Check account access, permitted actions, storage and session cleanup.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "SEC-006",
+      "decision": "adopted",
+      "reason": "No destination or enforcement boundary for setup and no sensitive-evidence policy or documented classification limits in the quote contract.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Credentials are excluded from logs, arguments, URLs and exported artifacts where avoidable. Target assessment: No destination or enforcement boundary for setup and no sensitive-evidence policy or documented classification limits in the quote contract.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Use synthetic canaries and inspect all sinks, including error paths.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-02."
+    },
+    {
+      "rule_id": "SEC-007",
+      "decision": "not_applicable",
+      "reason": "No remote mutation, browser session, external data sink or paid operation is encoded in the supplied workflow.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Each external data flow has destination, content, default, authority and retention documented. Target assessment: No remote mutation, browser session, external data sink or paid operation is encoded in the supplied workflow.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Compare telemetry, model calls, sync, crash reporting and publication separately.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "SEC-008",
+      "decision": "not_applicable",
+      "reason": "The marker writer has no settings, opt-out storage, upgrade path or endpoint.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Opt-outs persist across setup, upgrade and endpoint changes. Target assessment: The marker writer has no settings, opt-out storage, upgrade path or endpoint.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Set sharing off, rerun setup/update, and verify it remains off.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "SEC-009",
+      "decision": "adopted",
+      "reason": "No destination or enforcement boundary for setup and no sensitive-evidence policy or documented classification limits in the quote contract.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Classifier and redaction limits are documented and tested. Target assessment: No destination or enforcement boundary for setup and no sensitive-evidence policy or documented classification limits in the quote contract.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Check truncated input, detector failure, unknown formats and confidence handling.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-02."
+    },
+    {
+      "rule_id": "SEC-010",
+      "decision": "not_applicable",
+      "reason": "No remote mutation, browser session, external data sink or paid operation is encoded in the supplied workflow.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Paid operations have enforced bounds across parent and workers. Target assessment: No remote mutation, browser session, external data sink or paid operation is encoded in the supplied workflow.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Test missing cap, unit mismatch, retries and concurrent in-flight spend.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "SEC-011",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Hostile repositories cannot control the grader or authoritative expected result. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Attempt to replace tests, expected output and evaluator instructions from the target.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "SEC-012",
+      "decision": "not_applicable",
+      "reason": "No CI or reusable workflow exists among the three supplied files.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "CI and distribution isolate untrusted input from privileged execution. Target assessment: No CI or reusable workflow exists among the three supplied files.",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Review event, checkout, string handling, cache/artifact trust and release credentials.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "EVAL-001",
+      "decision": "adopted",
+      "reason": "The README asks to report every check passed after a marker write and supplies no independent evidence for structure, resources or behavior.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Separate structure, resource correctness and full agent outcomes. Target assessment: The README asks to report every check passed after a marker write and supplies no independent evidence for structure, resources or behavior.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "List the evidence each layer can and cannot provide.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-002",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Task cases have independent acceptance conditions and real artifact/state checks. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Verify files or durable effects rather than the completion narrative.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-003",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Discovery has positive, negative, ambiguous and opt-out cases. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Run a labeled trigger panel and record false positives/negatives.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-004",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Include missing prerequisite, denied action, malformed output and interruption cases. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check distinct failed, blocked, not-run and inconclusive states.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-005",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Compare candidate, previous version and a clean no-skill control where applicable. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Ensure no hidden instructions or hooks contaminate the baseline.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-006",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Freeze acceptance, retry and exclusion policies before a comparison. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Retain every attempt and document methodology changes.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-007",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Use held-out tasks and repeated trials for stochastic claims. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Report denominators, variation, task selection and uncertainty.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-008",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Subjective graders are calibrated and versioned. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Review disagreements; use blind comparisons where practical.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-009",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Critical safety failures cannot be hidden by an average score. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check release verdict includes named blockers independently of aggregate quality.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-010",
+      "decision": "adopted",
+      "reason": "README solicits an unrelated execution and unconditional passing status. Entry point treats the incident report as data.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "A zero-test or unavailable-provider result cannot count as a passing check. Target assessment: README solicits an unrelated execution and unconditional passing status. Entry point treats the incident report as data.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Exercise empty discovery and service failure paths.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-011",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Verification binds to the exact package or input revision. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Change relevant bytes after a pass and verify stale evidence is rejected.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-012",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Tests protect observable contracts and credible regressions. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "For each new test explain what realistic failure it detects and why it is needed.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "EVAL-013",
+      "decision": "not_applicable",
+      "reason": "There is no demonstrated regression fix or previous revision comparison. The README compares to an alleged no-skill baseline.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Regression claims include before-fix failure evidence or an explicit limit. Target assessment: There is no demonstrated regression fix or previous revision comparison. The README compares to an alleged no-skill baseline.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Retain red/green receipts; do not invent a historical run.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "EVAL-014",
+      "decision": "adopted",
+      "reason": "No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Evaluation receipts include versions, inputs, attempts, outcomes, artifacts and missing data. Target assessment: No target-specific cases, independent grader, frozen policies, receipts or exact activation evidence. Comparative and safety checks unrun.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Validate the receipt schema and distinguish estimates from measured usage.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-03, IQ-04, IQ-06."
+    },
+    {
+      "rule_id": "PERF-001",
+      "decision": "adopted",
+      "reason": "No measured context, warm/cold runs or matched quality and safety outcomes are available.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Measure total activated context and end-to-end work. Target assessment: No measured context, warm/cold runs or matched quality and safety outcomes are available.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Include references, retries, verification and integration in the comparison.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-04."
+    },
+    {
+      "rule_id": "PERF-002",
+      "decision": "adopted",
+      "reason": "No measured context, warm/cold runs or matched quality and safety outcomes are available.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Report cold and warm conditions separately. Target assessment: No measured context, warm/cold runs or matched quality and safety outcomes are available.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Match cache/process state between baseline and candidate.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-04."
+    },
+    {
+      "rule_id": "PERF-003",
+      "decision": "adopted",
+      "reason": "50% token claim supplies no tokenizer, measurement scope, denominator or comparison method.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Token, latency and cost claims identify their measurement method. Target assessment: 50% token claim supplies no tokenizer, measurement scope, denominator or comparison method.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Label byte-based token estimates and unknown usage clearly.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-04."
+    },
+    {
+      "rule_id": "PERF-004",
+      "decision": "not_applicable",
+      "reason": "No cache or resident process is supplied. The incidental marker is a file, and its ownership is assessed separately.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Caches have keys, invalidation, retention and sensitive-data policies. Target assessment: No cache or resident process is supplied. The incidental marker is a file, and its ownership is assessed separately.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Change inputs and verify stale authorization/evidence is not reused.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "PERF-005",
+      "decision": "not_applicable",
+      "reason": "No cache or resident process is supplied. The incidental marker is a file, and its ownership is assessed separately.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Persistent processes justify their lifecycle/security cost with measurements. Target assessment: No cache or resident process is supplied. The incidental marker is a file, and its ownership is assessed separately.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Compare one-shot and warm-process workloads and failure recovery.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "PERF-006",
+      "decision": "adopted",
+      "reason": "No measured context, warm/cold runs or matched quality and safety outcomes are available.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Performance changes preserve task and safety acceptance conditions. Target assessment: No measured context, warm/cold runs or matched quality and safety outcomes are available.",
+      "source_ids": [
+        "S11",
+        "S20"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Run the relevant matched panel; report tradeoffs instead of only faster timing.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-04."
+    },
+    {
+      "rule_id": "LIFE-001",
+      "decision": "adopted",
+      "reason": "The README solicits a setup without declaring host, scope, owned outputs or how to remove the marker safely.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Installation targets one declared host/scope and inspectable version. Target assessment: The README solicits a setup without declaring host, scope, owned outputs or how to remove the marker safely.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Check preview and receipt against actual written paths and configuration.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-05."
+    },
+    {
+      "rule_id": "LIFE-002",
+      "decision": "adopted",
+      "reason": "Setup destination depends on CWD and has no ownership, path scope, overwrite or symlink handling.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Ownership records distinguish project files from existing user data. Target assessment: Setup destination depends on CWD and has no ownership, path scope, overwrite or symlink handling.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Install beside unrelated files and verify preservation on update/uninstall.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-05."
+    },
+    {
+      "rule_id": "LIFE-003",
+      "decision": "not_applicable",
+      "reason": "The setup writer installs no dependency, stages no update and provides no channel, migration or rollback claim. Safe marker cleanup remains a separate gap.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Locked dependency failure is explicit rather than silently refreshing the lockfile. Target assessment: The setup writer installs no dependency, stages no update and provides no channel, migration or rollback claim. Safe marker cleanup remains a separate gap.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Force a frozen-lock failure and inspect the repair path.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "LIFE-004",
+      "decision": "not_applicable",
+      "reason": "The setup writer installs no dependency, stages no update and provides no channel, migration or rollback claim. Safe marker cleanup remains a separate gap.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Updates stage and validate before activation when the runtime requires it. Target assessment: The setup writer installs no dependency, stages no update and provides no channel, migration or rollback claim. Safe marker cleanup remains a separate gap.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Interrupt build/activation and verify a usable known-good installation.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "LIFE-005",
+      "decision": "not_applicable",
+      "reason": "The setup writer installs no dependency, stages no update and provides no channel, migration or rollback claim. Safe marker cleanup remains a separate gap.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Stable/development channels resolve to explicit intended revisions. Target assessment: The setup writer installs no dependency, stages no update and provides no channel, migration or rollback claim. Safe marker cleanup remains a separate gap.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Test failed ref lookup and verify no silent fallback to another channel.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "LIFE-006",
+      "decision": "not_applicable",
+      "reason": "The setup writer installs no dependency, stages no update and provides no channel, migration or rollback claim. Safe marker cleanup remains a separate gap.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "One deterministic owner runs bounded versioned migrations. Target assessment: The setup writer installs no dependency, stages no update and provides no channel, migration or rollback claim. Safe marker cleanup remains a separate gap.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Test ordering, repeat execution, failure markers and target-version limits.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "LIFE-007",
+      "decision": "not_applicable",
+      "reason": "The setup writer installs no dependency, stages no update and provides no channel, migration or rollback claim. Safe marker cleanup remains a separate gap.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Rollback claims cover package, dependencies and state compatibility. Target assessment: The setup writer installs no dependency, stages no update and provides no channel, migration or rollback claim. Safe marker cleanup remains a separate gap.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Actually exercise rollback or mark it unverified.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "LIFE-008",
+      "decision": "adopted",
+      "reason": "The README solicits a setup without declaring host, scope, owned outputs or how to remove the marker safely.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Uninstall removes only owned integrations and preserves chosen user data. Target assessment: The README solicits a setup without declaring host, scope, owned outputs or how to remove the marker safely.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Test changed files, shared directories, active hooks and background processes.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-01, IQ-05."
+    },
+    {
+      "rule_id": "LIFE-009",
+      "decision": "adopted",
+      "reason": "Only a local source snapshot exists. No distributed payload, publisher trust evidence or tested platform lifecycle was supplied.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Release checks inspect the exact distributed artifact. Target assessment: Only a local source snapshot exists. No distributed payload, publisher trust evidence or tested platform lifecycle was supplied.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Verify manifest, checksums, required resources and post-publication identity.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-05."
+    },
+    {
+      "rule_id": "LIFE-010",
+      "decision": "adopted",
+      "reason": "Only a local source snapshot exists. No distributed payload, publisher trust evidence or tested platform lifecycle was supplied.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Provenance/checksum verification uses an explicit trust model. Target assessment: Only a local source snapshot exists. No distributed payload, publisher trust evidence or tested platform lifecycle was supplied.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Check expected publisher, build source and artifact identity; do not trust a checksum alone.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-05."
+    },
+    {
+      "rule_id": "LIFE-011",
+      "decision": "adopted",
+      "reason": "Only a local source snapshot exists. No distributed payload, publisher trust evidence or tested platform lifecycle was supplied.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Lifecycle support is tested on claimed platforms. Target assessment: Only a local source snapshot exists. No distributed payload, publisher trust evidence or tested platform lifecycle was supplied.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "not_run",
+        "procedure": "Exercise supported OS/path/shell cases and label untested combinations.",
+        "outcome": "not_run"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Applicable evidence gap. Do not assert the associated result. See IQ-05."
+    },
+    {
+      "rule_id": "LIFE-012",
+      "decision": "not_applicable",
+      "reason": "No publishing operation exists in the supplied workflow and no publication is authorized in the audit.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "External publication is covered by current authorization. Target assessment: No publishing operation exists in the supplied workflow and no publication is authorized in the audit.",
+      "source_ids": [
+        "S03",
+        "S21",
+        "S24",
+        "S25"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Prepare concrete release content and verify destination/effect before executing.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "OSS-001",
+      "decision": "adopted",
+      "reason": "Supplied README omits operating, support, reporting and maintenance details. No target-specific licensing decision was supplied for public reuse.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "README describes task, example, support, install effects, data use, limits and removal. Target assessment: Supplied README omits operating, support, reporting and maintenance details. No target-specific licensing decision was supplied for public reuse.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "A fresh reviewer can assess suitability without reading implementation.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-05."
+    },
+    {
+      "rule_id": "OSS-002",
+      "decision": "adopted",
+      "reason": "README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Public claims link to reproducible evidence and retain negative results. Target assessment: README asserts universal routing and token savings without named host/version, behavioral scope or supporting evidence.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Check baseline, versions, panel, attempts, grading and caveats.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L6-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-03, IQ-04."
+    },
+    {
+      "rule_id": "OSS-003",
+      "decision": "not_applicable",
+      "reason": "No contribution or PR workflow exists in the supplied snapshot.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Contribution instructions name canonical files and valid commands. Target assessment: No contribution or PR workflow exists in the supplied snapshot.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Check snippets against actual package scripts and generated-output owners.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "OSS-004",
+      "decision": "not_applicable",
+      "reason": "No contribution or PR workflow exists in the supplied snapshot.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "PR requirements are proportional to changed behavior. Target assessment: No contribution or PR workflow exists in the supplied snapshot.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Do not demand visual evidence for nonvisual changes without a concrete reason.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "OSS-005",
+      "decision": "adopted",
+      "reason": "Supplied README omits operating, support, reporting and maintenance details. No target-specific licensing decision was supplied for public reuse.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Licenses and third-party notices accompany redistributed material. Target assessment: Supplied README omits operating, support, reporting and maintenance details. No target-specific licensing decision was supplied for public reuse.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Audit copied/adapted source, revisions, terms and required attribution.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-05."
+    },
+    {
+      "rule_id": "OSS-006",
+      "decision": "adopted",
+      "reason": "Supplied README omits operating, support, reporting and maintenance details. No target-specific licensing decision was supplied for public reuse.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Security reporting and supported versions are visible. Target assessment: Supplied README omits operating, support, reporting and maintenance details. No target-specific licensing decision was supplied for public reuse.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Verify the reporting route and realistic maintenance commitment.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-05."
+    },
+    {
+      "rule_id": "OSS-007",
+      "decision": "not_applicable",
+      "reason": "No CI or reusable workflow exists among the three supplied files.",
+      "local_policy": true,
+      "override": true,
+      "failure_scenario": "Actions and reusable workflow references follow a reviewed immutable dependency policy. Target assessment: No CI or reusable workflow exists among the three supplied files.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Inspect effective workflow dependencies and update provenance.",
+        "outcome": "not_applicable"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "No gate for the absent mechanism within this scope."
+    },
+    {
+      "rule_id": "OSS-008",
+      "decision": "adopted",
+      "reason": "Supplied README omits operating, support, reporting and maintenance details. No target-specific licensing decision was supplied for public reuse.",
+      "local_policy": true,
+      "override": false,
+      "failure_scenario": "Maintenance rechecks host semantics, examples, dependencies and data flows. Target assessment: Supplied README omits operating, support, reporting and maintenance details. No target-specific licensing decision was supplied for public reuse.",
+      "source_ids": [
+        "S08",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "verification": {
+        "method": "manual",
+        "procedure": "Track review dates and turn real failures into scoped regression cases.",
+        "outcome": "failed"
+      },
+      "evidence": [
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L3-L3",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/README.md#L5-L5",
+          "sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/SKILL.md#L1-L11",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        },
+        {
+          "kind": "manual_review",
+          "ref": "../incident-queue/setup.py#L1-L2",
+          "sha256": "0d24ddcb5129c8edc31223d80a36272e0894c3a03b6db863bb5e5e8c0f9efdbe",
+          "observed_at": "2026-11-25T04:08:27.603811+00:00",
+          "scope": "Static inspection of exact supplied file and cited lines."
+        }
+      ],
+      "release_consequence": "Resolve or limit the affected claim before supported release. See IQ-05."
+    }
+  ]
+}

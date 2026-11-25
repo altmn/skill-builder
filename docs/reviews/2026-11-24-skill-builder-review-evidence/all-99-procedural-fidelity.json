@@ -1,0 +1,1606 @@
+{
+  "record_type": "independent-procedural-fidelity-review",
+  "schema_version": "1.0.0",
+  "date": "2026-11-24",
+  "commit": "6b80b70",
+  "scope": "Semantic comparison of all 99 canonical rule statements/verification with full current runtime entrypoint/governance/create/audit/explain and all mapping verification obligations. Source handbook chapters 00-12 and playbooks considered. Companion review record, not canonical rule-traceability compliance result.",
+  "summary": {
+    "rules": 99,
+    "unique_routes": 99,
+    "basis_strength_mismatches": 0,
+    "procedurally_covered": 97,
+    "procedural_conflicts": 2
+  },
+  "limitations": [
+    "No native host or complete agent workflow trial in this subreview.",
+    "Historical 77 MB catalogs/receipts were not reviewed semantically per record.",
+    "Archive preservation and runtime/helper correctness delegated to parent/other reviewers.",
+    "Procedural coverage does not certify any target."
+  ],
+  "rules": [
+    {
+      "id": "FMT-001",
+      "category": "Portable format",
+      "basis": "specification",
+      "strength": "required",
+      "canonical_statement": "A skill has SKILL.md with YAML frontmatter and a Markdown body.",
+      "canonical_verification": "Parse the distributed file, not only its source template.",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Delivered-byte format validation, conservative ASCII distinction, types/lengths, YAML safety, paths and checker limitations retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "FMT-002",
+      "category": "Portable format",
+      "basis": "specification",
+      "strength": "required",
+      "canonical_statement": "name is a nonempty string, at most 64 characters, and matches its directory.",
+      "canonical_verification": "Test empty, overlong and mismatched names.",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Delivered-byte format validation, conservative ASCII distinction, types/lengths, YAML safety, paths and checker limitations retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "FMT-003",
+      "category": "Portable format",
+      "basis": "specification",
+      "strength": "required",
+      "canonical_statement": "name follows the published lowercase alphanumeric/hyphen rules without boundary or consecutive hyphens.",
+      "canonical_verification": "Validate names against the selected specification; document an ASCII-only project policy separately.",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Delivered-byte format validation, conservative ASCII distinction, types/lengths, YAML safety, paths and checker limitations retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "FMT-004",
+      "category": "Portable format",
+      "basis": "specification",
+      "strength": "required",
+      "canonical_statement": "description is a nonempty string of at most 1024 characters.",
+      "canonical_verification": "Test missing, empty, non-string and overlong descriptions.",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Delivered-byte format validation, conservative ASCII distinction, types/lengths, YAML safety, paths and checker limitations retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "FMT-005",
+      "category": "Portable format",
+      "basis": "specification",
+      "strength": "required",
+      "canonical_statement": "Optional standard fields obey their documented types and limits, including compatibility and metadata.",
+      "canonical_verification": "Test compatibility length and string-to-string metadata; do not rely on an outdated helper allowlist.",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Delivered-byte format validation, conservative ASCII distinction, types/lengths, YAML safety, paths and checker limitations retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "FMT-006",
+      "category": "Portable format",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Reject duplicate YAML keys, unsafe tags and ambiguous coercion in distributed metadata.",
+      "canonical_verification": "Supply duplicate keys and unsafe YAML fixtures; parsing must fail visibly.",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Delivered-byte format validation, conservative ASCII distinction, types/lengths, YAML safety, paths and checker limitations retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "FMT-007",
+      "category": "Portable format",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Portable metadata contains no undeclared host extension or unresolved template variable.",
+      "canonical_verification": "Validate the exact target package and explicit adapter extension schema.",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Delivered-byte format validation, conservative ASCII distinction, types/lengths, YAML safety, paths and checker limitations retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "FMT-008",
+      "category": "Portable format",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Runtime resource references resolve within the declared package or an explicitly allowed dependency.",
+      "canonical_verification": "Check missing links, path traversal and symlink escape without executing the payload.",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Delivered-byte format validation, conservative ASCII distinction, types/lengths, YAML safety, paths and checker limitations retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "FMT-009",
+      "category": "Portable format",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "The package contains only needed runtime resources and applicable notices.",
+      "canonical_verification": "Inspect a release manifest for secrets, caches, unused examples and development debris.",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Delivered-byte format validation, conservative ASCII distinction, types/lengths, YAML safety, paths and checker limitations retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "FMT-010",
+      "category": "Portable format",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Format-validation claims list their checked and unchecked properties.",
+      "canonical_verification": "Verify the report does not imply behavioral or security certification.",
+      "owners": [
+        "references/governance.md#g-format",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Delivered-byte format validation, conservative ASCII distinction, types/lengths, YAML safety, paths and checker limitations retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-001",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Define a concrete outcome, inputs, scope and output contract.",
+      "canonical_verification": "A reviewer can state the expected artifact or state and independent acceptance condition.",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-02-contract",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Task/effects/output contracts, consequence worksheet, authority, conditional source loading, owner search, honest failures and evidence distinctions retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-002",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Discovery text states triggers and relevant boundaries early.",
+      "canonical_verification": "Evaluate positive prompts, paraphrases, near misses and opt-outs.",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Procedural coverage explicit; current native trigger/activation panel remains unrun.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-003",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Consequential instructions identify condition, action, evidence, failure behavior and authority.",
+      "canonical_verification": "Trace each external or destructive step through an instruction worksheet.",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Task/effects/output contracts, consequence worksheet, authority, conditional source loading, owner search, honest failures and evidence distinctions retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-004",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Respect existing user authorization and higher-level execution policy.",
+      "canonical_verification": "Test both an authorized continuation and an unauthorized scope expansion.",
+      "owners": [
+        "references/governance.md#g-authority",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Task/effects/output contracts, consequence worksheet, authority, conditional source loading, owner search, honest failures and evidence distinctions retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-005",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Ask only for missing information that materially changes the task or effect.",
+      "canonical_verification": "Measure unnecessary questions on a fully specified request.",
+      "owners": [
+        "references/governance.md#g-authority",
+        "commands/skill-builder-create.md#create-02-contract",
+        "commands/skill-builder-audit.md#audit-01-scope"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Task/effects/output contracts, consequence worksheet, authority, conditional source loading, owner search, honest failures and evidence distinctions retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-006",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Put branch-specific detail in references with explicit load conditions.",
+      "canonical_verification": "Trace a normal and exceptional task; required instructions must arrive before use.",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Task/effects/output contracts, consequence worksheet, authority, conditional source loading, owner search, honest failures and evidence distinctions retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-007",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Fix deterministic failures in resources before adding repeated prompt warnings.",
+      "canonical_verification": "Identify the owning implementation and a meaningful failing case.",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Task/effects/output contracts, consequence worksheet, authority, conditional source loading, owner search, honest failures and evidence distinctions retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-008",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "One authoritative owner defines each policy or command contract.",
+      "canonical_verification": "Search source, generated text, help, tests and README for contradictory copies.",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "gap",
+      "reviewer_note": "GAP: audit command line 120 and explain command line 62 say original-material licensing is unresolved; current governance and create command line 131 recognize current outer MIT decision. Consumer drift violates consistent ownership.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-009",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Unavailable checks and partial completion remain visible.",
+      "canonical_verification": "Inject a missing prerequisite and check final output for honest status.",
+      "owners": [
+        "references/governance.md#g-continuation",
+        "commands/skill-builder-create.md#create-09-recovery",
+        "commands/skill-builder-audit.md#audit-09-recovery"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Task/effects/output contracts, consequence worksheet, authority, conditional source loading, owner search, honest failures and evidence distinctions retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-010",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Examples teach decisions without requiring exact prose when meaning is the contract.",
+      "canonical_verification": "Vary wording while preserving expected artifacts and outcomes.",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Task/effects/output contracts, consequence worksheet, authority, conditional source loading, owner search, honest failures and evidence distinctions retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-011",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Keep observed facts, estimates, hypotheses and recommendations distinct.",
+      "canonical_verification": "Review unsupported numerical claims and causal explanations.",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Task/effects/output contracts, consequence worksheet, authority, conditional source loading, owner search, honest failures and evidence distinctions retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "INS-012",
+      "category": "Instruction quality",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Remove task-irrelevant promotion, profiling and repeated ceremony from the core path.",
+      "canonical_verification": "Trace whether each mandatory step contributes to the requested outcome.",
+      "owners": [
+        "references/governance.md#g-instruction",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Task/effects/output contracts, consequence worksheet, authority, conditional source loading, owner search, honest failures and evidence distinctions retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "ARC-001",
+      "category": "Architecture and composition",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Choose instruction-only, resource-assisted or suite/runtime according to actual needs.",
+      "canonical_verification": "Document why each service, generator or installer exists.",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Proportional architecture, subcommand semantics, adapters, generator drift, handoffs, worker ownership, reader termination and repo/runtime separation retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "ARC-002",
+      "category": "Architecture and composition",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Split discoverable skills by user intent, capability or materially different effects.",
+      "canonical_verification": "Check whether each entry point has a coherent independent task.",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Proportional architecture, subcommand semantics, adapters, generator drift, handoffs, worker ownership, reader termination and repo/runtime separation retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "ARC-003",
+      "category": "Architecture and composition",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Keep portable task logic separate from host integration.",
+      "canonical_verification": "Identify all native tool names, paths, permissions and hooks in an adapter.",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Proportional architecture, subcommand semantics, adapters, generator drift, handoffs, worker ownership, reader termination and repo/runtime separation retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "ARC-004",
+      "category": "Architecture and composition",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Generated artifacts have deterministic sources, provenance and drift checks.",
+      "canonical_verification": "Regenerate and compare the exact artifact; check unresolved variables and references.",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Proportional architecture, subcommand semantics, adapters, generator drift, handoffs, worker ownership, reader termination and repo/runtime separation retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "ARC-005",
+      "category": "Architecture and composition",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Handoffs contain identity, scope, decisions, outputs, status and pending effects.",
+      "canonical_verification": "Resume an interrupted workflow without repeating an uncertain external mutation.",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-09-recovery",
+        "commands/skill-builder-audit.md#audit-09-recovery"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Proportional architecture, subcommand semantics, adapters, generator drift, handoffs, worker ownership, reader termination and repo/runtime separation retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "ARC-006",
+      "category": "Architecture and composition",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Parallel workers have disjoint writes or an explicit integration owner.",
+      "canonical_verification": "Exercise concurrent work and confirm no overwritten user or peer changes.",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-02-inventory"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Proportional architecture, subcommand semantics, adapters, generator drift, handoffs, worker ownership, reader termination and repo/runtime separation retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "ARC-007",
+      "category": "Architecture and composition",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Readers finish or are confirmed stopped before a shared snapshot changes.",
+      "canonical_verification": "Force timeout and verify that timeout is not interpreted as termination.",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-09-recovery",
+        "commands/skill-builder-audit.md#audit-02-inventory"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Proportional architecture, subcommand semantics, adapters, generator drift, handoffs, worker ownership, reader termination and repo/runtime separation retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "ARC-008",
+      "category": "Architecture and composition",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Repository contribution documents are distinct from installed task instructions.",
+      "canonical_verification": "Inspect release contents and verify AGENTS.md does not become accidental task policy.",
+      "owners": [
+        "references/governance.md#g-architecture",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-03-instructions"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Proportional architecture, subcommand semantics, adapters, generator drift, handoffs, worker ownership, reader termination and repo/runtime separation retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "HOST-001",
+      "category": "Host compatibility",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Advertise named hosts and products rather than model brands alone.",
+      "canonical_verification": "Separate Grok Build, Grok Bot and API/custom-host claims.",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Product/surface/version/policy, independent support axes and temporal/collision/resource tests retained. Native exercise remains separate evidence.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "HOST-002",
+      "category": "Host compatibility",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Record host version, platform, capability and tested status.",
+      "canonical_verification": "Match each support claim to dated documentation and execution evidence.",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Procedural coverage explicit; native host/version/policy evidence remains unrun.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "HOST-003",
+      "category": "Host compatibility",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Translate permission and invocation semantics explicitly.",
+      "canonical_verification": "Test identical field names with different meanings, especially allowed-tools and user-invocable.",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "allowed-tools, user-invocable, implicit invocation and lifetimes covered explicitly; native exercise remains unrun.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "HOST-004",
+      "category": "Host compatibility",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Unsupported and unknown capabilities do not silently become supported.",
+      "canonical_verification": "Disable a required capability and verify the branch reports a blocker.",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-09-recovery",
+        "commands/skill-builder-audit.md#audit-09-recovery"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Product/surface/version/policy, independent support axes and temporal/collision/resource tests retained. Native exercise remains separate evidence.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "HOST-005",
+      "category": "Host compatibility",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Resource paths work independently of the caller working directory.",
+      "canonical_verification": "Invoke from another directory and a path containing spaces.",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-05-hosts",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Product/surface/version/policy, independent support axes and temporal/collision/resource tests retained. Native exercise remains separate evidence.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "HOST-006",
+      "category": "Host compatibility",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "For each secondary host claimed as functionally exercised, safety exercised or supported, run the applicable shared outcome and denied-action cases. Format-only targets remain explicitly untested for behavior.",
+      "canonical_verification": "Compare acceptance conditions across hosts; preserve missing coverage.",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Faithful procedure; current shared native outcome/denied-action panel remains unrun.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "HOST-007",
+      "category": "Host compatibility",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Format compatibility is not presented as functional or security support.",
+      "canonical_verification": "Review badges and README wording against the actual evidence tier.",
+      "owners": [
+        "references/governance.md#g-host",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Product/surface/version/policy, independent support axes and temporal/collision/resource tests retained. Native exercise remains separate evidence.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "CMD-001",
+      "category": "Commands and resources",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Public commands document inputs, outputs, effects, errors, limits and cleanup.",
+      "canonical_verification": "Exercise help, malformed input and normal output at the public boundary.",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "I/O/status/effects/limits, safe arguments, ownership, execution review, cancellation/retry, temporary state, durable commits and freshness retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "CMD-002",
+      "category": "Commands and resources",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Machine output uses a versioned schema and explicit result states.",
+      "canonical_verification": "Validate malformed, empty, partial and successful outputs independently of prose.",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "I/O/status/effects/limits, safe arguments, ownership, execution review, cancellation/retry, temporary state, durable commits and freshness retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "CMD-003",
+      "category": "Commands and resources",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Untrusted text is passed as data, not interpolated into shell source.",
+      "canonical_verification": "Use structured arguments or private files; test quotes, newlines and shell metacharacters.",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "I/O/status/effects/limits, safe arguments, ownership, execution review, cancellation/retry, temporary state, durable commits and freshness retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "CMD-004",
+      "category": "Commands and resources",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Writes and deletions validate destination scope and ownership.",
+      "canonical_verification": "Test traversal, symlink escape, existing user files and overwrite conflicts.",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "I/O/status/effects/limits, safe arguments, ownership, execution review, cancellation/retry, temporary state, durable commits and freshness retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "CMD-005",
+      "category": "Commands and resources",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Validators and tests are inspected for hooks, plugins, downloads and side effects before execution.",
+      "canonical_verification": "Trace the actual executable chain in an untrusted checkout.",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "I/O/status/effects/limits, safe arguments, ownership, execution review, cancellation/retry, temporary state, durable commits and freshness retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "CMD-006",
+      "category": "Commands and resources",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Timeout, cancellation and retry behavior are bounded and observable.",
+      "canonical_verification": "Force a slow process and verify termination, cleanup and retained error evidence.",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "I/O/status/effects/limits, safe arguments, ownership, execution review, cancellation/retry, temporary state, durable commits and freshness retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "CMD-007",
+      "category": "Commands and resources",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Uncertain remote outcomes are reconciled before retry.",
+      "canonical_verification": "Simulate a completed mutation with a lost response; prevent duplicate effects.",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "I/O/status/effects/limits, safe arguments, ownership, execution review, cancellation/retry, temporary state, durable commits and freshness retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "CMD-008",
+      "category": "Commands and resources",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Temporary paths are unique and private; cleanup removes only owned state.",
+      "canonical_verification": "Run two instances and inspect permissions, collisions and preserved unrelated files.",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "I/O/status/effects/limits, safe arguments, ownership, execution review, cancellation/retry, temporary state, durable commits and freshness retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "CMD-009",
+      "category": "Commands and resources",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Durable writes survive interruption without false completion.",
+      "canonical_verification": "Interrupt before and after commit points; inspect old/new state and recovery.",
+      "owners": [
+        "references/governance.md#g-command",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "I/O/status/effects/limits, safe arguments, ownership, execution review, cancellation/retry, temporary state, durable commits and freshness retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "CMD-010",
+      "category": "Commands and resources",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Reused results bind to exact relevant inputs and configuration.",
+      "canonical_verification": "Change one relevant input or runtime setting and verify invalidation.",
+      "owners": [
+        "references/governance.md#g-evidence",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "I/O/status/effects/limits, safe arguments, ownership, execution review, cancellation/retry, temporary state, durable commits and freshness retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-001",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Treat lower-trust retrieved content, repository task data and tool results as data rather than new authority. Apply host-designated instruction sources only at their actual trust level, without expanding user authorization or overriding higher-level policy.",
+      "canonical_verification": "Embed scope-expansion instructions in fixtures and verify they do not authorize actions.",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-002",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "List protected resources, trust boundaries and enforcement mechanisms.",
+      "canonical_verification": "Map each safety claim to code/host enforcement or label it advisory.",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-003",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "A control failure does not silently broaden access or weaken isolation.",
+      "canonical_verification": "Make worktree, sandbox or authentication setup fail and inspect fallback effects.",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-09-recovery",
+        "commands/skill-builder-audit.md#audit-09-recovery"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-004",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Filesystem and network limits protect actual operations, including redirects and path resolution.",
+      "canonical_verification": "Exercise the named boundary and document DNS/rebinding/TOCTOU limits.",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-005",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Browser profile/session reuse is explicit and scoped.",
+      "canonical_verification": "Check account access, permitted actions, storage and session cleanup.",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-006",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Credentials are excluded from logs, arguments, URLs and exported artifacts where avoidable.",
+      "canonical_verification": "Use synthetic canaries and inspect all sinks, including error paths.",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-007",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Each external data flow has destination, content, default, authority and retention documented.",
+      "canonical_verification": "Compare telemetry, model calls, sync, crash reporting and publication separately.",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-008",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Opt-outs persist across setup, upgrade and endpoint changes.",
+      "canonical_verification": "Set sharing off, rerun setup/update, and verify it remains off.",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-009",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Classifier and redaction limits are documented and tested.",
+      "canonical_verification": "Check truncated input, detector failure, unknown formats and confidence handling.",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-04-effects"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-010",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Paid operations have enforced bounds across parent and workers.",
+      "canonical_verification": "Test missing cap, unit mismatch, retries and concurrent in-flight spend.",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-011",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Hostile repositories cannot control the grader or authoritative expected result.",
+      "canonical_verification": "Attempt to replace tests, expected output and evaluator instructions from the target.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "SEC-012",
+      "category": "Security and privacy",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "CI and distribution isolate untrusted input from privileged execution.",
+      "canonical_verification": "Review event, checkout, string handling, cache/artifact trust and release credentials.",
+      "owners": [
+        "references/governance.md#g-security",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Trust/data boundaries, actual enforcement and negative tests, failure fallback, session/secret/opt-out limits, grader/CI integrity retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-001",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Separate structure, resource correctness and full agent outcomes.",
+      "canonical_verification": "List the evidence each layer can and cannot provide.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Independent artifacts, distinct evidence layers, adverse/trigger panels, clean controls, frozen methods, trials/calibration, blockers, identities and receipts retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-002",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Task cases have independent acceptance conditions and real artifact/state checks.",
+      "canonical_verification": "Verify files or durable effects rather than the completion narrative.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-02-contract",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Independent artifacts, distinct evidence layers, adverse/trigger panels, clean controls, frozen methods, trials/calibration, blockers, identities and receipts retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-003",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Discovery has positive, negative, ambiguous and opt-out cases.",
+      "canonical_verification": "Run a labeled trigger panel and record false positives/negatives.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "All trigger classes covered procedurally; native discovery evidence remains unrun.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-004",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Include missing prerequisite, denied action, malformed output and interruption cases.",
+      "canonical_verification": "Check distinct failed, blocked, not-run and inconclusive states.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Independent artifacts, distinct evidence layers, adverse/trigger panels, clean controls, frozen methods, trials/calibration, blockers, identities and receipts retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-005",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Compare candidate, previous version and a clean no-skill control where applicable.",
+      "canonical_verification": "Ensure no hidden instructions or hooks contaminate the baseline.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Candidate/previous/clean-no-skill controls covered faithfully; current comparative evidence remains unrun.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-006",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Freeze acceptance, retry and exclusion policies before a comparison.",
+      "canonical_verification": "Retain every attempt and document methodology changes.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Independent artifacts, distinct evidence layers, adverse/trigger panels, clean controls, frozen methods, trials/calibration, blockers, identities and receipts retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-007",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Use held-out tasks and repeated trials for stochastic claims.",
+      "canonical_verification": "Report denominators, variation, task selection and uncertainty.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Held-out separation, repeats, denominators and uncertainty covered; designs alone do not establish reliability.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-008",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Subjective graders are calibrated and versioned.",
+      "canonical_verification": "Review disagreements; use blind comparisons where practical.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Independent artifacts, distinct evidence layers, adverse/trigger panels, clean controls, frozen methods, trials/calibration, blockers, identities and receipts retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-009",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Critical safety failures cannot be hidden by an average score.",
+      "canonical_verification": "Check release verdict includes named blockers independently of aggregate quality.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Independent artifacts, distinct evidence layers, adverse/trigger panels, clean controls, frozen methods, trials/calibration, blockers, identities and receipts retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-010",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "A zero-test or unavailable-provider result cannot count as a passing check.",
+      "canonical_verification": "Exercise empty discovery and service failure paths.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Independent artifacts, distinct evidence layers, adverse/trigger panels, clean controls, frozen methods, trials/calibration, blockers, identities and receipts retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-011",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Verification binds to the exact package or input revision.",
+      "canonical_verification": "Change relevant bytes after a pass and verify stale evidence is rejected.",
+      "owners": [
+        "references/governance.md#g-evidence",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Independent artifacts, distinct evidence layers, adverse/trigger panels, clean controls, frozen methods, trials/calibration, blockers, identities and receipts retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-012",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Tests protect observable contracts and credible regressions.",
+      "canonical_verification": "For each new test explain what realistic failure it detects and why it is needed.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Independent artifacts, distinct evidence layers, adverse/trigger panels, clean controls, frozen methods, trials/calibration, blockers, identities and receipts retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-013",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Regression claims include before-fix failure evidence or an explicit limit.",
+      "canonical_verification": "Retain red/green receipts; do not invent a historical run.",
+      "owners": [
+        "references/governance.md#g-evaluation",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Independent artifacts, distinct evidence layers, adverse/trigger panels, clean controls, frozen methods, trials/calibration, blockers, identities and receipts retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "EVAL-014",
+      "category": "Testing and evaluations",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Evaluation receipts include versions, inputs, attempts, outcomes, artifacts and missing data.",
+      "canonical_verification": "Validate the receipt schema and distinguish estimates from measured usage.",
+      "owners": [
+        "references/governance.md#g-evidence",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Independent artifacts, distinct evidence layers, adverse/trigger panels, clean controls, frozen methods, trials/calibration, blockers, identities and receipts retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "PERF-001",
+      "category": "Performance and cost",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Measure total activated context and end-to-end work.",
+      "canonical_verification": "Include references, retries, verification and integration in the comparison.",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Full KB preservation and conditional retrieval are compatible; actual mandatory-loading/context cost needs native measurement.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "PERF-002",
+      "category": "Performance and cost",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Report cold and warm conditions separately.",
+      "canonical_verification": "Match cache/process state between baseline and candidate.",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Faithful procedure; no current matched full-workflow cold/warm comparison verified by this assignment.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "PERF-003",
+      "category": "Performance and cost",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Token, latency and cost claims identify their measurement method.",
+      "canonical_verification": "Label byte-based token estimates and unknown usage clearly.",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Full context/end-to-end measurement, matched cold/warm, methods, cache/process justification and unchanged acceptance retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "PERF-004",
+      "category": "Performance and cost",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Caches have keys, invalidation, retention and sensitive-data policies.",
+      "canonical_verification": "Change inputs and verify stale authorization/evidence is not reused.",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-04-implementation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Full context/end-to-end measurement, matched cold/warm, methods, cache/process justification and unchanged acceptance retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "PERF-005",
+      "category": "Performance and cost",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Persistent processes justify their lifecycle/security cost with measurements.",
+      "canonical_verification": "Compare one-shot and warm-process workloads and failure recovery.",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-03-architecture",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Full context/end-to-end measurement, matched cold/warm, methods, cache/process justification and unchanged acceptance retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "PERF-006",
+      "category": "Performance and cost",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Performance changes preserve task and safety acceptance conditions.",
+      "canonical_verification": "Run the relevant matched panel; report tradeoffs instead of only faster timing.",
+      "owners": [
+        "references/governance.md#g-performance",
+        "commands/skill-builder-create.md#create-06-evaluation",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Faithful procedure; preservation, route completeness and local helper timings do not prove task benefit.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-001",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Installation targets one declared host/scope and inspectable version.",
+      "canonical_verification": "Check preview and receipt against actual written paths and configuration.",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-002",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Ownership records distinguish project files from existing user data.",
+      "canonical_verification": "Install beside unrelated files and verify preservation on update/uninstall.",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-003",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Locked dependency failure is explicit rather than silently refreshing the lockfile.",
+      "canonical_verification": "Force a frozen-lock failure and inspect the repair path.",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-004",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Updates stage and validate before activation when the runtime requires it.",
+      "canonical_verification": "Interrupt build/activation and verify a usable known-good installation.",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-005",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Stable/development channels resolve to explicit intended revisions.",
+      "canonical_verification": "Test failed ref lookup and verify no silent fallback to another channel.",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-006",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "One deterministic owner runs bounded versioned migrations.",
+      "canonical_verification": "Test ordering, repeat execution, failure markers and target-version limits.",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-007",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Rollback claims cover package, dependencies and state compatibility.",
+      "canonical_verification": "Actually exercise rollback or mark it unverified.",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-008",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Uninstall removes only owned integrations and preserves chosen user data.",
+      "canonical_verification": "Test changed files, shared directories, active hooks and background processes.",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-009",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Release checks inspect the exact distributed artifact.",
+      "canonical_verification": "Verify manifest, checksums, required resources and post-publication identity.",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-07-report"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-010",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Provenance/checksum verification uses an explicit trust model.",
+      "canonical_verification": "Check expected publisher, build source and artifact identity; do not trust a checksum alone.",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-011",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "conditional",
+      "canonical_statement": "Lifecycle support is tested on claimed platforms.",
+      "canonical_verification": "Exercise supported OS/path/shell cases and label untested combinations.",
+      "owners": [
+        "references/governance.md#g-lifecycle",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-05-validation"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "LIFE-012",
+      "category": "Installation and release",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "External publication is covered by current authorization.",
+      "canonical_verification": "Prepare concrete release content and verify destination/effect before executing.",
+      "owners": [
+        "references/governance.md#g-authority",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Host/scope/revision, ownership, staging, lock failure, channels, migration/rollback/removal preservation and artifact/publication verification retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "OSS-001",
+      "category": "Open-source presentation and maintenance",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "README describes task, example, support, install effects, data use, limits and removal.",
+      "canonical_verification": "A fresh reviewer can assess suitability without reading implementation.",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Realistic presentation, evidence/negative results, contribution guidance, proportional PRs, rights/notices, security reporting, immutable workflows and maintenance retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "OSS-002",
+      "category": "Open-source presentation and maintenance",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Public claims link to reproducible evidence and retain negative results.",
+      "canonical_verification": "Check baseline, versions, panel, attempts, grading and caveats.",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-08-delivery",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Realistic presentation, evidence/negative results, contribution guidance, proportional PRs, rights/notices, security reporting, immutable workflows and maintenance retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "OSS-003",
+      "category": "Open-source presentation and maintenance",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Contribution instructions name canonical files and valid commands.",
+      "canonical_verification": "Check snippets against actual package scripts and generated-output owners.",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Realistic presentation, evidence/negative results, contribution guidance, proportional PRs, rights/notices, security reporting, immutable workflows and maintenance retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "OSS-004",
+      "category": "Open-source presentation and maintenance",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "PR requirements are proportional to changed behavior.",
+      "canonical_verification": "Do not demand visual evidence for nonvisual changes without a concrete reason.",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Realistic presentation, evidence/negative results, contribution guidance, proportional PRs, rights/notices, security reporting, immutable workflows and maintenance retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "OSS-005",
+      "category": "Open-source presentation and maintenance",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Licenses and third-party notices accompany redistributed material.",
+      "canonical_verification": "Audit copied/adapted source, revisions, terms and required attribution.",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "gap",
+      "reviewer_note": "GAP: Rights/notice procedure is present, but audit/Q&A stale unresolved-license assertions can produce false publication blockers. Frozen inner pending text must remain historical; use current outer license decision.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "OSS-006",
+      "category": "Open-source presentation and maintenance",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Security reporting and supported versions are visible.",
+      "canonical_verification": "Verify the reporting route and realistic maintenance commitment.",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Realistic presentation, evidence/negative results, contribution guidance, proportional PRs, rights/notices, security reporting, immutable workflows and maintenance retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "OSS-007",
+      "category": "Open-source presentation and maintenance",
+      "basis": "project",
+      "strength": "required",
+      "canonical_statement": "Actions and reusable workflow references follow a reviewed immutable dependency policy.",
+      "canonical_verification": "Inspect effective workflow dependencies and update provenance.",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-06-claims"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Realistic presentation, evidence/negative results, contribution guidance, proportional PRs, rights/notices, security reporting, immutable workflows and maintenance retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    },
+    {
+      "id": "OSS-008",
+      "category": "Open-source presentation and maintenance",
+      "basis": "project",
+      "strength": "recommended",
+      "canonical_statement": "Maintenance rechecks host semantics, examples, dependencies and data flows.",
+      "canonical_verification": "Track review dates and turn real failures into scoped regression cases.",
+      "owners": [
+        "references/governance.md#g-oss",
+        "commands/skill-builder-create.md#create-07-package",
+        "commands/skill-builder-audit.md#audit-08-repair"
+      ],
+      "procedure_adequacy": "procedurally_covered",
+      "reviewer_note": "Realistic presentation, evidence/negative results, contribution guidance, proportional PRs, rights/notices, security reporting, immutable workflows and maintenance retained.",
+      "assurance_limit": "Procedural fidelity is not target compliance, automatic enforcement or executed host behavior."
+    }
+  ]
+}

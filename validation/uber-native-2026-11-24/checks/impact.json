@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "outcome": "passed",
+  "scope": "Staged index",
+  "changed_files": 253,
+  "fresh_records": [
+    "docs/change-impact/2026-11-24-uber-native-trials.json",
+    "docs/change-impact/2026-11-24-uber-workflows.json"
+  ],
+  "unreviewed_paths": [],
+  "unresolved_verification": [
+    {
+      "record": "docs/change-impact/2026-11-24-uber-native-trials.json",
+      "workflow": "create",
+      "status": "inconclusive",
+      "consequence": "The blocked receipt probe prevents complete behavioral coverage; broad subject benefit, native uptake of all new helpers and general reliability remain unestablished."
+    }
+  ],
+  "limits": "Checks freshness, structure and path coverage only; reviewers assess reasoning and evidence truth. Unresolved verification is not release approval."
+}

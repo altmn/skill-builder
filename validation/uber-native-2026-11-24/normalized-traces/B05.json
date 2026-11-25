@@ -1,0 +1,30 @@
+{
+  "complete": true,
+  "raw_sha256": "b1a8492b2127e9fb88178f3d17339d2fc4e6848f4e780c458e5fd2b444d3b215",
+  "adapter": "bounded-native-review-v1",
+  "events": [
+    {
+      "kind": "skill_activation_succeeded",
+      "skill_sha256": "7abe45c3c211ef863bc964069c34ecf621a8723aa2f0f85d41fb6e720e71f5fb",
+      "evidence": [
+        {
+          "item": "item_1",
+          "command": "/opt/homebrew/bin/zsh -lc 'ls -a; for f in AGENTS.md CLAUDE.md; do if test -f \"$f\"; then cat \"$f\"; fi; done; cat .agents/skills/skill-builder/SKILL.md; rg --fil"
+        }
+      ]
+    },
+    {
+      "kind": "action",
+      "name": "read_target_sources",
+      "outcome": "succeeded",
+      "evidence": "Successful source-reading command in the preserved complete native event stream."
+    },
+    {
+      "kind": "action",
+      "name": "bind_findings_to_evidence",
+      "outcome": "succeeded",
+      "evidence": "Final findings contain source bindings; accuracy is separately graded."
+    }
+  ],
+  "limits": "Actions normalized from observed commands/output and final source bindings, not hidden reasoning. Partial KB reading is not comprehensive 99-rule review."
+}

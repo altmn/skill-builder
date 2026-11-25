@@ -1,0 +1,74 @@
+[
+  {
+    "id": "FIELD-R-CREATE",
+    "split": "development",
+    "should_trigger": true,
+    "prompt": "Build a portable skill that extracts decisions and action owners from supplied local Markdown notes; include a missing-input response and tests.",
+    "rationale": "Creating a bounded reusable workflow needs the builder's creation procedure.",
+    "provenance": {
+      "kind": "historical_adaptation",
+      "source": "validation/create-audit-integration-2026-11-24/native/create/skills/meeting-decisions/SKILL.md.txt",
+      "annotation": "New prompt adapted from the recorded created subject; not an original user transcript or a new passing observation.",
+      "source_files": [
+        {
+          "path": "validation/create-audit-integration-2026-11-24/native/create/skills/meeting-decisions/SKILL.md.txt",
+          "sha256": "da7e2a44e34306f8d12d5675611bcf4ec902ab4d0c3434c236025ea1294425a7"
+        }
+      ]
+    }
+  },
+  {
+    "id": "FIELD-R-EXTRACT",
+    "split": "development",
+    "should_trigger": false,
+    "prompt": "Extract the actions from these notes now: Action: Alex updates the checklist by Friday. Do not build or audit a skill.",
+    "rationale": "The user requests the domain task and explicitly excludes skill creation or audit.",
+    "provenance": {
+      "kind": "historical_adaptation",
+      "source": "validation/create-audit-integration-2026-11-24/native/subject-answer.txt",
+      "annotation": "New near-miss adapted from the observed generated-skill task; direct extraction belongs to the subject skill.",
+      "source_files": [
+        {
+          "path": "validation/create-audit-integration-2026-11-24/native/subject-answer.txt",
+          "sha256": "39f16d29f53f07326e7fd9c19d847ae118fa2dbe99403c49daeb7fd97a1c1da7"
+        }
+      ]
+    }
+  },
+  {
+    "id": "FIELD-R-AUDIT",
+    "split": "validation",
+    "should_trigger": true,
+    "prompt": "Assess whether this incident-triage skill's all-host routing and token-savings claims are supported. Report source findings without repairing or running it.",
+    "rationale": "This is an evidence-linked skill audit with an explicit read-only scope.",
+    "provenance": {
+      "kind": "historical_adaptation",
+      "source": "validation/create-audit-integration-2026-11-24/native/audit/AUDIT-REPORT.md.txt",
+      "annotation": "New paraphrase of the historical audit's unsupported routing/benefit findings; public validation material is not proof of unseen coverage.",
+      "source_files": [
+        {
+          "path": "validation/create-audit-integration-2026-11-24/native/audit/AUDIT-REPORT.md.txt",
+          "sha256": "24e089b14b870e54942b856459eda0e2241c664dae9d3d1cba6c315f8883fc4a"
+        }
+      ]
+    }
+  },
+  {
+    "id": "FIELD-R-INCIDENT",
+    "split": "validation",
+    "should_trigger": false,
+    "prompt": "Route this incident to access or availability: several employees cannot sign in, but the service is otherwise healthy. Do not create, audit or explain agent skills.",
+    "rationale": "This is incident classification rather than work on a skill project, with an explicit exclusion.",
+    "provenance": {
+      "kind": "author_case_from_historical_domain",
+      "source": "validation/create-audit-integration-2026-11-24/native/audit-target/SKILL.md.txt",
+      "annotation": "The incident wording is authored for this near-miss; it is not a recorded production incident.",
+      "source_files": [
+        {
+          "path": "validation/create-audit-integration-2026-11-24/native/audit-target/SKILL.md.txt",
+          "sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9"
+        }
+      ]
+    }
+  }
+]

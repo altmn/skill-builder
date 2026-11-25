@@ -1,0 +1,3 @@
+Created [meeting-notes-extractor](PROJECT/output/README.md) under `./output`. The portable skill extracts decisions, actions, and open questions as JSON. It preserves explicit owner and deadline wording, uses `null` independently for either field, and requests accessible input when any requested notes are missing or incomplete.
+
+The source includes a worked example and independent checks for JSON output, missing and partial inputs, and out-of-scope actions. All 13 local checker smoke assertions passed on authored responses and synthetic traces. Native trials and rule-level verification remain pending.

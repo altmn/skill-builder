@@ -1,0 +1,94 @@
+[
+  {
+    "command": [
+      "VALIDATION_ENV/bin/python",
+      "-I",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "77e641d96e45d4bb776c82260b5f0dec0d24dac68fb55625f1d7224bf63c11de",
+    "actual_command_sha256": "dffc55b90ea60f4bb7dc19c3a9dafb951c7f8b63204985db24ecf061abea7b56"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-B",
+      "tools/check_project.py"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "98cde0ed4c1500db94a0e44365f2e18927823b144a32e678de0110a27f901813",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual_command_sha256": "5659789e3fc04ee8d15cd76f11ce1364a8091f5c6996bf18d4368e6fdaffd479"
+  },
+  {
+    "command": [
+      "VALIDATION_ENV/bin/python",
+      "-I",
+      "-B",
+      "tools/check_project.py",
+      "--require-validators"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "52db8cf89b2c3455ca10f0cb58db317928f1e3f19d06c8f92d81ec1b0be6a61e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual_command_sha256": "549d0c718085bf4b4cc72c3e8d8d44ad51495cd044e1e538df22f5bfddee2313"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-B",
+      "-S",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_release.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "aa9a19109997c2f4a475a1aae1918f63479b2395f4c31f3f8c60a512112a7fb3",
+    "actual_command_sha256": "1a3a65457e285e3f844398781a57f3b7afeaef51d0b09fff069c264038099a7b"
+  },
+  {
+    "command": [
+      "python3.10",
+      "-I",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_evaluation.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "aaf4969b2cf2ce046ec4cd070e5e56c8a7c058812376456b8048a24b1277dc8c",
+    "actual_command_sha256": "429d8796fde89fe09dcd97f01fdcf8b4626fda3113ffa16e2dda1ebc216c15e5"
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual_command_sha256": "b0cb0040bc422ebfb014e6153798728f63427fe39376489da5643dfed1f50179"
+  }
+]

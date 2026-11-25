@@ -1,0 +1,22 @@
+{
+  "host": "Offline Python CLI panel preparation; not a native agent trial",
+  "model": "not invoked",
+  "settings": {
+    "tools": "Python standard library only",
+    "cache_condition": "No model/provider calls"
+  },
+  "policy": "Read explicit corpus/fixtures/runtime; create a new panel only; never execute subjects",
+  "isolation": {
+    "kind": "Disposable runtime-only directory; not an OS sandbox",
+    "runtime_identity": "3.15.2 (main, Oct 25 2026, 16:57:51) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "dependency_probe": "Python -I -B -S; no repository tools/cases in runtime copy or site packages",
+    "credentials": "No account/model calls; ambient host credentials were not OS-isolated",
+    "reset_evidence": "New temporary directory, full runtime copy, unrelated working directory; removed after preparation"
+  },
+  "catalog_sha256": "a43db7bb2915886080638600dd1a27dc44aedee5ed6dfda987c2e756df7942c0",
+  "budget": {
+    "max_runs": 16,
+    "per_run_seconds": 180,
+    "semantic_retries": 0
+  }
+}

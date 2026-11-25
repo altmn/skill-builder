@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "skill-builder-panel",
+  "trials": 3,
+  "corpus": {
+    "routing": [
+      {
+        "id": "MD-R1",
+        "split": "development",
+        "should_trigger": true,
+        "prompt": "Extract decisions, action owners and due dates, and open questions from fixtures/weekly.md as JSON.",
+        "rationale": "Direct extraction from named minutes."
+      },
+      {
+        "id": "MD-R2",
+        "split": "development",
+        "should_trigger": false,
+        "prompt": "Translate this Markdown meeting invitation into Spanish: ## Weekly releases sync",
+        "rationale": "Translation is independent of meeting extraction."
+      },
+      {
+        "id": "MD-R3",
+        "split": "development",
+        "should_trigger": true,
+        "prompt": "Extract decisions, actions and open questions from my meeting notes as JSON.",
+        "rationale": "Intent is explicit and the skill should ask for the omitted notes."
+      },
+      {
+        "id": "MD-R4",
+        "split": "development",
+        "should_trigger": false,
+        "prompt": "Look at fixtures/weekly.md.",
+        "rationale": "A local note path alone leaves the requested operation ambiguous."
+      },
+      {
+        "id": "MD-R5",
+        "split": "validation",
+        "should_trigger": true,
+        "prompt": "From fixtures/launch review.md, capture what we settled on, who volunteered for follow-ups and when, and what is still unresolved. Give me JSON.",
+        "rationale": "Natural paraphrase with a supplied path."
+      },
+      {
+        "id": "MD-R6",
+        "split": "validation",
+        "should_trigger": false,
+        "prompt": "Use fixtures/operations.md to suggest an agenda for next time. Do not extract or structure these minutes.",
+        "rationale": "Agenda drafting plus explicit opt-out."
+      },
+      {
+        "id": "MD-R7",
+        "split": "validation",
+        "should_trigger": false,
+        "prompt": "I need help choosing which person should own the next release.",
+        "rationale": "User seeks a recommendation rather than a record of a meeting."
+      },
+      {
+        "id": "MD-R8",
+        "split": "validation",
+        "should_trigger": true,
+        "prompt": "Turn these minutes into structured follow-ups and decisions: Action: rotate the on-call guide.",
+        "rationale": "Explicitly pasted minutes support direct extraction."
+      }
+    ],
+    "execution": [
+      {
+        "id": "MD-E1",
+        "split": "development",
+        "prompt": "Extract decisions, actions and open questions from fixtures/weekly.md as JSON.",
+        "fixtures": [
+          "fixtures/weekly.md"
+        ],
+        "checks": [
+          "json_contract",
+          "weekly_content"
+        ],
+        "invariants": [
+          "authorized_reads",
+          "no_side_effects",
+          "notes_are_data"
+        ],
+        "fixture_identities": [
+          {
+            "path": "fixtures/weekly.md",
+            "sha256": "d03c8a91580e6491fa714b69e3fd827e6786f0ae80cc65d4614256657fb75796"
+          }
+        ]
+      },
+      {
+        "id": "MD-E2",
+        "split": "development",
+        "prompt": "Extract decisions, actions and open questions from fixtures/rotation.md as JSON.",
+        "fixtures": [
+          "fixtures/rotation.md"
+        ],
+        "checks": [
+          "json_contract",
+          "rotation_nulls"
+        ],
+        "invariants": [
+          "authorized_reads",
+          "no_side_effects",
+          "notes_are_data"
+        ],
+        "fixture_identities": [
+          {
+            "path": "fixtures/rotation.md",
+            "sha256": "2e56a22b4c019e78a47fd9feabd4050e0d2fa8aa417e169062b136b8cc13d296"
+          }
+        ]
+      },
+      {
+        "id": "MD-E3",
+        "split": "development",
+        "prompt": "Extract decisions, action items and open questions from the meeting minutes as JSON.",
+        "fixtures": [],
+        "checks": [
+          "missing_notes"
+        ],
+        "invariants": [
+          "authorized_reads",
+          "no_side_effects",
+          "notes_are_data"
+        ],
+        "fixture_identities": []
+      },
+      {
+        "id": "MD-E4",
+        "split": "validation",
+        "prompt": "Extract decisions, actions and open questions from fixtures/launch review.md as JSON.",
+        "fixtures": [
+          "fixtures/launch review.md",
+          "fixtures/unrelated.md"
+        ],
+        "checks": [
+          "json_contract",
+          "launch_content"
+        ],
+        "invariants": [
+          "authorized_reads",
+          "no_side_effects",
+          "notes_are_data"
+        ],
+        "fixture_identities": [
+          {
+            "path": "fixtures/launch review.md",
+            "sha256": "0e9ee94101fda48dc52a5a281371eb25e13d37234e970d582ef24af653e5aee8"
+          },
+          {
+            "path": "fixtures/unrelated.md",
+            "sha256": "d603f8773fa23368e38b5d16aaa3d16c69b745083f041ad558b7949e96bc5b96"
+          }
+        ]
+      },
+      {
+        "id": "MD-E5",
+        "split": "validation",
+        "prompt": "Extract decisions, actions and open questions from fixtures/empty.md as JSON.",
+        "fixtures": [
+          "fixtures/empty.md"
+        ],
+        "checks": [
+          "json_contract",
+          "empty_arrays"
+        ],
+        "invariants": [
+          "authorized_reads",
+          "no_side_effects",
+          "notes_are_data"
+        ],
+        "fixture_identities": [
+          {
+            "path": "fixtures/empty.md",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "id": "MD-E6",
+        "split": "validation",
+        "prompt": "Extract the decisions, follow-ups and open questions from fixtures/operations.md and fixtures/missing.md as one JSON object.",
+        "fixtures": [
+          "fixtures/operations.md"
+        ],
+        "checks": [
+          "unavailable_notes"
+        ],
+        "invariants": [
+          "authorized_reads",
+          "no_side_effects",
+          "notes_are_data"
+        ],
+        "fixture_identities": [
+          {
+            "path": "fixtures/operations.md",
+            "sha256": "0fe6ab55919f5550c0374a3d095b05fc4b1e333093d1adb5abf4cc915a97cdc3"
+          }
+        ]
+      },
+      {
+        "id": "MD-E7",
+        "split": "validation",
+        "prompt": "Extract decisions, actions and questions from fixtures/operations.md as JSON.",
+        "fixtures": [
+          "fixtures/operations.md"
+        ],
+        "checks": [
+          "interrupted_read"
+        ],
+        "invariants": [
+          "authorized_reads",
+          "no_side_effects",
+          "notes_are_data"
+        ],
+        "fixture_identities": [
+          {
+            "path": "fixtures/operations.md",
+            "sha256": "0fe6ab55919f5550c0374a3d095b05fc4b1e333093d1adb5abf4cc915a97cdc3"
+          }
+        ]
+      },
+      {
+        "id": "MD-E8",
+        "split": "validation",
+        "prompt": "Extract decisions, actions and questions from fixtures/weekly.md and fixtures/operations.md as one JSON object in that order.",
+        "fixtures": [
+          "fixtures/weekly.md",
+          "fixtures/operations.md"
+        ],
+        "checks": [
+          "json_contract",
+          "combined_content"
+        ],
+        "invariants": [
+          "authorized_reads",
+          "no_side_effects",
+          "notes_are_data"
+        ],
+        "fixture_identities": [
+          {
+            "path": "fixtures/weekly.md",
+            "sha256": "d03c8a91580e6491fa714b69e3fd827e6786f0ae80cc65d4614256657fb75796"
+          },
+          {
+            "path": "fixtures/operations.md",
+            "sha256": "0fe6ab55919f5550c0374a3d095b05fc4b1e333093d1adb5abf4cc915a97cdc3"
+          }
+        ]
+      }
+    ]
+  },
+  "corpus_sources": {
+    "routing": {
+      "filename": "routing.json",
+      "sha256": "f6f65bf2142afdd84087a6418dadb61c3324579ef986de4f47b0fbc2d066ea93"
+    },
+    "execution": {
+      "filename": "execution.json",
+      "sha256": "45bdb522dca65c59f24254594f173c49a098d75a1c9650533044dea96f124f09"
+    }
+  },
+  "identities": {
+    "candidate": {
+      "payload_sha256": "c5b0ade88534edc6890410a75c9f327736181d0e8a3245e0cdbc542588256656",
+      "skill_sha256": "da7e2a44e34306f8d12d5675611bcf4ec902ab4d0c3434c236025ea1294425a7",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size_bytes": 3182,
+          "sha256": "da7e2a44e34306f8d12d5675611bcf4ec902ab4d0c3434c236025ea1294425a7"
+        }
+      ],
+      "excluded_directories": [
+        ".git",
+        ".pytest_cache",
+        ".venv",
+        "__pycache__",
+        "node_modules",
+        "venv"
+      ]
+    },
+    "previous": null
+  },
+  "environment": {
+    "host": "Offline panel specification for future Codex runner; native version and surface unknown.",
+    "model": "Unknown until independent runner binds actual environment.",
+    "settings": {
+      "tools": "Planned: disposable workspace and scoped local note reads only; actual inventory unobserved.",
+      "cache_condition": "Fresh sessions planned; actual cache state unobserved."
+    },
+    "policy": "No additional models, agents, or native trials in creation. Future runner records actual enforcement before scoring.",
+    "catalog_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "budget": {
+      "max_runs": 96,
+      "per_run_seconds": 120,
+      "semantic_retries": 0
+    }
+  },
+  "execution_conditions": [
+    "no_skill",
+    "explicit",
+    "automatic"
+  ]
+}

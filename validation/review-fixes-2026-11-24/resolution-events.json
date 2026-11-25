@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "finding-resolution-events-companion",
+  "baseline_commit": "6b80b706d891baed8dde3b8323e383f0072390b9",
+  "branch": "codex/fix-five-review-findings",
+  "events": [
+    {
+      "finding_id": "F-01",
+      "event": "locally_addressed",
+      "date": "2026-11-24",
+      "scope": "Attribution consistency and package gate",
+      "verification": "21 release tests and actual package grants inspected",
+      "native_host_claim": "not_established"
+    },
+    {
+      "finding_id": "F-02",
+      "event": "locally_addressed",
+      "date": "2026-11-24",
+      "scope": "Evidence retained in Git index and clean export",
+      "verification": "23 exact logs; four inventory regressions; clean export checks pass",
+      "native_host_claim": "not_established"
+    },
+    {
+      "finding_id": "F-03",
+      "event": "locally_addressed",
+      "date": "2026-11-24",
+      "scope": "Current-versus-historical license instruction conflict",
+      "verification": "Independent frozen selected/unselected source interpretation passes; native designs not_run",
+      "native_host_claim": "not_established"
+    },
+    {
+      "finding_id": "F-04",
+      "event": "locally_addressed",
+      "date": "2026-11-24",
+      "scope": "Owned output preservation on caught failures",
+      "verification": "Nine focused regressions pass on Python 3.10 and 3.15; original-source failures retained",
+      "native_host_claim": "not_established"
+    },
+    {
+      "finding_id": "F-05",
+      "event": "locally_addressed",
+      "date": "2026-11-24",
+      "scope": "macOS ordinary temporary fixture paths",
+      "verification": "21 release tests pass with default macOS temp settings, including explicit alias rejection",
+      "native_host_claim": "not_established"
+    }
+  ],
+  "remaining_validation": {
+    "full_schema_panel": "blocked: optional dependency setup authorization pending",
+    "native_host_panels": "not_run",
+    "clean_comparative_panel": "not_run",
+    "remote_ci": "not_run"
+  },
+  "git_state_note": "Local changes and historical evidence are staged for review; no commit, push or publication performed.",
+  "preservation_note": "Historical report, its evidence, previous validation artifacts except the prepended index, KB archive, KB manifest and all-rule map retain their bytes.",
+  "whitespace_note": "Authored operational changes pass scoped diff whitespace checks. Unmodified raw outputs and original Markdown hard breaks retain their exact trailing whitespace; full cached diff --check reports those expected historical bytes.",
+  "subsequent_validation_event": {
+    "date": "2026-11-24",
+    "authorization": "User authorized temporary pinned dependency installation, full validation and commit.",
+    "outcome": "passed",
+    "full_tests": 79,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "required_validators": "passed",
+    "canonical_record_validation": "passed",
+    "pip_check": "passed",
+    "evidence": "pinned-environment/results.json",
+    "prior_remaining_validation_note": "The earlier blocked state above is retained as historical; this event resolves its optional-dependency blocker. Native and comparative panels remain unrun."
+  }
+}

@@ -1,0 +1,32 @@
+# Evaluation review
+
+The task contract comes from the supplied notes fixture. The running
+assumptions are a complete pasted message or readable local Markdown and
+a host able to return plain text. Decisions and questions use string arrays.
+Action owner and due preserve source wording. The fixture intentionally
+includes HTML comment text with no authority.
+
+| Risk | Control | Independent evidence planned |
+| --- | --- | --- |
+| Comment changes instructions | Treat note text as data and omit comments | Example reply and host tool trace |
+| Unclear owner or due becomes a guess | Resolve the two fields separately and preserve wording | Independent-fields fixture and reply checker |
+| Failed read yields partial success | Check all requested reads before extracting | Unreadable case with one available file |
+| Missing input triggers search | Ask for paste or accessible local file | Missing case and host tool trace |
+| Skill activates for ordinary proofreading | Scope discovery to requests for extraction | Near-miss and explicit opt-out case |
+
+The example, missing-input and empty cases are development cases. The
+independent-fields, unreadable and near-miss cases are runner cases. Keep the
+oracles outside candidate context. For comparative evaluation use the same
+inputs and permissions with an isolated no-skill condition and separate
+explicit and automatic candidate conditions. No prior candidate was supplied.
+
+Host matrix: Codex and other Markdown-skill hosts have no observed discovery,
+execution or lifecycle results. Trace unavailable means effects inconclusive.
+No native trial, comparison, installation or publication was attempted.
+No native outcome, cost, token count or elapsed time was measured.
+
+Local checker smoke checks accepted the checked-in example JSON and two
+handwritten input-request replies for the missing and unreadable cases.
+Those replies were synthetic checker inputs. The source includes an
+[all-rule profile index](RULE-SELECTION.md). Individual applicability review,
+formal schema validation, and native host verification remain open.

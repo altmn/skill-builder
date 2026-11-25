@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "raw_sha256": "7b3e8be986c491117be9254ff9fa749d74bf5b392c54da1fc199791d36d9113a",
+  "adapter": "bounded-native-review-v1",
+  "events": [
+    {
+      "kind": "action",
+      "name": "read_target_sources",
+      "outcome": "succeeded",
+      "evidence": "Successful source-reading command in the preserved complete native event stream."
+    },
+    {
+      "kind": "action",
+      "name": "bind_findings_to_evidence",
+      "outcome": "succeeded",
+      "evidence": "Final findings contain source bindings; accuracy is separately graded."
+    }
+  ],
+  "limits": "Actions normalized from observed commands/output and final source bindings, not hidden reasoning. Partial KB reading is not comprehensive 99-rule review."
+}

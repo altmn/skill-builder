@@ -1,0 +1,25 @@
+{
+  "full_check": {
+    "command": "git diff --cached --check",
+    "exit_code": 2,
+    "outcome": "failed",
+    "diagnostics": [
+      {
+        "path": "native-views/B09/output/skills/meeting-notes-extractor/SKILL.md.txt",
+        "lines": [
+          28,
+          29,
+          30
+        ],
+        "reason": "Two trailing spaces are Markdown hard line breaks in the captured native output."
+      }
+    ],
+    "disposition": "Retain captured evidence unchanged. This is an explicit nonblocking data-format limit, not a passing full whitespace check."
+  },
+  "source_and_docs_check": {
+    "command": "git diff --cached --check -- . ':(exclude)validation/uber-native-2026-11-24/native-views/**'",
+    "exit_code": 0,
+    "outcome": "passed",
+    "scope": "Source/docs edits; exact native artifact views excluded and their full-check diagnostics retained above."
+  }
+}

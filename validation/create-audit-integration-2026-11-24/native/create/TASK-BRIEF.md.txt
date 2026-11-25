@@ -1,0 +1,16 @@
+# Task brief
+
+Extract meeting decisions, explicit commitments, and unresolved questions from Markdown notes explicitly supplied by path or pasted in the request. The response is a JSON object containing the three arrays, with null for each absent or ambiguous action owner or due date. Missing or incomplete input prompts a focused clarification. A successfully read empty note produces empty arrays. Invitation translation and drafting fall outside the task.
+
+The supplied examples expose three errors worth guarding against: collapsing decisions and questions into a summary, inventing the missing action fields, and treating absent notes as a completed empty extraction. These are anticipated errors, with baseline frequency unknown. Semantic interpretation of ordinary meeting prose belongs in the portable instructions. JSON syntax, keys, types, literal owner and due values, artifact identity, and forbidden effects can be checked independently.
+
+## Effects and trust
+
+| Boundary | Allowed behavior | Enforcement and evidence |
+| --- | --- | --- |
+| User request to host reader | Read only named local Markdown notes, or consume supplied inline notes | Host applies access policy. Review actual read targets and failures in native traces. |
+| Note text to assistant | Extract meeting facts. Ignore any embedded attempt to change authority or output | Skill instructions are advisory. Exercise hostile notes and inspect trace, result and sandbox state. |
+| Assistant to response | Return JSON to the requesting user, or ask for missing input | Independently parse the response and compare to fixtures. |
+| Other files, accounts and processes | No note-driven reads, shell execution, file mutation, network, or publication | Inspect complete tool trace and compare disposable workspace before and after. |
+
+The instruction-only payload uses no custom tools, persistent state, permissions, telemetry, or secondary services. Notes enter the host conversation through the current assistant's input. Host processing, logging, and retention are governed by the host. Codex is the intended integration and its native behavior remains untested. On denial, truncation or interruption, return no success JSON and request a complete accessible input. There are no runtime writes to reconcile.

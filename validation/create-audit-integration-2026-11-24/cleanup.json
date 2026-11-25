@@ -1,0 +1,10 @@
+{
+  "removed_owned_disposable_installs": [
+    "create",
+    "audit",
+    "subject"
+  ],
+  "changed_or_extra_files_preserved": [],
+  "private_originals_and_nondiscoverable_snapshots_retained": true,
+  "live_user_skill_directories_modified": false
+}

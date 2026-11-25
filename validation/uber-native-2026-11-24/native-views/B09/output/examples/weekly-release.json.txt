@@ -1,0 +1,8 @@
+{
+  "decisions": ["keep weekly releases."],
+  "actions": [
+    {"task": "updates the checklist", "owner": "Alex", "due": "Friday"},
+    {"task": "rotate the guide.", "owner": null, "due": null}
+  ],
+  "questions": ["who owns rollback?"]
+}

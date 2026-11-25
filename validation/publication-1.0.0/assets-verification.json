@@ -1,0 +1,24 @@
+{
+  "outcome": "passed",
+  "method": "PNG chunk CRC checks, square header/dimensions and image-data decompression; visual inspection at generation.",
+  "assets": [
+    {
+      "path": "assets/icon-dark.png",
+      "bytes": 1160120,
+      "sha256": "8481240181e970ef20fd5c21a5a3c99ee2a86519a27c40172341f831404f52c5",
+      "width": 1254,
+      "height": 1254,
+      "chunk_crc": "passed",
+      "decompressed_image_bytes": 4718802
+    },
+    {
+      "path": "assets/icon.png",
+      "bytes": 1058804,
+      "sha256": "4e668faf7cac53f6dbc147ac432de01d756b8f89cd5cd4dcec9b35af2eccf91e",
+      "width": 1254,
+      "height": 1254,
+      "chunk_crc": "passed",
+      "decompressed_image_bytes": 4718802
+    }
+  ]
+}

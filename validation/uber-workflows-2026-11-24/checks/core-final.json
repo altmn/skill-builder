@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python3",
+    "-I",
+    "-B",
+    "tools/check_project.py"
+  ],
+  "exit_code": 0,
+  "streams": {
+    "stdout": {
+      "path": "core-final.stdout.txt",
+      "original_sha256": "d7f8e4650ba947ef23ecbec08f9d68478a208765c73360cec26f80779fca60a2",
+      "retained_sha256": "d7f8e4650ba947ef23ecbec08f9d68478a208765c73360cec26f80779fca60a2"
+    },
+    "stderr": {
+      "path": "core-final.stderr.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

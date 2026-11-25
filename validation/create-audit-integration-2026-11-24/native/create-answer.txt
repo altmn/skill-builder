@@ -1,0 +1,7 @@
+Created [meeting-decisions under `./created`](TRIAL_ROOT/create/created/README.md) after reading the full loaded Skill Builder `SKILL.md`. The [skill](TRIAL_ROOT/create/created/skills/meeting-decisions/SKILL.md) extracts decisions, actions, and open questions from explicitly supplied Markdown. It uses JSON `null` for missing action owners or due dates, asks for notes when they’re absent, and treats embedded commands as data.
+
+- [Routing cases](TRIAL_ROOT/create/created/evals/routing.json) and [execution cases](TRIAL_ROOT/create/created/evals/execution.json) each contain eight cases across development and validation.
+- The [independent oracle](TRIAL_ROOT/create/created/EVALUATION-PLAN.md) defines expected content, JSON shape, and forbidden effects. The [supplemental review](TRIAL_ROOT/create/created/EVALUATION-REVIEW.md) records the outstanding native evidence.
+- [Exact commands and results](TRIAL_ROOT/create/created/evidence/CHECKS.md) document the passing offline checks for the single-file payload, restricted frontmatter, case and fixture hashes, oracle references, all 99 canonical rules, and all 182 indexed archive members.
+
+The offline panel scheduled **96 trials**, with **zero observed or scored**. Native routing, extraction, and enforcement remain unverified. The original validators were unavailable because PyYAML and jsonschema/referencing were missing, and the broader archived handbook review was partial. All work stayed local, with no dependency installation, skill installation, publication, commit, network access, or additional model calls.

@@ -1,0 +1,8 @@
+Created the portable **evaluation-receipt-review** skill under `./output`. It reviews prompts by meaning, validates canonical `rule_id` fields, and keeps intended payload identity, actual activation, and answer correctness separate.
+
+- [Skill instructions](output/SKILL.md)
+- [Worked examples](output/examples/reviews.md)
+- [Four independent test cases](output/tests/cases.json)
+- [Runner instructions](output/tests/README.md)
+
+The checks are unrun and ready for the independent runner.

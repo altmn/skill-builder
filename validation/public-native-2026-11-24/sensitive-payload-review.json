@@ -1,0 +1,328 @@
+{
+  "date": "2026-11-24",
+  "subject_commit": "9339b16af4027e50aba41dd13e3c57f42e3102d4",
+  "tracked_files": 263,
+  "history_blobs": 216,
+  "streams_scanned": 1473,
+  "bytes_scanned_including_archives_and_history": 188217219,
+  "archives": [
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip",
+      "members": 454
+    },
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/examples/manifest-inspector/dist/manifest-inspector.zip",
+      "members": 3
+    },
+    {
+      "location": "payload:validation/trials/audit-trial.zip",
+      "members": 49
+    },
+    {
+      "location": "payload:validation/trials/audit-trial.zip!audit/source-snapshot.zip",
+      "members": 5
+    },
+    {
+      "location": "payload:validation/trials/create-trial.zip",
+      "members": 29
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip",
+      "members": 454
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/examples/manifest-inspector/dist/manifest-inspector.zip",
+      "members": 3
+    },
+    {
+      "location": "history:5b0ba8281a94cb45fd88eb8afac9a39cf4434305:validation/trials/audit-trial.zip",
+      "members": 49
+    },
+    {
+      "location": "history:5b0ba8281a94cb45fd88eb8afac9a39cf4434305:validation/trials/audit-trial.zip!audit/source-snapshot.zip",
+      "members": 5
+    },
+    {
+      "location": "history:ba37e65a362d5c5cd265a865f20e98b7a6bcf0aa:validation/trials/create-trial.zip",
+      "members": 29
+    }
+  ],
+  "secret_pattern_candidates": [],
+  "privacy_metadata_locations": [
+    {
+      "location": "payload:docs/reviews/2026-11-24-skill-builder-review-evidence/fresh-check-results.json",
+      "home_path_occurrences": 9,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:docs/reviews/2026-11-24-skill-builder-review-evidence/full-local-tests.stderr.txt",
+      "home_path_occurrences": 39,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:docs/reviews/2026-11-24-skill-builder-review-evidence/runtime-tests.stderr.txt",
+      "home_path_occurrences": 13,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:docs/reviews/2026-11-24-skill-builder-review-evidence/stdlib-release-canonical-temp.stderr.txt",
+      "home_path_occurrences": 17,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:docs/reviews/2026-11-24-skill-builder-review-evidence/stdlib-release-default-temp.stderr.txt",
+      "home_path_occurrences": 26,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:docs/reviews/2026-11-24-skill-builder-review.md",
+      "home_path_occurrences": 3,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip",
+      "home_path_occurrences": 0,
+      "email_occurrences": 1
+    },
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/audits/runtime-file-review.json",
+      "home_path_occurrences": 0,
+      "email_occurrences": 1
+    },
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/audits/lifecycle-file-review.json",
+      "home_path_occurrences": 2,
+      "email_occurrences": 5
+    },
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/catalogs/coverage-summary.json",
+      "home_path_occurrences": 0,
+      "email_occurrences": 1
+    },
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/catalogs/instruction-review.jsonl",
+      "home_path_occurrences": 0,
+      "email_occurrences": 5
+    },
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/catalogs/file-review.csv",
+      "home_path_occurrences": 0,
+      "email_occurrences": 2
+    },
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/catalogs/catalog-browser.html",
+      "home_path_occurrences": 0,
+      "email_occurrences": 7
+    },
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/catalogs/file-review.json",
+      "home_path_occurrences": 11,
+      "email_occurrences": 7
+    },
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/tools/tests/test_validate_skill.py",
+      "home_path_occurrences": 0,
+      "email_occurrences": 1
+    },
+    {
+      "location": "payload:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/methods/tests/test_inventory_repository.py",
+      "home_path_occurrences": 0,
+      "email_occurrences": 2
+    },
+    {
+      "location": "payload:validation/rc2/creator-check.json",
+      "home_path_occurrences": 2,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:validation/rc2/development/integrated-64/creator-check.json",
+      "home_path_occurrences": 2,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:validation/rc2/local-check-runner.py",
+      "home_path_occurrences": 1,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:validation/rc2/panel-definition.json",
+      "home_path_occurrences": 1,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:validation/review-fixes-2026-11-24/available-environment/available-validation-results.json",
+      "home_path_occurrences": 2,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:validation/review-fixes-2026-11-24/available-environment/available-yaml-project-check.stdout.txt",
+      "home_path_occurrences": 2,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:validation/review-fixes-2026-11-24/available-environment/integrated-default-tests.stderr.txt",
+      "home_path_occurrences": 13,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:validation/review-fixes-2026-11-24/cleanup/before-regression-panel.stderr.txt",
+      "home_path_occurrences": 9,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:validation/review-fixes-2026-11-24/cleanup/runtime-suite.stderr.txt",
+      "home_path_occurrences": 13,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:validation/review-fixes-2026-11-24/git-export/clean-export-results.json",
+      "home_path_occurrences": 3,
+      "email_occurrences": 0
+    },
+    {
+      "location": "payload:validation/review-fixes-2026-11-24/pinned-environment/required-project.stdout.txt",
+      "home_path_occurrences": 2,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:a06d856a507357e7fe400ef97f50a7048c03339c:docs/reviews/2026-11-24-skill-builder-review-evidence/fresh-check-results.json",
+      "home_path_occurrences": 9,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:b07735c13f683863f5dad78630bdfcb3e94026f8:docs/reviews/2026-11-24-skill-builder-review-evidence/full-local-tests.stderr.txt",
+      "home_path_occurrences": 39,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:6e670bc2d77cb62920174ef3b45d3b7510a79bfe:docs/reviews/2026-11-24-skill-builder-review-evidence/runtime-tests.stderr.txt",
+      "home_path_occurrences": 13,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:13d790f2cf5f24e1321dd842ceaf049afc7bf8ae:docs/reviews/2026-11-24-skill-builder-review-evidence/stdlib-release-canonical-temp.stderr.txt",
+      "home_path_occurrences": 17,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:90093957e7cee23c6e0850b0210589f8f0fd5900:docs/reviews/2026-11-24-skill-builder-review-evidence/stdlib-release-default-temp.stderr.txt",
+      "home_path_occurrences": 26,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:e59e46c38fc5f74adc9cbff047a5f7f792df44e8:docs/reviews/2026-11-24-skill-builder-review.md",
+      "home_path_occurrences": 3,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip",
+      "home_path_occurrences": 0,
+      "email_occurrences": 1
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/audits/runtime-file-review.json",
+      "home_path_occurrences": 0,
+      "email_occurrences": 1
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/audits/lifecycle-file-review.json",
+      "home_path_occurrences": 2,
+      "email_occurrences": 5
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/catalogs/coverage-summary.json",
+      "home_path_occurrences": 0,
+      "email_occurrences": 1
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/catalogs/instruction-review.jsonl",
+      "home_path_occurrences": 0,
+      "email_occurrences": 5
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/catalogs/file-review.csv",
+      "home_path_occurrences": 0,
+      "email_occurrences": 2
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/catalogs/catalog-browser.html",
+      "home_path_occurrences": 0,
+      "email_occurrences": 7
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/catalogs/file-review.json",
+      "home_path_occurrences": 11,
+      "email_occurrences": 7
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/tools/tests/test_validate_skill.py",
+      "home_path_occurrences": 0,
+      "email_occurrences": 1
+    },
+    {
+      "location": "history:dd87a76e52b936f6d83210e5725d71edd0d833ea:skills/skill-builder/references/knowledge-base.zip!agent-skill-project-knowledge-base_final/methods/tests/test_inventory_repository.py",
+      "home_path_occurrences": 0,
+      "email_occurrences": 2
+    },
+    {
+      "location": "history:543be74269836e2c9db39507ab2d24c8d7ef8775:validation/rc2/creator-check.json",
+      "home_path_occurrences": 2,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:f20fd233d864aaac61b6c68c45d3f40c5bc2068f:validation/rc2/development/integrated-64/creator-check.json",
+      "home_path_occurrences": 2,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:a7640b654f8789719b549d646cdefdda5dc9ca72:validation/rc2/local-check-runner.py",
+      "home_path_occurrences": 1,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:e271dd0c4bee35d12a2c9fd30769763a7fe5a23e:validation/rc2/panel-definition.json",
+      "home_path_occurrences": 1,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:3bf7e4443db60fc7c3ccbbffd6b29b07b6ec93b9:validation/review-fixes-2026-11-24/available-environment/available-validation-results.json",
+      "home_path_occurrences": 2,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:b27796677151f28476c0ed7b1f746ed5af981290:validation/review-fixes-2026-11-24/available-environment/available-yaml-project-check.stdout.txt",
+      "home_path_occurrences": 2,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:220c252dd91c6e03ad3250c1254372dca586093b:validation/review-fixes-2026-11-24/available-environment/integrated-default-tests.stderr.txt",
+      "home_path_occurrences": 13,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:55ab4d18fbb1065f20a54f87a11097f19c227632:validation/review-fixes-2026-11-24/cleanup/before-regression-panel.stderr.txt",
+      "home_path_occurrences": 9,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:672035fdbb439844bd67e2073d1abc29d3b71858:validation/review-fixes-2026-11-24/cleanup/runtime-suite.stderr.txt",
+      "home_path_occurrences": 13,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:e3668f38caa4c8e121fe5ebaa8ff7ed71c16466a:validation/review-fixes-2026-11-24/git-export/clean-export-results.json",
+      "home_path_occurrences": 3,
+      "email_occurrences": 0
+    },
+    {
+      "location": "history:c0d690db86a2cee5ac077d562f58304192b2d49a:validation/review-fixes-2026-11-24/pinned-environment/required-project.stdout.txt",
+      "home_path_occurrences": 2,
+      "email_occurrences": 0
+    }
+  ],
+  "limits": [
+    "Pattern scanning cannot prove absence of arbitrary or unrecognized secrets.",
+    "Emails may be required public attribution; local paths are privacy metadata, not authentication secrets.",
+    "Archive members include preserved OS metadata; no member executed or rewritten."
+  ]
+}

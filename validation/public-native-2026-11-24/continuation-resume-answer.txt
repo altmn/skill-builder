@@ -1,0 +1,3 @@
+- Task marker: `CONTINUATION-CHECK-47`
+- Authority: read-only. No project writes, installs, or publication.
+- Prior skill root: `<DISPOSABLE_TEST_ROOT>/candidate/.agents/skills/skill-builder`

@@ -1,0 +1,304 @@
+{
+  "schema_version": "2.0",
+  "record_type": "evaluation-receipt",
+  "case_id": "skill-builder-local-contracts",
+  "recorded_at": "2026-11-23T07:09:13.736147+00:00",
+  "artifact": {
+    "artifact_id": "skill-builder-1.0.0-rc.1",
+    "source_commit": null,
+    "package_sha256": "28083dd9c2f0593d1562b9a8ef2b9c6c76c9076b1d188eca2b10b7a4ce7f35e2",
+    "activated_source": null,
+    "activated_sha256": null,
+    "missing_identity_reason": "No native agent host activated this package. Exact runtime ZIP and local resource hashes identify the candidate; no published source commit is assigned."
+  },
+  "panel": {
+    "id": "skill-builder-final-local-panel-47",
+    "sha256": "ac0d194583e486e0322d6ad24ff1d11f1b4517a3255bbd30dcc458159dde49a7",
+    "acceptance_frozen_at": "2026-11-23T07:07:47.398749+00:00",
+    "retry_policy": "One final run for these exact source/test bytes; prior development attempts and reproductions are retained separately, never silently substituted.",
+    "exclusion_policy": "No required local contract excluded; final run reported 47 tests, zero failures and zero skips.",
+    "control_identity": {
+      "kind": "not_run",
+      "artifact": null,
+      "isolation": "A comparative agent study would need a fresh environment without the candidate through skills, policy, memory or inherited context.",
+      "reason": "This panel measures deterministic local contracts only; no comparative agent benefit is claimed."
+    }
+  },
+  "budget": {
+    "max_attempts": 1,
+    "max_elapsed_seconds": 60,
+    "max_cost": null,
+    "currency": null,
+    "enforcement": "Local caller polled a 60-second deadline and one-MiB combined-log threshold every 50 ms, with process-group termination and two-second kill grace on breach; byte/time polling can overshoot. Neither threshold was reached. No paid provider was invoked."
+  },
+  "runtime_versions": {
+    "python": "3.12.14",
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0"
+  },
+  "attempts": [
+    {
+      "attempt_id": "final-local-002",
+      "case_id": "skill-builder-local-contracts",
+      "condition": "local_resource",
+      "started_at": "2026-11-23T07:07:47.398749+00:00",
+      "ended_at": "2026-11-23T07:07:54.270715+00:00",
+      "artifact": {
+        "artifact_id": "skill-builder-1.0.0-rc.1",
+        "source_commit": null,
+        "package_sha256": "28083dd9c2f0593d1562b9a8ef2b9c6c76c9076b1d188eca2b10b7a4ce7f35e2",
+        "activated_source": "skills/skill-builder/scripts/skill_builder.py",
+        "activated_sha256": "de8cb200873afa758946396d5e3be36d097ffeefc5ae8dac799aa4f3f4854ddb",
+        "missing_identity_reason": "This is execution/import of an explicit local resource, not native skill activation; package and resource hashes identify bytes."
+      },
+      "target": {
+        "product": "Python local contract tests",
+        "surface": "command_line",
+        "distribution": "source payload corresponding to the recorded deterministic runtime ZIP",
+        "version": "3.12.14",
+        "os": "Linux",
+        "policy": {
+          "network": false,
+          "target_code_execution": false,
+          "filesystem_contract": "Owned disposable fixtures under the source workspace; no adversarial concurrent replacement"
+        },
+        "missing_details": [
+          "No native agent-host discovery or enforcement was exercised."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "No model participated inside the deterministic test process."
+      },
+      "input_hashes": {
+        "tests/test_release.py": "694c39572b89fc9999f2d92831c1de765d9446e3e9079587da2a88bbd0e34cf6",
+        "tests/test_skill_builder.py": "0aee8c6c5b095540c167d2140c8b4c4172f432607f018e00c9465360154ce8f3",
+        "skills/skill-builder/scripts/skill_builder.py": "de8cb200873afa758946396d5e3be36d097ffeefc5ae8dac799aa4f3f4854ddb",
+        "skills/skill-builder/references/cli-result.schema.json": "2fbe253ecd71c3bd955e665e8b3fbb69a7b0e0ec39c8d3375d8d828197496607",
+        "tools/build_release.py": "15e31398903b00c14db442b034dac9f300f1dc2c59e7dc28e4bc28c75ec33eec"
+      },
+      "permissions": {
+        "network": false,
+        "test_effects": "Create/remove owned disposable fixtures; preserve target/unrelated files; no installation/publication."
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "local-resource-and-package-panel",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "validation/final-local-tests.log",
+              "sha256": "5b975653825eb7c188e84bfe07719bed9cd895ffcb2ab22f2cda6908bcb5ec98",
+              "observed_at": "2026-11-23T07:09:13.736147+00:00",
+              "scope": "All 47 deterministic helper/package tests passed, with zero failures and skips."
+            },
+            {
+              "kind": "artifact",
+              "ref": "validation/final-local-check-run.json",
+              "sha256": "76ef1a28661199018b8726e85f98a236319afd4430dcf9094d681fec458d16e5",
+              "observed_at": "2026-11-23T07:09:13.736147+00:00",
+              "scope": "Exact final command, timing, inputs and bounded capture policy."
+            },
+            {
+              "kind": "artifact",
+              "ref": "validation/final-runtime-package-identity.json",
+              "sha256": "dba3fb42a3697c913fd27d17ad31bc2090b6fa645d6fae89914610ee58640326",
+              "observed_at": "2026-11-23T07:09:13.736147+00:00",
+              "scope": "Exact final runtime ZIP and payload identity."
+            },
+            {
+              "kind": "artifact",
+              "ref": "validation/final-project-check.json",
+              "sha256": "3b8ec9918327814c46955a70ad333fcc4084be8ff2b281eb0355c3e8b79216d6",
+              "observed_at": "2026-11-23T07:09:13.736147+00:00",
+              "scope": "Final preservation, complete rule routing/pointers, metadata, direct resources and project checks."
+            }
+          ],
+          "reason": null
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "validation/final-local-tests.log",
+          "sha256": "5b975653825eb7c188e84bfe07719bed9cd895ffcb2ab22f2cda6908bcb5ec98",
+          "observed_at": "2026-11-23T07:09:13.736147+00:00",
+          "scope": "All 47 deterministic helper/package tests passed, with zero failures and skips."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/final-local-check-run.json",
+          "sha256": "76ef1a28661199018b8726e85f98a236319afd4430dcf9094d681fec458d16e5",
+          "observed_at": "2026-11-23T07:09:13.736147+00:00",
+          "scope": "Exact final command, timing, inputs and bounded capture policy."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/final-runtime-package-identity.json",
+          "sha256": "dba3fb42a3697c913fd27d17ad31bc2090b6fa645d6fae89914610ee58640326",
+          "observed_at": "2026-11-23T07:09:13.736147+00:00",
+          "scope": "Exact final runtime ZIP and payload identity."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/final-project-check.json",
+          "sha256": "3b8ec9918327814c46955a70ad333fcc4084be8ff2b281eb0355c3e8b79216d6",
+          "observed_at": "2026-11-23T07:09:13.736147+00:00",
+          "scope": "Final preservation, complete rule routing/pointers, metadata, direct resources and project checks."
+        }
+      ],
+      "elapsed": {
+        "value": 6.871917312000733,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": null,
+          "unit": "tokens",
+          "source": "unknown",
+          "missing_reason": "No model/provider meter is part of the local deterministic test run; local compute cost is not measured."
+        },
+        "output_tokens": {
+          "value": null,
+          "unit": "tokens",
+          "source": "unknown",
+          "missing_reason": "No model/provider meter is part of the local deterministic test run; local compute cost is not measured."
+        },
+        "tool_calls": {
+          "value": null,
+          "unit": "calls",
+          "source": "unknown",
+          "missing_reason": "No model/provider meter is part of the local deterministic test run; local compute cost is not measured."
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "No model/provider meter is part of the local deterministic test run; local compute cost is not measured."
+        }
+      },
+      "reason": null
+    }
+  ],
+  "elapsed": {
+    "value": 6.871917312000733,
+    "unit": "seconds",
+    "source": "measured",
+    "missing_reason": null
+  },
+  "usage": {
+    "input_tokens": {
+      "value": null,
+      "unit": "tokens",
+      "source": "unknown",
+      "missing_reason": "No model/provider meter is part of the local deterministic test run; local compute cost is not measured."
+    },
+    "output_tokens": {
+      "value": null,
+      "unit": "tokens",
+      "source": "unknown",
+      "missing_reason": "No model/provider meter is part of the local deterministic test run; local compute cost is not measured."
+    },
+    "tool_calls": {
+      "value": null,
+      "unit": "calls",
+      "source": "unknown",
+      "missing_reason": "No model/provider meter is part of the local deterministic test run; local compute cost is not measured."
+    },
+    "cost": {
+      "value": null,
+      "unit": "USD",
+      "source": "unknown",
+      "missing_reason": "No model/provider meter is part of the local deterministic test run; local compute cost is not measured."
+    }
+  },
+  "outcome": "passed",
+  "checks": [
+    {
+      "id": "local-resource-and-package-panel",
+      "outcome": "passed",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "validation/final-local-tests.log",
+          "sha256": "5b975653825eb7c188e84bfe07719bed9cd895ffcb2ab22f2cda6908bcb5ec98",
+          "observed_at": "2026-11-23T07:09:13.736147+00:00",
+          "scope": "All 47 deterministic helper/package tests passed, with zero failures and skips."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/final-local-check-run.json",
+          "sha256": "76ef1a28661199018b8726e85f98a236319afd4430dcf9094d681fec458d16e5",
+          "observed_at": "2026-11-23T07:09:13.736147+00:00",
+          "scope": "Exact final command, timing, inputs and bounded capture policy."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/final-runtime-package-identity.json",
+          "sha256": "dba3fb42a3697c913fd27d17ad31bc2090b6fa645d6fae89914610ee58640326",
+          "observed_at": "2026-11-23T07:09:13.736147+00:00",
+          "scope": "Exact final runtime ZIP and payload identity."
+        },
+        {
+          "kind": "artifact",
+          "ref": "validation/final-project-check.json",
+          "sha256": "3b8ec9918327814c46955a70ad333fcc4084be8ff2b281eb0355c3e8b79216d6",
+          "observed_at": "2026-11-23T07:09:13.736147+00:00",
+          "scope": "Final preservation, complete rule routing/pointers, metadata, direct resources and project checks."
+        }
+      ],
+      "reason": null
+    }
+  ],
+  "artifacts": [
+    {
+      "kind": "artifact",
+      "ref": "validation/final-local-tests.log",
+      "sha256": "5b975653825eb7c188e84bfe07719bed9cd895ffcb2ab22f2cda6908bcb5ec98",
+      "observed_at": "2026-11-23T07:09:13.736147+00:00",
+      "scope": "All 47 deterministic helper/package tests passed, with zero failures and skips."
+    },
+    {
+      "kind": "artifact",
+      "ref": "validation/final-local-check-run.json",
+      "sha256": "76ef1a28661199018b8726e85f98a236319afd4430dcf9094d681fec458d16e5",
+      "observed_at": "2026-11-23T07:09:13.736147+00:00",
+      "scope": "Exact final command, timing, inputs and bounded capture policy."
+    },
+    {
+      "kind": "artifact",
+      "ref": "validation/final-runtime-package-identity.json",
+      "sha256": "dba3fb42a3697c913fd27d17ad31bc2090b6fa645d6fae89914610ee58640326",
+      "observed_at": "2026-11-23T07:09:13.736147+00:00",
+      "scope": "Exact final runtime ZIP and payload identity."
+    },
+    {
+      "kind": "artifact",
+      "ref": "validation/final-project-check.json",
+      "sha256": "3b8ec9918327814c46955a70ad333fcc4084be8ff2b281eb0355c3e8b79216d6",
+      "observed_at": "2026-11-23T07:09:13.736147+00:00",
+      "scope": "Final preservation, complete rule routing/pointers, metadata, direct resources and project checks."
+    }
+  ],
+  "grader": {
+    "id": "skill-builder-contract-unittests",
+    "version": "1.0.0-rc.1",
+    "sha256": "ac0d194583e486e0322d6ad24ff1d11f1b4517a3255bbd30dcc458159dde49a7",
+    "method": "deterministic",
+    "calibration": "Expected archive bytes, independent canonical selector, output contracts and forbidden effects are tested; no subjective model scoring is claimed."
+  },
+  "omissions": [
+    "No native Codex/Claude Code/Grok discovery, permission or complete-host task trial.",
+    "No clean no-skill comparison, agent reliability rate or performance improvement measurement.",
+    "No hostile concurrent filesystem sandbox guarantee.",
+    "No public reuse license selection, publication or remote CI execution.",
+    "Earlier 46-test development run remains in local-evaluation-receipt.json; final protocol changes required this new exact-byte run."
+  ],
+  "redaction": "Only inert local test fixtures and build metadata were used; no real credentials or personal target inputs."
+}

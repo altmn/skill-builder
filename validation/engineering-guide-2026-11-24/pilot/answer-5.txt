@@ -1,0 +1,19 @@
+In YAML, `>` starts a **folded string**. YAML joins consecutive lines of ordinary text with spaces, so you can wrap a long string in the file while keeping it on one line in the parsed value.
+
+```yaml
+message: >
+  Your order is ready.
+  Pick it up at the front desk.
+```
+
+The parsed value is `"Your order is ready. Pick it up at the front desk.\n"`. A blank line between paragraphs produces a newline, and line breaks around more-indented text are preserved.
+
+The marker also controls trailing newlines:
+
+| Marker | End of the parsed string |
+|---|---|
+| `>` | Keeps the final newline, if present, and drops trailing blank lines |
+| `>-` | Removes the final newline and any trailing blank lines |
+| `>+` | Keeps the final newline and any trailing blank lines |
+
+Use `|` for a **literal string** when the line breaks inside the text should stay exactly where you put them.

@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "skill-builder-panel-summary",
+  "plan_sha256": "e0b17638aef00e3977bb8f4a4fad1f39dd49355f4ba13d8bb8633ed25dc71caf",
+  "outcome": "incomplete",
+  "scheduled": 6,
+  "recorded": 6,
+  "scored": 5,
+  "missing": [],
+  "unscored": [
+    {
+      "key": [
+        "execution",
+        "E01",
+        "previous",
+        1
+      ],
+      "reason": "Activation/clean-control evidence is incomplete or mismatched."
+    }
+  ],
+  "observed_invariant_failures": [],
+  "routing": {
+    "development": {
+      "trial_level": {
+        "tp": 1,
+        "fn": 0,
+        "fp": 0,
+        "tn": 1,
+        "scored": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_activation_rate": 0.0,
+        "f1": 1.0
+      },
+      "query_majority": {
+        "tp": 1,
+        "fn": 0,
+        "fp": 0,
+        "tn": 1,
+        "scored": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_activation_rate": 0.0,
+        "f1": 1.0
+      },
+      "scheduled_queries": 2,
+      "unscored_queries": 0
+    },
+    "validation": {
+      "trial_level": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "scored": 0,
+        "precision": null,
+        "recall": null,
+        "false_activation_rate": null,
+        "f1": null
+      },
+      "query_majority": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "scored": 0,
+        "precision": null,
+        "recall": null,
+        "false_activation_rate": null,
+        "f1": null
+      },
+      "scheduled_queries": 0,
+      "unscored_queries": 0
+    }
+  },
+  "execution": {
+    "no_skill": {
+      "scored": 1,
+      "successes": 1,
+      "success_rate": 1.0,
+      "invariant_failures": 0,
+      "latency_seconds": {
+        "mean": 14.156557417009026,
+        "known": 1,
+        "unknown": 0
+      },
+      "input_tokens": {
+        "mean": 59648,
+        "known": 1,
+        "unknown": 0
+      },
+      "output_tokens": {
+        "mean": 290,
+        "known": 1,
+        "unknown": 0
+      },
+      "cost_usd": {
+        "mean": null,
+        "known": 0,
+        "unknown": 1
+      }
+    },
+    "explicit": {
+      "scored": 1,
+      "successes": 1,
+      "success_rate": 1.0,
+      "invariant_failures": 0,
+      "latency_seconds": {
+        "mean": 31.00409233395476,
+        "known": 1,
+        "unknown": 0
+      },
+      "input_tokens": {
+        "mean": 209094,
+        "known": 1,
+        "unknown": 0
+      },
+      "output_tokens": {
+        "mean": 875,
+        "known": 1,
+        "unknown": 0
+      },
+      "cost_usd": {
+        "mean": null,
+        "known": 0,
+        "unknown": 1
+      }
+    },
+    "automatic": {
+      "scored": 1,
+      "successes": 1,
+      "success_rate": 1.0,
+      "invariant_failures": 0,
+      "latency_seconds": {
+        "mean": 24.45755641593132,
+        "known": 1,
+        "unknown": 0
+      },
+      "input_tokens": {
+        "mean": 179598,
+        "known": 1,
+        "unknown": 0
+      },
+      "output_tokens": {
+        "mean": 720,
+        "known": 1,
+        "unknown": 0
+      },
+      "cost_usd": {
+        "mean": null,
+        "known": 0,
+        "unknown": 1
+      }
+    },
+    "previous": {
+      "scored": 0,
+      "successes": 0,
+      "success_rate": null,
+      "invariant_failures": 0,
+      "latency_seconds": {
+        "mean": 29.156084374990314,
+        "known": 1,
+        "unknown": 0
+      },
+      "input_tokens": {
+        "mean": 165036,
+        "known": 1,
+        "unknown": 0
+      },
+      "output_tokens": {
+        "mean": 752,
+        "known": 1,
+        "unknown": 0
+      },
+      "cost_usd": {
+        "mean": null,
+        "known": 0,
+        "unknown": 1
+      }
+    }
+  },
+  "paired_comparisons": {
+    "explicit_minus_no_skill": {
+      "matched_trials": 1,
+      "success_rate_difference": 0
+    },
+    "automatic_minus_no_skill": {
+      "matched_trials": 1,
+      "success_rate_difference": 0
+    },
+    "explicit_minus_previous": {
+      "matched_trials": 0,
+      "success_rate_difference": null
+    }
+  },
+  "resource_usage": {
+    "latency_seconds": {
+      "known_total": 130.30318916682154,
+      "known": 6,
+      "unknown": 0
+    },
+    "input_tokens": {
+      "known_total": 782368,
+      "known": 6,
+      "unknown": 0
+    },
+    "output_tokens": {
+      "known_total": 3461,
+      "known": 6,
+      "unknown": 0
+    },
+    "cost_usd": {
+      "known_total": null,
+      "known": 0,
+      "unknown": 6
+    }
+  },
+  "limitations": [
+    "Normalized traces and semantic grades require an independent trusted adapter/reviewer; hashes verify identity, not truth.",
+    "Repeated trials are clustered by prompt; these descriptive differences are not confidence intervals or a release certification."
+  ]
+}

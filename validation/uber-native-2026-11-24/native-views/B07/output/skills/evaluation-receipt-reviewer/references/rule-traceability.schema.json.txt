@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rule-traceability.schema.json",
+  "title": "Rule Traceability 2.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "record_type": {
+      "const": "rule-traceability"
+    },
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile": {
+      "enum": [
+        "instruction",
+        "resource_assisted",
+        "suite_runtime"
+      ]
+    },
+    "modifiers": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "network",
+          "publication",
+          "persistent_state",
+          "authenticated_browser",
+          "installer"
+        ]
+      },
+      "minItems": 0
+    },
+    "selected_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule_id": {
+            "type": "string",
+            "pattern": "^[A-Z]+-[0-9]{3}$"
+          },
+          "decision": {
+            "enum": [
+              "adopted",
+              "not_applicable",
+              "not_assessed"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "local_policy": {
+            "type": "boolean"
+          },
+          "override": {
+            "type": "boolean"
+          },
+          "failure_scenario": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "verification": {
+            "type": "object",
+            "properties": {
+              "method": {
+                "enum": [
+                  "automated",
+                  "manual",
+                  "mixed",
+                  "not_run"
+                ]
+              },
+              "procedure": {
+                "type": "string",
+                "minLength": 1
+              },
+              "outcome": {
+                "enum": [
+                  "passed",
+                  "failed",
+                  "blocked",
+                  "not_run",
+                  "inconclusive",
+                  "not_applicable"
+                ]
+              }
+            },
+            "required": [
+              "method",
+              "procedure",
+              "outcome"
+            ],
+            "additionalProperties": false
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/evidence"
+            },
+            "minItems": 0
+          },
+          "release_consequence": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "rule_id",
+          "decision",
+          "reason",
+          "local_policy",
+          "override",
+          "failure_scenario",
+          "source_ids",
+          "verification",
+          "evidence",
+          "release_consequence"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "record_type",
+    "project",
+    "profile",
+    "modifiers",
+    "selected_at",
+    "records"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "workflow-contract",
+  "goal": "REPLACE: one concrete outcome for SUBJECT",
+  "outputs": ["REPLACE: independently observable artifact or state"],
+  "requirements": [
+    {
+      "id": "REQ-OUTPUT",
+      "kind": "output",
+      "statement": "REPLACE: expected task result",
+      "owner": {"path": "SKILL.md", "sha256": "REPLACE: actual owner digest"},
+      "verification": [{"case_id": "TASK-1", "check_id": "task_result"}]
+    },
+    {
+      "id": "REQ-BOUNDARY",
+      "kind": "forbidden_action",
+      "statement": "REPLACE: effect that the subject must never perform",
+      "owner": {"path": "SKILL.md", "sha256": "REPLACE: actual owner digest"},
+      "verification": [{"case_id": "TASK-1", "check_id": "authorized_effects"}]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+"""Retained local-check recipe. No installs, models, network or publication."""
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+ROOT = Path(__file__).absolute().parents[2]
+OUT = Path(__file__).absolute().parent / "checks"
+PINNED = "/private/tmp/skill-builder-pinned-validation-20261124/bin/python"
+JOBS = {
+    "full": [PINNED, "-I", "-B", "-m", "unittest", "discover", "-s", "tests", "-v"],
+    "uber-stdlib": ["python3", "-I", "-B", "-S", "-m", "unittest", "discover", "-s", "tests", "-p", "test_uber_workflows.py", "-v"],
+    "evaluation-stdlib": ["python3", "-I", "-B", "-S", "-m", "unittest", "discover", "-s", "tests", "-p", "test_evaluation.py", "-v"],
+    "release-stdlib": ["python3", "-I", "-B", "-S", "-m", "unittest", "discover", "-s", "tests", "-p", "test_release.py", "-v"],
+    "uber-python310": ["python3.10", "-I", "-B", "-S", "-m", "unittest", "discover", "-s", "tests", "-p", "test_uber_workflows.py", "-v"],
+    "core": ["python3", "-I", "-B", "tools/check_project.py"],
+    "required": [PINNED, "-I", "-B", "tools/check_project.py", "--require-validators"],
+    "whitespace": ["git", "diff", "--cached", "--check"],
+    "impact": ["python3", "-I", "-B", "tools/check_workflow_impact.py"],
+    "inventory": ["python3", "-I", "-B", "tools/check_git_inventory.py"]
+}
+JOBS.update({key + "-final": value for key, value in list(JOBS.items())})
+
+name = sys.argv[1]
+command = JOBS[name]
+OUT.mkdir(exist_ok=True)
+result = subprocess.run(command, cwd=ROOT, capture_output=True, timeout=300)
+record = {"command": command, "exit_code": result.returncode, "streams": {}}
+for stream in ("stdout", "stderr"):
+    raw = getattr(result, stream)
+    sanitized = raw.replace(str(ROOT).encode(), b"PROJECT_ROOT").replace(PINNED.encode(), b"PINNED_ENV/bin/python")
+    path = OUT / (name + "." + stream + ".txt")
+    path.write_bytes(sanitized)
+    record["streams"][stream] = {"path": path.name, "original_sha256": hashlib.sha256(raw).hexdigest(),
+                                "retained_sha256": hashlib.sha256(sanitized).hexdigest()}
+record["command"] = [c.replace(PINNED, "PINNED_ENV/bin/python") for c in command]
+(OUT / (name + ".json")).write_text(json.dumps(record, indent=2) + "\n")
+print(json.dumps({"check": name, "exit_code": result.returncode,
+                  "tail": result.stderr.decode(errors="replace")[-300:]}))

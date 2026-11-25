@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python3",
+    "-I",
+    "-B",
+    "tools/check_git_inventory.py"
+  ],
+  "exit_code": 0,
+  "streams": {
+    "stdout": {
+      "path": "inventory-final.stdout.txt",
+      "original_sha256": "01dda93eb2f7da3310767b3d23c8c50a4f1b78a6d16790261cfe48545ddee50a",
+      "retained_sha256": "01dda93eb2f7da3310767b3d23c8c50a4f1b78a6d16790261cfe48545ddee50a"
+    },
+    "stderr": {
+      "path": "inventory-final.stderr.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

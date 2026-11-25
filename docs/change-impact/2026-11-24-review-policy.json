@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "Require future improvements to assess create and audit propagation explicitly, with fresh records, evidence and automated path coverage.",
+  "reviewed_paths": [
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/workflows/ci.yml",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "docs/templates/workflow-impact.json.template",
+    "docs/workflow-impact.md",
+    "tests/test_workflow_impact.py",
+    "tools/check_workflow_impact.py",
+    "validation/workflow-impact-2026-11-24/0.stderr.txt",
+    "validation/workflow-impact-2026-11-24/0.stdout.txt",
+    "validation/workflow-impact-2026-11-24/1.stderr.txt",
+    "validation/workflow-impact-2026-11-24/1.stdout.txt",
+    "validation/workflow-impact-2026-11-24/2.stderr.txt",
+    "validation/workflow-impact-2026-11-24/2.stdout.txt",
+    "validation/workflow-impact-2026-11-24/3.stderr.txt",
+    "validation/workflow-impact-2026-11-24/3.stdout.txt",
+    "validation/workflow-impact-2026-11-24/4.stderr.txt",
+    "validation/workflow-impact-2026-11-24/4.stdout.txt",
+    "validation/workflow-impact-2026-11-24/5.stderr.txt",
+    "validation/workflow-impact-2026-11-24/5.stdout.txt",
+    "validation/workflow-impact-2026-11-24/README.md",
+    "validation/workflow-impact-2026-11-24/results.json"
+  ],
+  "workflows": {
+    "create": {
+      "decision": "no_change_needed",
+      "reason": "This follow-up adds repository contribution/review enforcement only. The create runtime procedure, generated outputs and target evaluation engine remain exactly as committed in 6215a9f.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-create.md"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "118 local tests and the staged/CI review-gate regressions passed; no runtime behavior or support claim changed, so no new native trial was required.",
+        "commands": [
+          "VALIDATION_ENV/bin/python -I -B -m unittest discover -s tests -v",
+          "python3 -I -B -S -m unittest discover -s tests -p test_workflow_impact.py -v"
+        ],
+        "evidence": [
+          "validation/workflow-impact-2026-11-24/results.json"
+        ]
+      }
+    },
+    "audit": {
+      "decision": "no_change_needed",
+      "reason": "This follow-up adds repository contribution/review enforcement only. The audit runtime procedure, generated outputs and target evaluation engine remain exactly as committed in 6215a9f.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-audit.md"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "118 local tests and the staged/CI review-gate regressions passed; no runtime behavior or support claim changed, so no new native trial was required.",
+        "commands": [
+          "VALIDATION_ENV/bin/python -I -B -m unittest discover -s tests -v",
+          "python3 -I -B -S -m unittest discover -s tests -p test_workflow_impact.py -v"
+        ],
+        "evidence": [
+          "validation/workflow-impact-2026-11-24/results.json"
+        ]
+      }
+    }
+  }
+}

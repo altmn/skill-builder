@@ -1,0 +1,29 @@
+{
+  "command": [
+    "python3",
+    "-I",
+    "-B",
+    "-S",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_evaluation.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "streams": {
+    "stdout": {
+      "path": "evaluation-stdlib.stdout.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "evaluation-stdlib.stderr.txt",
+      "original_sha256": "66a37608c4c55e05eb093a46e46934f2031fa426358122547faa39e5a85dd43d",
+      "retained_sha256": "66a37608c4c55e05eb093a46e46934f2031fa426358122547faa39e5a85dd43d"
+    }
+  }
+}

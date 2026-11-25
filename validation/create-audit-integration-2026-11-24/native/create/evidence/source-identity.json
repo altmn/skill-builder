@@ -1,0 +1,7 @@
+{
+  "builder_version": "1.0.0-rc.2",
+  "knowledge_base_archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+  "source_content_condensed": false,
+  "source_rules": "catalogs/requirements.json",
+  "evidence_boundary": "Generated scaffolding and static observations do not establish semantic compliance or live host behavior."
+}

@@ -1,0 +1,272 @@
+{
+  "review_date": "2026-11-24",
+  "timezone": "America/Los_Angeles",
+  "observed_utc": "2026-11-24T16:30:24.672401+00:00",
+  "environment": {
+    "python": "3.15.2 (main, Oct 25 2026, 16:57:51) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "executable": "/opt/homebrew/opt/python@3.15/bin/python3.15",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O"
+  },
+  "git_commit": "6b80b706d891baed8dde3b8323e383f0072390b9",
+  "results": [
+    {
+      "label": "project-check",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "tools/check_project.py"
+      ],
+      "cwd": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder",
+      "environment_changes": {},
+      "returncode": 2,
+      "duration_seconds": 0.1159,
+      "outputs": {
+        "stdout": {
+          "file": "project-check.stdout.txt",
+          "bytes": 85,
+          "sha256": "ee7853dbf26b01ce3bddde9e9ec8d94cbf0bb0033e1ceb5e850f59bb861c58ee"
+        },
+        "stderr": {
+          "file": "project-check.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "label": "project-check-required",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "tools/check_project.py",
+        "--require-validators"
+      ],
+      "cwd": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder",
+      "environment_changes": {},
+      "returncode": 2,
+      "duration_seconds": 0.0898,
+      "outputs": {
+        "stdout": {
+          "file": "project-check-required.stdout.txt",
+          "bytes": 85,
+          "sha256": "ee7853dbf26b01ce3bddde9e9ec8d94cbf0bb0033e1ceb5e850f59bb861c58ee"
+        },
+        "stderr": {
+          "file": "project-check-required.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "label": "kb-verify",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "kb",
+        "verify"
+      ],
+      "cwd": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder",
+      "environment_changes": {},
+      "returncode": 0,
+      "duration_seconds": 0.1991,
+      "outputs": {
+        "stdout": {
+          "file": "kb-verify.stdout.txt",
+          "bytes": 415,
+          "sha256": "e1519694d406f3355b34bab2d6ef19e32f2afe10df4d342fb33ca1ce518af3bf"
+        },
+        "stderr": {
+          "file": "kb-verify.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "label": "full-local-tests",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder",
+      "environment_changes": {},
+      "returncode": 1,
+      "duration_seconds": 5.9171,
+      "outputs": {
+        "stdout": {
+          "file": "full-local-tests.stdout.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "file": "full-local-tests.stderr.txt",
+          "bytes": 37815,
+          "sha256": "4752783573aa096c996126e50030bc09d3dacdc48944079441cd0653cc488774"
+        }
+      }
+    },
+    {
+      "label": "stdlib-release-default-temp",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "-S",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_release.py",
+        "-v"
+      ],
+      "cwd": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder",
+      "environment_changes": {},
+      "returncode": 1,
+      "duration_seconds": 0.9971,
+      "outputs": {
+        "stdout": {
+          "file": "stdlib-release-default-temp.stdout.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "file": "stdlib-release-default-temp.stderr.txt",
+          "bytes": 19726,
+          "sha256": "21dcdaba2b009f4a09edbc8ff65246b40b7ae34fcbfcf6c4aba9ba8849f799ef"
+        }
+      }
+    },
+    {
+      "label": "stdlib-release-canonical-temp",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "-S",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_release.py",
+        "-v"
+      ],
+      "cwd": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder",
+      "environment_changes": {
+        "TMPDIR": "/private/tmp/skill-builder-review-z4iqDE/temp"
+      },
+      "returncode": 1,
+      "duration_seconds": 1.2009,
+      "outputs": {
+        "stdout": {
+          "file": "stdlib-release-canonical-temp.stdout.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "file": "stdlib-release-canonical-temp.stderr.txt",
+          "bytes": 8108,
+          "sha256": "f3e3d4e3e77838fc5062fb22d7eb02863e18c65c852dab9a3a51fceeeaa01475"
+        }
+      }
+    },
+    {
+      "label": "build-identity",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "tools/build_release.py",
+        "--identity"
+      ],
+      "cwd": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder",
+      "environment_changes": {},
+      "returncode": 2,
+      "duration_seconds": 0.073,
+      "outputs": {
+        "stdout": {
+          "file": "build-identity.stdout.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "file": "build-identity.stderr.txt",
+          "bytes": 78,
+          "sha256": "6486f293830e59b73362507362f501d02c937276c9451e131037d534c44ae2c6"
+        }
+      }
+    },
+    {
+      "label": "build-archives",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "tools/build_release.py",
+        "--output",
+        "/private/tmp/skill-builder-review-z4iqDE/release-attempt"
+      ],
+      "cwd": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder",
+      "environment_changes": {},
+      "returncode": 2,
+      "duration_seconds": 0.1451,
+      "outputs": {
+        "stdout": {
+          "file": "build-archives.stdout.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "file": "build-archives.stderr.txt",
+          "bytes": 78,
+          "sha256": "6486f293830e59b73362507362f501d02c937276c9451e131037d534c44ae2c6"
+        }
+      }
+    },
+    {
+      "label": "receipt-check",
+      "argv": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-I",
+        "-B",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "check",
+        "--record",
+        "validation/rc2/evaluation-receipt.json"
+      ],
+      "cwd": "/Users/routerhealthchecker/Dropbox/SoftwareDevelopment/AI-Plugins/skill-builder",
+      "environment_changes": {},
+      "returncode": 2,
+      "duration_seconds": 0.1706,
+      "outputs": {
+        "stdout": {
+          "file": "receipt-check.stdout.txt",
+          "bytes": 658,
+          "sha256": "e86b5ea6911ce9bb58543be1b5736c52dd6107416c66a6c565c4c87d0874a207"
+        },
+        "stderr": {
+          "file": "receipt-check.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  ],
+  "no_dependency_installation": true,
+  "native_hosts": "not_run"
+}

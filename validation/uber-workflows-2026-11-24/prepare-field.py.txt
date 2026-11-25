@@ -1,0 +1,44 @@
+"""Prepare incident-derived cases using a disposable runtime-only copy."""
+import hashlib
+import json
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import tempfile
+
+ROOT = Path(__file__).absolute().parents[2]
+OUT = Path(__file__).absolute().parent
+environment = {
+    "host": "Offline Python CLI panel preparation; not a native agent trial",
+    "model": "not invoked",
+    "settings": {"tools": "Python standard library only", "cache_condition": "No model/provider calls"},
+    "policy": "Read explicit corpus/fixtures/runtime; create a new panel only; never execute subjects",
+    "isolation": {
+        "kind": "Disposable runtime-only directory; not an OS sandbox",
+        "runtime_identity": sys.version,
+        "dependency_probe": "Python -I -B -S; no repository tools/cases in runtime copy or site packages",
+        "credentials": "No account/model calls; ambient host credentials were not OS-isolated",
+        "reset_evidence": "New temporary directory, full runtime copy, unrelated working directory; removed after preparation"
+    },
+    "catalog_sha256": hashlib.sha256(b"No agent/distractor catalog used in offline preparation").hexdigest(),
+    "budget": {"max_runs": 16, "per_run_seconds": 180, "semantic_retries": 0}
+}
+(OUT / "field-environment.json").write_text(json.dumps(environment, indent=2) + "\n")
+with tempfile.TemporaryDirectory(dir=Path(tempfile.gettempdir()).resolve()) as temp:
+    work = Path(temp) / "unrelated field panel Ω"
+    work.mkdir()
+    runtime = work / "runtime copy"
+    shutil.copytree(ROOT / "skills/skill-builder", runtime)
+    command = [sys.executable, "-I", "-B", "-S", str(runtime / "scripts/evaluate.py"), "prepare",
+               "--candidate", str(runtime), "--routing-cases", str(ROOT / "evals/field/routing.json"),
+               "--execution-cases", str(ROOT / "evals/field/execution.json"), "--fixtures-root", str(ROOT / "evals/field"),
+               "--environment", str(OUT / "field-environment.json"), "--trials", "1", "--output", str(OUT / "field-panel")]
+    result = subprocess.run(command, cwd=work, capture_output=True, timeout=60)
+    (OUT / "field-preparation.json").write_text(json.dumps({"exit_code": result.returncode,
+        "result": json.loads(result.stdout), "stderr_sha256": hashlib.sha256(result.stderr).hexdigest(),
+        "scope": "Runtime-only standard-library preparation, no model or target execution"}, indent=2) + "\n")
+    assert result.returncode == 0, result.stdout
+    assert json.loads(result.stdout)["scheduled"] == 16
+    assert json.loads((OUT / "field-panel/observations.json").read_text())["runs"] == []
+print("Prepared 16 slots from runtime-only copy; zero observations; temporary copy removed.")

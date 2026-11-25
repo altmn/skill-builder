@@ -1,0 +1,22 @@
+{
+  "host": "REPLACE: host/surface/version",
+  "model": "REPLACE: model/version or explicit unknown reason",
+  "settings": {
+    "tools": "REPLACE: actual tool inventory",
+    "cache_condition": "REPLACE: warm/cold/cache observations"
+  },
+  "policy": "REPLACE: allowed effects, isolation and denials",
+  "isolation": {
+    "kind": "REPLACE: fresh session or disposable environment",
+    "runtime_identity": "REPLACE: image/runtime/OS and tool versions",
+    "dependency_probe": "REPLACE: undeclared tools, caches and path assumptions checked",
+    "credentials": "REPLACE: credential exposure/denial policy",
+    "reset_evidence": "REPLACE: independent reset and hidden-copy check"
+  },
+  "catalog_sha256": "REPLACE: digest of fixed distractor catalog excluding target",
+  "budget": {
+    "max_runs": 24,
+    "per_run_seconds": 180,
+    "semantic_retries": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "version": "1.0.0-rc.2",
+  "preparation": "passed",
+  "publication": "not_run",
+  "release_verdict": "PREPARED_UNPUBLISHED",
+  "license": "MIT",
+  "license_scope": "original_work_only; retained third-party terms apply",
+  "blockers": [],
+  "pending_actions": [
+    "Configure actual private security-reporting route before public release",
+    "Run native host panels before claiming tested native support"
+  ],
+  "limits": [
+    "Native Codex, Claude Code and Grok Build trials not run",
+    "Checksums prove byte identity, not publisher authentication"
+  ],
+  "archives": [
+    {
+      "filename": "skill-builder-1.0.0-rc.2.zip",
+      "size_bytes": 12004367,
+      "sha256": "c1f9e6caa663d9ccc92a22587546f3f1e307e1ae61c9cf06d6c5716976156fc3",
+      "payload_sha256": "96a55ff2b2e8ba20262b2c0f8cba8bcb8444ac872a886525e66e6841bb765f27",
+      "payload_files": 24
+    },
+    {
+      "filename": "skill-builder-1.0.0-rc.2-source.zip",
+      "size_bytes": 12797386,
+      "sha256": "ef3749013243809a042f731638bebbcce0dcab81776cd7978f496f4211372dc1",
+      "payload_sha256": "e00fb757f7ba24a1965347562a4e5fbd917128ecebafe53a04541846c11a6132",
+      "payload_files": 73
+    }
+  ],
+  "determinism": "ZIP_STORED, sorted names, fixed timestamp and regular-file mode; exact source bytes"
+}

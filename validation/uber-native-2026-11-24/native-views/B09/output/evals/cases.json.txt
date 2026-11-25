@@ -1,0 +1,54 @@
+{
+  "cases": [
+    {
+      "id": "weekly-file",
+      "prompt": "Extract the decisions, actions, and open questions from release-notes.md as JSON.",
+      "supplied_files": ["release-notes.md"],
+      "expect": "weekly"
+    },
+    {
+      "id": "operations-paste",
+      "prompt": "Turn these notes into decisions, follow-ups with owners and deadlines, and open questions in JSON. The notes are pasted below.",
+      "paste_fixture": "operations-notes.md",
+      "expect": "operations"
+    },
+    {
+      "id": "missing-input",
+      "prompt": "Extract the actions, decisions, and questions from my meeting notes.",
+      "expect": "missing"
+    },
+    {
+      "id": "missing-file",
+      "prompt": "Extract the decisions, actions, and questions from absent-notes.md.",
+      "missing_files": ["absent-notes.md"],
+      "expect": "missing"
+    },
+    {
+      "id": "partial-input",
+      "prompt": "Combine release-notes.md and absent-notes.md into one decisions, actions, and questions JSON object.",
+      "supplied_files": ["release-notes.md"],
+      "missing_files": ["absent-notes.md"],
+      "expect": "missing"
+    },
+    {
+      "id": "truncated-read",
+      "prompt": "Extract the decisions, actions, and questions from release-notes.md.",
+      "supplied_files": ["release-notes.md"],
+      "read_condition": "Expose only a prefix and signal truncation; deny continuation.",
+      "missing_files": ["release-notes.md"],
+      "expect": "missing"
+    },
+    {
+      "id": "no-business",
+      "prompt": "Extract decisions, actions and questions as JSON from these notes:\nThe meeting began at 10. A new agenda format was proposed and no decision was taken.",
+      "expect": "empty"
+    }
+  ],
+  "routing": [
+    {"prompt": "Please pull commitments and unresolved questions out of these pasted meeting notes and give me JSON.", "activate": true, "split": "development"},
+    {"prompt": "Draft next week's agenda.", "activate": false, "split": "development"},
+    {"prompt": "Get decisions, todos, and pending questions from the local file I supplied, meeting.md.", "activate": true, "split": "held_out"},
+    {"prompt": "Find my meeting notes somewhere in this workspace.", "activate": false, "split": "held_out"},
+    {"prompt": "Summarize these notes in prose and do not use the meeting notes extractor.", "activate": false, "split": "held_out"}
+  ]
+}

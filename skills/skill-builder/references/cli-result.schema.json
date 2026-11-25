@@ -1,0 +1,289 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cli-result.schema.json",
+  "title": "Skill Builder public JSON result 1.0.0",
+  "description": "Versioned envelope and required operation fields. CLI documentation defines semantics and exit status; schema validity cannot prove evidence truth. Exact-file reads and help/version text are excluded.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "outcome"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "outcome": {
+      "enum": [
+        "scaffold_created",
+        "static_preparation_completed",
+        "selected",
+        "listed",
+        "read",
+        "searched",
+        "extracted",
+        "blocked",
+        "passed",
+        "failed"
+      ]
+    },
+    "output": {
+      "type": "string",
+      "minLength": 1
+    },
+    "release_ready": {
+      "const": false
+    },
+    "target_code_executed": {
+      "const": false
+    },
+    "code_executed": {
+      "const": false
+    },
+    "content_rewritten": {
+      "const": false
+    },
+    "rule_decisions": {
+      "const": 99
+    },
+    "profile": {
+      "enum": [
+        "instruction",
+        "resource_assisted",
+        "suite_runtime"
+      ]
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 99,
+      "maxItems": 99
+    },
+    "modifiers": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "network",
+          "publication",
+          "persistent_state",
+          "authenticated_browser",
+          "installer"
+        ]
+      }
+    },
+    "audit_verdict": {
+      "enum": [
+        "inconclusive",
+        "failed"
+      ]
+    },
+    "static_checks": {
+      "enum": [
+        "passed",
+        "failed",
+        "blocked"
+      ]
+    },
+    "inventory_coverage": {
+      "enum": [
+        "incomplete",
+        "complete_within_declared_exclusions"
+      ]
+    },
+    "semantic_implementation": {
+      "const": "not_run"
+    },
+    "full_semantic_review": {
+      "const": "not_run"
+    },
+    "host_trials": {
+      "const": "not_run"
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "files": {
+      "type": "array"
+    },
+    "archive_content_total": {
+      "const": 182
+    },
+    "complete_for_prefix": {
+      "const": true
+    },
+    "content_files": {
+      "const": 182
+    },
+    "content_bytes": {
+      "const": 76965199
+    },
+    "archive_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "offset": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "path": {"type": "string", "minLength": 1},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "total_bytes": {"type": "integer", "minimum": 0},
+    "returned_bytes": {"type": "integer", "minimum": 0, "maximum": 16384},
+    "text": {"type": "string"},
+    "complete": {"type": "boolean"},
+    "limit": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 16384
+    },
+    "total_matching_lines": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "returned": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 200
+    },
+    "next_offset": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "matches": {
+      "type": "array",
+      "maxItems": 200
+    },
+    "error": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"outcome": {"const": "read"}}},
+      "then": {"required": ["path", "sha256", "archive_sha256", "total_bytes", "offset", "returned_bytes", "text", "next_offset", "complete"]}
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "scaffold_created"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "output",
+          "skill",
+          "rule_decisions",
+          "semantic_implementation",
+          "host_trials",
+          "release_ready"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "static_preparation_completed"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "audit_verdict",
+          "output",
+          "static_checks",
+          "inventory_coverage",
+          "changed_during_check",
+          "full_semantic_review",
+          "host_trials",
+          "target_code_executed",
+          "release_ready"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "selected"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "profile",
+          "modifiers",
+          "canonical_rules",
+          "archive_sha256",
+          "note",
+          "rules"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "listed"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "count",
+          "files",
+          "archive_content_total",
+          "complete_for_prefix"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "searched"
+          }
+        }
+      },
+      "then": {
+        "properties": {"limit": {"maximum": 200}},
+        "required": [
+          "mode",
+          "case_sensitive",
+          "offset",
+          "limit",
+          "total_matching_lines",
+          "returned",
+          "next_offset",
+          "matches",
+          "binary_files_not_searched",
+          "note"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "extracted"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "output",
+          "content_files",
+          "content_rewritten",
+          "code_executed",
+          "metadata"
+        ]
+      }
+    }
+  ],
+  "additionalProperties": true
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "path": "output/README.md.txt",
+    "original_sha256": "a346f0d7d493b7caa69d06eaaf84501daa482de69bde33644322e8a2763e818c",
+    "derived_sha256": "a346f0d7d493b7caa69d06eaaf84501daa482de69bde33644322e8a2763e818c"
+  },
+  {
+    "path": "output/TASK-BRIEF.md.txt",
+    "original_sha256": "5b85fd96f9662f5484d129ec4b12ec38e2b2e005651b795c64eb1e8af44eaf6e",
+    "derived_sha256": "5b85fd96f9662f5484d129ec4b12ec38e2b2e005651b795c64eb1e8af44eaf6e"
+  },
+  {
+    "path": "output/evals/README.md.txt",
+    "original_sha256": "cebc29281e5e138fb9338d757ba1cb508a48c6a9ab7c62665faa68c91285549d",
+    "derived_sha256": "cebc29281e5e138fb9338d757ba1cb508a48c6a9ab7c62665faa68c91285549d"
+  },
+  {
+    "path": "output/evals/cases.json.txt",
+    "original_sha256": "1bf19577b345e0e1c6afb26095c9ba4a578c67cb4d74c2e3f5e0a459e80ccc01",
+    "derived_sha256": "1bf19577b345e0e1c6afb26095c9ba4a578c67cb4d74c2e3f5e0a459e80ccc01"
+  },
+  {
+    "path": "output/evals/check.py.txt",
+    "original_sha256": "0602cf9b4b5dec7c3b16ea1ff91670e729159d0d3545547b13c8e487fc0fecac",
+    "derived_sha256": "0602cf9b4b5dec7c3b16ea1ff91670e729159d0d3545547b13c8e487fc0fecac"
+  },
+  {
+    "path": "output/evals/fixtures/operations-notes.md.txt",
+    "original_sha256": "12cbd3454f6cfff600d8a63e2c33a30b0896c2412f6da1931c4522b2677cd114",
+    "derived_sha256": "12cbd3454f6cfff600d8a63e2c33a30b0896c2412f6da1931c4522b2677cd114"
+  },
+  {
+    "path": "output/evals/fixtures/release-notes.md.txt",
+    "original_sha256": "6d24c221c0f09773203b7dcd1342194c3631757047f4bb0a43e9805f8ef64c0c",
+    "derived_sha256": "6d24c221c0f09773203b7dcd1342194c3631757047f4bb0a43e9805f8ef64c0c"
+  },
+  {
+    "path": "output/evals/local-check-receipt.json.txt",
+    "original_sha256": "7f47d6d53e73da78e8a696e30811d146c152de698eea0b4bd6d868efe017bbf5",
+    "derived_sha256": "7f47d6d53e73da78e8a696e30811d146c152de698eea0b4bd6d868efe017bbf5"
+  },
+  {
+    "path": "output/examples/weekly-release.json.txt",
+    "original_sha256": "f81454458c485523875d3cc49f808f5605885152804026efdb6be0306d0b1dba",
+    "derived_sha256": "f81454458c485523875d3cc49f808f5605885152804026efdb6be0306d0b1dba"
+  },
+  {
+    "path": "output/examples/weekly-release.md.txt",
+    "original_sha256": "6d24c221c0f09773203b7dcd1342194c3631757047f4bb0a43e9805f8ef64c0c",
+    "derived_sha256": "6d24c221c0f09773203b7dcd1342194c3631757047f4bb0a43e9805f8ef64c0c"
+  },
+  {
+    "path": "output/rule-traceability.json.txt",
+    "original_sha256": "58c62794ec17e0c27404d74be25ed52d3cc83bafa3b8e79624e0c00091e078a5",
+    "derived_sha256": "58c62794ec17e0c27404d74be25ed52d3cc83bafa3b8e79624e0c00091e078a5"
+  },
+  {
+    "path": "output/skills/meeting-notes-extractor/SKILL.md.txt",
+    "original_sha256": "89fc206b17abaa911acdb8faafce0d626768f4d81dc339d9f1b9559e49405c1f",
+    "derived_sha256": "89fc206b17abaa911acdb8faafce0d626768f4d81dc339d9f1b9559e49405c1f"
+  },
+  {
+    "path": "output/source-manifest.json.txt",
+    "original_sha256": "b38bdb5232cf0642bfcebfe0aebd08b6fc524095d089196ade8ff57190f85830",
+    "derived_sha256": "b38bdb5232cf0642bfcebfe0aebd08b6fc524095d089196ade8ff57190f85830"
+  },
+  {
+    "path": "answer.txt",
+    "original_sha256": "92dbe93cb2a5e2dbde5ac23860e79fc565c5fe88eae13c6da09bf9185e5aa915",
+    "derived_sha256": "bec88d347f003ef7ed800ef7a8dc9f280249debcbd24249988a3035831d4dd8f"
+  }
+]

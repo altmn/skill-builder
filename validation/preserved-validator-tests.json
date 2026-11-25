@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "preserved-validator-test-observation",
+  "command": "python3 -I -B -m unittest discover -s source/agent-skill-project-knowledge-base_final/tools/tests -v",
+  "source_archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+  "tests_run": 73,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "reported_suite_seconds": 1.031,
+  "exit_code": 0,
+  "outcome": "passed",
+  "scope": "Executed original preserved profile, format and evidence validator regression tests in this environment. Historical stored receipts remain unchanged.",
+  "log_limit": "Tool display truncated part of the per-test listing; the run summary and exit status were observed. No full raw-log claim."
+}

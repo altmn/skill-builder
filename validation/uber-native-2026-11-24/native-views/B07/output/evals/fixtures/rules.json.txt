@@ -1,0 +1,39 @@
+[
+  {
+    "rule_id": "EVAL-008",
+    "decision": "adopted",
+    "reason": "Review comparison evidence.",
+    "local_policy": true,
+    "override": false,
+    "failure_scenario": "A comparison is scored without evidence of the activated version.",
+    "source_ids": [],
+    "verification": {"method": "not_run", "procedure": "Check activation evidence.", "outcome": "not_run"},
+    "evidence": [],
+    "release_consequence": "Comparison remains unscored."
+  },
+  {
+    "id": "EVAL-008",
+    "decision": "adopted",
+    "reason": "Review comparison evidence.",
+    "local_policy": true,
+    "override": false,
+    "failure_scenario": "A comparison is scored without evidence of the activated version.",
+    "source_ids": [],
+    "verification": {"method": "not_run", "procedure": "Check activation evidence.", "outcome": "not_run"},
+    "evidence": [],
+    "release_consequence": "Comparison remains unscored."
+  },
+  {
+    "rule_id": "EVAL-008",
+    "id": "EVAL-008",
+    "decision": "adopted",
+    "reason": "Review comparison evidence.",
+    "local_policy": true,
+    "override": false,
+    "failure_scenario": "A comparison is scored without evidence of the activated version.",
+    "source_ids": [],
+    "verification": {"method": "not_run", "procedure": "Check activation evidence.", "outcome": "not_run"},
+    "evidence": [],
+    "release_consequence": "Comparison remains unscored."
+  }
+]

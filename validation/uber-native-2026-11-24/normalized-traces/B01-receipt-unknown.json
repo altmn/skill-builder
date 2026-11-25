@@ -1,0 +1,6 @@
+{
+  "complete": false,
+  "raw_sha256": "6e1c476e375c9f2d6ffbb12becf77b16784c63d4002edbb4b96276313aee03f1",
+  "events": [],
+  "reason": "Selected model at capacity before any command/skill read; deadline; no retry."
+}

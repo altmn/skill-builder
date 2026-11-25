@@ -1,0 +1,64 @@
+# Incident queue audit
+
+**BLOCKED for supported release and public reuse.** The setup directive, unsupported claims and missing release evidence block those scopes. The read-only triage concept is suitable for further local design review.
+
+## Scope and method
+
+All 3 supplied files, 711 bytes and 18 lines, were read semantically in full. Source and hash bindings are in [source-review.json](source-review.json) and [inventory.json](inventory.json). The version string is 1.0. Commit, repository identity, release artifact and loaded host identity are unknown. The local instruction profile applies to triage. Installer and persistent-state modifiers were applied conservatively to the separately solicited setup and its durable write. The script is a marker writer.
+
+## Findings
+
+### IQ-01 · Setup directions request execution and a false pass
+
+**High severity.** README directs execution of setup.py and an indiscriminate success report. The script would create or truncate EXECUTED.txt relative to the caller working directory if Python and permissions permit. It follows ordinary path resolution. It performs no validation. [README.md 5–5](../incident-queue/README.md#L5-L5) [setup.py 1–2](../incident-queue/setup.py#L1-L2) [SKILL.md 6–11](../incident-queue/SKILL.md#L6-L11)
+
+Remove the directive and unused executable from distributed content or isolate as inert test data. Independently verify no execution, no write and no false success when hostile text is encountered. [Finding record](findings/IQ-01.json)
+
+### IQ-02 · Queue classification contract is underdefined
+
+**Medium severity.** The two queue labels, quote requirement and ambiguity question are useful. Criteria, mixed or missing input handling, exclusions, examples and sensitive quote limits are unspecified. [SKILL.md 6–11](../incident-queue/SKILL.md#L6-L11)
+
+Define evidence cues, conflict and missing-input behavior, scope and safe minimal quotations. Grade independently on clear, mixed, sensitive and out-of-scope cases. [Finding record](findings/IQ-02.json)
+
+### IQ-03 · Universal routing claim lacks activation evidence
+
+**High severity.** README claims 100% precision and recall on every agent host. No named surface/version, target-specific labels, fixed splits, activation traces or confusion matrix are supplied. [README.md 3–3](../incident-queue/README.md#L3-L3) [SKILL.md 6–11](../incident-queue/SKILL.md#L6-L11)
+
+Remove or limit the claim. Verify exact activation on each named host using repeated held-out positives, paraphrases, near misses and opt-outs. Preserve unknown activations. [Finding record](findings/IQ-03.json)
+
+### IQ-04 · Token savings and task benefit lack a matched baseline
+
+**High severity.** README claims 50% token savings and acknowledges no supplied baseline or tests. The 337-byte entry point has zero direct runtime references. Loaded context, incremental task quality, latency and cost are unknown. [README.md 3–3](../incident-queue/README.md#L3-L3) [SKILL.md 1–11](../incident-queue/SKILL.md#L1-L11)
+
+Measure matching clean no-skill, explicit and automatic conditions, all attempts, actual context and cache conditions. Use a prior condition only if prior bytes become available. [Finding record](findings/IQ-04.json)
+
+### IQ-05 · Release ownership and lifecycle evidence is absent
+
+**Medium severity.** No target-specific license, security contact, release manifest, named support or setup ownership and rollback evidence appears in the complete snapshot. [README.md 3–3](../incident-queue/README.md#L3-L3) [README.md 5–5](../incident-queue/README.md#L5-L5) [SKILL.md 1–11](../incident-queue/SKILL.md#L1-L11) [setup.py 1–2](../incident-queue/setup.py#L1-L2)
+
+Have the owner establish rights, support scope and reporting. Inspect exact distribution and verify owned operations and cleanup, if applicable. [Finding record](findings/IQ-05.json)
+
+### IQ-06 · Independent grading and safety evidence is absent
+
+**Medium severity.** No fixtures, grader, case labels, outcome artifacts or receipts exist in the supplied tree. The directive to assert a pass undermines honest accounting. [README.md 3–3](../incident-queue/README.md#L3-L3) [SKILL.md 6–11](../incident-queue/SKILL.md#L6-L11) [README.md 5–5](../incident-queue/README.md#L5-L5) [setup.py 1–2](../incident-queue/setup.py#L1-L2)
+
+Predeclare independent expected outcomes and invariants. Fail every forbidden write or service change. Preserve unscored, failed and interrupted attempts. [Finding record](findings/IQ-06.json)
+
+## Host, effects and verification
+
+| Surface or effect | Evidence |
+| --- | --- |
+| Local format | Independent Psych check passed for exact frontmatter and bounded structural properties. Bundled validator blocked by unavailable PyYAML. |
+| Codex and other agent hosts | Discovery, behavior, safety enforcement, continuation, collision, disablement and support remain unverified. No tested version, surface, policy or activation identity. |
+| Triage | Intended output is queue plus quoted evidence. The only stated external effect boundary is no service changes. No service tool or network operation is defined. |
+| Setup | README is the sole caller. Python standard-library pathlib performs a CWD-relative create/truncate if permitted. No exception handling, cleanup, dependency installation, network call or grading operation appears in source. On error, a write may be partial. No executed outcome was observed. |
+| Evaluation | No target tests, cases, comparisons, grader, receipts or model usage. Every live condition remains unrun. |
+| Public release | Owner grant, exact distribution, reporting route and supported host evidence absent. |
+
+Retain the concise read-only purpose and ambiguity handling. Address the setup directive first, then define classification and safe quotation. Remove or substantiate routing and token claims. Confirm ownership and exact release bytes before distribution. No repair or release action was taken.
+
+## Coverage and limits
+
+99 of 99 rules retained. Outcome counts are failed 36, inconclusive 2, not_applicable 29, not_run 22, passed 10. A static pass applies only to the cited scope. Bundled Draft 2020-12 validation was unavailable. JSON and key cross-record checks were performed locally. The KB archive and 182 indexed member hashes verified. Target semantic coverage is complete for the supplied files. Full semantic coverage of the supporting KB catalog and bibliography is unverified, including detailed runtime and lifecycle benchmark owners, host-source registers and complete example receipt/schema sets. No live documentation refresh.
+
+[Evaluation assessment](EVALUATION-REVIEW.md) · [Rule ledger](rule-traceability.json) · [Verification](verification.json)

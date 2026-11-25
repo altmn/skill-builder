@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "outcome": "passed",
+  "preservation": {
+    "outcome": "passed",
+    "scope": "Exact archive and every indexed substantive file identity; no host or semantic assurance.",
+    "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+    "archive_bytes": 11572664,
+    "content_files": 182,
+    "content_bytes": 76965199,
+    "all_original_archive_members_retained": true,
+    "source_content_rewritten": false
+  },
+  "records": {
+    "outcome": "passed",
+    "scope": "Original versioned schema and cross-field checks; truth of evidence was not verified.",
+    "records": [
+      {
+        "path": "TRIAL_ROOT/create/created/evidence/rule-traceability.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "TRIAL_ROOT/audit/review/rule-traceability.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "TRIAL_ROOT/audit/review/source-review.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "TRIAL_ROOT/audit/review/findings/IQ-01.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "TRIAL_ROOT/audit/review/findings/IQ-02.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "TRIAL_ROOT/audit/review/findings/IQ-03.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "TRIAL_ROOT/audit/review/findings/IQ-04.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "TRIAL_ROOT/audit/review/findings/IQ-05.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      },
+      {
+        "path": "TRIAL_ROOT/audit/review/findings/IQ-06.json",
+        "outcome": "passed",
+        "error_count": 0,
+        "reason": null
+      }
+    ]
+  }
+}

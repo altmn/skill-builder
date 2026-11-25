@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "source-change-inventory",
+  "recorded_at": "2026-11-23T19:17:46.718193+00:00",
+  "version": "1.0.0-rc.2",
+  "outcome": "passed",
+  "original_source_zip_sha256": "624d313a45a15749c75a5251b53c40408808ba1ee3c7149e2d4697635bd06588",
+  "original_source_file_count_including_manifest": 71,
+  "checks": {
+    "all_70_original_source_payload_paths_present": true,
+    "frozen_knowledge_archive_byte_identical": true,
+    "frozen_knowledge_manifest_byte_identical": true,
+    "all_99_rule_routing_map_byte_identical": true,
+    "all_25_historical_validation_artifacts_byte_identical": true,
+    "original_generated_manifest_preserved": true
+  },
+  "missing_original_payload_paths": [],
+  "changed_original_payload_files": [
+    {
+      "path": "CHANGELOG.md",
+      "original_sha256": "0d79727fcbba468e57e602ddeef7e59e1aab4cdbd87697d297b8a87aa805bfd6",
+      "current_sha256": "776c286745b1ed7aeeb52b173e39d15cb200ee14414a30337b5573ce3dd2b22d",
+      "original_size_bytes": 831,
+      "current_size_bytes": 2188
+    },
+    {
+      "path": "LICENSE.md",
+      "original_sha256": "bb3105f82a1e79b633f12c5ea664d179315b588400130003008f60a965b2608a",
+      "current_sha256": "3d088fe8079c8c8b6487e232429fb374abc47ccc4ea7e38de8ed8b89493aa959",
+      "original_size_bytes": 2609,
+      "current_size_bytes": 4166
+    },
+    {
+      "path": "NOTICE.md",
+      "original_sha256": "eb168e07695b4163e7c4f880209758013e9bd8b0244aa19659df8f372b07deae",
+      "current_sha256": "07829a5ba8bfceac29684ac6f84d93e3e707cc9fbb7fe4a5bf3f4f497aa02af2",
+      "original_size_bytes": 2713,
+      "current_size_bytes": 2960
+    },
+    {
+      "path": "README.md",
+      "original_sha256": "8a3a0a84de8f14bd60c1acc024067e19522502ea2852b9da6e105316be31428f",
+      "current_sha256": "e6aae20accd584a0cf336469d9d64a1157e0f715146d1142146e628422f807dc",
+      "original_size_bytes": 12269,
+      "current_size_bytes": 12607
+    },
+    {
+      "path": "VERSION",
+      "original_sha256": "8e3ccfbe492191dbb919be7b4ef3d93bd88f92b1d99532b25ba19c5ad9f1f722",
+      "current_sha256": "0c654c00f94741d78169de333d4d9e866be0667b41f9c54cafe3c6b700b15a43",
+      "original_size_bytes": 11,
+      "current_size_bytes": 11
+    },
+    {
+      "path": "docs/architecture.md",
+      "original_sha256": "91f5e2f9a572ed866d82626f0cc1b579c2609bfed4eca555604df5300d7e589d",
+      "current_sha256": "03407401d43ef6d66e4945db036a55d3f73992e0d247f534c7126d72e08393c8",
+      "original_size_bytes": 3777,
+      "current_size_bytes": 4899
+    },
+    {
+      "path": "docs/compatibility.md",
+      "original_sha256": "12a8f2787a048f70ad8fbe9ab2ec5c7320767196eddb87bc457cef02f7afb6d1",
+      "current_sha256": "c1bb33d6dd0e339c22752ce84ef4cdbe82ffdf3f6c1f51e72e47673957addebe",
+      "original_size_bytes": 8321,
+      "current_size_bytes": 8409
+    },
+    {
+      "path": "docs/task-brief.md",
+      "original_sha256": "c7aa552cd9e93388fbeda5916a42033289faced5af0c3d9026067667a053099b",
+      "current_sha256": "7a44f9382dc6257703af497ee52189c786d1d0bf62233a17efe4fb79c4cd4645",
+      "original_size_bytes": 3374,
+      "current_size_bytes": 3586
+    },
+    {
+      "path": "evals/cases.json",
+      "original_sha256": "e1f2f4e66e1cafbfd079234d4d618d4c9e0cff15c478bed2a9482660cb366d92",
+      "current_sha256": "12a285e3d4a53c2efff85ca6b8fa05e2d845bcb32a5a6602f41f7348fa8f32cc",
+      "original_size_bytes": 16981,
+      "current_size_bytes": 18334
+    },
+    {
+      "path": "skills/skill-builder/LICENSE.md",
+      "original_sha256": "c1c7f2e9c0d87b787c4ca786b183b59964b212fc1d8fc80d61d6c20218c2b6ec",
+      "current_sha256": "3d088fe8079c8c8b6487e232429fb374abc47ccc4ea7e38de8ed8b89493aa959",
+      "original_size_bytes": 1343,
+      "current_size_bytes": 4166
+    },
+    {
+      "path": "skills/skill-builder/NOTICE.md",
+      "original_sha256": "63ae13db6fcf8c21c76eecb2bfd3a75aed773d221f9b85a50738cb32402b93f3",
+      "current_sha256": "d9974124015ad16e7c10d6ea1c49e19c33a9f65fb24846f09d835b72ab790d49",
+      "original_size_bytes": 1613,
+      "current_size_bytes": 1737
+    },
+    {
+      "path": "skills/skill-builder/VERSION",
+      "original_sha256": "8e3ccfbe492191dbb919be7b4ef3d93bd88f92b1d99532b25ba19c5ad9f1f722",
+      "current_sha256": "0c654c00f94741d78169de333d4d9e866be0667b41f9c54cafe3c6b700b15a43",
+      "original_size_bytes": 11,
+      "current_size_bytes": 11
+    },
+    {
+      "path": "skills/skill-builder/commands/skill-builder-create.md",
+      "original_sha256": "4a02ce2a2862cd567fe5ff47fa80c6af1460e33890cdc97494a7b309b9a81caf",
+      "current_sha256": "bfb8e6373ed4869844aa1a4b1111940b6b277a3b95328839a4ce0340823df8b3",
+      "original_size_bytes": 23224,
+      "current_size_bytes": 23444
+    },
+    {
+      "path": "skills/skill-builder/references/cli.md",
+      "original_sha256": "31f48a03f3faf20d752a6f700be05a3f3a33f67ad5eb231357aeb7b5bc3ec665",
+      "current_sha256": "ca5c9bc9c2f9acc3fa27185603c6ecf3ab1a21e104988b822033b15b18fc19e4",
+      "original_size_bytes": 19612,
+      "current_size_bytes": 20704
+    },
+    {
+      "path": "skills/skill-builder/references/governance.md",
+      "original_sha256": "89e4de3a74d045e18613b8ee78a45759e23982cd852956b3cc75245ce2dbff51",
+      "current_sha256": "b3dcf582d676cfc5286bf9d7c7184b6e703b030505aaeee3c3595e4bf7710924",
+      "original_size_bytes": 35471,
+      "current_size_bytes": 35717
+    },
+    {
+      "path": "skills/skill-builder/references/release-status.md",
+      "original_sha256": "a03e141e0f457d6d479e1fbbcea06791e9a0c1e42963effc742e556e5f255383",
+      "current_sha256": "fbc21b8467d114ac5eea9916b8c866def29ce94618c68f750906f879d16a262e",
+      "original_size_bytes": 2273,
+      "current_size_bytes": 2675
+    },
+    {
+      "path": "skills/skill-builder/scripts/skill_builder.py",
+      "original_sha256": "de8cb200873afa758946396d5e3be36d097ffeefc5ae8dac799aa4f3f4854ddb",
+      "current_sha256": "02d059365b37ee12c03283bb406ea87d74305525ff1c7b554675f28d170d20d0",
+      "original_size_bytes": 43550,
+      "current_size_bytes": 45595
+    },
+    {
+      "path": "tests/test_release.py",
+      "original_sha256": "694c39572b89fc9999f2d92831c1de765d9446e3e9079587da2a88bbd0e34cf6",
+      "current_sha256": "47265f7c176aa546627414105959620d81c3e6dd284480a59cce78c53933cb25",
+      "original_size_bytes": 4054,
+      "current_size_bytes": 16323
+    },
+    {
+      "path": "tests/test_skill_builder.py",
+      "original_sha256": "0aee8c6c5b095540c167d2140c8b4c4172f432607f018e00c9465360154ce8f3",
+      "current_sha256": "e4ac4c974b9cb122ec23de99a1b257be4d507d23a387e5ca18e91747732dcff5",
+      "original_size_bytes": 24292,
+      "current_size_bytes": 30988
+    },
+    {
+      "path": "tools/build_release.py",
+      "original_sha256": "15e31398903b00c14db442b034dac9f300f1dc2c59e7dc28e4bc28c75ec33eec",
+      "current_sha256": "079847a2f686b8466ca1c7e82d4b7c3e4c67efb63871cba49b3f0db3db9f5a4f",
+      "original_size_bytes": 9760,
+      "current_size_bytes": 14675
+    },
+    {
+      "path": "tools/check_project.py",
+      "original_sha256": "2efb62548c6336705d573e542f3fa68717c02894b69100c17ac01165c46e9f85",
+      "current_sha256": "2e6497050385277b9b26a8e91d3ac7c5c48689b0be4e907eb55e5f2df9d6b9f2",
+      "original_size_bytes": 9021,
+      "current_size_bytes": 10634
+    },
+    {
+      "path": "validation/README.md",
+      "original_sha256": "97e3887e967c4f0f390124f9834d274f166cf52ffd9209b4024c7b6d913a6365",
+      "current_sha256": "a7592562572f893ddb27ab1c7eea9c5123228c9a46c22fff2f837632dedc7771",
+      "original_size_bytes": 4822,
+      "current_size_bytes": 8122
+    }
+  ],
+  "unchanged_original_payload_files": [
+    ".github/workflows/ci.yml",
+    ".gitignore",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "docs/effects-and-threat-model.md",
+    "evals/README.md",
+    "requirements-validation.txt",
+    "skills/skill-builder/SKILL.md",
+    "skills/skill-builder/agents/openai.yaml",
+    "skills/skill-builder/assets/handoff.md",
+    "skills/skill-builder/assets/request-examples.md",
+    "skills/skill-builder/commands/skill-builder-audit.md",
+    "skills/skill-builder/commands/skill-builder-explain.md",
+    "skills/skill-builder/references/cli-result.schema.json",
+    "skills/skill-builder/references/hosts/claude-code.md",
+    "skills/skill-builder/references/hosts/codex.md",
+    "skills/skill-builder/references/hosts/custom-host.md",
+    "skills/skill-builder/references/hosts/grok.md",
+    "skills/skill-builder/references/implementation-map.json",
+    "skills/skill-builder/references/knowledge-base-manifest.json",
+    "skills/skill-builder/references/knowledge-base.zip",
+    "skills/skill-builder/references/requirement-coverage.md",
+    "validation/coverage-audit.md",
+    "validation/creator-check.txt",
+    "validation/development-trials.json",
+    "validation/final-local-check-run.json",
+    "validation/final-local-evaluation-receipt.json",
+    "validation/final-local-tests.log",
+    "validation/final-project-check.json",
+    "validation/final-runtime-package-identity.json",
+    "validation/independent-review/independent-package-reproduction.json",
+    "validation/independent-review/independent-reproduction-followup.json",
+    "validation/independent-review/independent-reproduction.json",
+    "validation/independent-review/independent-resolution-verification.json",
+    "validation/independent-review/independent-review.md",
+    "validation/independent-review/integration-addendum.md",
+    "validation/local-check-run.json",
+    "validation/local-evaluation-receipt.json",
+    "validation/local-tests.log",
+    "validation/preserved-validator-tests.json",
+    "validation/project-check.json",
+    "validation/runtime-package-identity.json",
+    "validation/self-assessment-context.json",
+    "validation/self-rule-selection.json",
+    "validation/self-rule-traceability.json",
+    "validation/trials/audit-trial.zip",
+    "validation/trials/create-trial.zip"
+  ],
+  "historical_validation_file_count": 25,
+  "generated_manifest_policy": "PACKAGE-MANIFEST.json is regenerated for the final source ZIP; its original exact bytes are retained under validation/rc1-review. The final archive member set is independently verified after assembly.",
+  "identity_cycle_policy": "This observation does not include its enclosing source ZIP digest or a digest of itself. It compares original payload paths and scoped immutable/history bytes. Final source ZIP identity stays detached.",
+  "scope_limit": "Byte equality and path retention are mechanical observations; the independent review and diffs address the meaning of edited instructions/code."
+}

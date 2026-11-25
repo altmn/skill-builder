@@ -1,0 +1,33 @@
+docs/reviews/2026-11-24-skill-builder-review-evidence/full-local-tests.stderr.txt:7: trailing whitespace.
++test_nested_output_is_rejected_without_creating_any_files (test_release.ReleaseContractTests.test_nested_output_is_rejected_without_creating_any_files) ... 
+docs/reviews/2026-11-24-skill-builder-review-evidence/stdlib-release-default-temp.stderr.txt:7: trailing whitespace.
++test_nested_output_is_rejected_without_creating_any_files (test_release.ReleaseContractTests.test_nested_output_is_rejected_without_creating_any_files) ... 
+docs/reviews/2026-11-24-skill-builder-review.md:3: trailing whitespace.
++Review date: **November 24, 2026, America/Los_Angeles**  
+docs/reviews/2026-11-24-skill-builder-review.md:4: trailing whitespace.
++Subject version: **1.0.0-rc.2**  
+docs/reviews/2026-11-24-skill-builder-review.md:5: trailing whitespace.
++Reviewed commit: **`6b80b706d891baed8dde3b8323e383f0072390b9`**  
+docs/reviews/2026-11-24-skill-builder-review.md:6: trailing whitespace.
++Reviewed Git tree: **`e9d95cb78a63da1cbf949ed4d4b91ac295136ec6`**  
+evals/execution.json:54: new blank line at EOF.
+evals/fixtures/review-skill/README.md:5: new blank line at EOF.
+evals/fixtures/review-skill/SKILL.md.fixture:8: new blank line at EOF.
+evals/routing.json:143: new blank line at EOF.
+validation/engineering-guide-2026-11-24/post-documentation-checks.json:504: new blank line at EOF.
+validation/public-native-2026-11-24/qa-answer.txt:6: trailing whitespace.
++**Skill root used**  
+validation/rc2/development/runtime/before-fix-runtime-tests.log:1: trailing whitespace.
++test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) ... 
+validation/rc2/development/runtime/before-fix-runtime-tests.log:11: trailing whitespace.
++test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) ... 
+validation/rc2/development/runtime/before-fix-runtime-tests.log:20: trailing whitespace.
++test_surrogate_descriptions_fail_before_output_creation (runtime_regression_tests.BuilderContracts.test_surrogate_descriptions_fail_before_output_creation) ... 
+validation/review-fixes-2026-11-24/cleanup/before-regression-panel.stderr.txt:2: trailing whitespace.
++test_owned_failure_cleanup_keeps_files_with_changed_metadata (cleanup_regression_tests.BuilderContracts.test_owned_failure_cleanup_keeps_files_with_changed_metadata) ... 
+validation/uber-native-2026-11-24/native-views/B09/output/skills/meeting-notes-extractor/SKILL.md.txt:28: trailing whitespace.
++> Decision: keep weekly releases.  
+validation/uber-native-2026-11-24/native-views/B09/output/skills/meeting-notes-extractor/SKILL.md.txt:29: trailing whitespace.
++> Action: Alex updates the checklist by Friday.  
+validation/uber-native-2026-11-24/native-views/B09/output/skills/meeting-notes-extractor/SKILL.md.txt:30: trailing whitespace.
++> Action: rotate the guide.  

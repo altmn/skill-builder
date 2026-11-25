@@ -1,0 +1,18 @@
+{
+  "fixture_kind": "synthetic_counterexample_not_a_native_receipt",
+  "case_id": "example-prior-comparison",
+  "intended_payload_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "actual_activation_sha256": null,
+  "actual_activation_reason": "No native activation identity or verified full-read event was exposed.",
+  "answer_checks": "passed",
+  "comparison_outcome": "unscored",
+  "cost_usd": null,
+  "cost_reason": "Provider dollar cost was unavailable.",
+  "cache_condition": "uncontrolled",
+  "session_overlap": true,
+  "attempts": [
+    {"attempt": 1, "outcome": "failed", "reason": "Independent keyword grader rejected a valid paraphrase."},
+    {"attempt": 2, "outcome": "failed", "reason": "Independent verifier requested id instead of rule_id."}
+  ],
+  "rule_traceability_example": {"rule_id": "EVAL-008", "outcome": "not_run"}
+}

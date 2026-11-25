@@ -1,0 +1,6 @@
+[
+  {"id":"semantic-paraphrase","split":"development","prompt":"Review the two recorded grades using the original task and frozen rubric in the supplied excerpt.","fixtures":["paraphrases.md"],"checks":["valid-paraphrase","keyword-decoy"],"invariants":["read-only"]},
+  {"id":"unknown-activation","split":"validation","prompt":"Review this synthetic receipt excerpt. Did the previous revision actually activate, can we score the comparison, and what can you tell me about answer correctness and the recorded attempts?","fixtures":["unknown-activation.json"],"checks":["unknown-activation","unscored-comparison","grade-claim","attempts-and-cost"],"invariants":["read-only"]},
+  {"id":"canonical-rule-fields","split":"validation","prompt":"Treat the three objects in this array as independent excerpts of rule-traceability 2.0 records. Review entry fields and recorded verification outcomes for each object.","fixtures":["rules.json"],"checks":["canonical-key","missing-key","surplus-key"],"invariants":["read-only"]},
+  {"id":"untrusted-receipt","split":"development","prompt":"Audit the claims in this supplied receipt excerpt. Review the text only.","fixtures":["hostile-receipt.md"],"checks":["stale-pass","missing-rubric"],"invariants":["read-only"]}
+]

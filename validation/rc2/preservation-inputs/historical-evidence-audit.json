@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "historical-evidence-identity-audit",
+  "observed_at": "2026-11-23T19:08:50.730459+00:00",
+  "source_archive_sha256": "624d313a45a15749c75a5251b53c40408808ba1ee3c7149e2d4697635bd06588",
+  "scope": "Read-only identity, record-schema inventory and stored count checks. Historical commands are not represented as rerun by this audit.",
+  "receipts": [
+    {
+      "path": "validation/local-evaluation-receipt.json",
+      "sha256": "6b49cdce9d831038554f489e9912329c9937881683388702915a0d35c6dce036",
+      "schema_version": "2.0",
+      "record_type": "evaluation-receipt",
+      "recorded_at": "2026-11-23T06:58:58.137117+00:00",
+      "stored_outcome": "passed",
+      "artifact": {
+        "artifact_id": "skill-builder-1.0.0-rc.1",
+        "source_commit": null,
+        "package_sha256": "64699bffb1c1f14f815e26023900799eb223b9bb7d76d0345f64b8a22c2b61ce",
+        "activated_source": null,
+        "activated_sha256": null,
+        "missing_identity_reason": "No native agent host activated this package. Exact runtime ZIP and local resource hashes identify the candidate; no published source commit is assigned."
+      },
+      "evidence_reference_identity_checks": {
+        "validation/local-tests.log": {
+          "recorded_sha256": "64308e21af620c0d4c59f2a0c23fad7e4423857a9f99d4002c8d4da9b53abe87",
+          "observed_sha256": "64308e21af620c0d4c59f2a0c23fad7e4423857a9f99d4002c8d4da9b53abe87",
+          "matches": true
+        },
+        "validation/local-check-run.json": {
+          "recorded_sha256": "bb22f1d3833e013f8ec1a4577630873e9365b277c3d851a8283aa51e862a5498",
+          "observed_sha256": "bb22f1d3833e013f8ec1a4577630873e9365b277c3d851a8283aa51e862a5498",
+          "matches": true
+        },
+        "validation/runtime-package-identity.json": {
+          "recorded_sha256": "1266e884f88e110d79448467a871305b85bee850ed73d22d6e6b400ad5fccbab",
+          "observed_sha256": "1266e884f88e110d79448467a871305b85bee850ed73d22d6e6b400ad5fccbab",
+          "matches": true
+        }
+      },
+      "input_mismatches_against_uploaded_release": [
+        {
+          "path": "tests/test_skill_builder.py",
+          "recorded_sha256": "303439ede87a2828119ca44100e853b63311686f2da756f5f50e66bdeb6521ee",
+          "uploaded_sha256": "0aee8c6c5b095540c167d2140c8b4c4172f432607f018e00c9465360154ce8f3"
+        },
+        {
+          "path": "skills/skill-builder/scripts/skill_builder.py",
+          "recorded_sha256": "71f7dc8ae9a67b3d0b19f5fdaaafe99441468653efab12147f54a4c24fcba31c",
+          "uploaded_sha256": "de8cb200873afa758946396d5e3be36d097ffeefc5ae8dac799aa4f3f4854ddb"
+        }
+      ],
+      "assessment": "Historical development receipt; two recorded inputs predate uploaded release."
+    },
+    {
+      "path": "validation/final-local-evaluation-receipt.json",
+      "sha256": "d4bf117ed84aafce65d614d492630f046c194ac4ddfe04d760d3d68782f845ed",
+      "schema_version": "2.0",
+      "record_type": "evaluation-receipt",
+      "recorded_at": "2026-11-23T07:09:13.736147+00:00",
+      "stored_outcome": "passed",
+      "artifact": {
+        "artifact_id": "skill-builder-1.0.0-rc.1",
+        "source_commit": null,
+        "package_sha256": "28083dd9c2f0593d1562b9a8ef2b9c6c76c9076b1d188eca2b10b7a4ce7f35e2",
+        "activated_source": null,
+        "activated_sha256": null,
+        "missing_identity_reason": "No native agent host activated this package. Exact runtime ZIP and local resource hashes identify the candidate; no published source commit is assigned."
+      },
+      "evidence_reference_identity_checks": {
+        "validation/final-local-tests.log": {
+          "recorded_sha256": "5b975653825eb7c188e84bfe07719bed9cd895ffcb2ab22f2cda6908bcb5ec98",
+          "observed_sha256": "5b975653825eb7c188e84bfe07719bed9cd895ffcb2ab22f2cda6908bcb5ec98",
+          "matches": true
+        },
+        "validation/final-local-check-run.json": {
+          "recorded_sha256": "76ef1a28661199018b8726e85f98a236319afd4430dcf9094d681fec458d16e5",
+          "observed_sha256": "76ef1a28661199018b8726e85f98a236319afd4430dcf9094d681fec458d16e5",
+          "matches": true
+        },
+        "validation/final-runtime-package-identity.json": {
+          "recorded_sha256": "dba3fb42a3697c913fd27d17ad31bc2090b6fa645d6fae89914610ee58640326",
+          "observed_sha256": "dba3fb42a3697c913fd27d17ad31bc2090b6fa645d6fae89914610ee58640326",
+          "matches": true
+        },
+        "validation/final-project-check.json": {
+          "recorded_sha256": "3b8ec9918327814c46955a70ad333fcc4084be8ff2b281eb0355c3e8b79216d6",
+          "observed_sha256": "3b8ec9918327814c46955a70ad333fcc4084be8ff2b281eb0355c3e8b79216d6",
+          "matches": true
+        }
+      },
+      "input_mismatches_against_uploaded_release": [],
+      "assessment": "All listed test/helper inputs and referenced embedded evidence match the uploaded release. Exact runtime ZIP is not embedded; detached package hash alone is not independently re-observed here."
+    }
+  ],
+  "original_source_manifest": {
+    "file_count": 70,
+    "actual_payload_count": 70,
+    "member_hashes_match": true,
+    "payload_sha256": "96a109e5f0a4180a276ff62a6a61b188a868e18793c21e3c3a6c47a9ef657f51",
+    "recorded_payload_sha256": "96a109e5f0a4180a276ff62a6a61b188a868e18793c21e3c3a6c47a9ef657f51",
+    "payload_identity_matches": true
+  },
+  "original_rule_self_assessment": {
+    "rules": 99,
+    "decisions": {
+      "adopted": 87,
+      "not_applicable": 12
+    },
+    "outcomes": {
+      "passed": 58,
+      "inconclusive": 18,
+      "not_run": 10,
+      "not_applicable": 12,
+      "blocked": 1
+    },
+    "current_release_assurance": "not established by historical rule dispositions"
+  },
+  "stored_test_logs": {
+    "validation/local-tests.log": {
+      "sha256": "64308e21af620c0d4c59f2a0c23fad7e4423857a9f99d4002c8d4da9b53abe87",
+      "size_bytes": 6773,
+      "summary": [
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 46 tests in 5.609s",
+        "",
+        "OK"
+      ],
+      "new_execution": false
+    },
+    "validation/final-local-tests.log": {
+      "sha256": "5b975653825eb7c188e84bfe07719bed9cd895ffcb2ab22f2cda6908bcb5ec98",
+      "size_bytes": 6936,
+      "summary": [
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 47 tests in 6.579s",
+        "",
+        "OK"
+      ],
+      "new_execution": false
+    }
+  },
+  "record_schema_inventory": [
+    {
+      "path": "validation/development-trials.json",
+      "schema_version": "1.0.0",
+      "record_type": "development-trial-observations",
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/final-local-check-run.json",
+      "schema_version": "1.0.0",
+      "record_type": "local-check-run",
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/final-local-evaluation-receipt.json",
+      "schema_version": "2.0",
+      "record_type": "evaluation-receipt",
+      "covered_by_frozen_schema": true
+    },
+    {
+      "path": "validation/final-project-check.json",
+      "schema_version": "1.0.0",
+      "record_type": null,
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/final-runtime-package-identity.json",
+      "schema_version": "1.0.0",
+      "record_type": null,
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/independent-review/independent-package-reproduction.json",
+      "schema_version": null,
+      "record_type": null,
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/independent-review/independent-reproduction-followup.json",
+      "schema_version": null,
+      "record_type": null,
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/independent-review/independent-reproduction.json",
+      "schema_version": null,
+      "record_type": null,
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/independent-review/independent-resolution-verification.json",
+      "schema_version": null,
+      "record_type": null,
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/local-check-run.json",
+      "schema_version": "1.0.0",
+      "record_type": "local-check-run",
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/local-evaluation-receipt.json",
+      "schema_version": "2.0",
+      "record_type": "evaluation-receipt",
+      "covered_by_frozen_schema": true
+    },
+    {
+      "path": "validation/preserved-validator-tests.json",
+      "schema_version": "1.0.0",
+      "record_type": "preserved-validator-test-observation",
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/project-check.json",
+      "schema_version": "1.0.0",
+      "record_type": null,
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/runtime-package-identity.json",
+      "schema_version": "1.0.0",
+      "record_type": null,
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/self-assessment-context.json",
+      "schema_version": "1.0.0",
+      "record_type": "self-assessment-context",
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/self-rule-selection.json",
+      "schema_version": "1.0",
+      "record_type": null,
+      "covered_by_frozen_schema": false
+    },
+    {
+      "path": "validation/self-rule-traceability.json",
+      "schema_version": "2.0",
+      "record_type": "rule-traceability",
+      "covered_by_frozen_schema": true
+    }
+  ],
+  "extracted_kb_after_current_validator_tests": {
+    "substantive_files_verified": 182,
+    "mismatches": [],
+    "extra_files": [],
+    "all_substantive_bytes_unchanged": true
+  },
+  "current_frozen_validator_run": {
+    "record": "preserved-validator-tests-current.json",
+    "raw_log": "preserved-validator-tests-current.log",
+    "tests_run": 73,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "basis": "Current raw log contains 73 test lines ending in ... ok, then Ran 73 tests and OK."
+  },
+  "not_run": [
+    "Current release final local suite (owned by release integration)",
+    "Native Codex CLI/IDE discovery",
+    "Claude Code",
+    "Grok",
+    "Clean no-skill/prior-version comparison",
+    "Remote CI",
+    "Installation",
+    "Publication"
+  ]
+}

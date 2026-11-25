@@ -1,0 +1,19 @@
+{
+  "outcome": "existing_whitespace_preserved",
+  "git_check_exit_code": 2,
+  "paths": [
+    "docs/reviews/2026-11-24-skill-builder-review-evidence/full-local-tests.stderr.txt",
+    "docs/reviews/2026-11-24-skill-builder-review-evidence/stdlib-release-default-temp.stderr.txt",
+    "docs/reviews/2026-11-24-skill-builder-review.md",
+    "evals/execution.json",
+    "evals/fixtures/review-skill/README.md",
+    "evals/fixtures/review-skill/SKILL.md.fixture",
+    "evals/routing.json",
+    "validation/engineering-guide-2026-11-24/post-documentation-checks.json",
+    "validation/public-native-2026-11-24/qa-answer.txt",
+    "validation/rc2/development/runtime/before-fix-runtime-tests.log",
+    "validation/review-fixes-2026-11-24/cleanup/before-regression-panel.stderr.txt",
+    "validation/uber-native-2026-11-24/native-views/B09/output/skills/meeting-notes-extractor/SKILL.md.txt"
+  ],
+  "verification": "Every flagged file is byte-identical to the private reviewed source snapshot. New publication edits passed the private branch diff check. Historical logs, deliberate fixtures and Markdown line breaks are retained rather than rewritten to clear the root-commit check."
+}

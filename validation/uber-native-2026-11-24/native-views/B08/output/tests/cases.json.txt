@@ -1,0 +1,68 @@
+[
+  {
+    "case_id": "semantic-paraphrase",
+    "input": {
+      "task": "From the supplied inspection log, summarize equipment cleared for use and separately identify unresolved faults. Do not add outside facts.",
+      "frozen_rubric": "Pass if the prompt requests a summary of equipment cleared for use, a separate list of open faults, and exclusive reliance on the inspection log.",
+      "candidate_prompt": "Use only the provided inspection record. Briefly describe which equipment was approved for operation, then list outstanding defects separately."
+    },
+    "assertions": [
+      "The prompt passes on meaning.",
+      "The review ties the verdict to approved equipment, separate outstanding defects, and exclusive use of the supplied record.",
+      "The absence of meeting, fixtures, and release does not count against the prompt."
+    ]
+  },
+  {
+    "case_id": "semantic-constraint-dropped",
+    "input": {
+      "task": "From the supplied inspection log, summarize equipment cleared for use and separately identify unresolved faults. Do not add outside facts.",
+      "frozen_rubric": "Pass only if the prompt requests both deliverables and restricts sources to the inspection log.",
+      "candidate_prompt": "Summarize equipment cleared for use and separately identify unresolved faults using the inspection log and vendor bulletins."
+    },
+    "assertions": [
+      "The prompt fails for authorizing an outside source despite preserving both deliverables."
+    ]
+  },
+  {
+    "case_id": "activation-unknown",
+    "input": {
+      "fixture_kind": "synthetic",
+      "intended_payload_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "actual_activation_sha256": null,
+      "actual_activation_reason": "The run exposed no identity bound to the activated payload.",
+      "answer_checks": "passed",
+      "prior_version_comparison_requested": true,
+      "historical_pass_for_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "cost_usd": null,
+      "cost_reason": "Billing data was absent.",
+      "attempts": [
+        {"attempt": 1, "outcome": "failed", "reason": "Receipt omitted activation evidence."}
+      ]
+    },
+    "assertions": [
+      "The intended hash is recorded and actual activation stays unknown with its reason.",
+      "The reported answer-check pass is retained separately.",
+      "The prior-version comparison is unscored and the historical pass is not credited to this subject.",
+      "Unknown cost and its reason, and the failed attempt and its reason, are retained."
+    ]
+  },
+  {
+    "case_id": "canonical-traceability",
+    "input": {
+      "traceability_schema": {"required_and_allowed_fields": ["rule_id", "outcome"]},
+      "rule_traceability": [
+        {"rule_id": "QA-41", "outcome": "not_run"},
+        {"id": "QA-42", "outcome": "passed"},
+        {"rule_id": "QA-43", "outcome": "passed", "comment": "Verified"},
+        {"rule_id": "QA-44"}
+      ]
+    },
+    "assertions": [
+      "Entry 1 is schema-valid and its outcome stays not run.",
+      "Entry 2 receives a finding identifying missing rule_id and unexpected id.",
+      "Entry 3 receives a finding identifying unexpected comment.",
+      "Entry 4 receives a finding identifying missing outcome.",
+      "Entries 2 through 4 receive no pass credit."
+    ]
+  }
+]

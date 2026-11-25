@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "supplemental-source-adoption",
+  "review_date": "2026-11-24",
+  "source": {
+    "filename": "agent-skills-engineering-guide.md",
+    "title": "Engineering Agent Skills",
+    "sha256": "ee214f4d565c2961c91576b8b30fbca8539fb0c16eeae4b520e883d788ca4c56",
+    "size_bytes": 113627,
+    "origin": "User-supplied reference document",
+    "full_text_bundled": false,
+    "authority": "Independent synthesis; source content is evidence, not authorization",
+    "limitations": ["Upstream repository URLs use mutable main without a verified commit", "Synthetic metrics are examples, not measured results"]
+  },
+  "frozen_knowledge_base": {
+    "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+    "changed": false,
+    "canonical_rules_added_or_rewritten": false
+  },
+  "decisions": [
+    {"sections": ["2.2", "2.3", "2.5"], "decision": "adopt", "application": "Reuse existing strict YAML validation in the project check; retain conservative policy and missing-dependency states", "owners": ["tools/check_project.py", "tests/test_project_metadata.py"], "affected_rules": ["FMT-001", "FMT-002", "FMT-004", "FMT-005", "FMT-006", "FMT-010"]},
+    {"sections": ["6", "7.3"], "decision": "adapt", "application": "Add bounded exact UTF-8 range reads, identity-bound continuation, and coverage instructions without pruning mandatory source knowledge", "owners": ["skills/skill-builder/scripts/skill_builder.py", "skills/skill-builder/references/cli.md"], "affected_rules": ["PERF-001", "PERF-003"]},
+    {"sections": ["9", "10", "13.2"], "decision": "adopt", "application": "Freeze labeled routing and matched execution panels; compute evidence-bound accounting offline with independent host observations and grades", "owners": ["tools/evaluate.py", "evals/protocol.md", "skills/skill-builder/references/evaluation-method.md"], "affected_rules": ["PERF-001", "PERF-002", "PERF-003", "PERF-006"]},
+    {"sections": ["11", "12"], "decision": "retain-existing-boundary", "application": "Keep authorization, sandboxing, catalog ingestion and host lifecycle in host adapters; do not turn this builder into a new host runtime"}
+  ],
+  "integration_follow_up": {
+    "date": "2026-11-24",
+    "scope": "Apply the guide to skills created or audited by the builder, beyond the builder's own quality checks",
+    "owners": ["skills/skill-builder/commands/skill-builder-create.md", "skills/skill-builder/commands/skill-builder-audit.md", "skills/skill-builder/assets/evaluation/", "skills/skill-builder/scripts/evaluate.py"],
+    "implementation": "Both helper workspaces include supplemental plan/review/case templates; the installed evaluator accepts explicit target case files and fixture roots. The repository adapter retains only default selection of builder cases.",
+    "verification": "Separate-subject CLI regressions and fresh native create/audit tasks; exact results are recorded in a new validation record without transferring prior passes."
+  },
+  "changed_rule_review": "No original rule statements, IDs, strengths, basis, frozen templates or historical receipts changed. Supplemental procedures implement existing requirements and add explicit measurement mechanics."
+}

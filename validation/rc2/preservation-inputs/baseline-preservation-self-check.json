@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "current-release-preservation-audit",
+  "observed_at": "2026-11-23T19:09:47.673000+00:00",
+  "outcome": "passed",
+  "original": {
+    "kind": "zip",
+    "path": "/workspace/scratch/ce88fda257c5/upload/skill-builder-1.0.0-rc.1-source(2).zip",
+    "root": "skill-builder-1.0.0-rc.1",
+    "sha256": "624d313a45a15749c75a5251b53c40408808ba1ee3c7149e2d4697635bd06588",
+    "size_bytes": 12685526,
+    "entry_count": 71,
+    "file_count": 71
+  },
+  "candidate": {
+    "kind": "zip",
+    "path": "/workspace/scratch/ce88fda257c5/upload/skill-builder-1.0.0-rc.1-source(2).zip",
+    "root": "skill-builder-1.0.0-rc.1",
+    "sha256": "624d313a45a15749c75a5251b53c40408808ba1ee3c7149e2d4697635bd06588",
+    "size_bytes": 12685526,
+    "entry_count": 71,
+    "file_count": 71
+  },
+  "candidate_version": "1.0.0-rc.1",
+  "checks": {
+    "all_original_file_paths_retained": true,
+    "frozen_kb_archive_exact": true,
+    "frozen_kb_manifest_exact": true,
+    "historical_validation_bytes_unchanged": true,
+    "generated_source_manifest_matches_candidate": true
+  },
+  "missing_original_paths": [],
+  "modified_original_files": [],
+  "added_files": [],
+  "historical_validation_files_checked": 25,
+  "changed_historical_validation_files": [],
+  "source_manifest": {
+    "outcome": "passed",
+    "version": "1.0.0-rc.1",
+    "declared_files": 70,
+    "observed_files": 70,
+    "recorded_payload_sha256": "96a109e5f0a4180a276ff62a6a61b188a868e18793c21e3c3a6c47a9ef657f51",
+    "observed_payload_sha256": "96a109e5f0a4180a276ff62a6a61b188a868e18793c21e3c3a6c47a9ef657f51",
+    "missing_or_changed": [],
+    "undeclared": []
+  },
+  "kb": {
+    "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+    "archive_size_bytes": 11572664,
+    "entry_count": 454,
+    "substantive_file_count": 182,
+    "substantive_bytes": 76965199,
+    "all_members_rehashed": true
+  },
+  "limits": [
+    "Retained paths and exact immutable/history bytes are established; changed prose/code still needs substantive review.",
+    "No candidate code or host integration was executed by this comparison.",
+    "Historical validation README is a current index and may change; historical results themselves are compared byte for byte."
+  ]
+}

@@ -1,0 +1,500 @@
+{
+  "source": "knowledge-base.zip!catalogs/requirements.json",
+  "rules": [
+    {
+      "rule_id": "FMT-001",
+      "basis": "specification",
+      "strength": "required"
+    },
+    {
+      "rule_id": "FMT-002",
+      "basis": "specification",
+      "strength": "required"
+    },
+    {
+      "rule_id": "FMT-003",
+      "basis": "specification",
+      "strength": "required"
+    },
+    {
+      "rule_id": "FMT-004",
+      "basis": "specification",
+      "strength": "required"
+    },
+    {
+      "rule_id": "FMT-005",
+      "basis": "specification",
+      "strength": "required"
+    },
+    {
+      "rule_id": "FMT-006",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "FMT-007",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "FMT-008",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "FMT-009",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "FMT-010",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "INS-001",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "INS-002",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "INS-003",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "INS-004",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "INS-005",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "INS-006",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "INS-007",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "INS-008",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "INS-009",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "INS-010",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "INS-011",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "INS-012",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "ARC-001",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "ARC-002",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "ARC-003",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "ARC-004",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "ARC-005",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "ARC-006",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "ARC-007",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "ARC-008",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "HOST-001",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "HOST-002",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "HOST-003",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "HOST-004",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "HOST-005",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "HOST-006",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "HOST-007",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "CMD-001",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "CMD-002",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "CMD-003",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "CMD-004",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "CMD-005",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "CMD-006",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "CMD-007",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "CMD-008",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "CMD-009",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "CMD-010",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "SEC-001",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "SEC-002",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "SEC-003",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "SEC-004",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "SEC-005",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "SEC-006",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "SEC-007",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "SEC-008",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "SEC-009",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "SEC-010",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "SEC-011",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "SEC-012",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "EVAL-001",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "EVAL-002",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "EVAL-003",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "EVAL-004",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "EVAL-005",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "EVAL-006",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "EVAL-007",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "EVAL-008",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "EVAL-009",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "EVAL-010",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "EVAL-011",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "EVAL-012",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "EVAL-013",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "EVAL-014",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "PERF-001",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "PERF-002",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "PERF-003",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "PERF-004",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "PERF-005",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "PERF-006",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "LIFE-001",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "LIFE-002",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "LIFE-003",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "LIFE-004",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "LIFE-005",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "LIFE-006",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "LIFE-007",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "LIFE-008",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "LIFE-009",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "LIFE-010",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "LIFE-011",
+      "basis": "project",
+      "strength": "conditional"
+    },
+    {
+      "rule_id": "LIFE-012",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "OSS-001",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "OSS-002",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "OSS-003",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "OSS-004",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "OSS-005",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "OSS-006",
+      "basis": "project",
+      "strength": "recommended"
+    },
+    {
+      "rule_id": "OSS-007",
+      "basis": "project",
+      "strength": "required"
+    },
+    {
+      "rule_id": "OSS-008",
+      "basis": "project",
+      "strength": "recommended"
+    }
+  ]
+}

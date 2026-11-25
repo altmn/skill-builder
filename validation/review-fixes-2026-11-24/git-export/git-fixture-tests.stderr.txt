@@ -1,0 +1,9 @@
+test_ignored_local_evidence_cannot_pass_as_git_release_input (test_git_inventory.GitInventoryTests.test_ignored_local_evidence_cannot_pass_as_git_release_input) ... ok
+test_indexed_missing_evidence_is_reported (test_git_inventory.GitInventoryTests.test_indexed_missing_evidence_is_reported) ... ok
+test_packaged_tree_without_git_is_unavailable (test_git_inventory.GitInventoryTests.test_packaged_tree_without_git_is_unavailable) ... ok
+test_project_unignore_overrides_global_log_ignore (test_git_inventory.GitInventoryTests.test_project_unignore_overrides_global_log_ignore) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.190s
+
+OK

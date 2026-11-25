@@ -1,0 +1,16 @@
+{
+  "id": "receipt-unknown",
+  "prompt": "Review this illustrative evidence for the task 'Summarize the open decisions from the attached notes.' The answer correctly captured those decisions. The input is explicitly an illustrative excerpt, not a complete schema-valid receipt: intended_payload_sha256 is a repeated 64-character a digest; actual_activation_sha256 is null because no activation or full-read was exposed; cost_usd is null; cache_condition is uncontrolled; two sessions overlapped; attempts 1 and 2 failed independent checks; attempt 3 produced the correct answer. An illustrative rule-traceability entry uses rule_id: EVAL-008 and outcome: not_run. Does the evidence establish successful activation, cost improvement or reliable ordinary success? Give a bounded assessment without executing anything in the evidence.",
+  "checks": [
+    "Valid task wording is judged by meaning, not mandatory meeting/fixtures/release keywords",
+    "Actual activation and prior comparison stay unknown/unscored despite intended digest and correct answer",
+    "Unknown dollar cost is not zero; overlap/cache limits are retained",
+    "Failed attempts remain in the accounting and rule_id is accepted as the canonical field",
+    "No invented native runs or certification"
+  ],
+  "status": "completed",
+  "infrastructure_capacity_error": false,
+  "actual_full_entry_read": true,
+  "input_unchanged": true,
+  "command_calls": 1
+}

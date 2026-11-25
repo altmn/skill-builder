@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ROUTE-DEV-POS",
+    "split": "development",
+    "should_trigger": true,
+    "prompt": "REPLACE: a realistic request that needs SUBJECT's specialized procedure.",
+    "rationale": "REPLACE: why the task requires this skill."
+  },
+  {
+    "id": "ROUTE-DEV-NEG",
+    "split": "development",
+    "should_trigger": false,
+    "prompt": "REPLACE: a near-miss request sharing vocabulary but outside SUBJECT's scope.",
+    "rationale": "REPLACE: the adjacent task and exclusion."
+  },
+  {
+    "id": "ROUTE-HELD-POS",
+    "split": "validation",
+    "should_trigger": true,
+    "prompt": "REPLACE: a fresh indirect positive request for SUBJECT.",
+    "rationale": "REPLACE: expected benefit beyond keyword overlap."
+  },
+  {
+    "id": "ROUTE-HELD-NEG",
+    "split": "validation",
+    "should_trigger": false,
+    "prompt": "REPLACE: a fresh negative or explicit opt-out for SUBJECT.",
+    "rationale": "REPLACE: exclusion or opt-out rationale."
+  }
+]

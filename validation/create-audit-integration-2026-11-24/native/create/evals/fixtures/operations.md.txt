@@ -1,0 +1,5 @@
+## Operations
+
+- Open question: what retention period should we use?
+- Agreed: keep manual review for imports.
+- Action: Mina will review the import checklist by 2027-02-03.

@@ -1,0 +1,763 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "skill-builder-panel-summary",
+  "plan_sha256": "34d4693ee91f46e40ef2939c297be43ede7262684fec9a6f2c2c13a1171f0437",
+  "outcome": "incomplete",
+  "scheduled": 96,
+  "recorded": 0,
+  "scored": 0,
+  "missing": [
+    [
+      "execution",
+      "MD-E1",
+      "automatic",
+      1
+    ],
+    [
+      "execution",
+      "MD-E1",
+      "automatic",
+      2
+    ],
+    [
+      "execution",
+      "MD-E1",
+      "automatic",
+      3
+    ],
+    [
+      "execution",
+      "MD-E1",
+      "explicit",
+      1
+    ],
+    [
+      "execution",
+      "MD-E1",
+      "explicit",
+      2
+    ],
+    [
+      "execution",
+      "MD-E1",
+      "explicit",
+      3
+    ],
+    [
+      "execution",
+      "MD-E1",
+      "no_skill",
+      1
+    ],
+    [
+      "execution",
+      "MD-E1",
+      "no_skill",
+      2
+    ],
+    [
+      "execution",
+      "MD-E1",
+      "no_skill",
+      3
+    ],
+    [
+      "execution",
+      "MD-E2",
+      "automatic",
+      1
+    ],
+    [
+      "execution",
+      "MD-E2",
+      "automatic",
+      2
+    ],
+    [
+      "execution",
+      "MD-E2",
+      "automatic",
+      3
+    ],
+    [
+      "execution",
+      "MD-E2",
+      "explicit",
+      1
+    ],
+    [
+      "execution",
+      "MD-E2",
+      "explicit",
+      2
+    ],
+    [
+      "execution",
+      "MD-E2",
+      "explicit",
+      3
+    ],
+    [
+      "execution",
+      "MD-E2",
+      "no_skill",
+      1
+    ],
+    [
+      "execution",
+      "MD-E2",
+      "no_skill",
+      2
+    ],
+    [
+      "execution",
+      "MD-E2",
+      "no_skill",
+      3
+    ],
+    [
+      "execution",
+      "MD-E3",
+      "automatic",
+      1
+    ],
+    [
+      "execution",
+      "MD-E3",
+      "automatic",
+      2
+    ],
+    [
+      "execution",
+      "MD-E3",
+      "automatic",
+      3
+    ],
+    [
+      "execution",
+      "MD-E3",
+      "explicit",
+      1
+    ],
+    [
+      "execution",
+      "MD-E3",
+      "explicit",
+      2
+    ],
+    [
+      "execution",
+      "MD-E3",
+      "explicit",
+      3
+    ],
+    [
+      "execution",
+      "MD-E3",
+      "no_skill",
+      1
+    ],
+    [
+      "execution",
+      "MD-E3",
+      "no_skill",
+      2
+    ],
+    [
+      "execution",
+      "MD-E3",
+      "no_skill",
+      3
+    ],
+    [
+      "execution",
+      "MD-E4",
+      "automatic",
+      1
+    ],
+    [
+      "execution",
+      "MD-E4",
+      "automatic",
+      2
+    ],
+    [
+      "execution",
+      "MD-E4",
+      "automatic",
+      3
+    ],
+    [
+      "execution",
+      "MD-E4",
+      "explicit",
+      1
+    ],
+    [
+      "execution",
+      "MD-E4",
+      "explicit",
+      2
+    ],
+    [
+      "execution",
+      "MD-E4",
+      "explicit",
+      3
+    ],
+    [
+      "execution",
+      "MD-E4",
+      "no_skill",
+      1
+    ],
+    [
+      "execution",
+      "MD-E4",
+      "no_skill",
+      2
+    ],
+    [
+      "execution",
+      "MD-E4",
+      "no_skill",
+      3
+    ],
+    [
+      "execution",
+      "MD-E5",
+      "automatic",
+      1
+    ],
+    [
+      "execution",
+      "MD-E5",
+      "automatic",
+      2
+    ],
+    [
+      "execution",
+      "MD-E5",
+      "automatic",
+      3
+    ],
+    [
+      "execution",
+      "MD-E5",
+      "explicit",
+      1
+    ],
+    [
+      "execution",
+      "MD-E5",
+      "explicit",
+      2
+    ],
+    [
+      "execution",
+      "MD-E5",
+      "explicit",
+      3
+    ],
+    [
+      "execution",
+      "MD-E5",
+      "no_skill",
+      1
+    ],
+    [
+      "execution",
+      "MD-E5",
+      "no_skill",
+      2
+    ],
+    [
+      "execution",
+      "MD-E5",
+      "no_skill",
+      3
+    ],
+    [
+      "execution",
+      "MD-E6",
+      "automatic",
+      1
+    ],
+    [
+      "execution",
+      "MD-E6",
+      "automatic",
+      2
+    ],
+    [
+      "execution",
+      "MD-E6",
+      "automatic",
+      3
+    ],
+    [
+      "execution",
+      "MD-E6",
+      "explicit",
+      1
+    ],
+    [
+      "execution",
+      "MD-E6",
+      "explicit",
+      2
+    ],
+    [
+      "execution",
+      "MD-E6",
+      "explicit",
+      3
+    ],
+    [
+      "execution",
+      "MD-E6",
+      "no_skill",
+      1
+    ],
+    [
+      "execution",
+      "MD-E6",
+      "no_skill",
+      2
+    ],
+    [
+      "execution",
+      "MD-E6",
+      "no_skill",
+      3
+    ],
+    [
+      "execution",
+      "MD-E7",
+      "automatic",
+      1
+    ],
+    [
+      "execution",
+      "MD-E7",
+      "automatic",
+      2
+    ],
+    [
+      "execution",
+      "MD-E7",
+      "automatic",
+      3
+    ],
+    [
+      "execution",
+      "MD-E7",
+      "explicit",
+      1
+    ],
+    [
+      "execution",
+      "MD-E7",
+      "explicit",
+      2
+    ],
+    [
+      "execution",
+      "MD-E7",
+      "explicit",
+      3
+    ],
+    [
+      "execution",
+      "MD-E7",
+      "no_skill",
+      1
+    ],
+    [
+      "execution",
+      "MD-E7",
+      "no_skill",
+      2
+    ],
+    [
+      "execution",
+      "MD-E7",
+      "no_skill",
+      3
+    ],
+    [
+      "execution",
+      "MD-E8",
+      "automatic",
+      1
+    ],
+    [
+      "execution",
+      "MD-E8",
+      "automatic",
+      2
+    ],
+    [
+      "execution",
+      "MD-E8",
+      "automatic",
+      3
+    ],
+    [
+      "execution",
+      "MD-E8",
+      "explicit",
+      1
+    ],
+    [
+      "execution",
+      "MD-E8",
+      "explicit",
+      2
+    ],
+    [
+      "execution",
+      "MD-E8",
+      "explicit",
+      3
+    ],
+    [
+      "execution",
+      "MD-E8",
+      "no_skill",
+      1
+    ],
+    [
+      "execution",
+      "MD-E8",
+      "no_skill",
+      2
+    ],
+    [
+      "execution",
+      "MD-E8",
+      "no_skill",
+      3
+    ],
+    [
+      "routing",
+      "MD-R1",
+      "automatic",
+      1
+    ],
+    [
+      "routing",
+      "MD-R1",
+      "automatic",
+      2
+    ],
+    [
+      "routing",
+      "MD-R1",
+      "automatic",
+      3
+    ],
+    [
+      "routing",
+      "MD-R2",
+      "automatic",
+      1
+    ],
+    [
+      "routing",
+      "MD-R2",
+      "automatic",
+      2
+    ],
+    [
+      "routing",
+      "MD-R2",
+      "automatic",
+      3
+    ],
+    [
+      "routing",
+      "MD-R3",
+      "automatic",
+      1
+    ],
+    [
+      "routing",
+      "MD-R3",
+      "automatic",
+      2
+    ],
+    [
+      "routing",
+      "MD-R3",
+      "automatic",
+      3
+    ],
+    [
+      "routing",
+      "MD-R4",
+      "automatic",
+      1
+    ],
+    [
+      "routing",
+      "MD-R4",
+      "automatic",
+      2
+    ],
+    [
+      "routing",
+      "MD-R4",
+      "automatic",
+      3
+    ],
+    [
+      "routing",
+      "MD-R5",
+      "automatic",
+      1
+    ],
+    [
+      "routing",
+      "MD-R5",
+      "automatic",
+      2
+    ],
+    [
+      "routing",
+      "MD-R5",
+      "automatic",
+      3
+    ],
+    [
+      "routing",
+      "MD-R6",
+      "automatic",
+      1
+    ],
+    [
+      "routing",
+      "MD-R6",
+      "automatic",
+      2
+    ],
+    [
+      "routing",
+      "MD-R6",
+      "automatic",
+      3
+    ],
+    [
+      "routing",
+      "MD-R7",
+      "automatic",
+      1
+    ],
+    [
+      "routing",
+      "MD-R7",
+      "automatic",
+      2
+    ],
+    [
+      "routing",
+      "MD-R7",
+      "automatic",
+      3
+    ],
+    [
+      "routing",
+      "MD-R8",
+      "automatic",
+      1
+    ],
+    [
+      "routing",
+      "MD-R8",
+      "automatic",
+      2
+    ],
+    [
+      "routing",
+      "MD-R8",
+      "automatic",
+      3
+    ]
+  ],
+  "unscored": [],
+  "observed_invariant_failures": [],
+  "routing": {
+    "development": {
+      "trial_level": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "scored": 0,
+        "precision": null,
+        "recall": null,
+        "false_activation_rate": null,
+        "f1": null
+      },
+      "query_majority": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "scored": 0,
+        "precision": null,
+        "recall": null,
+        "false_activation_rate": null,
+        "f1": null
+      },
+      "scheduled_queries": 4,
+      "unscored_queries": 4
+    },
+    "validation": {
+      "trial_level": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "scored": 0,
+        "precision": null,
+        "recall": null,
+        "false_activation_rate": null,
+        "f1": null
+      },
+      "query_majority": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "scored": 0,
+        "precision": null,
+        "recall": null,
+        "false_activation_rate": null,
+        "f1": null
+      },
+      "scheduled_queries": 4,
+      "unscored_queries": 4
+    }
+  },
+  "execution": {
+    "no_skill": {
+      "scored": 0,
+      "successes": 0,
+      "success_rate": null,
+      "invariant_failures": 0,
+      "latency_seconds": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      },
+      "input_tokens": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      },
+      "output_tokens": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      },
+      "cost_usd": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      }
+    },
+    "explicit": {
+      "scored": 0,
+      "successes": 0,
+      "success_rate": null,
+      "invariant_failures": 0,
+      "latency_seconds": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      },
+      "input_tokens": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      },
+      "output_tokens": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      },
+      "cost_usd": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      }
+    },
+    "automatic": {
+      "scored": 0,
+      "successes": 0,
+      "success_rate": null,
+      "invariant_failures": 0,
+      "latency_seconds": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      },
+      "input_tokens": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      },
+      "output_tokens": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      },
+      "cost_usd": {
+        "mean": null,
+        "known": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "paired_comparisons": {
+    "explicit_minus_no_skill": {
+      "matched_trials": 0,
+      "success_rate_difference": null
+    },
+    "automatic_minus_no_skill": {
+      "matched_trials": 0,
+      "success_rate_difference": null
+    },
+    "explicit_minus_previous": {
+      "matched_trials": 0,
+      "success_rate_difference": null
+    }
+  },
+  "resource_usage": {
+    "latency_seconds": {
+      "known_total": null,
+      "known": 0,
+      "unknown": 0
+    },
+    "input_tokens": {
+      "known_total": null,
+      "known": 0,
+      "unknown": 0
+    },
+    "output_tokens": {
+      "known_total": null,
+      "known": 0,
+      "unknown": 0
+    },
+    "cost_usd": {
+      "known_total": null,
+      "known": 0,
+      "unknown": 0
+    }
+  },
+  "limitations": [
+    "Normalized traces and semantic grades require an independent trusted adapter/reviewer; hashes verify identity, not truth.",
+    "Repeated trials are clustered by prompt; these descriptive differences are not confidence intervals or a release certification."
+  ]
+}

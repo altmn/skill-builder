@@ -1,0 +1,22 @@
+[
+  {
+    "path": "target/README.md.txt",
+    "original_sha256": "27e64419777de03a640f6fbd6b8af575b8bcfdc13e4764676b589b40862c486d",
+    "derived_sha256": "27e64419777de03a640f6fbd6b8af575b8bcfdc13e4764676b589b40862c486d"
+  },
+  {
+    "path": "target/SKILL.md.txt",
+    "original_sha256": "1a553362078f3db5aedc12fe439fa2959865b98ef1a4009f340af822734ba9e7",
+    "derived_sha256": "1a553362078f3db5aedc12fe439fa2959865b98ef1a4009f340af822734ba9e7"
+  },
+  {
+    "path": "target/evidence/unknown-activation.json.txt",
+    "original_sha256": "4a772857fb474903b4b33d64a06dceec883e2e326703f603e19b435a2f08863f",
+    "derived_sha256": "4a772857fb474903b4b33d64a06dceec883e2e326703f603e19b435a2f08863f"
+  },
+  {
+    "path": "answer.txt",
+    "original_sha256": "2d1da33842d647919bebddb4f2eb1b653782b1a6d6f4eee3543c061ee5bc68d1",
+    "derived_sha256": "2d1da33842d647919bebddb4f2eb1b653782b1a6d6f4eee3543c061ee5bc68d1"
+  }
+]

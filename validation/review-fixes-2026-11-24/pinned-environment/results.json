@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "pinned-validation-observation-companion",
+  "date": "2026-11-24",
+  "authorization": "User explicitly authorized temporary pinned dependency installation and full validation.",
+  "python": "3.15.2 (main, Oct 25 2026, 16:57:51) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "dependencies": {
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0",
+    "attrs": "26.1.0",
+    "jsonschema-specifications": "2025.9.1",
+    "rpds-py": "2026.6.3",
+    "typing_extensions": "4.16.0"
+  },
+  "results": [
+    {
+      "name": "full-tests",
+      "argv": [
+        "/private/tmp/skill-builder-pinned-validation-20261124/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "required-project",
+      "argv": [
+        "/private/tmp/skill-builder-pinned-validation-20261124/bin/python",
+        "-I",
+        "-B",
+        "tools/check_project.py",
+        "--require-validators"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "stdlib-release",
+      "argv": [
+        "/private/tmp/skill-builder-pinned-validation-20261124/bin/python",
+        "-I",
+        "-B",
+        "-S",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_release.py",
+        "-v"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "preservation",
+      "argv": [
+        "/private/tmp/skill-builder-pinned-validation-20261124/bin/python",
+        "-I",
+        "-B",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "kb",
+        "verify"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "canonical-record",
+      "argv": [
+        "/private/tmp/skill-builder-pinned-validation-20261124/bin/python",
+        "-I",
+        "-B",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "check",
+        "--record",
+        "validation/rc2/evaluation-receipt.json"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "pip-check",
+      "argv": [
+        "/private/tmp/skill-builder-pinned-validation-20261124/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0
+    }
+  ],
+  "outcome": "passed",
+  "native_hosts": "not_run"
+}

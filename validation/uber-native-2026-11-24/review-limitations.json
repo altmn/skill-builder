@@ -1,0 +1,13 @@
+{
+  "notes_checker_limit": "All three generated notes checkers use constrained wording anchors; semantic-equivalent answers still require independent review. This did not change the frozen primary rubric.",
+  "receipt_baseline_limit": "The compact unassisted receipt skill assumes two traceability fields without a supplied schema; no universal canonical conformance is established.",
+  "knowledge_coverage": "Some source loading was partial. Field-task outcomes do not certify full semantic reading/application of all 99 rules.",
+  "adapter_deviation": "Audit materialization used ./target instead of frontmatter package directory names, identically across conditions. Additional true mismatch observations earned no primary credit.",
+  "measurement_errors_retained": [
+    "Initial prompt-inventory substring assertion matched the private directory prefix.",
+    "Several analysis wrapper commands were rejected by supply-chain review; direct reviewed executables and file APIs completed diagnostics.",
+    "The first inventory check found its own newly created output plus 18 inert target-view files omitted by the global target/ ignore rule. Staging the report left the 18 views missing. Scoped force-adds preserved those reviewed evidence files; original failed inventory.json retained, then a fresh check passed."
+  ],
+  "unscored_failure": "One receipt-unknown probe hit selected-model capacity before any entrypoint read/command and reached the frozen deadline. Empty answer, unknown usage, no retry.",
+  "causal_limits": "One trial on four public tasks plus LLM semantic judgment; narrow citation advantage may reflect ordinary run variation. New companion helper adoption remains unobserved."
+}

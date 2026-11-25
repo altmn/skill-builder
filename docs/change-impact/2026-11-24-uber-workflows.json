@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "Apply six Uber-derived workflow improvements through existing create/audit architecture with independent evidence and bounded offline companions.",
+  "reviewed_paths": [
+    ".github/workflows/ci.yml",
+    "CHANGELOG.md",
+    "README.md",
+    "docs/architecture.md",
+    "docs/uber-adoption.json",
+    "evals/README.md",
+    "evals/field/README.md",
+    "evals/field/execution.json",
+    "evals/field/fixtures/incident-README.md.fixture",
+    "evals/field/fixtures/incident-SKILL.md.fixture",
+    "evals/field/fixtures/incident-setup.py.fixture",
+    "evals/field/fixtures/notes-contract.md.fixture",
+    "evals/field/fixtures/receipt examples/unknown-activation.json.fixture",
+    "evals/field/fixtures/reviewer-README.md.fixture",
+    "evals/field/fixtures/reviewer-SKILL.md.fixture",
+    "evals/field/fixtures/reviewer-contract.md.fixture",
+    "evals/field/routing.json",
+    "evals/protocol.md",
+    "skills/skill-builder/assets/evaluation/ABLATION.md.template",
+    "skills/skill-builder/assets/evaluation/PLAN.md.template",
+    "skills/skill-builder/assets/evaluation/REVIEW.md.template",
+    "skills/skill-builder/assets/evaluation/contract.json.template",
+    "skills/skill-builder/assets/evaluation/environment.json.template",
+    "skills/skill-builder/assets/evaluation/execution.json.template",
+    "skills/skill-builder/assets/evaluation/papercut.json.template",
+    "skills/skill-builder/commands/skill-builder-audit.md",
+    "skills/skill-builder/commands/skill-builder-create.md",
+    "skills/skill-builder/references/cli.md",
+    "skills/skill-builder/references/evaluation-method.md",
+    "skills/skill-builder/references/hosts/claude-code.md",
+    "skills/skill-builder/references/hosts/codex.md",
+    "skills/skill-builder/references/hosts/custom-host.md",
+    "skills/skill-builder/references/hosts/grok.md",
+    "skills/skill-builder/references/uber-workflows.md",
+    "skills/skill-builder/scripts/ablate.py",
+    "skills/skill-builder/scripts/evaluate.py",
+    "skills/skill-builder/scripts/review.py",
+    "skills/skill-builder/scripts/skill_builder.py",
+    "tests/test_target_workflows.py",
+    "tests/test_uber_workflows.py",
+    "validation/README.md",
+    "validation/uber-workflows-2026-11-24/README.md",
+    "validation/uber-workflows-2026-11-24/checks/core-final.json",
+    "validation/uber-workflows-2026-11-24/checks/core-final.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/core-final.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/evaluation-stdlib.json",
+    "validation/uber-workflows-2026-11-24/checks/evaluation-stdlib.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/evaluation-stdlib.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/full-final.json",
+    "validation/uber-workflows-2026-11-24/checks/full-final.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/full-final.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/full.json",
+    "validation/uber-workflows-2026-11-24/checks/full.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/full.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/impact-final.json",
+    "validation/uber-workflows-2026-11-24/checks/impact-final.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/impact-final.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/inventory-final.json",
+    "validation/uber-workflows-2026-11-24/checks/inventory-final.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/inventory-final.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/release-stdlib.json",
+    "validation/uber-workflows-2026-11-24/checks/release-stdlib.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/release-stdlib.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/required-final.json",
+    "validation/uber-workflows-2026-11-24/checks/required-final.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/required-final.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/uber-python310-final.json",
+    "validation/uber-workflows-2026-11-24/checks/uber-python310-final.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/uber-python310-final.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/uber-python310.json",
+    "validation/uber-workflows-2026-11-24/checks/uber-python310.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/uber-python310.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/uber-stdlib-final.json",
+    "validation/uber-workflows-2026-11-24/checks/uber-stdlib-final.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/uber-stdlib-final.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/uber-stdlib.json",
+    "validation/uber-workflows-2026-11-24/checks/uber-stdlib.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/uber-stdlib.stdout.txt",
+    "validation/uber-workflows-2026-11-24/checks/whitespace-final.json",
+    "validation/uber-workflows-2026-11-24/checks/whitespace-final.stderr.txt",
+    "validation/uber-workflows-2026-11-24/checks/whitespace-final.stdout.txt",
+    "validation/uber-workflows-2026-11-24/field-environment.json",
+    "validation/uber-workflows-2026-11-24/field-panel/observations.json",
+    "validation/uber-workflows-2026-11-24/field-panel/plan.json",
+    "validation/uber-workflows-2026-11-24/field-preparation.json",
+    "validation/uber-workflows-2026-11-24/implementation-identity.json",
+    "validation/uber-workflows-2026-11-24/prepare-field.py.txt",
+    "validation/uber-workflows-2026-11-24/run-check.py.txt"
+  ],
+  "workflows": {
+    "create": {
+      "decision": "updated",
+      "reason": "Creation now exports requirement, incident and ablation worksheets and teaches domain trajectories, annotated field cases, independent comparisons and advisory review. Shared installed helpers implement mechanics without inventing subject quality.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-create.md",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "skills/skill-builder/scripts/evaluate.py",
+        "skills/skill-builder/scripts/review.py",
+        "skills/skill-builder/scripts/ablate.py"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "139 local tests passed, including both subject helper workflows, runtime-only new companion CLIs, preserved target state, denied paths and synthetic accounting. Native subject benefit, statistical improvement and maintained-host support remain unmeasured.",
+        "commands": [
+          "PINNED_ENV/bin/python -I -B -m unittest discover -s tests -v",
+          "python3 -I -B -S -m unittest discover -s tests -p test_uber_workflows.py -v",
+          "python3 -I -B validation/uber-workflows-2026-11-24/prepare-field.py.txt"
+        ],
+        "evidence": [
+          "validation/uber-workflows-2026-11-24/checks/full-final.json",
+          "validation/uber-workflows-2026-11-24/checks/uber-stdlib-final.json",
+          "validation/uber-workflows-2026-11-24/field-preparation.json"
+        ]
+      }
+    },
+    "audit": {
+      "decision": "updated",
+      "reason": "Audit now assesses requirement drift, observable process evidence, field provenance, local incident resolution and blinded comparisons independently of output and activation. Missing native evidence stays unrun and audited inputs remain unchanged.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-audit.md",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "skills/skill-builder/scripts/evaluate.py",
+        "skills/skill-builder/scripts/review.py",
+        "skills/skill-builder/scripts/ablate.py"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "139 local tests passed, including both subject helper workflows, runtime-only new companion CLIs, preserved target state, denied paths and synthetic accounting. Native subject benefit, statistical improvement and maintained-host support remain unmeasured.",
+        "commands": [
+          "PINNED_ENV/bin/python -I -B -m unittest discover -s tests -v",
+          "python3 -I -B -S -m unittest discover -s tests -p test_uber_workflows.py -v",
+          "python3 -I -B validation/uber-workflows-2026-11-24/prepare-field.py.txt"
+        ],
+        "evidence": [
+          "validation/uber-workflows-2026-11-24/checks/full-final.json",
+          "validation/uber-workflows-2026-11-24/checks/uber-stdlib-final.json",
+          "validation/uber-workflows-2026-11-24/field-preparation.json"
+        ]
+      }
+    }
+  },
+  "delivery_assessment": [
+    {
+      "improvement": "trajectory grading",
+      "create_decision": "updated",
+      "audit_decision": "updated",
+      "downstream_review": "Both procedures now require observable subject actions; the shared case template, evaluator and review topic carry the contract. Required/order failures and forbidden attempts remain distinct from correct answers and unknown activation.",
+      "actual_verification": "Known synthetic trajectories exercise success, alternate actions, reordering, failed required actions and forbidden attempts on incomplete/unscored traces; all corresponding tests passed.",
+      "limits": "Native action normalization remains unrun; no host trajectory correctness is inferred."
+    },
+    {
+      "improvement": "field cases and clean environments",
+      "create_decision": "updated",
+      "audit_decision": "updated",
+      "downstream_review": "Creation and audit receive domain provenance/isolation instructions; the separate corpus contains two creation and two audit tasks without altering historical default panels.",
+      "actual_verification": "Source hashes, inert fixtures and oracle IDs passed consistency tests. Runtime-only preparation from an unrelated Unicode/space directory with no site packages produced 16 slots and zero observations.",
+      "limits": "Public historical adaptations are not unseen field tasks; native/model/remote clean-room trials and benefit remain unrun."
+    },
+    {
+      "improvement": "ablation",
+      "create_decision": "updated",
+      "audit_decision": "updated",
+      "downstream_review": "Both workflows export the experiment worksheet and apply frozen named variants, independent preferences and identical-payload variation before instruction pruning.",
+      "actual_verification": "Variant identity/schedule, randomized neutral copies, ties/missing/unknown, preserved unsafe panels, tampering, copy budgets and whole-skill no-skill pairing all passed local tests.",
+      "limits": "Fixture preferences test accounting only; no instruction savings, quality gain or statistical noise interval is measured."
+    },
+    {
+      "improvement": "local failure feedback",
+      "create_decision": "updated",
+      "audit_decision": "updated",
+      "downstream_review": "Both workflows export local incident worksheets and assess owner, deduplication, reproduction and regression closure without reporting externally.",
+      "actual_verification": "Open records validated; missing or mismatched closure evidence was rejected; an identity-bound synthetic independent passing receipt validated.",
+      "limits": "Record structure cannot establish a true production fix; no incident was sent or resolved in an external system."
+    },
+    {
+      "improvement": "specification traceability",
+      "create_decision": "updated",
+      "audit_decision": "updated",
+      "downstream_review": "Both workflows export stable requirement/check mappings and assess source ownership and drift through the installed read-only companion.",
+      "actual_verification": "Separate subject source mappings passed; changed owners, unknown checks, duplicate IDs, incorrect forbidden-action mappings and escaped paths were detected or refused.",
+      "limits": "Mapping checks do not prove complete requirements, semantic coverage or actual enforcement."
+    },
+    {
+      "improvement": "advisory workflow linter",
+      "create_decision": "updated",
+      "audit_decision": "updated",
+      "downstream_review": "Creation reviews procedure completion and recovery; audit treats line diagnostics as locators rather than an approval gate.",
+      "actual_verification": "A flawed separate workflow returned completion/command/recovery locations without executing its command; a useful bounded procedure returned no advisory diagnostics.",
+      "limits": "Heuristics cannot certify one objective per step or semantic quality; manual review remains required."
+    }
+  ],
+  "shared_owners": {
+    "agent_instructions": "Both command procedures apply the new shared runtime supplement at their evaluation decision point.",
+    "helper_outputs_templates": "One shared write_evaluation_support owner emits draft contracts, incidents, ablation plans and four unassessed topics for each mode.",
+    "target_evaluation": "New historical-adaptation cases broaden design coverage, while explicit subject cases, action traces and independent outputs remain separate from builder checks.",
+    "host_adapters": "All four adapters link trusted action normalization and clean-environment guidance; no native permission, installation or capability claim changes. New native panels are unrun.",
+    "packaging": "Existing runtime selection includes new scripts/assets/reference. Runtime-only copies and 21 release tests verify mechanics; no release archive is delivered or publication attempted.",
+    "frozen_and_external_subjects": "Original KB examples, historical generated subjects and receipts remain byte-identical evidence. No live installed subject is changed. Future create/audit work receives the new procedure and worksheets; local helper tests establish no general task benefit."
+  },
+  "limits": [
+    "No new native/model/remote trial, paid evaluation, public release or automatic report.",
+    "Core-only format validation remains blocked without PyYAML; the existing pinned environment checks it.",
+    "Workflow lints, schema/mapping checks and preference counts are not semantic certification."
+  ]
+}

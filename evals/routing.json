@@ -1,0 +1,143 @@
+[
+  {
+    "id": "R01",
+    "split": "development",
+    "should_trigger": true,
+    "prompt": "Create a reusable agent skill that turns bug reports into QA test plans.",
+    "rationale": "Requests creation of an agent skill, rather than the QA plan itself."
+  },
+  {
+    "id": "R02",
+    "split": "development",
+    "should_trigger": true,
+    "prompt": "Audit this SKILL.md package for instruction quality and release readiness. Report findings only.",
+    "rationale": "Requests a semantic audit of an existing skill package."
+  },
+  {
+    "id": "R03",
+    "split": "development",
+    "should_trigger": true,
+    "prompt": "Our team repeats the same incident triage steps. Help package that procedure so an agent can reuse it.",
+    "rationale": "Describes reuse of an agent procedure without naming the skill format."
+  },
+  {
+    "id": "R04",
+    "split": "development",
+    "should_trigger": true,
+    "prompt": "Review this agent capability folder: its scripts, references, discovery metadata, and trust boundaries.",
+    "rationale": "Requests review of packaged agent instructions and supporting resources."
+  },
+  {
+    "id": "R05",
+    "split": "development",
+    "should_trigger": true,
+    "prompt": "When building an agent skill, which steps should become code instead of more instructions?",
+    "rationale": "Asks a skill-authoring design question about deterministic resources."
+  },
+  {
+    "id": "R06",
+    "split": "development",
+    "should_trigger": true,
+    "prompt": "Will this reusable skill work on Codex and Claude Code? Compare what needs adapting.",
+    "rationale": "Requests a host-portability assessment of an agent skill."
+  },
+  {
+    "id": "R07",
+    "split": "development",
+    "should_trigger": false,
+    "prompt": "Write a QA test plan for the attached checkout bug.",
+    "rationale": "Requests the domain task itself; no agent-skill authoring or audit."
+  },
+  {
+    "id": "R08",
+    "split": "development",
+    "should_trigger": false,
+    "prompt": "Review this Python API implementation for bugs.",
+    "rationale": "Requests ordinary code review, not skill-package review."
+  },
+  {
+    "id": "R09",
+    "split": "development",
+    "should_trigger": false,
+    "prompt": "Explain how Python loads a module from another directory.",
+    "rationale": "Asks a general programming question outside skill design."
+  },
+  {
+    "id": "R10",
+    "split": "development",
+    "should_trigger": false,
+    "prompt": "Add better exception handling to this command-line script.",
+    "rationale": "Requests an ordinary script repair without skill context."
+  },
+  {
+    "id": "R11",
+    "split": "development",
+    "should_trigger": false,
+    "prompt": "Do not use skill-builder. Explain YAML folded strings directly.",
+    "rationale": "Explicitly opts out even though YAML overlaps skill-authoring terminology."
+  },
+  {
+    "id": "R12",
+    "split": "development",
+    "should_trigger": false,
+    "prompt": "Improve this developer's resume skills section.",
+    "rationale": "Uses the ordinary-language sense of skills, unrelated to agent capabilities."
+  },
+  {
+    "id": "R13",
+    "split": "validation",
+    "should_trigger": true,
+    "prompt": "hey can u make a SKILL.md for checking local csv reports? no publishing",
+    "rationale": "Requests a new skill using casual phrasing and a publication exclusion."
+  },
+  {
+    "id": "R14",
+    "split": "validation",
+    "should_trigger": true,
+    "prompt": "Before sharing this agent instruction bundle, check whether its claims and evidence hold up.",
+    "rationale": "Requests evidence and readiness assessment of an agent instruction bundle."
+  },
+  {
+    "id": "R15",
+    "split": "validation",
+    "should_trigger": true,
+    "prompt": "We keep re-explaining this workflow to our coding agent. Make it a reusable, testable capability.",
+    "rationale": "Describes repeated agent workflow packaging without SKILL.md terminology."
+  },
+  {
+    "id": "R16",
+    "split": "validation",
+    "should_trigger": true,
+    "prompt": "How can I tell whether my skill description gets selected for the right requests?",
+    "rationale": "Asks how to evaluate a skill's discovery description."
+  },
+  {
+    "id": "R17",
+    "split": "validation",
+    "should_trigger": false,
+    "prompt": "Compare these two OpenAPI files for breaking changes.",
+    "rationale": "Requests API contract review rather than authoring or auditing its agent skill."
+  },
+  {
+    "id": "R18",
+    "split": "validation",
+    "should_trigger": false,
+    "prompt": "Package my Python library as a wheel.",
+    "rationale": "Requests Python distribution packaging, not skill distribution."
+  },
+  {
+    "id": "R19",
+    "split": "validation",
+    "should_trigger": false,
+    "prompt": "Summarize the documentation attached to this ticket.",
+    "rationale": "Requests an ordinary document summary; documents are input data."
+  },
+  {
+    "id": "R20",
+    "split": "validation",
+    "should_trigger": false,
+    "prompt": "Write a short release checklist for our web application.",
+    "rationale": "Requests an application release checklist, not a skill-building workflow."
+  }
+]
+

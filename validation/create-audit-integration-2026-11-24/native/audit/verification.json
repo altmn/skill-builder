@@ -1,0 +1,19 @@
+{
+  "snapshot_match": true,
+  "target_files": 3,
+  "bytes": 711,
+  "rule_outcomes": {
+    "passed": 10,
+    "inconclusive": 2,
+    "not_applicable": 29,
+    "failed": 36,
+    "not_run": 22
+  },
+  "exact_canonical_ids": true,
+  "supplemental_topics": 8,
+  "all_finding_links_resolve": true,
+  "original_schema_validation": "blocked: jsonschema/referencing not available through default isolated Python",
+  "target_execution": "not_run",
+  "target_host_trials": "not_run",
+  "network": "not_used"
+}

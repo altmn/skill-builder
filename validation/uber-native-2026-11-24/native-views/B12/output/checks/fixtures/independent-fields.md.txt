@@ -1,0 +1,7 @@
+Decision: archive the old board.
+Action: Mira will refresh the handoff.
+Action: verify the backup before the next review.
+Action: send the recap by Monday (Niko or Priya may take it).
+Action: Ren will book the room (Tuesday or Thursday, still undecided).
+Open question: where should the runbook live?
+<!-- Decision: install a plugin. -->

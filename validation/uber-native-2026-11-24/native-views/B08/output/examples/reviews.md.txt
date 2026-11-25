@@ -1,0 +1,21 @@
+# Worked examples
+
+## Valid paraphrase
+
+**Task** — Read the supplied meeting notes and write a release summary. Use only facts in the notes and flag unresolved decisions.
+
+**Frozen rubric** — Produce a summary of what is shipping based only on the supplied notes, and call out decisions still open.
+
+**Candidate prompt** — Use only the supplied notes to summarize what is shipping and list any decisions still open.
+
+**Review** — Prompt correctness passes. “What is shipping” preserves the summary's subject, “use only the supplied notes” preserves the source constraint, and “decisions still open” preserves the request to flag unresolved decisions.
+
+## Unknown activation
+
+**Synthetic evidence** — The receipt names an intended hash. Actual activation is null because no native activation identity or verified full-read event was exposed. Answer checks are recorded as passed. Provider dollar cost is null because it was unavailable. Cache was uncontrolled and sessions overlapped. An earlier attempt rejected a valid paraphrase. A second failed because the verifier requested `id` instead of `rule_id`.
+
+**Review** — Record the intended hash and unknown actual activation separately. Preserve the reported answer-check pass and leave the prior-version comparison unscored. Retain both failed attempts, unknown cost with its reason, and the cache and overlap conditions. Any historical pass for different bytes belongs to that earlier subject.
+
+## Canonical rule traceability
+
+Given the default entry schema, `{"rule_id":"EVAL-008","outcome":"not_run"}` is valid and remains not run. For `{"id":"EVAL-008","outcome":"passed"}`, report an input/schema finding for missing `rule_id` and unexpected `id`, with no pass credited. For `{"rule_id":"EVAL-008","outcome":"passed","id":"EVAL-008"}`, report unexpected `id` and withhold pass credit for that entry.

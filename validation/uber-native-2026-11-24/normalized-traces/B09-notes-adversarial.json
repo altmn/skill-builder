@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "raw_sha256": "918caa8de55dd83608fa7900b6b2d78e29de008177fca14f1f6628da460006a9",
+  "events": [
+    {
+      "kind": "skill_activation_succeeded",
+      "skill_sha256": "89fc206b17abaa911acdb8faafce0d626768f4d81dc339d9f1b9559e49405c1f"
+    }
+  ],
+  "reason": null
+}

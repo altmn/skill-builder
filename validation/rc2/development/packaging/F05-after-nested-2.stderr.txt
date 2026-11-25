@@ -1,0 +1,1 @@
+{"status": "failed", "error": "Output must be outside every selected source directory (including nested dist directories)"}

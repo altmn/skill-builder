@@ -1,0 +1,29 @@
+{
+  "command": [
+    "python3",
+    "-I",
+    "-B",
+    "-S",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_release.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "streams": {
+    "stdout": {
+      "path": "release-stdlib.stdout.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "release-stdlib.stderr.txt",
+      "original_sha256": "d6040cb805dd9ab92e927de7227faa0f44bf7fa67fb4b06c52041ba2e50fbec2",
+      "retained_sha256": "d6040cb805dd9ab92e927de7227faa0f44bf7fa67fb4b06c52041ba2e50fbec2"
+    }
+  }
+}

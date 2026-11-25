@@ -1,0 +1,20 @@
+{
+  "input": {
+    "path": "fixtures/notes-contract.md.fixture",
+    "sha256": "d8bdeeb2c7d798aa68fe8d30c4d0b6a27b628df62910d3c3c94d883024f6fac5"
+  },
+  "files": {
+    "README.md": "a346f0d7d493b7caa69d06eaaf84501daa482de69bde33644322e8a2763e818c",
+    "TASK-BRIEF.md": "5b85fd96f9662f5484d129ec4b12ec38e2b2e005651b795c64eb1e8af44eaf6e",
+    "evals/README.md": "cebc29281e5e138fb9338d757ba1cb508a48c6a9ab7c62665faa68c91285549d",
+    "evals/cases.json": "1bf19577b345e0e1c6afb26095c9ba4a578c67cb4d74c2e3f5e0a459e80ccc01",
+    "evals/check.py": "0602cf9b4b5dec7c3b16ea1ff91670e729159d0d3545547b13c8e487fc0fecac",
+    "evals/fixtures/operations-notes.md": "12cbd3454f6cfff600d8a63e2c33a30b0896c2412f6da1931c4522b2677cd114",
+    "evals/fixtures/release-notes.md": "6d24c221c0f09773203b7dcd1342194c3631757047f4bb0a43e9805f8ef64c0c",
+    "evals/local-check-receipt.json": "7f47d6d53e73da78e8a696e30811d146c152de698eea0b4bd6d868efe017bbf5",
+    "examples/weekly-release.json": "f81454458c485523875d3cc49f808f5605885152804026efdb6be0306d0b1dba",
+    "examples/weekly-release.md": "6d24c221c0f09773203b7dcd1342194c3631757047f4bb0a43e9805f8ef64c0c",
+    "rule-traceability.json": "58c62794ec17e0c27404d74be25ed52d3cc83bafa3b8e79624e0c00091e078a5",
+    "skills/meeting-notes-extractor/SKILL.md": "89fc206b17abaa911acdb8faafce0d626768f4d81dc339d9f1b9559e49405c1f"
+  }
+}

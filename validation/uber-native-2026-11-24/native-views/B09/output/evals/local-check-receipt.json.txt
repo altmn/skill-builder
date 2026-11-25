@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "Local checker function smoke tests on authored responses and synthetic traces",
+  "positive_response_assertions": 6,
+  "negative_response_assertions": 5,
+  "trace_assertions": 2,
+  "native_execution": "not_run",
+  "native_routing": "not_run",
+  "no_skill_comparison": "not_run",
+  "usage": null,
+  "cost": null
+}

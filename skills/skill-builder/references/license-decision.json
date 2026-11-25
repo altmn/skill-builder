@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "license-decision",
+  "license": "MIT",
+  "status": "selected",
+  "copyright": "Copyright (c) 2026 Alex Allen",
+  "declaration": "LICENSE.md",
+  "knowledge_base_archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+  "scope": "original_work_only; retained third-party terms apply",
+  "recorded_on": "2026-11-23",
+  "timezone": "America/Los_Angeles",
+  "effective_version": "1.0.0-rc.2",
+  "authority": "Alex explicitly selected MIT and requested applying review finding F-01; no renewed selection is required.",
+  "coverage": [
+    "Original Skill Builder instructions, code, tests, templates, mappings, and documentation",
+    "Original knowledge-base prose, analysis, rules, catalogs, code, schemas, examples, tools, and scaffolding in the identified snapshot"
+  ],
+  "exceptions": [
+    "Retained third-party source and excerpts keep their own terms",
+    "OpenAI public helper material retains applicable Apache 2.0 terms",
+    "Primary-documentation sources are not relicensed"
+  ],
+  "historical_status": "The frozen archive and rc.1 evidence retain their earlier pending status; this later declaration resolves the original-material selection for rc.2."
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "path": "output/SKILL.md.txt",
+    "original_sha256": "31c053c2c82378faa62899c4045a1451513ab9d28ea29749c2e19b5a1b193f89",
+    "derived_sha256": "31c053c2c82378faa62899c4045a1451513ab9d28ea29749c2e19b5a1b193f89"
+  },
+  {
+    "path": "output/examples/reviews.md.txt",
+    "original_sha256": "d248a6815467e1e2105f81cfd19695c52336f5936c9c1b3a00c3a77b139d33f5",
+    "derived_sha256": "d248a6815467e1e2105f81cfd19695c52336f5936c9c1b3a00c3a77b139d33f5"
+  },
+  {
+    "path": "output/tests/README.md.txt",
+    "original_sha256": "a9aeb40c3b47dfc25974f79eb34eab83a1deb261944b25713cfe4d4f3d67f533",
+    "derived_sha256": "a9aeb40c3b47dfc25974f79eb34eab83a1deb261944b25713cfe4d4f3d67f533"
+  },
+  {
+    "path": "output/tests/cases.json.txt",
+    "original_sha256": "e8ba14e2f04660354d9372ff9746fdcdc27a56052c7b9113fe49d939c46782a9",
+    "derived_sha256": "e8ba14e2f04660354d9372ff9746fdcdc27a56052c7b9113fe49d939c46782a9"
+  },
+  {
+    "path": "answer.txt",
+    "original_sha256": "f4349ab627e30d66ea796d1e616a40915f305ebbaac4aa65466d61e5c4ed4ae7",
+    "derived_sha256": "f4349ab627e30d66ea796d1e616a40915f305ebbaac4aa65466d61e5c4ed4ae7"
+  }
+]

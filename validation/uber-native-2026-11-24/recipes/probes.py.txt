@@ -1,0 +1,27 @@
+"""Execute the 12 predeclared fresh read-only generated-subject probes once."""
+import concurrent.futures
+import importlib.machinery
+import importlib.util
+import json
+from pathlib import Path
+import sys
+
+HERE = Path(__file__).absolute().parent
+loader = importlib.machinery.SourceFileLoader('native_runner', str(HERE/'runner.py.txt'))
+spec = importlib.util.spec_from_loader(loader.name, loader)
+runner = importlib.util.module_from_spec(spec)
+loader.exec_module(runner)
+# Direct reviewed installed native binary, the same CLI 0.170.0 used by the
+# npm wrapper in main trials. No package-manager resolution or download.
+runner.CLI = '/Users/routerhealthchecker/.nvm/versions/node/v25.0.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex'
+work = Path(sys.argv[1])
+main_jobs = json.loads((work/'jobs.json').read_text())
+assert all((Path(j['project']).parent/'run.json').exists() for j in main_jobs)
+jobs = json.loads((work/'probe-jobs.json').read_text())
+assert len(jobs) == 12 and all(j['case_id'].startswith('PROBE-') for j in jobs)
+for job in jobs:
+    project = Path(job['project'])
+    assert not (project.parent/'run.json').exists()
+    runner.write(project.parent/'before.json', runner.identity(project))
+with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+    list(pool.map(runner.run, jobs))

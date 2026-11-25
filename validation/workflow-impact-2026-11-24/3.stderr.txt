@@ -1,0 +1,16 @@
+test_changed_files_without_fresh_review_fail (test_workflow_impact.WorkflowImpactTests.test_changed_files_without_fresh_review_fail) ... ok
+test_committed_base_and_ci_event_check_the_complete_range (test_workflow_impact.WorkflowImpactTests.test_committed_base_and_ci_event_check_the_complete_range) ... ok
+test_duplicate_json_keys_cannot_hide_missing_decision (test_workflow_impact.WorkflowImpactTests.test_duplicate_json_keys_cannot_hide_missing_decision) ... ok
+test_missing_audit_decision_or_placeholder_is_blocked (test_workflow_impact.WorkflowImpactTests.test_missing_audit_decision_or_placeholder_is_blocked) ... ok
+test_pass_requires_existing_evidence_and_commands (test_workflow_impact.WorkflowImpactTests.test_pass_requires_existing_evidence_and_commands) ... ok
+test_reasoned_no_change_decisions_pass_without_forcing_domain_edits (test_workflow_impact.WorkflowImpactTests.test_reasoned_no_change_decisions_pass_without_forcing_domain_edits) ... ok
+test_rewriting_or_deleting_prior_record_is_refused (test_workflow_impact.WorkflowImpactTests.test_rewriting_or_deleting_prior_record_is_refused) ... ok
+test_staged_bytes_are_checked_instead_of_unstaged_working_record (test_workflow_impact.WorkflowImpactTests.test_staged_bytes_are_checked_instead_of_unstaged_working_record) ... ok
+test_stale_existing_record_cannot_cover_new_change (test_workflow_impact.WorkflowImpactTests.test_stale_existing_record_cannot_cover_new_change) ... ok
+test_uncovered_second_path_remains_a_failure (test_workflow_impact.WorkflowImpactTests.test_uncovered_second_path_remains_a_failure) ... ok
+test_updated_decision_needs_reviewed_owner_and_blocked_status_needs_consequence (test_workflow_impact.WorkflowImpactTests.test_updated_decision_needs_reviewed_owner_and_blocked_status_needs_consequence) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.135s
+
+OK

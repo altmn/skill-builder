@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "outcome": "passed",
+  "scope": "Staged index",
+  "changed_files": 79,
+  "fresh_records": [
+    "docs/change-impact/2026-11-24-uber-workflows.json"
+  ],
+  "unreviewed_paths": [],
+  "unresolved_verification": [],
+  "limits": "Checks freshness, structure and path coverage only; reviewers assess reasoning and evidence truth. Unresolved verification is not release approval."
+}

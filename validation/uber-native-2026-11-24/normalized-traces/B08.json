@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "raw_sha256": "71c3b0f6ce79f4f9b2f5f779bc41af097de66c858d4993cb6ab86973c706a075",
+  "adapter": "bounded-native-review-v1",
+  "events": [
+    {
+      "kind": "action",
+      "name": "read_supplied_contract",
+      "outcome": "succeeded",
+      "evidence": "Successful source-reading command in the preserved complete native event stream."
+    },
+    {
+      "kind": "action",
+      "name": "inspect_delivered_artifacts",
+      "outcome": "succeeded",
+      "evidence": "Post-write file inventory, source reads or hash/check outputs. Inventory alone does not prove semantic verification."
+    }
+  ],
+  "limits": "Actions normalized from observed commands/output and final source bindings, not hidden reasoning. Partial KB reading is not comprehensive 99-rule review."
+}

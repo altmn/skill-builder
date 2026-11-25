@@ -1,0 +1,3 @@
+Created the portable [Evaluation Receipt Reviewer skill](output/skills/evaluation-receipt-reviewer/SKILL.md) under `./output`. It reviews supplied receipts read-only, grades paraphrases by meaning, flags missing or unexpected `rule_id` fields, and leaves prior-version comparisons unscored when activation identity is unknown.
+
+The [worked examples](output/evals/EXAMPLES.md) and [independent rubric](output/evals/RUBRIC.md) cover all three requested behaviors. Static source checks passed. Native trials and behavioral grading remain unrun for the independent runner.

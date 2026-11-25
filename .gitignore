@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.venv/
+.venv-current/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+dist/
+.coverage
+*.egg-info/
+.DS_Store
+work/
+
+# Reviewed validation evidence belongs in the source history, even when a
+# contributor's global ignore excludes logs. Inspect new evidence before adding.
+!/validation/**/*.log
+!/validation/uber-native-2026-11-24/native-views/*/target/
+!/validation/uber-native-2026-11-24/native-views/*/target/**

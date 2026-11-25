@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0.0",
+  "outcome": "passed",
+  "scope": "Release-input containment, preservation, implemented ownership mapping, entrypoint/links/syntax and available original format checks",
+  "checks": [
+    {
+      "name": "release_input_boundary",
+      "outcome": "passed",
+      "detail": {
+        "selected_files": 169,
+        "policy": "Required selected roots, files and ancestors are nonsymlink and contained; traversal errors fail explicitly.",
+        "limit": "Point-in-time checks; not a sandbox against concurrent filesystem mutation."
+      }
+    },
+    {
+      "name": "current_scoped_license",
+      "outcome": "passed",
+      "detail": {
+        "license": "MIT",
+        "scope": "original_work_only; retained third-party terms apply",
+        "decision": "skills/skill-builder/references/license-decision.json",
+        "limit": "Checks declared terms and component identity; does not adjudicate third-party rights."
+      }
+    },
+    {
+      "name": "original_archive_identity",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "manifest_archive_identity",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "substantive_member_set",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "all_source_file_bytes",
+      "outcome": "passed",
+      "detail": {
+        "mismatches": [],
+        "files": 182
+      }
+    },
+    {
+      "name": "uncompressed_content_total",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "canonical_rules",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "all_rule_owners_present",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "rule_owner_contracts",
+      "outcome": "passed",
+      "detail": []
+    },
+    {
+      "name": "version_agreement",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "portable_entrypoint",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "entrypoint_not_placeholder",
+      "outcome": "passed",
+      "detail": {
+        "lines": 101,
+        "bytes": 13375
+      }
+    },
+    {
+      "name": "single_discoverable_runtime_entry",
+      "outcome": "passed",
+      "detail": null
+    },
+    {
+      "name": "local_document_links",
+      "outcome": "passed",
+      "detail": []
+    },
+    {
+      "name": "python_syntax",
+      "outcome": "passed",
+      "detail": []
+    },
+    {
+      "name": "original_portable_validator",
+      "outcome": "passed",
+      "detail": {
+        "outcome": "passed",
+        "scope": "Implemented portable format and direct-resource checks only.",
+        "validator": {
+          "version": "1.1.0",
+          "profile": "portable-conservative-v1",
+          "PyYAML": "6.0.3",
+          "tested_PyYAML": "6.0.3"
+        },
+        "skills": [
+          {
+            "input": "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder",
+            "checks": [
+              {
+                "id": "directory",
+                "status": "passed",
+                "message": "Selected directory resolves; this resolved path is the resource boundary."
+              },
+              {
+                "id": "skill_file",
+                "status": "passed",
+                "message": "SKILL.md is bounded UTF-8 text within the selected root.",
+                "bytes": 13375
+              },
+              {
+                "id": "frontmatter.delimiters",
+                "status": "passed",
+                "message": "Opening and closing frontmatter delimiters are present."
+              },
+              {
+                "id": "body.nonempty",
+                "status": "passed",
+                "message": "Markdown body must contain non-whitespace text."
+              },
+              {
+                "id": "frontmatter.yaml",
+                "status": "passed",
+                "message": "Safe YAML parsed with unique string keys and bounded depth; aliases/merges are disallowed."
+              },
+              {
+                "id": "frontmatter.mapping",
+                "status": "passed",
+                "message": "Frontmatter is a mapping."
+              },
+              {
+                "id": "frontmatter.fields",
+                "status": "passed",
+                "message": "Only current standard fields are accepted; host extensions require a separate adapter check."
+              },
+              {
+                "id": "name.format",
+                "status": "passed",
+                "message": "name must be 1–64 ASCII lowercase letters/digits with single interior hyphens."
+              },
+              {
+                "id": "name.directory",
+                "status": "passed",
+                "message": "name must equal the explicitly selected directory's final component."
+              },
+              {
+                "id": "description",
+                "status": "passed",
+                "message": "description must be a nonblank string of at most 1,024 characters."
+              },
+              {
+                "id": "links.supported_syntax",
+                "status": "passed",
+                "message": "Block/inline coverage and direct Markdown destination/title syntax fit the supported subset; unsupported ambiguous masking fails this gate."
+              },
+              {
+                "id": "links.relative_resources",
+                "status": "passed",
+                "message": "Recognized direct relative links must resolve to files within this skill root; external URIs are not fetched.",
+                "recognized": 19,
+                "failed": 0,
+                "passed": 19,
+                "not_checked": 0
+              }
+            ],
+            "resources": [
+              {
+                "line": 14,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "commands/skill-builder-create.md"
+              },
+              {
+                "line": 15,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "commands/skill-builder-audit.md"
+              },
+              {
+                "line": 16,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "commands/skill-builder-explain.md"
+              },
+              {
+                "line": 20,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "assets/handoff.md"
+              },
+              {
+                "line": 25,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "references/governance.md"
+              },
+              {
+                "line": 25,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "references/hosts/codex.md"
+              },
+              {
+                "line": 25,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "references/hosts/claude-code.md"
+              },
+              {
+                "line": 25,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "references/hosts/grok.md"
+              },
+              {
+                "line": 25,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "references/hosts/custom-host.md"
+              },
+              {
+                "line": 33,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "references/knowledge-base.zip"
+              },
+              {
+                "line": 33,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "references/knowledge-base-manifest.json"
+              },
+              {
+                "line": 62,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "commands/skill-builder-explain.md"
+              },
+              {
+                "line": 64,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "references/implementation-map.json"
+              },
+              {
+                "line": 64,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "references/requirement-coverage.md"
+              },
+              {
+                "line": 76,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "references/cli.md"
+              },
+              {
+                "line": 95,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "assets/handoff.md"
+              },
+              {
+                "line": 99,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "assets/request-examples.md"
+              },
+              {
+                "line": 101,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "references/release-status.md"
+              },
+              {
+                "line": 101,
+                "status": "passed",
+                "code": "resource.contained_file",
+                "message": "Relative resource exists as a file within the selected root.",
+                "path": "LICENSE.md"
+              }
+            ],
+            "warnings": [],
+            "root": "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1/skills/skill-builder",
+            "status": "passed"
+          }
+        ],
+        "not_checked": [
+          "Instruction quality, task success, model behavior, triggering, or evaluation quality.",
+          "Host discovery, installation, permission enforcement, tool availability, or adapter metadata.",
+          "Script execution, executable safety, dependency provenance, or malicious instructions/content.",
+          "Resource contents, recursively linked documents, or files mentioned only in prose/code.",
+          "Reference-style Markdown links, raw HTML links, autolinks, dynamic paths, or complete CommonMark conformance.",
+          "External URL availability/content, query semantics, or fragment/heading targets.",
+          "Filesystem race resistance: this is a point-in-time check, not a sandbox for later execution."
+        ]
+      }
+    },
+    {
+      "name": "evidence_validator_dependencies",
+      "outcome": "passed",
+      "detail": null
+    }
+  ],
+  "failed_checks": [],
+  "not_established": [
+    "semantic truth of all rule decisions",
+    "native discovery or host enforcement",
+    "clean baseline improvement",
+    "public distribution rights",
+    "GitHub CI execution"
+  ]
+}

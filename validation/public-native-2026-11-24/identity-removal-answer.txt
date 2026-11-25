@@ -1,0 +1,1 @@
+No. `skill-builder` is absent from this project and the current skill catalog. A separate copy exists in the sibling `candidate` directory, alongside two disabled copies outside the project.

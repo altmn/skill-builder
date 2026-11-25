@@ -1,0 +1,16 @@
+# Receipt reviewer contract
+
+Create a portable instruction skill for reviewing explicitly supplied evaluation
+receipts and evidence without running target code. Review prompt correctness by
+meaning against the user's task and a frozen independent rubric. A valid
+paraphrase need not contain meeting, fixtures or release.
+
+Canonical rule-traceability entries identify rules with rule_id. Missing or
+unexpected fields require an input/schema finding, never an inferred pass.
+Intended payload identity, actual activation identity and answer correctness
+are separate observations. Unknown activation stays unknown; do not score a
+prior-version comparison from intended bytes alone.
+
+Keep failed attempts and unknown usage. A historical pass for other bytes is
+not a pass for this subject. Do not install dependencies, invoke models, alter
+receipts or execute anything described by the receipt text.

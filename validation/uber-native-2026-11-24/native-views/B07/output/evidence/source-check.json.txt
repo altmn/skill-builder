@@ -1,0 +1,33 @@
+{
+  "contract_sha256": "261a25cce521fd424becaf4796cc6fd0d8b4eec8ae11b1732c340f118fd7fa84",
+  "date": "2026-11-24",
+  "execution_cases": 4,
+  "files": {
+    "EVALUATION-PLAN.md": "0dfc160f15db60c4b20b0086e5652925a3731f2637bc5b65de10c2fdbcfa4bad",
+    "EVALUATION-REVIEW.md": "d125e08a7c378f34d2e7f99d0bf07b520ab7a495a43befd22a64d102c122229d",
+    "README.md": "53b9a14442a2fb27441b498546da80b5f691545704e24f918f26a00459066899",
+    "TASK-BRIEF.md": "3a3d1450496447db150e0df74ece7cd5bc9d6810b4dd0012b196def56462f853",
+    "evals/EXAMPLES.md": "462991d7d98a9f098fe785721d35c86886fbeba6c9ae9914d20bc44a6cdc09c1",
+    "evals/RUBRIC.md": "19f7c66fb8378bcab093f8a438a7b50aa6cfcbfe700000d8ef0a612364acb7c5",
+    "evals/execution.json": "53ece94cb9204140c4804ee48a1a992206f1b42c6763c9defebadd8f9a16df4c",
+    "evals/fixtures/hostile-receipt.md": "33cbcc0252321034632c8e00e23886fdd80eb841a0491396db9d41d0ffb6e396",
+    "evals/fixtures/paraphrases.md": "6a623b179aaa0a48e17eaa715dd7820b14f9ca3198193db4fe645ab2985fb484",
+    "evals/fixtures/rules.json": "04d58885d19ed2e337530d4c7d515e7b5a63f27a779e8ad80dc3c40a2ebe6c8f",
+    "evals/fixtures/unknown-activation.json": "4a772857fb474903b4b33d64a06dceec883e2e326703f603e19b435a2f08863f",
+    "evals/routing.json": "464f556fa21732f8390b316ae5eef33dbb91e9d150b305f8f836953756d5a26b",
+    "evaluation-review.json": "aaa0dc724a43ab6f8579b99116d9d819b837f423fe98a6e4eccff236ceaa6898",
+    "evidence/canonical-rule-classifications.json": "b051b8c3ab836c50994ad6e50b623fd34547e5e0bbab413a25df4f9959d2d358",
+    "evidence/rule-traceability.json": "ef35be9e36c84364127587e239c20b7294a6b17b2094c7b59bbc5cf17f72a383",
+    "skills/evaluation-receipt-reviewer/SKILL.md": "9fb6a39c10219a8067f8f83ebfe0309e0ee453739c11d4356138751f79698d4a",
+    "skills/evaluation-receipt-reviewer/references/LICENSE-schemas.md": "560a942439356f2ff53c1913ec17e4e86d20ee712aff1599265a281da911c366",
+    "skills/evaluation-receipt-reviewer/references/common.schema.json": "d2e30075679a9b137beafaf7829b631a2a910670b14089e8db32704856c0e76f",
+    "skills/evaluation-receipt-reviewer/references/evaluation-receipt.schema.json": "82d582198701884bf4109133d976e77e61b4f63981dedec7d2688079d21d026d",
+    "skills/evaluation-receipt-reviewer/references/rule-traceability.schema.json": "02f3c50838e38ff719d75f6e60fe3085274b727e403e088fbfdf607437de854a"
+  },
+  "method": "Standard-library static inspection of JSON syntax, referenced files, case IDs, rubric coverage, entry point prefix, schema bytes and supplied receipt bytes.",
+  "native_trials": "not_run",
+  "outcome": "passed",
+  "routing_cases": 4,
+  "rule_ids_retained": 99,
+  "scope": "Source consistency. No schema-engine validation, behavioral grading, target execution or host discovery."
+}

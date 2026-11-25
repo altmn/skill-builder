@@ -1,0 +1,14 @@
+{
+  "outcome": "static_preparation_completed",
+  "audit_verdict": "inconclusive",
+  "output": "TRIAL_ROOT/audit/review",
+  "static_checks": "blocked",
+  "inventory_coverage": "complete_within_declared_exclusions",
+  "changed_during_check": [],
+  "full_semantic_review": "not_run",
+  "host_trials": "not_run",
+  "target_code_executed": false,
+  "release_ready": false,
+  "evaluation_plan": "EVALUATION-PLAN.md",
+  "evaluation_review": "evaluation-review.json"
+}

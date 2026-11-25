@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "Preserve 18 historical evidence files omitted by global target-directory ignore rules during fresh public index creation.",
+  "reviewed_paths": [
+    ".gitignore",
+    "validation/publication-1.0.0/clean-export-inventory-initial.json",
+    "validation/publication-1.0.0/clean-export-tests.log",
+    "validation/publication-1.0.0/clean-export-inventory-corrected.json",
+    "validation/publication-1.0.0/clean-export-inventory-tests.log"
+  ],
+  "workflows": {
+    "create": {
+      "decision": "no_change_needed",
+      "reason": "This change restores historical evidence membership in the fresh Git index. It does not change subject instructions, helper outputs, evaluation templates, target-specific grading or host capability semantics. The full clean-export suite passed 146 tests; the retained failed inventory still requires a corrected index check.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-create.md"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "The scoped exception restores the 18 exact historical files. Corrected index membership and four inventory regressions passed; this establishes no new subject behavior or native support.",
+        "commands": [
+          "python -I -B tools/check_git_inventory.py",
+          "python -I -B -m unittest discover -s tests -p test_git_inventory.py -v"
+        ],
+        "evidence": [
+          "validation/publication-1.0.0/clean-export-inventory-initial.json",
+          "validation/publication-1.0.0/clean-export-inventory-corrected.json",
+          "validation/publication-1.0.0/clean-export-inventory-tests.log"
+        ]
+      }
+    },
+    "audit": {
+      "decision": "no_change_needed",
+      "reason": "This change restores historical evidence membership in the fresh Git index. It does not change subject instructions, helper outputs, evaluation templates, target-specific grading or host capability semantics. The full clean-export suite passed 146 tests; the retained failed inventory still requires a corrected index check.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-audit.md"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "The scoped exception restores the 18 exact historical files. Corrected index membership and four inventory regressions passed; this establishes no new subject behavior or native support.",
+        "commands": [
+          "python -I -B tools/check_git_inventory.py",
+          "python -I -B -m unittest discover -s tests -p test_git_inventory.py -v"
+        ],
+        "evidence": [
+          "validation/publication-1.0.0/clean-export-inventory-initial.json",
+          "validation/publication-1.0.0/clean-export-inventory-corrected.json",
+          "validation/publication-1.0.0/clean-export-inventory-tests.log"
+        ]
+      }
+    }
+  }
+}

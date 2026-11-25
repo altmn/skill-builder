@@ -1,0 +1,45 @@
+# Skill project audit: [project]
+
+## Verdict and priority actions
+
+[State the result, blockers and next actions. Distinguish readiness from average quality.]
+
+## Subject and method
+
+| Field | Value |
+|---|---|
+| Repository / exact commit / version | [values] |
+| Date and requested hosts | [values] |
+| Authorization and executed checks | [values] |
+| Tracked files / bytes | [values] |
+| Full semantic / targeted semantic / structural / metadata-only | [counts] |
+| Unique instruction coverage and generated duplicates | [counts and method] |
+
+## Findings
+
+### [ID] — [title]
+
+- Impact and severity: [consequence, not a style preference].
+- Evidence type: documented / static source / reproduced / hypothesis.
+- Source: [pinned path and lines, runtime identity when relevant].
+- Observed behavior: [exact supported claim].
+- Failure scenario: [conditions and affected resource].
+- Recommendation: [specific owning layer and change].
+- Verification: [independent check and expected outcome].
+- Limits: [what was not established].
+
+## Patterns to adopt, adapt, or avoid
+
+[Separate useful benchmark patterns from project-specific policy.]
+
+## Host compatibility, effects, tests and lifecycle
+
+[Matrices and evidence, including missing coverage.]
+
+## Remediation order
+
+[Blockers first, dependencies, owner, effort as an estimate, completion evidence.]
+
+## Sources and appendices
+
+[File inventory, instruction ledger, receipts, source register and reproducibility notes.]

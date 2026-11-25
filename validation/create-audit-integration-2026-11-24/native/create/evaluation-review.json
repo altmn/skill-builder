@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "skill-builder-evaluation-review",
+  "mode": "create",
+  "subject": "meeting-decisions",
+  "semantic_review_performed": true,
+  "items": [
+    {
+      "id": "task_value",
+      "applicability": "adopted",
+      "outcome": "passed",
+      "reason": "The contract implements the three supplied examples and distinguishes absent notes from a read empty file. Baseline frequency is unknown.",
+      "evidence": [
+        "TASK-BRIEF.md",
+        "skills/meeting-decisions/SKILL.md"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "metadata_portability",
+      "applicability": "adopted",
+      "outcome": "passed",
+      "reason": "Restricted local frontmatter and payload checks cover the exact two scalar fields and the matching directory. Original PyYAML validation and host parsing remain unavailable or unrun.",
+      "evidence": [
+        "skills/meeting-decisions/SKILL.md",
+        "evidence/local-checks.json"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "routing",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "Balanced domain labels and near misses were reviewed. Native activation evidence and routing metrics are missing.",
+      "evidence": [
+        "evals/routing.json",
+        "evals/panel/summary.json"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "execution_benefit",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "The matched panel was prepared with no native observations. Prior revision is unavailable and the future runner must verify control isolation.",
+      "evidence": [
+        "evals/execution.json",
+        "evals/panel/plan.json",
+        "evals/panel/summary.json"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "independent_grading",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "Explicit domain oracle is available outside the payload. No actual response or independent grades exist.",
+      "evidence": [
+        "EVALUATION-PLAN.md"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "context_resources",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "Payload bytes are known. Actual loaded context, tokens, latency, cache and cost are unknown.",
+      "evidence": [
+        "evals/panel/plan.json"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "trust_recovery",
+      "applicability": "adopted",
+      "outcome": "not_run",
+      "reason": "Source review covered bounded reading and recovery. Host behavior with hostile, denied or interrupted input remains unobserved.",
+      "evidence": [
+        "TASK-BRIEF.md",
+        "evals/execution.json"
+      ],
+      "finding_ids": []
+    },
+    {
+      "id": "claims_operations",
+      "applicability": "adopted",
+      "outcome": "passed",
+      "reason": "Source scope, exact identity and unrun native gates are documented. No deployment or host support is claimed.",
+      "evidence": [
+        "README.md",
+        "EVALUATION-REVIEW.md"
+      ],
+      "finding_ids": []
+    }
+  ]
+}

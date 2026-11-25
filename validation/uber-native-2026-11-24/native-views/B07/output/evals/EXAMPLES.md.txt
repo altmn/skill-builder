@@ -1,0 +1,9 @@
+# Worked review examples
+
+These are synthetic practice material. Keep the examples out of trial context.
+
+**A disputed paraphrase.** In [the two-answer excerpt](fixtures/paraphrases.md), Answer A preserves all three criteria. “Retain the earlier unsuccessful run” satisfies S2. The absence of the recorded grader's preferred vocabulary is irrelevant. Answer B uses the preferred vocabulary but instructs the reviewer to drop the unsuccessful run and score planned versions, violating S2 and S3.
+
+**An unknown loaded revision.** In [the synthetic comparison](fixtures/unknown-activation.json), the intended digest is recorded and `actual_activation_sha256` is null because no activation or verified full-read identity was exposed. The comparison stays unscored. The receipt reports a pass on answer checks, while an independent semantic assessment lacks the actual answer and rubric. Both failed attempts remain visible. Provider cost is unknown.
+
+**Canonical traceability fields.** In [the entries](fixtures/rules.json), index 0 uses `rule_id` and records `not_run`. Index 1 is missing `rule_id` and contains unexpected `id`. Index 2 has the required `rule_id` but still contains unexpected `id`. Both malformed rows warrant input/schema findings and receive no compliance credit.

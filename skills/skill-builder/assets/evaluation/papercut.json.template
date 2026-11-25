@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "skill-papercut",
+  "id": "REPLACE: local incident ID",
+  "subject": "SUBJECT",
+  "version": "REPLACE: affected or verified fixed revision/digest with role stated",
+  "attempted": "REPLACE: minimal safe reproduction",
+  "expected": "REPLACE: intended behavior",
+  "observed": "REPLACE: actual failure and impact",
+  "owner": "REPLACE: code, instructions, adapter or evaluation owner",
+  "dedup_key": "REPLACE: stable failure category and owning layer",
+  "workaround": null,
+  "status": "open",
+  "evidence": [],
+  "regression": null
+}

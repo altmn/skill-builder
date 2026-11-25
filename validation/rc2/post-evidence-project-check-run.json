@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-B",
+    "tools/check_project.py",
+    "--require-validators"
+  ],
+  "cwd": "/workspace/scratch/ce88fda257c5/work/skill-builder-1.0.0-rc.1",
+  "started_at": "2026-11-23T19:18:11.317446+00:00",
+  "ended_at": "2026-11-23T19:18:12.223105+00:00",
+  "elapsed_seconds": 0.9061528729998827,
+  "exit_code": 0,
+  "outcome": "passed",
+  "stdout": "post-evidence-project-check.json",
+  "stdout_sha256": "c234827e34c6f7ab0a8c6e10e455606701c5e24b8d8ea49793ea09e375461092",
+  "stderr": "post-evidence-project-check.stderr",
+  "stderr_bytes": 0,
+  "scope": "Post-assembly record or project structural verification; not a rerun of the 65-method suite."
+}

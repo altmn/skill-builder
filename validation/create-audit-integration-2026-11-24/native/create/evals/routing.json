@@ -1,0 +1,58 @@
+[
+  {
+    "id": "MD-R1",
+    "split": "development",
+    "should_trigger": true,
+    "prompt": "Extract decisions, action owners and due dates, and open questions from fixtures/weekly.md as JSON.",
+    "rationale": "Direct extraction from named minutes."
+  },
+  {
+    "id": "MD-R2",
+    "split": "development",
+    "should_trigger": false,
+    "prompt": "Translate this Markdown meeting invitation into Spanish: ## Weekly releases sync",
+    "rationale": "Translation is independent of meeting extraction."
+  },
+  {
+    "id": "MD-R3",
+    "split": "development",
+    "should_trigger": true,
+    "prompt": "Extract decisions, actions and open questions from my meeting notes as JSON.",
+    "rationale": "Intent is explicit and the skill should ask for the omitted notes."
+  },
+  {
+    "id": "MD-R4",
+    "split": "development",
+    "should_trigger": false,
+    "prompt": "Look at fixtures/weekly.md.",
+    "rationale": "A local note path alone leaves the requested operation ambiguous."
+  },
+  {
+    "id": "MD-R5",
+    "split": "validation",
+    "should_trigger": true,
+    "prompt": "From fixtures/launch review.md, capture what we settled on, who volunteered for follow-ups and when, and what is still unresolved. Give me JSON.",
+    "rationale": "Natural paraphrase with a supplied path."
+  },
+  {
+    "id": "MD-R6",
+    "split": "validation",
+    "should_trigger": false,
+    "prompt": "Use fixtures/operations.md to suggest an agenda for next time. Do not extract or structure these minutes.",
+    "rationale": "Agenda drafting plus explicit opt-out."
+  },
+  {
+    "id": "MD-R7",
+    "split": "validation",
+    "should_trigger": false,
+    "prompt": "I need help choosing which person should own the next release.",
+    "rationale": "User seeks a recommendation rather than a record of a meeting."
+  },
+  {
+    "id": "MD-R8",
+    "split": "validation",
+    "should_trigger": true,
+    "prompt": "Turn these minutes into structured follow-ups and decisions: Action: rotate the on-call guide.",
+    "rationale": "Explicitly pasted minutes support direct extraction."
+  }
+]

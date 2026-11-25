@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "review-findings-companion",
+  "reviewed_commit": "6b80b706d891baed8dde3b8323e383f0072390b9",
+  "date": "2026-11-24",
+  "timezone": "America/Los_Angeles",
+  "schema_note": "Companion record for this independent report; not a canonical KB version-2.0 finding record or a certification.",
+  "findings": [
+    {
+      "id": "F-01",
+      "priority": "P1",
+      "title": "Source/runtime license-copy drift blocks validation and packaging",
+      "evidence_type": "reproduced",
+      "locations": [
+        {
+          "path": "LICENSE.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "skills/skill-builder/LICENSE.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "tools/build_release.py",
+          "start": 127,
+          "end": 155
+        },
+        {
+          "path": "skills/skill-builder/references/license-decision.json",
+          "start": 6,
+          "end": 6
+        }
+      ],
+      "rule_ids": [
+        "INS-008",
+        "EVAL-011",
+        "LIFE-009",
+        "OSS-005"
+      ],
+      "evidence": [
+        "project-check.stdout.txt",
+        "build-identity.stderr.txt",
+        "build-archives.stderr.txt",
+        "preservation-and-git-inventory.json"
+      ],
+      "release_consequence": "Blocks required check and package generation for the current source.",
+      "verification_needed": "Synchronize intended attribution across owners; rerun required checks and reproducible builds; retain historical receipts.",
+      "status": "open"
+    },
+    {
+      "id": "F-02",
+      "priority": "P1",
+      "title": "Git omits 23 required evidence logs",
+      "evidence_type": "reproduced",
+      "locations": [
+        {
+          "path": "validation/README.md",
+          "start": 9,
+          "end": 13
+        },
+        {
+          "path": "validation/rc2/README.md",
+          "start": 30,
+          "end": 47
+        },
+        {
+          "path": ".gitignore",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "rule_ids": [
+        "EVAL-011",
+        "EVAL-014",
+        "LIFE-009",
+        "OSS-001",
+        "OSS-007"
+      ],
+      "evidence": [
+        "preservation-and-git-inventory.json",
+        "clean-tracked-tree-result.json",
+        "clean-tracked-tree.stdout.txt"
+      ],
+      "release_consequence": "Clean GitHub checkout loses promised raw evidence and fails local-reference checks after isolated F-01 correction.",
+      "verification_needed": "Review and track exact required evidence; check clean Git-tree inventory and local links.",
+      "status": "open"
+    },
+    {
+      "id": "F-03",
+      "priority": "P2",
+      "title": "Audit and explanation instructions falsely retain an unresolved original-material MIT choice",
+      "evidence_type": "static_instruction_conflict",
+      "locations": [
+        {
+          "path": "skills/skill-builder/commands/skill-builder-audit.md",
+          "start": 120,
+          "end": 120
+        },
+        {
+          "path": "skills/skill-builder/commands/skill-builder-explain.md",
+          "start": 62,
+          "end": 62
+        },
+        {
+          "path": "skills/skill-builder/references/governance.md",
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "rule_ids": [
+        "INS-008",
+        "OSS-005"
+      ],
+      "evidence": [
+        "all-99-procedural-fidelity.json",
+        "source-inventory.json"
+      ],
+      "release_consequence": "Can produce contradictory license advice; native reproduction not run.",
+      "verification_needed": "Update consumers to current outer decision; exercise paired selected/unselected audit and Q&A cases.",
+      "status": "open"
+    },
+    {
+      "id": "F-04",
+      "priority": "P2",
+      "title": "Failure cleanup deletes an in-place edit to generated output",
+      "evidence_type": "reproduced_inert_probe",
+      "locations": [
+        {
+          "path": "skills/skill-builder/scripts/skill_builder.py",
+          "start": 243,
+          "end": 245
+        },
+        {
+          "path": "skills/skill-builder/scripts/skill_builder.py",
+          "start": 271,
+          "end": 279
+        },
+        {
+          "path": "skills/skill-builder/references/cli.md",
+          "start": 187,
+          "end": 187
+        }
+      ],
+      "rule_ids": [
+        "CMD-001",
+        "CMD-004",
+        "CMD-008"
+      ],
+      "evidence": [
+        "cleanup-probe.json"
+      ],
+      "release_consequence": "Bounded preservation-contract defect during later failure and another writer; no general sandbox escape established.",
+      "verification_needed": "Preserve modified owned bytes and add in-place-edit regression, retaining unchanged/unrelated/replaced cleanup tests and explicit race limits.",
+      "status": "open"
+    },
+    {
+      "id": "F-05",
+      "priority": "P2",
+      "title": "Release test temporary fixtures encounter macOS symlink ancestors before intended assertions",
+      "evidence_type": "reproduced_default_and_canonical_temp_comparison",
+      "locations": [
+        {
+          "path": "tests/test_release.py",
+          "start": 214,
+          "end": 218
+        },
+        {
+          "path": "tests/test_release.py",
+          "start": 228,
+          "end": 239
+        },
+        {
+          "path": "tests/test_release.py",
+          "start": 253,
+          "end": 273
+        },
+        {
+          "path": "tools/build_release.py",
+          "start": 46,
+          "end": 59
+        }
+      ],
+      "rule_ids": [
+        "EVAL-004",
+        "EVAL-010",
+        "HOST-007"
+      ],
+      "evidence": [
+        "stdlib-release-default-temp.stderr.txt",
+        "stdlib-release-canonical-temp.stderr.txt",
+        "fresh-check-results.json"
+      ],
+      "release_consequence": "Default macOS documented test command fails and obscures actual defects; Linux evidence remains scoped.",
+      "verification_needed": "Canonicalize ordinary fixture roots while retaining deliberate alias tests; rerun default macOS panel after F-01.",
+      "status": "open"
+    }
+  ]
+}

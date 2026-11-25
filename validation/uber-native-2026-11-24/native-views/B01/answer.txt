@@ -1,0 +1,5 @@
+Created [evaluation-receipt-reviewer](PROJECT/output/skills/evaluation-receipt-reviewer/SKILL.md) under `./output`. The skill reviews answers by meaning, keeps intended and actual activation identities distinct, and reports missing or unexpected `rule_id` fields without inferring a pass.
+
+The source project includes worked examples and four [independent acceptance cases](PROJECT/output/tests/acceptance.md) covering valid paraphrases, unknown activation, canonical traceability fields, and embedded instructions.
+
+Static source checks passed. Acceptance cases, native trials, and formal schema validation remain unrun.

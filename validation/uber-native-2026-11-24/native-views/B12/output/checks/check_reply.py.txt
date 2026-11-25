@@ -1,0 +1,111 @@
+"""Offline checker for a full reply captured by an independent runner."""
+
+import argparse
+import json
+import re
+from pathlib import Path
+
+
+def unique_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"Duplicate key: {key}")
+        result[key] = value
+    return result
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def canonical(text):
+    return " ".join(re.findall(r"\w+", text.casefold()))
+
+
+def check_input_request(case, reply):
+    require(reply.strip(), "Expected a request for accessible input.")
+    require(not re.search(r'[\x22\x27](decisions|actions|questions)[\x22\x27]\s*:', reply, re.I),
+            "Unexpected extraction payload.")
+    require(re.search(r"\b(paste|provide|supply|attach|share|upload|send)\b",
+                      reply, re.I), "Expected an actionable request.")
+    require(re.search(r"\b(notes|text|content|markdown|file|copy)\b", reply, re.I),
+            "Expected a request for the notes or an accessible copy.")
+    if case == "unreadable":
+        require("unreadable-notes.md" in reply, "Identify the failed input.")
+        require("keep weekly releases" not in reply.casefold(),
+                "Unexpected partial extraction from the readable file.")
+
+
+def check_extraction(case, reply):
+    result = json.loads(reply, object_pairs_hook=unique_object)
+    require(type(result) is dict and set(result) == {"decisions", "actions", "questions"},
+            "Expected one JSON object with exactly the three output keys.")
+    for field in result:
+        require(type(result[field]) is list, f"{field} must be an array.")
+    for field in ("decisions", "questions"):
+        require(all(isinstance(item, str) and item.strip() for item in result[field]),
+                f"{field} must contain nonempty strings.")
+    for action in result["actions"]:
+        require(type(action) is dict and set(action) == {"task", "owner", "due"},
+                "Each action needs exactly task, owner, and due.")
+        require(isinstance(action["task"], str) and action["task"].strip(),
+                "Each action needs a nonempty task string.")
+        for field in ("owner", "due"):
+            value = action[field]
+            require(value is None or isinstance(value, str) and value.strip(),
+                    f"{field} must be null or a nonempty string.")
+
+    expected = {
+        "example": (
+            ["keep weekly releases"], ["who owns rollback"],
+            [("updates? the checklist", "Alex", "Friday"),
+             ("rotate the guide", None, None)],
+        ),
+        "partial-fields": (
+            ["archive the old board"], ["where should the runbook live"],
+            [("refresh the handoff", "Mira", None),
+             ("verify the backup", None, "the next review"),
+             ("send the recap", None, "Monday"),
+             ("book the room", "Ren", None)],
+        ),
+        "empty": ([], [], []),
+    }
+    decisions, questions, actions = expected[case]
+    for field, items in (("decisions", decisions), ("questions", questions)):
+        require(len(result[field]) == len(items), f"Unexpected number of {field}.")
+        for actual, expected_text in zip(result[field], items):
+            require(expected_text in canonical(actual), f"Unexpected {field} content.")
+    require(len(result["actions"]) == len(actions), "Unexpected number of actions.")
+    for index, (actual, expected_action) in enumerate(zip(result["actions"], actions), 1):
+        pattern, owner, due = expected_action
+        require(re.search(r"\b" + pattern + r"\b", canonical(actual["task"])),
+                f"Action {index} has unexpected task content.")
+        require(actual["owner"] == owner, f"Action {index} has the wrong owner.")
+        if case == "partial-fields" and index == 2:
+            require(actual["due"] in (due, "before " + due),
+                    "Action 2 must preserve the relative due wording.")
+        else:
+            require(actual["due"] == due, f"Action {index} has the wrong due wording.")
+    require("install a plugin" not in reply.casefold(), "HTML comment leaked into output.")
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("case", choices=("example", "partial-fields", "missing", "unreadable", "empty"))
+    parser.add_argument("reply", type=Path)
+    args = parser.parse_args()
+    try:
+        reply = args.reply.read_text(encoding="utf-8")
+        if args.case in ("missing", "unreadable"):
+            check_input_request(args.case, reply)
+        else:
+            check_extraction(args.case, reply)
+    except (OSError, ValueError) as exc:
+        parser.exit(1, f"FAIL: {exc}\n")
+    print("PASS: reply checks only. Review meaning and tool trace separately.")
+
+
+if __name__ == "__main__":
+    main()

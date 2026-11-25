@@ -1,0 +1,3 @@
+# License decision
+
+The original meeting-decisions instructions, cases and checks are delivered as local source. The rights holder has not selected public reuse terms. The rule-selection and traceability records retain the supplied builder's canonical rule text, source identifiers and archive digest. Their source is the loaded Skill Builder 1.0.0-rc.2, whose own license decision is documented separately with that builder. No new grant is asserted for this project.

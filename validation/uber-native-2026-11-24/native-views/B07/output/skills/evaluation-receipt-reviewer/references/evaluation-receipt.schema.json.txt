@@ -1,0 +1,711 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evaluation-receipt.schema.json",
+  "title": "Evaluation Receipt 2.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "record_type": {
+      "const": "evaluation-receipt"
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "artifact": {
+      "$ref": "common.schema.json#/$defs/identity"
+    },
+    "panel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "acceptance_frozen_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "retry_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exclusion_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "control_identity": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "no_skill",
+                "previous_version",
+                "not_run",
+                "not_applicable"
+              ]
+            },
+            "artifact": {
+              "anyOf": [
+                {
+                  "$ref": "common.schema.json#/$defs/identity"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "isolation": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reason": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "artifact",
+            "isolation",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "sha256",
+        "acceptance_frozen_at",
+        "retry_policy",
+        "exclusion_policy",
+        "control_identity"
+      ],
+      "additionalProperties": false
+    },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "max_attempts": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_elapsed_seconds": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "max_cost": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "enforcement": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "max_attempts",
+        "max_elapsed_seconds",
+        "max_cost",
+        "currency",
+        "enforcement"
+      ],
+      "additionalProperties": false
+    },
+    "runtime_versions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "attempt_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "case_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "condition": {
+            "enum": [
+              "candidate",
+              "previous",
+              "no_skill",
+              "local_resource"
+            ]
+          },
+          "started_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ended_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "artifact": {
+            "$ref": "common.schema.json#/$defs/identity"
+          },
+          "target": {
+            "$ref": "common.schema.json#/$defs/target"
+          },
+          "model": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "version": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "missing_reason": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              }
+            },
+            "required": [
+              "name",
+              "version",
+              "missing_reason"
+            ],
+            "additionalProperties": false
+          },
+          "input_hashes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "permissions": {
+            "type": "object",
+            "additionalProperties": {
+              "type": [
+                "string",
+                "boolean",
+                "number",
+                "null"
+              ]
+            }
+          },
+          "outcome": {
+            "enum": [
+              "passed",
+              "failed",
+              "blocked",
+              "not_run",
+              "inconclusive",
+              "not_applicable"
+            ]
+          },
+          "checks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "outcome": {
+                  "enum": [
+                    "passed",
+                    "failed",
+                    "blocked",
+                    "not_run",
+                    "inconclusive",
+                    "not_applicable"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "common.schema.json#/$defs/evidence"
+                  },
+                  "minItems": 0
+                },
+                "reason": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "id",
+                "outcome",
+                "evidence",
+                "reason"
+              ],
+              "additionalProperties": false,
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "outcome": {
+                        "const": "passed"
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "evidence": {
+                        "minItems": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "outcome": {
+                        "enum": [
+                          "blocked",
+                          "not_run",
+                          "inconclusive",
+                          "not_applicable"
+                        ]
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "reason": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "minItems": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/evidence"
+            },
+            "minItems": 0
+          },
+          "elapsed": {
+            "$ref": "common.schema.json#/$defs/metric"
+          },
+          "usage": {
+            "type": "object",
+            "properties": {
+              "input_tokens": {
+                "$ref": "common.schema.json#/$defs/metric"
+              },
+              "output_tokens": {
+                "$ref": "common.schema.json#/$defs/metric"
+              },
+              "tool_calls": {
+                "$ref": "common.schema.json#/$defs/metric"
+              },
+              "cost": {
+                "$ref": "common.schema.json#/$defs/metric"
+              }
+            },
+            "required": [
+              "input_tokens",
+              "output_tokens",
+              "tool_calls",
+              "cost"
+            ],
+            "additionalProperties": false
+          },
+          "reason": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          }
+        },
+        "required": [
+          "attempt_id",
+          "case_id",
+          "condition",
+          "started_at",
+          "ended_at",
+          "artifact",
+          "target",
+          "model",
+          "input_hashes",
+          "permissions",
+          "outcome",
+          "checks",
+          "evidence",
+          "elapsed",
+          "usage",
+          "reason"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "outcome": {
+                  "const": "passed"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "artifact": {
+                  "properties": {
+                    "package_sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    }
+                  }
+                },
+                "evidence": {
+                  "minItems": 1
+                },
+                "checks": {
+                  "minItems": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "outcome": {
+                  "enum": [
+                    "blocked",
+                    "not_run",
+                    "inconclusive",
+                    "not_applicable"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 0
+    },
+    "elapsed": {
+      "$ref": "common.schema.json#/$defs/metric"
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "input_tokens": {
+          "$ref": "common.schema.json#/$defs/metric"
+        },
+        "output_tokens": {
+          "$ref": "common.schema.json#/$defs/metric"
+        },
+        "tool_calls": {
+          "$ref": "common.schema.json#/$defs/metric"
+        },
+        "cost": {
+          "$ref": "common.schema.json#/$defs/metric"
+        }
+      },
+      "required": [
+        "input_tokens",
+        "output_tokens",
+        "tool_calls",
+        "cost"
+      ],
+      "additionalProperties": false
+    },
+    "outcome": {
+      "enum": [
+        "passed",
+        "failed",
+        "blocked",
+        "not_run",
+        "inconclusive",
+        "not_applicable"
+      ]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "outcome": {
+            "enum": [
+              "passed",
+              "failed",
+              "blocked",
+              "not_run",
+              "inconclusive",
+              "not_applicable"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/evidence"
+            },
+            "minItems": 0
+          },
+          "reason": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "outcome",
+          "evidence",
+          "reason"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "outcome": {
+                  "const": "passed"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "evidence": {
+                  "minItems": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "outcome": {
+                  "enum": [
+                    "blocked",
+                    "not_run",
+                    "inconclusive",
+                    "not_applicable"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 0
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/evidence"
+      },
+      "minItems": 0
+    },
+    "grader": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "method": {
+          "enum": [
+            "deterministic",
+            "human",
+            "model",
+            "not_run"
+          ]
+        },
+        "calibration": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "sha256",
+        "method",
+        "calibration"
+      ],
+      "additionalProperties": false
+    },
+    "omissions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "redaction": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "record_type",
+    "case_id",
+    "recorded_at",
+    "artifact",
+    "panel",
+    "budget",
+    "runtime_versions",
+    "attempts",
+    "elapsed",
+    "usage",
+    "outcome",
+    "checks",
+    "artifacts",
+    "grader",
+    "omissions",
+    "redaction"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "passed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "artifact": {
+            "properties": {
+              "package_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "attempts": {
+            "minItems": 1
+          },
+          "checks": {
+            "minItems": 1
+          },
+          "artifacts": {
+            "minItems": 1
+          },
+          "panel": {
+            "properties": {
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "acceptance_frozen_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

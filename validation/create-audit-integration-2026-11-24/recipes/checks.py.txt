@@ -1,0 +1,31 @@
+"""Reviewed local checks; retain exact commands, return codes and both streams."""
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+ROOT = Path('PROJECT_ROOT')
+WORK = Path(__file__).parent / 'checks'
+WORK.mkdir()
+PYTHON = 'VALIDATION_ENV/bin/python'
+commands = [
+    [PYTHON,'-I','-B','-m','unittest','discover','-s','tests','-v'],
+    ['python3','-I','-B','tools/check_project.py'],
+    [PYTHON,'-I','-B','tools/check_project.py','--require-validators'],
+    ['python3','-I','-B','-S','-m','unittest','discover','-s','tests','-p','test_release.py','-v'],
+    ['python3','-I','-B','-S','-m','unittest','discover','-s','tests','-p','test_evaluation.py','-v'],
+    ['python3.10','-I','-B','-m','unittest','discover','-s','tests','-p','test_evaluation.py','-v'],
+    ['git','diff','--check']]
+records = []
+for index, command in enumerate(commands):
+    result = subprocess.run(command,cwd=ROOT,capture_output=True,timeout=180)
+    for stream in ('stdout','stderr'):
+        (WORK/f'{index}.{stream}.txt').write_bytes(getattr(result,stream))
+    records.append({'command':command,'exit_code':result.returncode,
+                    'stdout_sha256':hashlib.sha256(result.stdout).hexdigest(),
+                    'stderr_sha256':hashlib.sha256(result.stderr).hexdigest()})
+    print(json.dumps({'index':index,'exit_code':result.returncode,
+          'tail':result.stderr.decode(errors='replace').splitlines()[-4:]}),flush=True)
+(WORK/'results.json').write_text(json.dumps(records,indent=2)+'\n')
+sys.exit(any(r['exit_code'] for r in records))

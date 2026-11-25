@@ -1,0 +1,14 @@
+{
+  "outcome": "passed",
+  "scope": "Exact local file: delimiters, Markdown heading, safe YAML and nested duplicate-key inspection, field types, lengths, name and directory, absence of direct Markdown links. No generic negative parser fixtures or host behavior tested.",
+  "parser": "Psych 5.3.1",
+  "metadata": {
+    "metadata": {
+      "version": "1.0"
+    },
+    "name": "incident-queue",
+    "compatibility": "Offline text classification.",
+    "description": "Route incident reports to access or availability queues. Use for incident triage; do not change services."
+  },
+  "source_sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9"
+}

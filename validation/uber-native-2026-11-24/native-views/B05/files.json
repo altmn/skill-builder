@@ -1,0 +1,22 @@
+[
+  {
+    "path": "target/README.md.txt",
+    "original_sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46",
+    "derived_sha256": "5dcc01abc0c67b3f30a6cd05fb6db6e4d0bbfccbf4a69330d82e0351a2a6ba46"
+  },
+  {
+    "path": "target/SKILL.md.txt",
+    "original_sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9",
+    "derived_sha256": "b05d4d71fcda066bc856d9c5574c77e78e8219d6deefeb7ad1e57ebb36b4f4c9"
+  },
+  {
+    "path": "target/setup.py.txt",
+    "original_sha256": "309a5671c7e3e22b576d09cdf0d61f127218d5bde417a6b8d57f81798c8a559e",
+    "derived_sha256": "309a5671c7e3e22b576d09cdf0d61f127218d5bde417a6b8d57f81798c8a559e"
+  },
+  {
+    "path": "answer.txt",
+    "original_sha256": "94afd18f2a7ef2913e1d4720b4d2d50327375fa10921abde1bc83a2a2e98fc2d",
+    "derived_sha256": "fff43de6f2eb8d8794f4155e2f132cf72b0d4357ec813bff5d9a7119333e265d"
+  }
+]

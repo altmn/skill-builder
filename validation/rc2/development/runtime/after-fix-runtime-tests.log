@@ -1,0 +1,10 @@
+test_nonfinite_numbers_are_rejected_at_every_json_depth (runtime_regression_tests.BuilderContracts.test_nonfinite_numbers_are_rejected_at_every_json_depth) ... ok
+test_overflow_record_failures_keep_finite_controls_and_batch_order (runtime_regression_tests.BuilderContracts.test_overflow_record_failures_keep_finite_controls_and_batch_order) ... ok
+test_created_descriptions_round_trip_unicode_scalars_through_yaml (runtime_regression_tests.BuilderContracts.test_created_descriptions_round_trip_unicode_scalars_through_yaml) ... ok
+test_surrogate_descriptions_fail_before_output_creation (runtime_regression_tests.BuilderContracts.test_surrogate_descriptions_fail_before_output_creation) ... ok
+test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values (runtime_regression_tests.BuilderContracts.test_wrong_type_record_dispatch_preserves_every_result_without_echoing_values) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.142s
+
+OK

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "development-trial-observations",
+  "recorded_at": "2026-11-23T07:12:38.221362+00:00",
+  "method": "Three fresh-context task agents used the actual builder from its supplied path; integrating agent inspected returned artifacts/answers. No expected findings were supplied to the task agents.",
+  "identity_limit": "Tasks exercised development snapshots while source documentation was being completed. Actual native activated hashes were not exposed. Final deterministic tests separately bind to the final runtime ZIP.",
+  "model": null,
+  "model_missing_reason": "Exact child model/version and provider usage were not captured in these trial artifacts.",
+  "clean_no_skill_control": "not_run",
+  "native_discovery": "not_run",
+  "cases": [
+    {
+      "id": "builder-create-trial",
+      "task": "Create a small instruction-only release-note-checker that identifies contradictions, unsupported certainty, compatibility assumptions and concrete questions without inventing facts, browsing, editing inputs or publishing.",
+      "outcome": "passed_for_artifact_creation",
+      "observed": [
+        "A complete 6011-byte/47-line runtime was produced, rather than a scaffold.",
+        "Runtime distinguishes ambiguous build/runtime requirements from direct contradictions.",
+        "Fourteen concrete cases and all 22 source design dispositions were recorded.",
+        "All 99 rules retained; five schema records and nine final integrity checks passed."
+      ],
+      "limits": [
+        "Generated skill independent behavioral exercise was blocked at dispatch by agent concurrency limit; no child started.",
+        "Generated skill native-host tests and clean baseline remain unrun.",
+        "Original-material license and maintained support route remain unresolved."
+      ]
+    },
+    {
+      "id": "builder-audit-trial",
+      "task": "Audit the supplied five-file flawed project for release readiness, preserving its files and avoiding installation/publication.",
+      "outcome": "passed_for_bounded_source_audit",
+      "observed": [
+        "Eight findings cover contradictory authority, marker-only publication, unchecked writes, missing reference, name mismatch, unsupported host/security claims, zero-test success and licensing/release gaps.",
+        "All five files, 784 bytes and 20 lines received semantic_full review.",
+        "All 99 rules were dispositioned and all 18 original-schema records validated.",
+        "Integrating agent independently rechecked input SHA-256 identities; target bytes unchanged and no expected setup/publication marker appeared."
+      ],
+      "limits": [
+        "No candidate script was executed.",
+        "Runtime exploitation, native host outcomes and every possible attack were not tested."
+      ]
+    },
+    {
+      "id": "builder-question-trial",
+      "task": "Are all 99 rules mandatory industry standards? Which requirements can a writing-only skill omit, and how should it record this?",
+      "outcome": "passed_for_source_based_answer",
+      "observed": [
+        "Answer correctly distinguished five specification-based rules from 94 project-policy rules and required/conditional/recommended strength.",
+        "Recommended the instruction profile without adding unnecessary runtime machinery.",
+        "Explained actual-effect applicability, all-99 dispositions, reasoned overrides and separate evidence outcomes with precise KB paths/IDs.",
+        "Did not create a project."
+      ],
+      "limits": [
+        "Answer was reviewed as a development task, not a calibrated statistical evaluation.",
+        "A concise observation record is retained here; no complete private reasoning/tool trace is claimed."
+      ]
+    }
+  ],
+  "archives": [
+    {
+      "case": "audit",
+      "artifact": "validation/trials/audit-trial.zip",
+      "sha256": "5801c109c5ec4cdfc75c6ceb264890d570e5628dd5a0d5e10146b36dd0da6692",
+      "files": 49,
+      "size_bytes": 94413
+    },
+    {
+      "case": "create",
+      "artifact": "validation/trials/create-trial.zip",
+      "sha256": "a544c48d49d29ef74fa87629139043e14cbe2678a89ca198f7930cd8a9fae723",
+      "files": 29,
+      "size_bytes": 63284
+    }
+  ],
+  "usage": {
+    "tokens": null,
+    "cost": null,
+    "reason": "No complete usage/cost meter was captured."
+  },
+  "grading_limits": "The three outcomes establish these observed builder tasks, not native discovery, broad success rates, speed/cost benefits or universal safety. Existing blocked attempts and target findings remain in each trial archive."
+}

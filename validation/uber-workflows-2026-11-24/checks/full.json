@@ -1,0 +1,26 @@
+{
+  "command": [
+    "PINNED_ENV/bin/python",
+    "-I",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "streams": {
+    "stdout": {
+      "path": "full.stdout.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "full.stderr.txt",
+      "original_sha256": "4d68950aaba4f223eca2c87ab043832b299a4f15263682ff1eaba450e129a59e",
+      "retained_sha256": "4d68950aaba4f223eca2c87ab043832b299a4f15263682ff1eaba450e129a59e"
+    }
+  }
+}

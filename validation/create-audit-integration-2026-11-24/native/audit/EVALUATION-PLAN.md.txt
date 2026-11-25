@@ -1,0 +1,45 @@
+# incident-queue evaluation plan
+
+Status: DRAFT — task-specific cases, oracle and environment are not complete.
+Mode: audit. This supplement does not replace the original 99-rule ledger.
+
+## Complete the target-specific inputs
+
+1. Adapt `evals/routing.json.template` into `evals/routing.json`: replace every
+   REPLACE value with domain prompts, negative boundaries and label rationales.
+   Keep a fixed development/validation split; do not copy builder-evaluation prompts.
+2. Adapt `evals/execution.json.template` into `evals/execution.json`: define normal,
+   boundary, missing-capability and hostile-input cases as relevant. Give each
+   check/invariant a concrete independent oracle here before running trials.
+   Fixture paths are relative to one explicitly approved fixture root.
+3. Adapt `evals/environment.json.template` into `evals/environment.json`.
+   Freeze host/model/settings/tools/catalog, allowed effects and budget. Choose
+   the budget for this task; template numbers are editable defaults, not a standard.
+4. Record the baseline task failures or expertise being captured, why a skill
+   is appropriate, and what parsing/verification belongs in deterministic code.
+   Measure actual loaded context before pruning; KB byte counts are not tokens.
+
+## Frozen experiment and independent oracle
+
+- Subject, intended snapshot and previous snapshot identities:
+- Domain-specific acceptance meaning for every execution check/invariant:
+- Routing labels, rationale, held-out ownership and distractor catalog:
+- No-skill, explicit candidate, automatic candidate and prior-version conditions:
+- Clean-session reset, hidden-copy checks, matching tools/settings and cache conditions:
+- Authorized runner, trace normalization, time/cost enforcement and zero semantic retries:
+- Actual artifact/effect grading, denied paths and unavailable-capability handling:
+- Results, all attempts, unknown usage and release consequences:
+
+Use the activated builder's `scripts/evaluate.py prepare` with explicit
+`--routing-cases`, `--execution-cases` and `--fixtures-root` plus the candidate,
+environment and new output path. The installed helper works without this
+repository's tools or builder-specific cases. Read its help/contract first.
+Preparation performs no model calls, target execution, installation or publication.
+
+## Audit or release assessment
+
+Complete `evaluation-review.json` and `EVALUATION-REVIEW.md` using actual evidence.
+Missing evidence is unassessed/unrun, not a passing outcome or nonapplicability.
+Separate format conformance, documented/observed host behavior, recommendations,
+and empirical quality/cost claims. Use justified nonblocking limits or name the
+specific release/support claim blocked; do not require a universal certification.

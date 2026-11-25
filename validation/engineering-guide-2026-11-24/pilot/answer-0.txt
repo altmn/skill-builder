@@ -1,0 +1,11 @@
+No. A passing portable Agent Skills format check shows that the exact package met the rules the validator checked, such as `SKILL.md` structure, required metadata, and naming. Record the package revision, validator version, and check coverage.
+
+| Claim | Evidence needed |
+|---|---|
+| **Safe in a given environment** | Review the skill’s instructions, scripts, dependencies, and data flows against a threat model. Test both allowed and denied actions at the actual enforcement boundary, such as the host sandbox or service permissions. Verify observable effects, including file access, network calls, and secret handling. Scope the claim to the controls and environment tested. |
+| **Discoverable on a given host** | Install the exact release in the intended location and verify in a fresh session that the named host, version, and configuration discover and load the intended revision. Test explicit invocation and, where supported, automatic selection with matching prompts and near misses. Untested hosts remain unverified. |
+| **Useful compared with no skill** | Run repeated, matched trials on representative tasks against a clean no-skill baseline. Hold the model, tools, inputs, and budgets fixed, and independently grade actual outputs and effects against predefined criteria. Test explicit activation for the benefit of the instructions and automatic selection for the end-to-end benefit. Report failures, costs, and uncertainty alongside any gains. |
+
+A skill can pass the format check, load correctly on one host, and still produce worse results than the baseline.
+
+[Local skill-builder governance](PILOT_ROOT/run-0/.agents/skills/skill-builder/references/governance.md) · [Evaluation method](PILOT_ROOT/run-0/.agents/skills/skill-builder/references/evaluation-method.md)

@@ -1,0 +1,21 @@
+{
+  "helper_sha256": "b98bd560973b989757349d75ec6659904a0f93ad6a82527217c198d7f395bc4c",
+  "version": "1.0.0-rc.1",
+  "depth_limit": {
+    "coverage": "incomplete",
+    "entries_seen": 129,
+    "omissions": [
+      {
+        "path": "d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d/d",
+        "reason": "maximum_directory_depth_128"
+      }
+    ],
+    "limit": 128
+  },
+  "enumeration_budget": {
+    "configured_max_entries": 6,
+    "reported_entries_seen": 6,
+    "actual_scandir_entries_read": 27,
+    "coverage": "incomplete"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "command": [
+    "python3.10",
+    "-I",
+    "-B",
+    "-S",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_uber_workflows.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "streams": {
+    "stdout": {
+      "path": "uber-python310.stdout.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "uber-python310.stderr.txt",
+      "original_sha256": "edd7d46a990c8948ec75c44f15c915daf417ea359e9f398144ff3813e43c3eab",
+      "retained_sha256": "edd7d46a990c8948ec75c44f15c915daf417ea359e9f398144ff3813e43c3eab"
+    }
+  }
+}

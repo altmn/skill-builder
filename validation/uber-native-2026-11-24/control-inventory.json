@@ -1,0 +1,48 @@
+{
+  "observations": [
+    {
+      "case_id": "FIELD-CREATE-NOTES",
+      "prompt_inventory_sha256": "d09f9119db5122440c7dfdefbebec51bacd852a83bbffb16d13c49353d11a060",
+      "target_skill_advertisement_or_entry_present": false,
+      "builder_repository_path_present": false,
+      "project_target_skill_directory_present": false,
+      "ancestor_instruction_files": []
+    },
+    {
+      "case_id": "FIELD-AUDIT-CLAIMS",
+      "prompt_inventory_sha256": "db3fcdaa4727560fcf950404b8dc18104a7fe22b31c931ee876d70583ec65c83",
+      "target_skill_advertisement_or_entry_present": false,
+      "builder_repository_path_present": false,
+      "project_target_skill_directory_present": false,
+      "ancestor_instruction_files": []
+    },
+    {
+      "case_id": "FIELD-CREATE-REVIEWER",
+      "prompt_inventory_sha256": "d3531b8a79cf741133189bfa5f4518b1076b8d91d7c9b2187e44a8025088a62a",
+      "target_skill_advertisement_or_entry_present": false,
+      "builder_repository_path_present": false,
+      "project_target_skill_directory_present": false,
+      "ancestor_instruction_files": []
+    },
+    {
+      "case_id": "FIELD-AUDIT-RECEIPT",
+      "prompt_inventory_sha256": "654f7f1c3c475cbd8bb13e70738b69110ae2057c954c0683efbc9a8018b4ea84",
+      "target_skill_advertisement_or_entry_present": false,
+      "builder_repository_path_present": false,
+      "project_target_skill_directory_present": false,
+      "ancestor_instruction_files": []
+    }
+  ],
+  "known_user_roots_checked": [
+    "~/.agents/skills",
+    "~/.codex/skills",
+    "~/.claude/skills"
+  ],
+  "target_entries_found": 0,
+  "measurement_correction": "Initial broad substring assertion matched the private workspace prefix, not an advertised or loaded target. Exact advertisement/frontmatter/entrypoint checks corrected the diagnostic; no native attempt or criterion changed.",
+  "guard_denials": "Analysis wrappers were rejected for unresolved executable/package indirection. Direct reviewed CLI diagnostics and direct file APIs were used; native tasks were not repeated.",
+  "limits": [
+    "Debug lacks exec ignore-user-config; matching supported plugin/app/hook/memory flags were used. Actual exec ignores user config.",
+    "Actual trace reads and input identities are checked separately. Context separation is not independent remote OS isolation."
+  ]
+}

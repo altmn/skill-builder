@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "supplemental-source-adoption",
+  "review_date": "2026-11-24",
+  "base_commit": "afcad44",
+  "source": {
+    "filename": "uber.md",
+    "title": "How Uber Evals 1 Million Agent Skill Invocations a Month",
+    "url": "https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/",
+    "sha256": "d0324882f315365bd7b4e105a29620a105471fb7b06e3bf705a94c1966f68873",
+    "size_bytes": 23236,
+    "authority": "User-supplied reference evidence; not authorization or a format standard",
+    "full_text_bundled": false
+  },
+  "frozen_knowledge_base": {
+    "archive_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+    "changed": false,
+    "canonical_rules_added_or_rewritten": false
+  },
+  "planning_assessment": [
+    {"improvement": "trajectory grading", "create": "Generate observable required/forbidden/order contracts for subject cases.", "audit": "Assess subject trajectories independently of answer quality and activation.", "owners": ["scripts/evaluate.py", "assets/evaluation/execution.json.template"], "verification": "Known ordered, reordered, forbidden and incomplete traces on separate subjects."},
+    {"improvement": "field cases and clean environments", "create": "Derive subject cases from redacted real failures with annotation and held-out ownership.", "audit": "Inspect provenance, oracle and environment isolation; missing trials remain unrun.", "owners": ["commands/skill-builder-create.md", "commands/skill-builder-audit.md", "assets/evaluation/PLAN.md.template"], "verification": "Broader incident-derived corpus preparation and runtime-only subject integration; no native benefit inferred."},
+    {"improvement": "ablation", "create": "Freeze named instruction variants and blind matched artifact comparisons before pruning.", "audit": "Check variant identity, grading blindness, identical-condition variation and retained negative results.", "owners": ["scripts/evaluate.py", "scripts/ablate.py", "references/evaluation-method.md"], "verification": "Variant schedules, blinded files, complete/incomplete judgments, identical-payload comparisons and unsafe-run accounting."},
+    {"improvement": "local failure feedback", "create": "Emit an opt-in local incident worksheet linked to a regression case and owning layer.", "audit": "Assess redaction, reproduction, ownership and evidence before closure.", "owners": ["assets/evaluation/papercut.json.template", "scripts/review.py"], "verification": "Open/closed incident validation, missing regression evidence and target nonexecution."},
+    {"improvement": "specification traceability", "create": "Emit stable requirements linking source hashes to case/check IDs.", "audit": "Detect drift and untested or incorrectly mapped forbidden actions without trusting target instructions.", "owners": ["assets/evaluation/contract.json.template", "scripts/review.py"], "verification": "Valid mapping, changed source, unknown check, duplicate requirement and escaped owner rejection."},
+    {"improvement": "advisory workflow linter", "create": "Review completion conditions, command checks and actionable recovery before delivery.", "audit": "Use bounded diagnostics as review locators rather than semantic verdicts.", "owners": ["scripts/review.py", "references/uber-workflows.md"], "verification": "Useful and deliberately flawed subject procedures; diagnostics never certify semantic quality."}
+  ],
+  "shared_propagation": {
+    "helper_outputs": "Both helpers receive the same visibly unfinished new companion worksheets.",
+    "host_adapters": "Document normalized observable events and isolation limits; no permissions, tools or install paths change.",
+    "packaging": "Existing runtime selection includes new scripts, references and assets; verify a runtime-only copy and release tests.",
+    "delivery_review": "Record actual checks and remaining claims in a new append-only docs/change-impact record."
+  },
+  "adaptation_limits": [
+    "No automatic reporting, telemetry, marketplace, installer, paid-model runner or model-specific compiler.",
+    "Uber's ratios, pass rates, savings and MCP policies are context-specific observations, not acceptance thresholds.",
+    "No source archive, original rule, template or historical receipt is rewritten."
+  ]
+}

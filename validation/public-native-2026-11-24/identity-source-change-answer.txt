@@ -1,0 +1,4 @@
+- **Selected skill root:** `<DISPOSABLE_TEST_ROOT>/identity-project/.agents/skills/skill-builder`
+- **`display_name`:** `Skill Builder`, read from `agents/openai.yaml` under the resolved root.
+- **Supported parent skill modes:** `skill-builder-create`, `skill-builder-audit`, and `skill-builder-explain`, declared in `SKILL.md`. The YAML has no separate modes field.
+- **Disposable source revision marker:** `SOURCE-REVISION-TWO`, verified in the activated `SKILL.md`.
