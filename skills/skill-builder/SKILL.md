@@ -1,7 +1,7 @@
 ---
 name: skill-builder
 description: Create and audit Codex-first, portable agent skills using the complete preserved skill-project knowledge base. Use skill-builder-create for new skills, skill-builder-audit for evidence-linked reviews, or ask questions about skill design, instructions, resources, testing, security, portability, installation, and releases. Produces working artifacts and explicit verification limits. Audit does not imply repair or publication.
-compatibility: Python 3.10+ for offline helpers; PyYAML and jsonschema/referencing for optional validation. Without Python, use a trusted archive reader and report automated checks unavailable.
+compatibility: Python 3.10+ for offline helpers; Python 3.11+ for the full pinned optional PyYAML and jsonschema/referencing validation set. Without Python, use a trusted archive reader and report automated checks unavailable.
 ---
 
 # Skill Builder
