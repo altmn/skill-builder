@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "Correct the packaged-runtime test to assert blocked exit 2 when validators are absent and passing format checks only when available.",
+  "reviewed_paths": [
+    "tests/test_plugin.py",
+    "validation/publication-1.0.0/README.md",
+    "validation/publication-1.0.0/blocked-audit-fix-core310.log",
+    "validation/publication-1.0.0/blocked-audit-fix-local-tests.log",
+    "validation/publication-1.0.0/blocked-audit-fix-project-check.json",
+    "validation/publication-1.0.0/ci-core310-blocked-audit-test-failure.log"
+  ],
+  "workflows": {
+    "create": {
+      "decision": "no_change_needed",
+      "reason": "Production create/audit behavior already distinguishes scaffold completion, inconclusive semantic audit and unavailable optional format validation. Correct only the regression to prove the existing CLI contract under forced missing dependencies, without converting blocked checks into passes.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-create.md"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "Seven plugin tests passed on Python 3.10 without site packages and all 146 full local tests passed. The test now asserts blocked exit 2, the missing-parser reason and inconclusive/non-executing behavior, and checks available-parser success separately. No production workflow or native-support claim changes.",
+        "commands": [
+          "python3.10 -I -B -S -m unittest discover -s tests -p test_plugin.py -v",
+          "python -I -B -m unittest discover -s tests -v",
+          "python -I -B tools/check_project.py --require-validators"
+        ],
+        "evidence": [
+          "validation/publication-1.0.0/ci-core310-blocked-audit-test-failure.log",
+          "validation/publication-1.0.0/blocked-audit-fix-core310.log",
+          "validation/publication-1.0.0/blocked-audit-fix-local-tests.log",
+          "validation/publication-1.0.0/blocked-audit-fix-project-check.json"
+        ]
+      }
+    },
+    "audit": {
+      "decision": "no_change_needed",
+      "reason": "Production create/audit behavior already distinguishes scaffold completion, inconclusive semantic audit and unavailable optional format validation. Correct only the regression to prove the existing CLI contract under forced missing dependencies, without converting blocked checks into passes.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-audit.md"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "Seven plugin tests passed on Python 3.10 without site packages and all 146 full local tests passed. The test now asserts blocked exit 2, the missing-parser reason and inconclusive/non-executing behavior, and checks available-parser success separately. No production workflow or native-support claim changes.",
+        "commands": [
+          "python3.10 -I -B -S -m unittest discover -s tests -p test_plugin.py -v",
+          "python -I -B -m unittest discover -s tests -v",
+          "python -I -B tools/check_project.py --require-validators"
+        ],
+        "evidence": [
+          "validation/publication-1.0.0/ci-core310-blocked-audit-test-failure.log",
+          "validation/publication-1.0.0/blocked-audit-fix-core310.log",
+          "validation/publication-1.0.0/blocked-audit-fix-local-tests.log",
+          "validation/publication-1.0.0/blocked-audit-fix-project-check.json"
+        ]
+      }
+    }
+  }
+}
