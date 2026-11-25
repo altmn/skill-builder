@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "Review the four blocked dependency updates together, retain their failed gate evidence, and prevent duplicate feature-branch runs while preserving required PR review and test gates.",
+  "reviewed_paths": [
+    ".github/dependabot.yml",
+    ".github/workflows/ci.yml",
+    "CHANGELOG.md",
+    "docs/workflow-impact.md",
+    "requirements-validation.txt",
+    "validation/dependabot-2026-11-24/README.md",
+    "validation/dependabot-2026-11-24/config-check.json",
+    "validation/dependabot-2026-11-24/core310-plugin.log",
+    "validation/dependabot-2026-11-24/local-tests.log",
+    "validation/dependabot-2026-11-24/pip-check.log",
+    "validation/dependabot-2026-11-24/pr-1-failed.log",
+    "validation/dependabot-2026-11-24/pr-2-failed.log",
+    "validation/dependabot-2026-11-24/pr-3-failed.log",
+    "validation/dependabot-2026-11-24/pr-4-failed.log",
+    "validation/dependabot-2026-11-24/project-check.json",
+    "validation/dependabot-2026-11-24/summary.json",
+    "validation/dependabot-2026-11-24/triage.json",
+    "validation/dependabot-2026-11-24/upstream-actions.json",
+    "validation/dependabot-2026-11-24/wheel-review.json"
+  ],
+  "workflows": {
+    "create": {
+      "decision": "no_change_needed",
+      "reason": "The updated PyYAML parser and rpds-backed schema environment validate created subjects, but generated project layouts, task/effects contracts, 99-rule dispositions, templates and target graders are unchanged. Existing creation and packaged-runtime subject regressions passed under the new combined dependency set. Actions and event/group changes affect repository CI only; they introduce no subject installer, host permission or network behavior.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-create.md",
+        "skills/skill-builder/scripts/skill_builder.py"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "All 146 tests passed in the fresh combined-version environment, including external-subject creation/audit and runtime-only regressions. Seven plugin tests passed on Python 3.10 without site packages. Required-validator project, config/security invariants and dependency consistency checks passed. These are bounded mechanical results; no native or general subject-quality pass is inferred.",
+        "commands": [
+          "python -I -B -m unittest discover -s tests -v",
+          "python3.10 -I -B -S -m unittest discover -s tests -p test_plugin.py -v",
+          "python -I -B tools/check_project.py --require-validators",
+          "python -I -m pip check"
+        ],
+        "evidence": [
+          "validation/dependabot-2026-11-24/local-tests.log",
+          "validation/dependabot-2026-11-24/core310-plugin.log",
+          "validation/dependabot-2026-11-24/project-check.json",
+          "validation/dependabot-2026-11-24/config-check.json",
+          "validation/dependabot-2026-11-24/pip-check.log",
+          "validation/dependabot-2026-11-24/summary.json"
+        ]
+      }
+    },
+    "audit": {
+      "decision": "no_change_needed",
+      "reason": "Audit metadata and evidence-format checks use the updated optional parser/schema dependencies. Read-only inventory, non-execution of target setup, inconclusive semantic verdicts, blocked optional-validator handling and subject-specific evaluation remain unchanged and pass their existing regressions. No audit procedure, helper output, worksheet or host adapter change is warranted by these dependency/API-compatible maintenance updates.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-audit.md",
+        "skills/skill-builder/scripts/skill_builder.py"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "All 146 tests passed in the fresh combined-version environment, including external-subject creation/audit and runtime-only regressions. Seven plugin tests passed on Python 3.10 without site packages. Required-validator project, config/security invariants and dependency consistency checks passed. These are bounded mechanical results; no native or general subject-quality pass is inferred.",
+        "commands": [
+          "python -I -B -m unittest discover -s tests -v",
+          "python3.10 -I -B -S -m unittest discover -s tests -p test_plugin.py -v",
+          "python -I -B tools/check_project.py --require-validators",
+          "python -I -m pip check"
+        ],
+        "evidence": [
+          "validation/dependabot-2026-11-24/local-tests.log",
+          "validation/dependabot-2026-11-24/core310-plugin.log",
+          "validation/dependabot-2026-11-24/project-check.json",
+          "validation/dependabot-2026-11-24/config-check.json",
+          "validation/dependabot-2026-11-24/pip-check.log",
+          "validation/dependabot-2026-11-24/summary.json"
+        ]
+      }
+    }
+  }
+}

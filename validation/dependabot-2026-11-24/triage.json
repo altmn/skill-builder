@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-24",
+  "timezone": "America/Los_Angeles",
+  "observations": [
+    {
+      "pull_request": 1,
+      "run": 45561938157,
+      "cause": "Required append-only workflow impact review absent.",
+      "optional_validation": "passed",
+      "affected_path": ".github/workflows/ci.yml",
+      "classification": "Deterministic policy-gate failure; not a failed test or a claim of flakiness."
+    },
+    {
+      "pull_request": 2,
+      "run": 45561918784,
+      "cause": "Required append-only workflow impact review absent.",
+      "optional_validation": "passed",
+      "affected_path": ".github/workflows/ci.yml",
+      "classification": "Deterministic policy-gate failure; not a failed test or a claim of flakiness."
+    },
+    {
+      "pull_request": 3,
+      "run": 45561975204,
+      "cause": "Required append-only workflow impact review absent.",
+      "optional_validation": "passed",
+      "affected_path": "requirements-validation.txt",
+      "classification": "Deterministic policy-gate failure; not a failed test or a claim of flakiness."
+    },
+    {
+      "pull_request": 4,
+      "run": 45561968958,
+      "cause": "Required append-only workflow impact review absent.",
+      "optional_validation": "passed",
+      "affected_path": "requirements-validation.txt",
+      "classification": "Deterministic policy-gate failure; not a failed test or a claim of flakiness."
+    }
+  ],
+  "limits": "The triage skill classifies test failures. These are explicit repository review-policy failures, so its flakiness verdicts are not applicable."
+}
