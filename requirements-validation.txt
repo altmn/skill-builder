@@ -1,7 +1,7 @@
 # Optional validation dependencies; install explicitly in a dedicated environment.
 # This full pinned set requires Python 3.11+ (rpds-py); offline core helpers support 3.10+.
 # Exact observed set from the preserved KB; no automatic dependency installation.
-PyYAML==6.0.3
+PyYAML==6.0.4
 jsonschema==4.26.0
 referencing==0.37.0
 attrs==26.1.0
