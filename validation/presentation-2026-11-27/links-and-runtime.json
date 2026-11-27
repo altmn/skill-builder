@@ -1,0 +1,17 @@
+{
+  "outcome": "passed",
+  "scope": "Local changed-document links/heading anchors/assets, balanced fences, unchanged operational trees and non-presentation metadata",
+  "documents_checked": 5,
+  "local_links_checked": 84,
+  "missing_links": [],
+  "operational_changed_paths": [],
+  "knowledge_base_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204",
+  "plugin_changes": "Only root description and interface longDescription",
+  "not_established": [
+    "Rendered GitHub appearance",
+    "Native discovery or behavior of changed package metadata",
+    "Public directory availability",
+    "Full optional YAML/schema validation"
+  ],
+  "legacy_readme_heading_anchors_preserved": 11
+}

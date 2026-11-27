@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "skill-builder",
   "version": "1.0.0",
-  "description": "Create, audit, and explain portable agent skills using a preserved knowledge base and offline Python helpers.",
+  "description": "Turn repeatable tasks into AI skills, review existing skills, and make informed skill-design choices.",
   "author": {
     "name": "Alex Allen",
     "url": "https://github.com/altmn"
@@ -23,7 +23,7 @@
       "interface": {
         "displayName": "Skill Builder",
         "shortDescription": "Build and audit agent skills",
-        "longDescription": "Create a portable agent skill, audit an existing skill repository, or explain skill-building practices using the complete preserved knowledge base. Named create and audit modes guide task contracts, instruction design, resources, host adapters, tests, evaluation, and release decisions. Offline Python helpers retrieve original sources, prepare project scaffolds, and collect static audit evidence. Agent judgment completes creation and semantic review; structural checks do not certify safety, usefulness, or publication readiness. The package requires local file access and Python 3.10 or newer for its helpers. The full optional YAML and schema validation set requires Python 3.11+ and separately provisioned dependencies. No hosted backend, MCP server, automatic installer, telemetry, or publisher-paid service is included. Codex is the primary target; other adapters and historical trials retain their documented evidence limits. Stable versioning does not establish comprehensive host compatibility or OpenAI directory approval.",
+        "longDescription": "Turn a repeatable task into a reusable AI skill, review an existing skill, or ask a question about skill design. Create guides the agent from examples and requirements to a candidate skill and evaluation plan. Audit produces evidence-linked findings, coverage limits, and prioritized next steps. Explain answers design questions using the complete preserved knowledge base. Agent judgment completes the work; helper output alone does not certify usefulness, safety, or readiness to publish. The full workflow requires a desktop environment with local files and execution tools; helper requirements and current host evidence are documented in the repository. Codex is the primary target. Other adapters and historical trials retain their evidence limits; no public OpenAI directory approval is claimed.",
         "developerName": "Alex Allen",
         "category": "Developer Tools",
         "capabilities": [

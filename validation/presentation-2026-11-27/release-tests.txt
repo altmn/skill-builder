@@ -1,0 +1,26 @@
+test_descendant_symlinks_and_file_ancestors_are_refused (test_release.ReleaseContractTests.test_descendant_symlinks_and_file_ancestors_are_refused) ... ok
+test_environment_file_in_selected_tree_is_refused (test_release.ReleaseContractTests.test_environment_file_in_selected_tree_is_refused) ... ok
+test_exact_bytes_manifest_and_determinism (test_release.ReleaseContractTests.test_exact_bytes_manifest_and_determinism) ... ok
+test_existing_output_preserved (test_release.ReleaseContractTests.test_existing_output_preserved) ... ok
+test_inconsistent_license_decision_cannot_claim_selected_mit (test_release.ReleaseContractTests.test_inconsistent_license_decision_cannot_claim_selected_mit) ... ok
+test_matching_license_copies_with_wrong_full_attribution_are_refused (test_release.ReleaseContractTests.test_matching_license_copies_with_wrong_full_attribution_are_refused) ... ok
+test_missing_wrong_type_and_unreadable_selected_trees_fail (test_release.ReleaseContractTests.test_missing_wrong_type_and_unreadable_selected_trees_fail) ... ok
+test_nested_output_is_rejected_without_creating_any_files (test_release.ReleaseContractTests.test_nested_output_is_rejected_without_creating_any_files) ... ok
+test_output_symlink_ancestor_is_rejected_before_writing (test_release.ReleaseContractTests.test_output_symlink_ancestor_is_rejected_before_writing) ... ok
+test_payload_identity_changes_with_bytes_or_path (test_release.ReleaseContractTests.test_payload_identity_changes_with_bytes_or_path) ... ok
+test_project_check_rejects_selected_root_before_using_payload (test_release.ReleaseContractTests.test_project_check_rejects_selected_root_before_using_payload) ... ok
+test_project_path_alias_is_not_hidden_by_resolve (test_release.ReleaseContractTests.test_project_path_alias_is_not_hidden_by_resolve) ... ok
+test_runtime_has_only_one_discoverable_skill (test_release.ReleaseContractTests.test_runtime_has_only_one_discoverable_skill) ... ok
+test_runtime_root_and_ancestor_symlinks_are_refused (test_release.ReleaseContractTests.test_runtime_root_and_ancestor_symlinks_are_refused) ... ok
+test_selected_directory_roots_refused_before_read_or_output (test_release.ReleaseContractTests.test_selected_directory_roots_refused_before_read_or_output) ... ok
+test_selected_files_and_broken_links_are_refused (test_release.ReleaseContractTests.test_selected_files_and_broken_links_are_refused) ... ok
+test_source_runtime_licenses_and_current_metadata_agree (test_release.ReleaseContractTests.test_source_runtime_licenses_and_current_metadata_agree) ... ok
+test_stale_generated_manifest_is_refused (test_release.ReleaseContractTests.test_stale_generated_manifest_is_refused) ... ok
+test_supported_repeated_builds_keep_exact_archive_identities (test_release.ReleaseContractTests.test_supported_repeated_builds_keep_exact_archive_identities) ... ok
+test_symlink_source_refused (test_release.ReleaseContractTests.test_symlink_source_refused) ... ok
+test_temporary_fixture_canonicalizes_system_temp_alias (test_release.ReleaseContractTests.test_temporary_fixture_canonicalizes_system_temp_alias) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 7.242s
+
+OK
