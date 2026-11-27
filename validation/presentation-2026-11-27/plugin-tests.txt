@@ -1,0 +1,12 @@
+test_integrations_and_missing_executor_declaration_are_refused (test_plugin.PluginPackageTests.test_integrations_and_missing_executor_declaration_are_refused) ... ok
+test_listing_limits_and_duplicate_prompts_are_refused (test_plugin.PluginPackageTests.test_listing_limits_and_duplicate_prompts_are_refused) ... ok
+test_missing_bad_and_nonsquare_icons_are_refused (test_plugin.PluginPackageTests.test_missing_bad_and_nonsquare_icons_are_refused) ... ok
+test_packaged_runtime_creates_and_audits_another_skill_without_executing_it (test_plugin.PluginPackageTests.test_packaged_runtime_creates_and_audits_another_skill_without_executing_it) ... ok
+test_unrelated_traversal_and_colliding_members_are_refused (test_plugin.PluginPackageTests.test_unrelated_traversal_and_colliding_members_are_refused) ... ok
+test_upload_inventory_is_exact_and_kb_is_preserved (test_plugin.PluginPackageTests.test_upload_inventory_is_exact_and_kb_is_preserved) ... ok
+test_wrong_version_and_nonobject_metadata_are_refused (test_plugin.PluginPackageTests.test_wrong_version_and_nonobject_metadata_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.372s
+
+OK

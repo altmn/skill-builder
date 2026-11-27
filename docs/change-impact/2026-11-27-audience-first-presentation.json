@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "Make the public landing page useful before technical reference: show the task, an illustrative result, supported setup choices and copyable lifecycle prompts while preserving runtime behavior and source evidence.",
+  "reviewed_paths": [
+    "README.md",
+    "plugin.json",
+    "docs/getting-started.md",
+    "docs/technical-guide.md",
+    "docs/presentation.md",
+    "validation/presentation-2026-11-27/README.md",
+    "validation/presentation-2026-11-27/project-check.json",
+    "validation/presentation-2026-11-27/plugin-tests.txt",
+    "validation/presentation-2026-11-27/release-tests.txt",
+    "validation/presentation-2026-11-27/links-and-runtime.json"
+  ],
+  "workflows": {
+    "create": {
+      "decision": "no_change_needed",
+      "reason": "The public README and listing copy help a person choose and start the existing create workflow. The command procedure, helper-generated projects, templates, evaluation resources, host adapters and frozen knowledge base are unchanged; no new subject-facing rule or output is introduced. Root plugin description bytes do change, so package identity and current installed-host acceptance are not inherited from earlier archives.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-create.md",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "skills/skill-builder/assets/evaluation/PLAN.md.template"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "Delivery assessment confirms the create procedure, helpers, templates, evaluation resources and adapters remain byte-for-byte unchanged in Git. The 7 plugin and 21 release tests passed, including create/audit from a temporary packaged runtime; project preservation and 84 changed-document links passed available checks. Optional YAML parsing remains blocked and no native create acceptance or benefit is claimed.",
+        "commands": [
+          "python3 -I -B -S tools/check_project.py",
+          "python3 -I -B -S -m unittest discover -s tests -p test_plugin.py -v",
+          "python3 -I -B -S -m unittest discover -s tests -p test_release.py -v",
+          "git diff --name-only HEAD -- skills tools tests assets .github"
+        ],
+        "evidence": [
+          "validation/presentation-2026-11-27/project-check.json",
+          "validation/presentation-2026-11-27/plugin-tests.txt",
+          "validation/presentation-2026-11-27/release-tests.txt",
+          "validation/presentation-2026-11-27/links-and-runtime.json"
+        ]
+      }
+    },
+    "audit": {
+      "decision": "no_change_needed",
+      "reason": "The public task chooser and examples describe the existing audit without altering semantic review, structural intake, evidence outcomes, owner procedures, templates, target-specific evaluation, host adapters or behavioral skill instructions/helpers/resources. Only presentation fields in the packaged root manifest change; prior archive identity and installed-host acceptance do not apply to these changed package bytes. No downstream audit behavior requires propagation.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-audit.md",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "skills/skill-builder/scripts/evaluate.py"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "Delivery assessment confirms audit semantics, structural evidence, target evaluation and host adapters are unchanged. The 28 standard-library plugin/release tests passed, including the blocked-parser audit path and preservation of an unexecuted synthetic target. Source checks retain unavailable YAML validation as blocked; no new native audit, enforcement or release-readiness claim is made.",
+        "commands": [
+          "python3 -I -B -S tools/check_project.py",
+          "python3 -I -B -S -m unittest discover -s tests -p test_plugin.py -v",
+          "python3 -I -B -S -m unittest discover -s tests -p test_release.py -v",
+          "git diff --name-only HEAD -- skills tools tests assets .github"
+        ],
+        "evidence": [
+          "validation/presentation-2026-11-27/project-check.json",
+          "validation/presentation-2026-11-27/plugin-tests.txt",
+          "validation/presentation-2026-11-27/release-tests.txt",
+          "validation/presentation-2026-11-27/links-and-runtime.json"
+        ]
+      }
+    }
+  }
+}
