@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-27",
+  "baseline_commit": "5b3a59894d5c28ba1bf977fbdb2b78cd24c97ce2",
+  "scope": "README editorial examples and concise prompts; no runtime or package metadata change",
+  "checks": {
+    "project_check": {
+      "command": "python3 -I -B tools/check_project.py",
+      "outcome": "passed",
+      "passed_checks": 16,
+      "blocked_checks": ["portable_entrypoint", "original_portable_validator"],
+      "limitation": "Optional YAML parser dependencies are unavailable locally; full optional validation is not claimed."
+    },
+    "plugin_tests": {
+      "command": "python3 -I -B -S -m unittest discover -s tests -p test_plugin.py -v",
+      "passed": 7,
+      "failed": 0
+    },
+    "readme_local_links": {"checked": 35, "missing": 0},
+    "old_explicit_anchors": {"preserved": 10, "missing": 0},
+    "whitespace": {"command": "git diff --check", "outcome": "passed"},
+    "behavior_preservation": {
+      "command": "git diff --exit-code 5b3a59894d5c28ba1bf977fbdb2b78cd24c97ce2 -- skills plugin.json tools tests assets .github",
+      "outcome": "passed",
+      "knowledge_base_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204"
+    }
+  },
+  "limits": [
+    "The project-handoff example is illustrative, not a recorded model run.",
+    "No new native-host acceptance, measured benefit, installation, or release is claimed.",
+    "Plugin tests use temporary packaged runtime copies; their local passes are not language-model behavior evidence."
+  ]
+}
