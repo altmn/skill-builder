@@ -117,11 +117,11 @@ Use the [installation guide](docs/getting-started.md). Choose the package by pur
 
 | Package | Use it for |
 | --- | --- |
-| [Standalone skill ZIP](https://github.com/altmn/skill-builder/releases/download/v1.0.0/skill-builder-1.0.0.zip) | A host that loads a skill folder; copy only the complete runtime folder |
-| [OpenAI plugin ZIP](https://github.com/altmn/skill-builder/releases/download/v1.0.0/skill-builder-1.0.0-plugin.zip) | A compatible desktop plugin import; local execution is required |
-| [Source ZIP](https://github.com/altmn/skill-builder/releases/download/v1.0.0/skill-builder-1.0.0-source.zip) | Inspecting, developing, and testing this repository; not a plugin import |
+| [Standalone skill ZIP](https://github.com/altmn/skill-builder/releases/download/v1.0.1/skill-builder-1.0.1.zip) | A host that loads a skill folder; copy only the complete runtime folder |
+| [OpenAI plugin ZIP](https://github.com/altmn/skill-builder/releases/download/v1.0.1/skill-builder-1.0.1-plugin.zip) | A compatible desktop plugin import; local execution is required |
+| [Source ZIP](https://github.com/altmn/skill-builder/releases/download/v1.0.1/skill-builder-1.0.1-source.zip) | Inspecting, developing, and testing this repository; not a plugin import |
 
-These are the **1.0.0** published assets. [Checksums and release receipts](https://github.com/altmn/skill-builder/releases/tag/v1.0.0) identify them; subsequent source changes are separate. GitHub's automatic source archive is also distinct from an installable package. This project does not claim an approved OpenAI directory listing or a universal browser ZIP importer.
+These are the **1.0.1** release assets. [Checksums and release receipts](https://github.com/altmn/skill-builder/releases/tag/v1.0.1) identify them; subsequent source changes are separate. GitHub's automatic source archive is also distinct from an installable package. This project does not claim an approved OpenAI directory listing or a universal browser ZIP importer.
 
 ---
 

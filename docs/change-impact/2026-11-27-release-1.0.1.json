@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "Prepare version 1.0.1 for the merged README improvements and reviewed maintenance changes, preserving runtime behavior.",
+  "reviewed_paths": [
+    "CHANGELOG.md",
+    "README.md",
+    "VERSION",
+    "docs/chatgpt-submission.md",
+    "docs/releasing.md",
+    "docs/releases/1.0.1.md",
+    "plugin.json",
+    "skills/skill-builder/VERSION",
+    "skills/skill-builder/references/release-status.md",
+    "skills/skill-builder/scripts/skill_builder.py",
+    "validation/release-1.0.1/project-check.json",
+    "validation/release-1.0.1/full-tests.txt",
+    "validation/release-1.0.1/review.json"
+  ],
+  "workflows": {
+    "create": {
+      "decision": "no_change_needed",
+      "reason": "Planning and delivery assessment: this release synchronizes version identities, status and distribution links for already-merged presentation and maintenance work. Create instructions, scaffolding, templates, evaluation logic, adapters and permissions remain unchanged; exact byte comparison verifies the helper changes only its VERSION constant. The complete suite covers separate subjects and packaged-runtime creation.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-create.md",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "skills/skill-builder/assets/evaluation/PLAN.md.template"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "All 19 project checks and 146 independent offline tests pass in the exact pinned environment. Runtime byte comparison and KB preservation pass. This verifies release mechanics and existing contracts; native acceptance and task benefit remain unestablished.",
+        "commands": ["python -I -B tools/check_project.py --require-validators", "python -I -B -m unittest discover -s tests -v", "git diff --name-only ec596cfca2a5d3e4a2a034255b86d10e934c207b -- skills"],
+        "evidence": ["validation/release-1.0.1/project-check.json", "validation/release-1.0.1/full-tests.txt", "validation/release-1.0.1/review.json"]
+      }
+    },
+    "audit": {
+      "decision": "no_change_needed",
+      "reason": "Planning and delivery assessment: Audit intake, read-only handling, findings, coverage limits, evaluation procedures, adapters and permissions are unaffected by release metadata. Exact comparison verifies the helper changes only its VERSION constant; the frozen KB and other runtime resources stay exact. The complete suite independently covers separate-subject audits and denied target-code execution.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-audit.md",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "skills/skill-builder/scripts/evaluate.py"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "All 19 project checks and 146 independent offline tests pass, including read-only audit and packaged-runtime contracts. No semantic audit truth, native acceptance or comparative improvement is inferred from them.",
+        "commands": ["python -I -B tools/check_project.py --require-validators", "python -I -B -m unittest discover -s tests -v", "git diff --name-only ec596cfca2a5d3e4a2a034255b86d10e934c207b -- skills"],
+        "evidence": ["validation/release-1.0.1/project-check.json", "validation/release-1.0.1/full-tests.txt", "validation/release-1.0.1/review.json"]
+      }
+    }
+  }
+}

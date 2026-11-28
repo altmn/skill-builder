@@ -12,12 +12,12 @@ The listing pages are [website](https://github.com/altmn/skill-builder), [suppor
 
 ## Final handoff
 
-1. Select the exact `skill-builder-1.0.0-plugin.zip` from the verified GitHub release; record its SHA-256 and reviewed commit. Recheck public pages, icons, version and inventory. The source and standalone ZIPs are different distributions.
+1. Select the exact `skill-builder-1.0.1-plugin.zip` from the verified GitHub release; record its SHA-256 and reviewed commit. Recheck public pages, icons, version and inventory. The source and standalone ZIPs are different distributions.
 2. The publisher selects the intended OpenAI organization/project and verifies Alex Allen's individual identity. The directory uses that verified identity, not a ZIP override.
 3. When upload is authorized, use the supported skills-only flow. Inspect imported metadata, desktop-only classification, country/commerce choices and exact-draft findings. If local-executor submission access is unavailable, report that requirement rather than removing the declaration.
 4. Wait for required scans on the exact draft. Skills-only packages need no MCP cases, demo or reviewer credentials. Natural review prompts in the manifest are not executed test results.
 5. The authorized publisher reviews attestations and submits after requirements pass. Approval and publication are later states. Share a directory URL only after the listing exists.
 
-The 1.0.0 archives have no fresh native installed-host acceptance. Earlier Codex observations remain incomplete historical evidence; Claude Code/Grok runs remain unrun. Keep these gaps visible to publisher and reviewers.
+The 1.0.1 archives have no fresh native installed-host acceptance. Earlier Codex observations remain incomplete historical evidence; Claude Code/Grok runs remain unrun. Keep these gaps visible to publisher and reviewers.
 
 Primary references, reviewed November 24, 2026: [package format](https://developers.openai.com/plugins/build/plugins), [submission](https://developers.openai.com/plugins/deploy/submission), [submission errors](https://developers.openai.com/plugins/deploy/submission-errors), and [desktop-only packages](https://developers.openai.com/plugins/deploy/desktop-only). Recheck changing requirements before submission.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "skill-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turn repeatable tasks into AI skills, review existing skills, and make informed skill-design choices.",
   "author": {
     "name": "Alex Allen",
@@ -56,7 +56,7 @@
       },
       "publication": {
         "countries": [],
-        "release_notes": "First stable public release of Skill Builder, including standalone and OpenAI plugin packages, preserved source evidence, and explicit host compatibility limits."
+        "release_notes": "Clearer task examples and concise setup, usage and maintenance prompts, with reviewed validation dependencies. Create, Audit and Explain behavior and the preserved knowledge base are unchanged."
       }
     }
   }
