@@ -2,6 +2,8 @@
 
 The public repository is `altmn/skill-builder`, maintained by Alex Allen, with default branch `master`. Changes use new feature branches and pull requests. Never merge or mirror the private preparation repository's Git history into this repository.
 
+For a request to "get to production", follow [project instructions](../AGENTS.md#getting-to-production): publish a new versioned release, including for documentation-only changes, and update and verify existing installed copies without another confirmation. The validation, preservation, and package checks below still apply. Source-only work and local package preparation alone do not request production.
+
 ## First publication history
 
 Export reviewed source without `.git`, initialize an independent Git database, and create one signed commit with no parents. Upload no original branches, tags, reflogs, bundles, object alternates or preparation commits. Rename the bootstrap feature branch to `master` without creating another commit. Existing reviews, failures, changelog entries and attribution stay as files. This hides earlier Git history, not the historical evidence intentionally retained in the snapshot.

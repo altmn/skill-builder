@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "Treat a maintainer's request to get this repository to production as authorization to publish a new release and update existing installed copies without repeat confirmation, while preserving release checks and project behavior.",
+  "reviewed_paths": [
+    "AGENTS.md",
+    "docs/releasing.md",
+    "docs/change-impact/2026-11-27-production-authorization.json"
+  ],
+  "workflows": {
+    "create": {
+      "decision": "no_change_needed",
+      "reason": "The change defines authorization for maintaining and releasing this repository. It does not change what Create teaches or generates for another skill: its command procedure, helper output, templates, shared knowledge base, target evaluation, host adapters, and packaged runtime remain unchanged.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-create.md",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "skills/skill-builder/assets/evaluation/PLAN.md.template"
+      ],
+      "verification": {
+        "status": "not_run",
+        "reason": "Planning and delivery review are limited to repository instructions and release documentation. No Create model trial is required or run because no subject-facing runtime or workflow changes. Repository checks are run separately.",
+        "consequence": "This policy clarification establishes no new model behavior, generated-skill benefit, native-host acceptance, or release-artifact acceptance."
+      }
+    },
+    "audit": {
+      "decision": "no_change_needed",
+      "reason": "The change defines authorization for this repository's production workflow. It does not change Audit's subject-facing rules, findings, effects, helper output, templates, shared resources, target evaluation, or host adapters; those procedures retain their own task-specific authorization boundaries.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-audit.md",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "skills/skill-builder/scripts/evaluate.py"
+      ],
+      "verification": {
+        "status": "not_run",
+        "reason": "Planning and delivery review are limited to repository instructions and release documentation. No Audit model trial is required or run because no subject-facing runtime or workflow changes. Repository checks are run separately.",
+        "consequence": "This policy clarification establishes no new model behavior, generated-skill benefit, native-host acceptance, or release-artifact acceptance."
+      }
+    }
+  }
+}
+
