@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "summary": "Make the README easier to use with a realistic project-handoff example, brief task-oriented prompts, and independently copyable platform examples, without changing skill behavior.",
+  "reviewed_paths": [
+    "README.md",
+    "validation/readme-patterns-2026-11-27.json"
+  ],
+  "workflows": {
+    "create": {
+      "decision": "no_change_needed",
+      "reason": "Planning and delivery assessment agree that README text only changes how a person asks for the existing create workflow. The create procedure, generated project templates, evaluation resources, host adapters, plugin defaults, and frozen knowledge base are unchanged; no new rule is taught to subjects.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-create.md",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "skills/skill-builder/assets/evaluation/PLAN.md.template"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "Available project checks, seven existing plugin tests, README links/anchors, whitespace, and unchanged runtime/package inputs passed. The optional parser checks remain blocked locally; no native creation or new example execution is claimed.",
+        "commands": [
+          "python3 -I -B tools/check_project.py",
+          "python3 -I -B -S -m unittest discover -s tests -p test_plugin.py -v",
+          "git diff --check",
+          "git diff --exit-code 5b3a59894d5c28ba1bf977fbdb2b78cd24c97ce2 -- skills plugin.json tools tests assets .github"
+        ],
+        "evidence": ["validation/readme-patterns-2026-11-27.json"]
+      }
+    },
+    "audit": {
+      "decision": "no_change_needed",
+      "reason": "Planning and delivery assessment agree that the README's shorter support-ticket audit request remains a request for the existing audit mode. Audit semantics, structural helper outputs, target evaluation, resources, host adapters and packaged runtime are unchanged; the proposed findings remain the agent's work.",
+      "owners": [
+        "skills/skill-builder/commands/skill-builder-audit.md",
+        "skills/skill-builder/scripts/skill_builder.py",
+        "skills/skill-builder/scripts/evaluate.py"
+      ],
+      "verification": {
+        "status": "passed",
+        "reason": "Available project checks and the seven plugin tests passed, including packaged create/audit behavior on a temporary synthetic subject. Runtime diffs and KB identity are unchanged. Optional parser availability and native audit acceptance remain unestablished by this documentation-only check.",
+        "commands": [
+          "python3 -I -B tools/check_project.py",
+          "python3 -I -B -S -m unittest discover -s tests -p test_plugin.py -v",
+          "git diff --check",
+          "git diff --exit-code 5b3a59894d5c28ba1bf977fbdb2b78cd24c97ce2 -- skills plugin.json tools tests assets .github"
+        ],
+        "evidence": ["validation/readme-patterns-2026-11-27.json"]
+      }
+    }
+  }
+}

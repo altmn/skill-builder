@@ -7,24 +7,33 @@
 
 # Skill Builder
 
-Turn a repeatable task into an AI skill, or improve one you already use. Create a useful first version, review an existing skill, or ask a question about skill design.
+Create an AI skill for a recurring task, or improve an existing one.
+
+**Example: a skill for project handoffs**
+
+> **Notes:** “Launch Tuesday. Maya sends the customer email. Luis checks rollback. Support coverage is undecided.”
+>
+> **A skill built for this task could produce:**
+>
+> - **Decision:** launch Tuesday.
+> - **Action:** Maya — send the customer email.
+> - **Action:** Luis — check rollback.
+> - **Open question:** who covers support?
+
+*Illustrative task and output, not a recorded run.*
 
 [Try it](#try-it) · [Get started](#get-started) · [Get help](#get-help) · [Update or remove](#update-or-remove) · [Technical details](#technical-details)
 
-> **Create:** a repeatable task → a skill to try
->
-> **Audit:** an existing skill → prioritized improvements
->
-> **Explain:** a question → a grounded answer
-
-*Illustrative workflows, not measured results. Creation and audit include agent judgment; the bundled helpers prepare projects and evidence, not completed verdicts.*
+---
 
 <a id="start-with-a-task"></a>
 <a id="what-it-does"></a>
 
 ## Try it
 
-Choose the task you want to complete. **Create** and **Audit** are modes of the same Skill Builder skill, not separately installed skills.
+### Choose a task
+
+**Create** and **Audit** are modes of the same skill, not separate installations.
 
 | I want to… | Choose | What I receive |
 | --- | --- | --- |
@@ -32,36 +41,51 @@ Choose the task you want to complete. **Create** and **Audit** are modes of the 
 | Find worthwhile improvements in an existing skill | Audit | Evidence-linked findings, coverage limits, and a prioritized plan |
 | Understand a design choice | Explain | An answer grounded in the preserved knowledge base and applicable sources |
 
-**Paste into Codex after installation:**
+### Prompt examples
+
+**In Codex after installation:**
 
 ```text
 $skill-builder skill-builder-create
-Create a skill that turns meeting notes into decisions, action items,
-owners, and open questions. Ask about important missing requirements,
-then build a small useful first version and an evaluation plan.
+Create a skill that turns project handoff notes into decisions, actions,
+owners, and open questions. Use these notes as an example:
+
+Launch Tuesday. Maya sends the customer email.
+Luis checks rollback. Support coverage is undecided.
 ```
 
-<details>
-<summary>Prompts for auditing an existing skill or asking a question</summary>
+**In the ChatGPT tab of a compatible desktop app:** type `@` and select the installed Skill Builder entry, then paste:
 
-**In Codex:**
+```text
+skill-builder-create
+Create a skill that turns project handoff notes into decisions, actions,
+owners, and open questions. Use these notes as an example:
+
+Launch Tuesday. Maya sends the customer email.
+Luis checks rollback. Support coverage is undecided.
+```
+
+The ChatGPT tab uses `@`; the Codex tab/app uses `$skill-builder` or its skill picker (`/skills` in the CLI). Choose the actual menu entry. If it is missing, start with [setup help](#get-started).
+
+<details>
+<summary>More prompt examples: audit a skill or ask a question</summary>
+
+**In Codex:** replace the bracketed path with your skill's location.
 
 ```text
 $skill-builder skill-builder-audit
-Review the skill in [skill directory]. Prioritize the issues that affect
-usefulness, activation, clarity, or reliability. Explain the evidence and
-what still needs to be checked. Do not repair the skill.
+Audit the skill in [skill directory]. It summarizes customer-support
+tickets, but sometimes drops the requested next action. Recommend fixes.
 ```
 
 ```text
-$skill-builder Explain when a task should become a reusable skill rather
-than a one-off prompt. Use a meeting-notes workflow as the example and
-help me choose the simplest useful approach.
+$skill-builder Should our weekly project handoff be a reusable skill
+or a one-off prompt? Explain the trade-offs.
 ```
 
 </details>
 
-**In the ChatGPT tab of a compatible desktop app:** type `@`, select the installed **Skill Builder** entry, and paste the task without `$skill-builder`. In the **Codex tab/app**, use `$skill-builder` or the skill picker (`/skills` in the CLI). The ChatGPT and Codex tabs use different selection syntax. Choose the actual entry; typing an unselected name is not installation or proof of activation. See [where it works](#where-it-works) for current limits.
+---
 
 <a id="prerequisites-and-local-quick-start"></a>
 <a id="download-layout-and-installation-scope"></a>
@@ -69,33 +93,27 @@ help me choose the simplest useful approach.
 
 ## Get started
 
-The full workflow needs a desktop environment with local files and execution tools. You can still ask ChatGPT in a browser to help you choose the right setup and clarify your skill idea.
+The full workflow needs a desktop environment with local files and execution tools. A browser chat can guide you to the right setup.
 
-**Ask ChatGPT to guide you — paste into a chat at [chatgpt.com](https://chatgpt.com/):**
+### Ask your AI assistant
 
-```text
-I want to use Skill Builder to create an AI skill:
-https://github.com/altmn/skill-builder
-
-I'm using ChatGPT in my browser. Help me choose a supported desktop setup
-for this project's full workflow and the right package for that tool.
-Guide me through the next step without assuming I know command-line tools.
-Help me clarify my skill idea here while I get set up.
-```
-
-**Ask a coding agent to set it up — paste into Codex or an agent with local tools:**
+**Paste into ChatGPT in your browser:**
 
 ```text
-Set up Skill Builder for this AI tool:
+Guide me to a supported desktop setup for Skill Builder:
 https://github.com/altmn/skill-builder
-
-Read the current installation guidance, help me choose project or personal
-scope, and use the correct installable package. Preserve local changes and
-the complete bundled knowledge base. Verify the skill appears in a fresh
-session, then help me try one small Create or Audit task.
 ```
 
-Prefer direct instructions? Use the [installation guide](docs/getting-started.md). Choose the package by purpose:
+**Paste into Codex or a coding agent with local tools:**
+
+```text
+Install Skill Builder for this AI tool globally:
+https://github.com/altmn/skill-builder
+```
+
+### Prefer direct steps?
+
+Use the [installation guide](docs/getting-started.md). Choose the package by purpose:
 
 | Package | Use it for |
 | --- | --- |
@@ -104,6 +122,8 @@ Prefer direct instructions? Use the [installation guide](docs/getting-started.md
 | [Source ZIP](https://github.com/altmn/skill-builder/releases/download/v1.0.0/skill-builder-1.0.0-source.zip) | Inspecting, developing, and testing this repository; not a plugin import |
 
 These are the **1.0.0** published assets. [Checksums and release receipts](https://github.com/altmn/skill-builder/releases/tag/v1.0.0) identify them; subsequent source changes are separate. GitHub's automatic source archive is also distinct from an installable package. This project does not claim an approved OpenAI directory listing or a universal browser ZIP importer.
+
+---
 
 ## Get help
 
@@ -116,35 +136,42 @@ Help me troubleshoot Skill Builder:
 https://github.com/altmn/skill-builder
 
 I'm using [AI tool and surface]. I installed [package or method].
-When I try [task], I get [result or short error]. Check that I chose the
-right package, the skill is available, and the tools needed for this task
-are accessible. Guide me through the next useful step.
+I expected [result], but got [actual result or short error].
+Investigate the issue.
 ```
 
 [Get support](SUPPORT.md) or [report a problem](https://github.com/altmn/skill-builder/issues/new/choose) using a small synthetic example and the relevant version. Keep private skill content out of public reports. Report vulnerabilities through the [security policy](SECURITY.md).
 
+---
+
 ## Update or remove
 
-**Ask the coding agent managing your installation:**
+Ask the coding agent that manages your installation.
+
+To update:
 
 ```text
-Help me update my Skill Builder installation:
+Update Skill Builder:
 https://github.com/altmn/skill-builder
-
-Compare the installed version with the latest published release and follow
-the documented update process for this tool. Keep my generated projects,
-local changes, and knowledge-base material intact. Verify Create, Audit,
-and Explain are available afterward.
 ```
 
+To disable:
+
 ```text
-Help me temporarily disable or uninstall Skill Builder from [AI tool].
-Identify how this copy was installed and follow the project's instructions.
-Keep my generated projects, audit outputs, modified files, and unrelated
-settings. Help me confirm the result in a new chat or session.
+Temporarily disable Skill Builder:
+https://github.com/altmn/skill-builder
+```
+
+To uninstall:
+
+```text
+Uninstall Skill Builder:
+https://github.com/altmn/skill-builder
 ```
 
 See [direct update and removal guidance](docs/getting-started.md#update-disable-or-remove). There is no automatic updater; preserve owned-file records and local modifications.
+
+---
 
 <a id="validation-and-evidence"></a>
 
