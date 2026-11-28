@@ -29,7 +29,7 @@ import types
 from typing import Any
 import zipfile
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 SKILL_ROOT = Path(__file__).resolve().parents[1]
 REFERENCE_ROOT = SKILL_ROOT / "references"
 EXPECTED_ARCHIVE_SHA256 = "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204"

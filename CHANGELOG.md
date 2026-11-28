@@ -1,10 +1,13 @@
 # Changelog
 
-## Unreleased
+## 1.0.1 — 2026-11-27
 
+- Made the main page easier to scan, with a realistic project-handoff example and concise prompts for setup, Create, Audit, Explain and maintenance.
+- Clarified desktop setup and invocation while keeping browser guidance within supported host limits.
+- Documented the complete production and existing-installation update workflow.
 - Updated pinned checkout to 7.0.1, setup-python to 7.1.0, PyYAML to 6.0.4 and rpds-py to 2026.9.1 after reviewing the four Dependabot proposals together.
 - Grouped future dependency PRs by ecosystem and restricted push CI to master; pull-request and manual checks remain available, with required impact reviews unchanged.
-- Kept published v1.0.0 archives, the original knowledge ZIP and historical dependency/validation records unchanged.
+- Preserved Create, Audit and Explain behavior, the original knowledge ZIP, historical evidence and already-published v1.0.0 archives.
 
 ## 1.0.0 — 2026-11-24
 

@@ -1,0 +1,48 @@
+{
+  "version": "1.0.1",
+  "baseline_commit": "ec596cfca2a5d3e4a2a034255b86d10e934c207b",
+  "scope": "Release metadata and distribution documentation; no behavior changes.",
+  "python": "3.15.2",
+  "validation_dependencies": {
+    "PyYAML": "6.0.4",
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0",
+    "attrs": "26.1.0",
+    "jsonschema-specifications": "2025.9.1",
+    "rpds-py": "2026.9.1",
+    "typing_extensions": "4.16.0"
+  },
+  "project_check": {
+    "outcome": "passed",
+    "checks": 19,
+    "blocked": 0
+  },
+  "full_tests": {
+    "outcome": "passed",
+    "count": 146,
+    "evidence": "validation/release-1.0.1/full-tests.txt"
+  },
+  "behavior_preservation": {
+    "outcome": "passed",
+    "runtime_changed_paths": [
+      "skills/skill-builder/VERSION",
+      "skills/skill-builder/references/release-status.md",
+      "skills/skill-builder/scripts/skill_builder.py"
+    ],
+    "helper_change": "VERSION constant only; every other helper byte agrees with baseline",
+    "other_runtime_files": "unchanged from baseline",
+    "knowledge_base_sha256": "9666202020c7a0c2b8fd66e6e738db2695572e79225bb565aebc687ddaabb204"
+  },
+  "create_delivery_assessment": "No propagation required: instructions, scaffold/template/evaluation behavior and permissions unchanged; full suite includes separate-subject and packaged-runtime create contracts.",
+  "audit_delivery_assessment": "No propagation required: read-only source intake, findings and evaluator behavior unchanged; full suite covers separate-subject and packaged-runtime audit and denied execution.",
+  "commands": [
+    "python -I -B tools/check_project.py --require-validators",
+    "python -I -B -m unittest discover -s tests -v",
+    "git diff --name-only ec596cfca2a5d3e4a2a034255b86d10e934c207b -- skills",
+    "git diff --check"
+  ],
+  "limits": [
+    "Not native model acceptance or comparative benefit.",
+    "Clean-index/merged builds, GitHub checks, publication and installed-host discovery receive separate evidence."
+  ]
+}

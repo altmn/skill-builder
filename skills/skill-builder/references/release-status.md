@@ -1,6 +1,6 @@
 # Current release status
 
-Version: **1.0.0**, prepared November 24, 2026. Standalone, source and portable plugin archives are separate. The plugin declares required local execution. The MIT grant began at rc.2; third-party exceptions remain. Stable versioning does not establish native acceptance of the exact archives, comprehensive host support, security certification or OpenAI directory approval. Earlier Codex trials are historical; Claude Code/Grok execution remains unrun.
+Version: **1.0.1**, prepared November 27, 2026. Standalone, source and portable plugin archives are separate. The plugin declares required local execution. The MIT grant began at rc.2; third-party exceptions remain. Stable versioning does not establish native acceptance of the exact archives, comprehensive host support, security certification or OpenAI directory approval. Earlier Codex trials are historical; Claude Code/Grok execution remains unrun.
 
 Build receipts record local preparation. Remote GitHub publication is recorded separately. OpenAI publisher verification, exact-draft scans, attestations, submission and publication remain later portal steps.
 
